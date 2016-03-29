@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>demo</title>
+    <title>page2</title>
     <style>
         /* reset */
         * {
@@ -209,34 +209,87 @@
         /*-moz-osx-font-smoothing: grayscale;*/
         /*}*/
 
+        #saveImg{
+            position: absolute;
+            width: 100px;
+            right: 20px;
+            bottom: 20px;
+            z-index: 5;
+            text-decoration: none;
+        }
+        .mainImgBox{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 4;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .mainImgBox img{
+            /*display: block;*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+        }
+
+
+        .pageBox{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        
+        .imgBox{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+        #img1{
+            /*display: none;*/
+            /*opacity: .5;*/
+            position: absolute;
+            z-index: 9999;      
+            visibility: hidden;      
+        }
+        .page2{
+            /*background-image: url(img/bg1.jpg);*/
+        }
     </style>
 </head>
 <body>
 
-<a style="position: absolute; right: 0; z-index: 9999" href="javascript:window.location.reload();">刷新</a>
-<div id="page1" class="page page1">
-    <div class="form">
-        <div class="form-title">
-            <h2>缅怀哥哥，张国荣</h2>
-        </div>
-        <div class="form-inner">
-            <div class="form-box">
-                <div class="form-text">姓名：</div>
-                <div class="form-ipt"><input id="iptText1" type="text" tabindex="1"/></div>
-            </div>
-            <div class="form-box">
-                <textarea id="iptText2" readonly rows="3" tabindex="2"></textarea>
-            </div>
-            <div class="form-box" style="margin-bottom: 0">
-                <div class="btn-group">
-                    <input id="btn1" class="btn btn-info" type="button" value="换一组" tabindex="3"/>
-                    <input id="btn2" class="btn f-fr" type="button" value="生成" tabindex="4"/>
-                </div>
-            </div>
-        </div>
+<!-- <div id="mainImgBox" class="mainImgBox"></div>
+
+
+<a id="saveImg" class="btn" href="javascript:;">保存图片</a>
+<div id="page2" class="page page2">
+    <a style="position: absolute; right: 0; z-index: 9999" href="javascript:window.location.reload();">刷新</a>
+
+    <div id="otext" class="text">
+        <canvas id="c1"></canvas>
     </div>
+</div> -->
+
+<div id="imgBox" class="imgBox">
+    <img id="img1" src="" alt="">
 </div>
 
+<div id="page2" class="pageBox page2">
+    <canvas id="canvas1"></canvas>
+    <div id="otext" class="text text1"></div>
+</div>
+
+<a id="saveImg" class="btn" href="javascript:;">保存图片</a>
+
+<script src="js/base64.js"></script>
+<script src="js/canvas2image.js"></script>
 <script>
     var arrData = [
         {
@@ -257,51 +310,88 @@
         }
     ];
     window.onload = function () {
-        var oTxt1 = document.getElementById('iptText1');
-        var oTxt2 = document.getElementById('iptText2');
-        var oBtn1 = document.getElementById('btn1');
-        var oBtn2 = document.getElementById('btn2');
-        var iNow = 0;
 
-        init();
+        ///////
+        if (window.location.hash.length > 0) {
+            var url = window.location.hash.substr(1);
+            var _arr = deCode(url).split('&');
+            var _name = _arr[0].substr(_arr[0].indexOf('=') + 1);
+            var _data = _arr[1].substr(_arr[1].indexOf('=') + 1);
 
-        oBtn1.onclick = function () {
-            changeGeci();
-        };
+            if (_name != '' && _data != '') {
 
-        oBtn2.onclick = function () {
+                var myImg = new Image();
 
-            if (oTxt1.value == '') {
-                alert('请输入姓名!');
+                myImg.onload = function() {
+                    var oImgBox = document.getElementById('imgBox');
+                    var oImg = document.getElementById('img1');
+                    var oText = document.getElementById('otext');
+                    var oPage = document.getElementById('page2');
+                    var oSave = document.getElementById('saveImg');
+                    var oC = document.getElementById('canvas1');
+                    var ctx = oC.getContext('2d');
+
+                    var cW = document.documentElement.clientWidth;
+                    var cH = document.documentElement.clientHeight;
+                    var num = parseInt(_data) + 1;
+                    var _txt = '张国荣诞辰六十周年  ' + _name + '  缅怀';
+
+                    oImg.src = arrData[_data].bgUrl;
+                    oPage.style.backgroundImage = 'url(' + arrData[_data].bgUrl + ')';
+                    oText.className = 'text text' + num;
+
+                    var iW = parseInt( getStyle(oImg, 'width') );
+                    var iH = parseInt( getStyle(oImg, 'height') );
+
+                    var x = parseInt( getStyle(oText, 'paddingLeft') );
+                    var y = parseInt( getStyle(oText, 'paddingTop') );
+                    
+                    oImg.width = cW;
+                    oC.width = cW;
+                    oC.height = cH;
+
+                    ctx.drawImage(oImg,0,0, iW, iH);
+                    oImg.style.display = 'none';
+                    
+                    ctx.fillStyle = '#b7b7b7';
+                    ctx.font = "normal lighter 12px arial";
+                    ctx.fillText(_txt, x, y+12);
+                
+                    // 保存图片
+                    oSave.onclick = function() {
+                        oPage.style.display = 'none';
+                        // 返回一个包含JPG图片的<img>元素
+                        var oImgJPEG = Canvas2Image.saveAsJPEG(oC, true, cW, cH);
+
+                        oImgBox.appendChild(oImgJPEG);
+                    };
+                };
+
+                myImg.src = arrData[_data].bgUrl;
+
+
             } else {
-                var url = 'name=' + oTxt1.value + '&data=' + iNow;
-
-                window.location.href = 'page2.html#'+code(url);
+                window.location.href = 'index.html';
             }
-        };
-
-
-        function init() {
-            oTxt2.value = arrData[iNow]["geci"];
+        } else {
+            window.location.href = 'index.html';
         }
 
-        function changeGeci() {
-            iNow++;
-            if (iNow == arrData.length) {
-                iNow = 0;
-            }
-            oTxt2.value = arrData[iNow]["geci"];
-        }
     };
 
-    function code(str) {
-        var result = [];
+    function getStyle(obj, attr) {
+        return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, false)[attr];
+    }
 
-        for(var i=0;i<str.length;i++){
-            result.push( str.charCodeAt(i)+250 );
+    function deCode(arr) {
+        arr = arr.split(',');
+
+        var arr2 = [];
+        for (var i = 0; i < arr.length; i++) {
+            arr2.push(String.fromCharCode(parseInt(arr[i]) - 250));
         }
 
-        return result;
+        return arr2.join('');
     }
 </script>
 </body>
