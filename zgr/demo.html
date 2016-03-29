@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>demo</title>
+    <style>
+        #c1{
+
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var oC = document.getElementById('c1');
+            var ctx = oC.getContext('2d');
+
+
+
+            ctx.font="12px Georgia";
+            ctx.fillText("Hello World!",10,50);
+        };
+    </script>
+</head>
+<body>
+
+    <canvas id="c1" style="border: 1px solid black;"></canvas>
+
+</body>
+</html>
