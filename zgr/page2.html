@@ -1,274 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>page2</title>
     <style>
-        /* reset */
-        * {
-            box-sizing: border-box;
-        }
-
-        html, body {
-            overflow-x: hidden;
-            position: relative;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-size: 14px;
-            font-family: Helvetica;
-        }
-
-        input[type=text] {
-            padding: 10px;
-            border: none;
-            width: 100%;
-        }
-
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: none;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        .f-fr {
-            float: right;
-        }
-
-        .btn {
-            display: inline-block;
-            min-width: 100px;
-            padding: 6px 12px;
-            text-align: center;
-            border: none;
-            background-color: #3eaf44;
-            color: #fff;;
-        }
-
-        .btn-info {
-            color: #fff;
-            background-color: #5bc0de;
-        }
-
-        .btn-group .btn {
-            width: 45%;
-        }
-
-        /* form */
-        .form {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 23%;
-        }
-
-        .form-inner {
-            margin: 8px;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, .2);
-            border-radius: 5px;
-        }
-
-        .form-title {
-            padding: 0 10px;
-            margin-bottom: 20px;
-        }
-
-        .form-title h2 {
-            margin: 0;
-            padding: 5px 0 10px;
-            font-size: 20px;
-            font-weight: 600;
-            color: #fff;
-        }
-
-        .form-box {
-            margin-bottom: 20px;
-        }
-
-        .form-text {
-            float: left;
-            width: 60px;
-            line-height: 37px;
-            text-align: right;
-            color: #fff;
-        }
-
-        .form-ipt {
-            padding-left: 70px;
-        }
-
-        /* page */
-        .page {
-            position: absolute;
-            z-index: 1;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            overflow-y: auto;
-        }
-
-        .page1 {
-            background: url(img/3.jpg) center top no-repeat;
-            background-size: cover;
-        }
-
-        .page2 {
-            z-index: 2;
-            left: 0;
-            background: #fff center top no-repeat;
-            background-size: cover;
-        }
-
-        .text {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            color: #f3f4f3;
-            font-size: 10px;
-        }
-
-        .text span {
-            margin-left: 10px;
-        }
-
+    /* reset */
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        overflow-x: hidden;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        font-family: Helvetica;
+    }
+    
+    input[type=text] {
+        padding: 10px;
+        border: none;
+        width: 100%;
+    }
+    
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    .f-fr {
+        float: right;
+    }
+    
+    .btn {
+        display: inline-block;
+        min-width: 100px;
+        padding: 6px 12px;
+        text-align: center;
+        border: none;
+        background-color: #3eaf44;
+        color: #fff;
+        ;
+    }
+    
+    .btn-info {
+        color: #fff;
+        background-color: #5bc0de;
+    }
+    
+    .btn-group .btn {
+        width: 45%;
+    }
+    /* form */
+    
+    .form {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 23%;
+    }
+    
+    .form-inner {
+        margin: 8px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, .2);
+        border-radius: 5px;
+    }
+    
+    .form-title {
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+    
+    .form-title h2 {
+        margin: 0;
+        padding: 5px 0 10px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+    }
+    
+    .form-box {
+        margin-bottom: 20px;
+    }
+    
+    .form-text {
+        float: left;
+        width: 60px;
+        line-height: 37px;
+        text-align: right;
+        color: #fff;
+    }
+    
+    .form-ipt {
+        padding-left: 70px;
+    }
+    /* page */
+    
+    .page {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+    
+    .page1 {
+        background: url(img/3.jpg) center top no-repeat;
+        background-size: cover;
+    }
+    
+    .page2 {
+        z-index: 2;
+        left: 0;
+        background: #fff center top no-repeat;
+        background-size: cover;
+    }
+    
+    .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        color: #f3f4f3;
+        font-size: 10px;
+    }
+    
+    .text span {
+        margin-left: 10px;
+    }
+    
+    .text1 {
+        padding-top: 124%;
+        padding-left: 44%;
+    }
+    
+    .text2 {
+        padding-top: 114%;
+        padding-left: 7%;
+    }
+    
+    .text3 {
+        padding-top: 86%;
+        padding-left: 27%;
+    }
+    
+    .text4 {
+        padding-top: 73%;
+        padding-left: 30%;
+    }
+    /* ip6s */
+    
+    @media screen and (max-width: 414px) {
         .text1 {
             padding-top: 124%;
-            padding-left: 44%;
+            padding-left: 15%;
         }
-
+    }
+    /* ip6 */
+    
+    @media screen and (max-width: 375px) {
+        .text1 {
+            padding-top: 123.5%;
+            padding-left: 15%;
+        }
+    }
+    /* ip4 ip5 */
+    
+    @media screen and (max-width: 320px) {
+        .text1 {
+            font-size: 10px;
+            padding-top: 123%;
+            padding-left: 11%;
+        }
         .text2 {
             padding-top: 114%;
             padding-left: 7%;
         }
-
-        .text3 {
-            padding-top: 86%;
-            padding-left: 27%;
-        }
-
-        .text4 {
-            padding-top: 73%;
-            padding-left: 30%;
-        }
-
-        /* ip6s */
-        @media screen and (max-width: 414px) {
-            .text1 {
-                padding-top: 124%;
-                padding-left: 15%;
-            }
-        }
-
-        /* ip6 */
-        @media screen and (max-width: 375px) {
-            .text1 {
-                padding-top: 123.5%;
-                padding-left: 15%;
-            }
-        }
-
-        /* ip4 ip5 */
-        @media screen and (max-width: 320px) {
-            .text1 {
-                font-size: 10px;
-                padding-top: 123%;
-                padding-left: 11%;
-            }
-
-            .text2 {
-                padding-top: 114%;
-                padding-left: 7%;
-            }
-        }
-
-        /*@font-face {font-family: 'webfont';*/
-        /*src: url('//at.alicdn.com/t/ih7sikfrh33di.eot'); /!* IE9*!/*/
-        /*src: url('//at.alicdn.com/t/ih7sikfrh33di.eot?#iefix') format('embedded-opentype'), /!* IE6-IE8 *!/*/
-        /*url('//at.alicdn.com/t/ih7sikfrh33di.woff') format('woff'), /!* chrome、firefox *!/*/
-        /*url('//at.alicdn.com/t/ih7sikfrh33di.ttf') format('truetype'), /!* chrome、firefox、opera、Safari, Android, iOS 4.2+*!/*/
-        /*url('//at.alicdn.com/t/ih7sikfrh33di.svg#思源黑体-极细') format('svg'); /!* iOS 4.1- *!/*/
-        /*}*/
-
-        /*.web-font{*/
-        /*font-family:"webfont" !important;*/
-        /*font-size:16px;font-style:normal;*/
-        /*-webkit-font-smoothing: antialiased;*/
-        /*-webkit-text-stroke-width: 0.2px;*/
-        /*-moz-osx-font-smoothing: grayscale;*/
-        /*}*/
-
-        #saveImg {
-            position: absolute;
-            width: 100px;
-            right: 20px;
-            bottom: 20px;
-            z-index: 5;
-            text-decoration: none;
-        }
-
-        .mainImgBox {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            z-index: 4;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .mainImgBox img {
-            /*display: block;*/
-            /*width: 100%;*/
-            /*height: 100%;*/
-        }
-
-        .pageBox {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-        }
-
-        .imgBox {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            overflow: hidden;
-        }
-
-        #img1 {
-            /*display: none;*/
-            /*opacity: .5;*/
-            position: absolute;
-            z-index: 9999;
-            visibility: hidden;
-        }
-
-        .page2 {
-            /*background-image: url(img/bg1.jpg);*/
-        }
+    }
+        
+    #saveImg {
+        position: absolute;
+        width: 100px;
+        right: 20px;
+        bottom: 20px;
+        z-index: 5;
+        text-decoration: none;
+    }
+    
+    .mainImgBox {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+    .mainImgBox img {
+        /*display: block;*/
+        /*width: 100%;*/
+        /*height: 100%;*/
+    }
+    
+    .pageBox {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    
+    .imgBox {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    
+    #img1 {
+        /*display: none;*/
+        /*opacity: .5;*/
+        position: absolute;
+        z-index: 9999;
+        visibility: hidden;
+    }
+    
+    .page2 {
+        /*background-image: url(img/bg1.jpg);*/
+    }
     </style>
 </head>
-<body>
 
-<!-- <div id="mainImgBox" class="mainImgBox"></div>
+<body>
+    <!-- <div id="mainImgBox" class="mainImgBox"></div>
 
 
 <a id="saveImg" class="btn" href="javascript:;">保存图片</a>
@@ -279,42 +265,30 @@
         <canvas id="c1"></canvas>
     </div>
 </div> -->
-
-
-<div id="imgBox" class="imgBox" style="visibility: hidden">
-    <img id="img1" src="" alt="">
-</div>
-
-<div id="page2" class="pageBox page2" style="visibility: hidden;">
-    <canvas id="canvas1"></canvas>
-    <div id="otext" class="text text1"></div>
-</div>
-
-<!--<a id="saveImg" class="btn" href="javascript:;">生成图片</a>-->
-
-<script src="js/jquery.min.js"></script>
-<script src="js/base64.js"></script>
-<script src="js/canvas2image.js"></script>
-<script>
-    var arrData = [
-        {
-            "geci": "我就是我 是颜色不一样的烟火",
-            "bgUrl": "img/bg1.jpg"
-        },
-        {
-            "geci": "人生路 美梦似路长 路里风霜 风霜扑面干",
-            "bgUrl": "img/bg2.jpg"
-        },
-        {
-            "geci": "没什么可以给你 但求凭这阙 谢谢你风雨内 都不退愿陪着我",
-            "bgUrl": "img/bg3.jpg"
-        },
-        {
-            "geci": "风继续吹 不忍远离 心里亦有泪 不愿流泪望着你",
-            "bgUrl": "img/bg4.jpg"
-        }
-    ];
-    window.onload = function () {
+    <div id="imgBox" class="imgBox" style="visibility: hidden">
+        <img id="img1" src="" alt="">
+    </div>
+    <div id="page2" class="pageBox page2" style="visibility: hidden;">
+        <canvas id="canvas1"></canvas>
+        <div id="otext" class="text text1"></div>
+    </div>
+    <!--<a id="saveImg" class="btn" href="javascript:;">生成图片</a>-->
+    <script src="js/jquery.min.js"></script>
+    <script>
+    var arrData = [{
+        "geci": "我就是我 是颜色不一样的烟火",
+        "bgUrl": "img/bg1.jpg"
+    }, {
+        "geci": "人生路 美梦似路长 路里风霜 风霜扑面干",
+        "bgUrl": "img/bg2.jpg"
+    }, {
+        "geci": "没什么可以给你 但求凭这阙 谢谢你风雨内 都不退愿陪着我",
+        "bgUrl": "img/bg3.jpg"
+    }, {
+        "geci": "风继续吹 不忍远离 心里亦有泪 不愿流泪望着你",
+        "bgUrl": "img/bg4.jpg"
+    }];
+    window.onload = function() {
 
         ///////
         if (window.location.hash.length > 0) {
@@ -327,7 +301,7 @@
 
                 var myImg = new Image();
 
-                myImg.onload = function () {
+                myImg.onload = function() {
                     console.log('图片加载完成');
                     var oImgBox = document.getElementById('imgBox');
                     var oImg = document.getElementById('img1');
@@ -370,32 +344,32 @@
                     oImgBox.style.display = 'none';
 
                     // 测试图片
-//                    var mytestImg = document.createElement('img');
-//                    mytestImg.src = oC.toDataURL('image/jpeg');
-//                    document.body.appendChild(mytestImg);
+                    //                    var mytestImg = document.createElement('img');
+                    //                    mytestImg.src = oC.toDataURL('image/jpeg');
+                    //                    document.body.appendChild(mytestImg);
                     // 测试图片
 
 
                     var imgData = oC.toDataURL('image/jpeg');
 
+                    setTimeout(function() {
+                        $.ajax({
+                            url: 'http://zhongchou.paituwang.com/',
+                            type: 'post',
+                            data: imgData,
+                            success: function(url) {
+                                var newImage = new Image();
 
-                    $.ajax({
-                        url: 'http://zhongchou.paituwang.com/',
-                        type: 'post',
-                        data: imgData,
-                        success: function(url) {
-                            var newImage = new Image();
+                                newImage.onload = function() {
+                                    alert('图片加载完成');
+                                    getImage(url);
+                                };
 
-                            newImage.onload = function() {
-                                alert('图片加载完成');
-                                getImage(url);
-                            };
+                                newImage.src = url;
+                            }
+                        });
+                    }, 200);
 
-                            newImage.src = url;
-                        }
-                    });
-
-//                    getUrl();
 
 
 
@@ -435,9 +409,9 @@
         return arr2.join('');
     }
 
-    function getUrl(){
+    function getUrl() {
         var localHandler = function(data) {
-            alert('远程调用'+data.name);
+            alert('远程调用' + data.name);
         };
         var url = 'jsonp.js?callback=localHandler';
         var script = document.createElement('script');
@@ -447,7 +421,9 @@
 
 
 
-
-</script>
+    // TODO
+    // 1.图片压缩
+    </script>
 </body>
+
 </html>

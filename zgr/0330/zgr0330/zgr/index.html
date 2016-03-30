@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,11 +8,13 @@
     <title>demo</title>
     <style>
         /* reset */
+
         * {
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             position: relative;
             margin: 0;
@@ -62,6 +65,7 @@
         }
 
         /* form */
+
         .form {
             position: absolute;
             left: 0;
@@ -106,6 +110,7 @@
         }
 
         /* page */
+
         .page {
             position: absolute;
             z-index: 1;
@@ -164,6 +169,7 @@
         }
 
         /* ip6s */
+
         @media screen and (max-width: 414px) {
             .text1 {
                 padding-top: 124%;
@@ -172,6 +178,7 @@
         }
 
         /* ip6 */
+
         @media screen and (max-width: 375px) {
             .text1 {
                 padding-top: 123.5%;
@@ -180,6 +187,7 @@
         }
 
         /* ip4 ip5 */
+
         @media screen and (max-width: 320px) {
             .text1 {
                 font-size: 10px;
@@ -191,11 +199,11 @@
                 padding-top: 114%;
                 padding-left: 7%;
             }
-        }    
+        }
     </style>
 </head>
-<body>
 
+<body>
 <a style="position: absolute; right: 0; z-index: 9999" href="javascript:window.location.reload();">刷新</a>
 <div id="page1" class="page page1">
     <div class="form">
@@ -205,7 +213,9 @@
         <div class="form-inner">
             <div class="form-box">
                 <div class="form-text">姓名：</div>
-                <div class="form-ipt"><input id="iptText1" type="text" tabindex="1"/></div>
+                <div class="form-ipt">
+                    <input id="iptText1" type="text" tabindex="1"/>
+                </div>
             </div>
             <div class="form-box">
                 <textarea id="iptText2" readonly rows="3" tabindex="2"></textarea>
@@ -219,26 +229,20 @@
         </div>
     </div>
 </div>
-
 <script>
-    var arrData = [
-        {
-            "geci": "我就是我 是颜色不一样的烟火",
-            "bgUrl": "img/bg1.jpg"
-        },
-        {
-            "geci": "人生路 美梦似路长 路里风霜 风霜扑面干",
-            "bgUrl": "img/bg2.jpg"
-        },
-        {
-            "geci": "没什么可以给你 但求凭这阙 谢谢你风雨内 都不退愿陪着我",
-            "bgUrl": "img/bg3.jpg"
-        },
-        {
-            "geci": "风继续吹 不忍远离 心里亦有泪 不愿流泪望着你",
-            "bgUrl": "img/bg4.jpg"
-        }
-    ];
+    var arrData = [{
+        "geci": "我就是我 是颜色不一样的烟火",
+        "bgUrl": "img/bg1.jpg"
+    }, {
+        "geci": "人生路 美梦似路长 路里风霜 风霜扑面干",
+        "bgUrl": "img/bg2.jpg"
+    }, {
+        "geci": "没什么可以给你 但求凭这阙 谢谢你风雨内 都不退愿陪着我",
+        "bgUrl": "img/bg3.jpg"
+    }, {
+        "geci": "风继续吹 不忍远离 心里亦有泪 不愿流泪望着你",
+        "bgUrl": "img/bg4.jpg"
+    }];
     window.onload = function () {
         var oTxt1 = document.getElementById('iptText1');
         var oTxt2 = document.getElementById('iptText2');
@@ -259,7 +263,7 @@
             } else {
                 var url = 'name=' + oTxt1.value + '&data=' + iNow;
 
-                window.location.href = 'page2.html#'+code(url);
+                window.location.href = 'page2.html#' + code(url);
             }
         };
 
@@ -280,12 +284,13 @@
     function code(str) {
         var result = [];
 
-        for(var i=0;i<str.length;i++){
-            result.push( str.charCodeAt(i)+250 );
+        for (var i = 0; i < str.length; i++) {
+            result.push(str.charCodeAt(i) + 250);
         }
 
         return result;
     }
 </script>
 </body>
+
 </html>
