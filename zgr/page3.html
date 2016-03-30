@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>page2</title>
+    <title>page3</title>
     <style>
         /* reset */
         * {
@@ -280,19 +280,18 @@
     </div>
 </div> -->
 
-
-<div id="imgBox" class="imgBox" style="visibility: hidden">
+<a style="position: absolute; right: 0; z-index: 9999" href="javascript:window.location.reload();">刷新</a>
+<div id="imgBox" class="imgBox">
     <img id="img1" src="" alt="">
 </div>
 
-<div id="page2" class="pageBox page2" style="visibility: hidden;">
+<div id="page2" class="pageBox page2">
     <canvas id="canvas1"></canvas>
     <div id="otext" class="text text1"></div>
 </div>
 
-<!--<a id="saveImg" class="btn" href="javascript:;">生成图片</a>-->
+<a id="saveImg" class="btn" href="javascript:;">保存图片</a>
 
-<script src="js/jquery.min.js"></script>
 <script src="js/base64.js"></script>
 <script src="js/canvas2image.js"></script>
 <script>
@@ -328,7 +327,6 @@
                 var myImg = new Image();
 
                 myImg.onload = function () {
-                    console.log('图片加载完成');
                     var oImgBox = document.getElementById('imgBox');
                     var oImg = document.getElementById('img1');
                     var oText = document.getElementById('otext');
@@ -356,49 +354,65 @@
                     oC.width = cW;
                     oC.height = cH;
 
-                    console.log('图片绘制完成');
                     ctx.drawImage(oImg, 0, 0, iW, iH);
                     oImgBox.style.display = 'none';
 
                     ctx.fillStyle = '#b7b7b7';
                     ctx.font = "normal lighter 12px arial";
                     ctx.fillText(_txt, x, y + 12);
-                    console.log('文字绘制完成');
 
 
-                    oPage.style.display = 'none';
-                    oImgBox.style.display = 'none';
+                    //oPage.style.display = 'none';
+                    // 返回一个包含JPG图片的<img>元素
+                    //var oImgJPEG = Canvas2Image.saveAsJPEG(oC, true, cW, cH);
 
-                    // 测试图片
-//                    var mytestImg = document.createElement('img');
-//                    mytestImg.src = oC.toDataURL('image/jpeg');
-//                    document.body.appendChild(mytestImg);
-                    // 测试图片
-
-
-                    var imgData = oC.toDataURL('image/jpeg');
-
-
-                    $.ajax({
-                        url: 'http://zhongchou.paituwang.com/',
-                        type: 'post',
-                        data: imgData,
-                        success: function(url) {
-                            var newImage = new Image();
-
-                            newImage.onload = function() {
-                                alert('图片加载完成');
-                                getImage(url);
-                            };
-
-                            newImage.src = url;
-                        }
-                    });
-
-//                    getUrl();
+                    //oImgBox.appendChild(oImgJPEG);
 
 
 
+
+
+                    // 保存图片
+                    oSave.onclick = function () {
+
+                        // 图片导出为 png 格式
+//                        var type = 'jpeg';
+//                        var imgData = oC.toDataURL('image/'+type);
+
+//                        var _fixType = function(type) {
+//                            type = type.toLowerCase().replace(/jpg/i, 'jpeg');
+//                            var r = type.match(/png|jpeg|bmp|gif/)[0];
+//                            return 'image/' + r;
+//                        };
+
+                        // 加工image data，替换mime type
+//                        imgData = imgData.replace(_fixType(type),'image/octet-stream');
+
+
+//                        var mytest2 = document.createElement('img');
+//                        mytest2.src = imgData;
+//                        mytest2.setAttribute('src', imgData);
+//                        document.body.appendChild(mytest2);
+
+
+
+
+
+//                        Canvas2Image.saveAsPNG(oC);
+
+//                        var strDataURI = oC.toDataURL();
+//
+//
+//
+                        oImgBox.style.display = 'none';
+                        oPage.style.display = 'none';
+//                        Canvas2Image.saveAsPNG(oCanvas);
+//                        oImg.src = strDataURI;
+//                        oImg.style.display = 'block';
+//                        oImg.style.visibility = 'visible';
+
+//                        console.log(oImg);
+                    };
                 };
 
                 myImg.src = arrData[_data].bgUrl;
@@ -412,13 +426,6 @@
         }
 
     };
-
-
-    function getImage(url) {
-        var myImg = document.createElement('img');
-        myImg.src = url;
-        document.body.appendChild(myImg);
-    }
 
     function getStyle(obj, attr) {
         return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, false)[attr];
@@ -434,20 +441,6 @@
 
         return arr2.join('');
     }
-
-    function getUrl(){
-        var localHandler = function(data) {
-            alert('远程调用'+data.name);
-        };
-        var url = 'jsonp.js?callback=localHandler';
-        var script = document.createElement('script');
-        script.src = url;
-        document.getElementsByTagName('head')[0].appendChild(script);
-    }
-
-
-
-
 </script>
 </body>
 </html>
