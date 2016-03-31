@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>form</title>
+    <!-- bootstap -->
+    <link rel="stylesheet" href="../bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
+
+    <!-- linkcloud -->
+    <link rel="stylesheet" href="../css/linkCloud.css">
+
+    <!-- your css -->
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+<div class="container">
+
+
+    <div class="box">
+        <div class="row">
+        <div class="col-sm-12">
+            <form method="post" class="form-horizontal">
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">任务名称:</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-w">
+                        <span class="help-block m-b-none">帮助文本，可能会超过一行，以块级元素显示</span>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group form-inline">
+                    <label class="col-sm-2 control-label">地理位置:</label>
+                    <div class="col-sm-10">
+                        <select class="form-control form-w2" name="">
+                            <option value="0">省</option>
+                        </select>
+                        <select class="form-control form-w2" name="">
+                            <option value="0">市</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">任务描述:</label>
+
+                    <div class="col-sm-10">
+                        <textarea class="form-control form-w" rows="10"></textarea>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">上传附件:</label>
+
+                    <div class="col-sm-10">
+                        <!--<div class="form-file">-->
+                            <!--<input type="file">-->
+                            <!--<a class="btn btn-primary" href="javascript:;">选择文件</a>-->
+                        <!--</div>-->
+
+                        <input type="file" class="form-file"> <span class="text-muted">附件最大支持10MB 支持格式：.zip, .rar</span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">需要专业:</label>
+
+                    <div class="col-sm-10">
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">规划</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">建筑</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">给排水</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">园林</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">电气</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">结构</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">隧道</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">桥梁</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">道路</label>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group form-inline">
+                    <label class="col-sm-2 control-label">合作地区:</label>
+                    <div class="col-sm-10">
+                        <select class="form-control form-w2" name="">
+                            <option value="0">请选择</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">合作方式:</label>
+
+                    <div class="col-sm-10">
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">不限</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">认证企业</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">认证个人工作室</label>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">维保年限:</label>
+
+                    <div class="col-sm-10">
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">不限</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">1年</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="option1">2年</label>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">报名截止:</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-w">
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">任务预估:</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-w">
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">联系方式:</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-w">
+                    </div>
+                </div>
+
+
+
+                <!-- step2 -->
+                <div class="form-group form-inline">
+                    <label class="col-sm-2 control-label">招标金额:</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control"> <label class="checkbox-inline f-ml5"><input type="checkbox" value="option1">待议</label>
+                    </div>
+                </div>
+
+
+                <div class="form-group form-inline">
+                    <label class="col-sm-2 control-label">保证金:</label>
+
+                    <div class="col-sm-10">
+                        <select class="form-control form-w2" name="">
+                            <option value="10">10%</option>
+                            <option value="20">20%</option>
+                            <option value="100">100%</option>
+                        </select>
+                        <span>200</span>
+                        <span class="help-block">
+                            * 说明：为保障双方权益，图狼网将至少代收任务金额的10%作为定金，代为保管。交易成功后，转入任务赏金。若任务招标失败，全额退还给发布者。
+                        </span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <a class="btn btn-primary" href="javascript:;">下一步，填写招标金额</a>
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="box">
+        <div class="lc-filter">
+            <div class="lc-box">
+                <div class="lc-box-bd">
+                    <div class="items">
+                        <a class="more" href="javascript:;">更多 <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                        <dl class="dl-horizontal">
+                            <dt>专业</dt>
+                            <dd>
+                                <span class="active">全部</span>
+                                <span>道路</span>
+                                <span>桥梁</span>
+                                <span>给排水</span>
+                                <span>管网</span>
+                                <span>园林</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="items">
+                        <a class="more" href="javascript:;">更多 <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                        <dl class="dl-horizontal">
+                            <dt>地区地区</dt>
+                            <dd>
+                                <span>全国</span>
+                                <span class="active">北京</span>
+                                <span>上海</span>
+                                <span>深圳</span>
+                                <span>广州</span>
+                                <span>杭州</span>
+                                <span>成都</span>
+                                <span>南京</span>
+                                <span>武汉</span>
+                                <span>西安</span>
+                                <span>厦门</span>
+                                <span>长沙</span>
+                                <span>苏州</span>
+                                <span>天津</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery -->
+<script src="../libs/jquery-2.2.2/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="../bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- linkcloud -->
+<script src="../js/main.js"></script>
+
+<!-- your js -->
+<script src=""></script>
+</body>
+</html>

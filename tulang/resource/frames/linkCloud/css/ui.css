@@ -1,0 +1,77 @@
+body {
+  background-color: #f3f3f4;
+}
+label {
+  font-weight: 500;
+}
+.form-w {
+  width: 560px;
+}
+.form-w2 {
+  width: 150px !important;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-control {
+  border-radius: 0;
+  box-shadow: none;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+input.form-file {
+  position: relative;
+  display: inline-block;
+}
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+  border-bottom-width: 1px;
+}
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+  padding: 12px;
+}
+.label {
+  display: inline-block;
+  border-radius: 0;
+  line-height: normal;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 4px 10px;
+  min-width: 90px;
+}
+.lc-box {
+  border: 1px solid #ddd;
+  border-width: 0 1px 1px;
+  margin-bottom: 25px;
+  background-color: #fff;
+}
+.lc-box .lc-box-hd,
+.lc-box .lc-box-bd,
+.lc-box .lc-box-ft {
+  padding: 15px 20px;
+  border-top: 1px solid #ddd;
+}
+.lc-box .lc-box-hd .title {
+  display: inline-block;
+}
+.lc-box .lc-box-hd .title h5 {
+  margin: 0;
+  font-weight: 600;
+}
+.lc-box .lc-box-hd .tool {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+.box {
+  margin: 100px auto;
+}
+.jg {
+  margin-bottom: 20px;
+}
