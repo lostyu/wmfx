@@ -1,0 +1,19 @@
+.m-header {
+  padding: 14px 0;
+  border-bottom: none;
+}
+.m-header .form-group {
+  position: relative;
+}
+.m-header .form-group input {
+  width: 100%;
+  padding-left: 30px;
+}
+.m-header .form-group span {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.m-banner {
+  height: 500px;
+}
