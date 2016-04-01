@@ -175,7 +175,6 @@
   position: absolute;
   left: 10px;
   top: 10px;
-  color: #aeaeae;
 }
 .m-footer {
   padding: 11px 0;
@@ -203,4 +202,21 @@
 }
 .m-banner {
   height: 500px;
+}
+.demo-box {
+  margin-bottom: 100px;
+}
+.demo-hd {
+  margin: 10px 0;
+  font-size: 30px;
+}
+.demo-box2 {
+  padding: 20px;
+  margin-bottom: 40px;
+  background-color: #f0f0f0;
+}
+.demo-hd2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #999;
 }
