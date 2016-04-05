@@ -1,0 +1,165 @@
+// color
+@gray-darker:  lighten(#000, 13.5%); // #222
+@gray-dark:    lighten(#000, 20%);   // #333
+@gray:         lighten(#000, 33.5%); // #555
+@gray-light:   lighten(#000, 46.7%); // #777
+@gray-lighter: lighten(#000, 93.5%); // #eee
+
+@brand-primary: darken(#428bca, 6.5%); // #337ab7
+@brand-success: #5cb85c;
+@brand-info:    #5bc0de;
+@brand-warning: #f0ad4e;
+@brand-danger:  #d9534f;
+
+// Scaffolding
+@body-bg:    #fff;
+@text-color: @gray-darker - 50;
+
+// Variables
+@link-color:       @brand-primary;
+@link-hover-color: darken(@link-color, 15%);
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+//=============== S base ==================
+
+.f-pr{ position: relative}
+
+// font-size
+.f-fz12{font-size: @font-size-base - 2;}
+.f-fz14{font-size: @font-size-base }
+.f-fz16{font-size: @font-size-base + 2;}
+.f-fz18{font-size: @font-size-base + 4;}
+.f-fz20{font-size: @font-size-base + 6;}
+
+// margin
+.f-mb5{ margin-bottom: 5px;}
+.f-mb10{ margin-bottom: 10px;}
+.f-mb15{ margin-bottom: 15px;}
+.f-mb20{ margin-bottom: 20px;}
+.f-mb25{ margin-bottom: 25px;}
+.f-mb30{ margin-bottom: 30px;}
+.f-mb35{ margin-bottom: 35px;}
+.f-mb40{ margin-bottom: 40px;}
+
+.f-mr5{ margin-right: 5px;}
+.f-mr10{ margin-right: 10px;}
+.f-mr15{ margin-right: 15px;}
+.f-mr20{ margin-right: 20px;}
+.f-mr25{ margin-right: 25px;}
+.f-mr30{ margin-right: 30px;}
+.f-mr35{ margin-right: 35px;}
+.f-mr40{ margin-right: 40px;}
+
+// padding
+.f-pb5{ padding-bottom: 5px;}
+.f-pb10{ padding-bottom: 10px;}
+.f-pb15{ padding-bottom: 15px;}
+.f-pb20{ padding-bottom: 20px;}
+.f-pb25{ padding-bottom: 25px;}
+.f-pb30{ padding-bottom: 30px;}
+.f-pb35{ padding-bottom: 35px;}
+.f-pb40{ padding-bottom: 40px;}
+
+.f-pr5{ padding-right: 5px;}
+.f-pr10{ padding-right: 10px;}
+.f-pr15{ padding-right: 15px;}
+.f-pr20{ padding-right: 20px;}
+.f-pr25{ padding-right: 25px;}
+.f-pr30{ padding-right: 30px;}
+.f-pr35{ padding-right: 35px;}
+.f-pr40{ padding-right: 40px;}
+
+// border
+.f-bd{border: 1px solid @gray-lighter;}
+
+
+// boxshadow
+.f-shadow{ box-shadow: 0 3px 10px rgba(7,0,2, .15);}
+
+// textColor
+.text-black{
+  color: @gray-darker;
+}
+
+// reset
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+h1{font-size: @font-size-base+16;}
+h2{font-size: @font-size-base+10;}
+h3{font-size: @font-size-base+4;}
+h4{font-size: @font-size-base;}
+
+html,body{
+  background-color: @body-bg;
+}
+
+// btn
+.btn-default{}
+
+//=============== E base ==================
+
+
+//=============== S components ==================
+// label
+.label{
+  display: inline-block;
+  font-size: @font-size-base;
+  font-weight: normal;
+  padding: 8px 16px;
+  border-radius: 0;
+}
+
+//=============== E components ==================
+
+
+.demo-box{
+  margin-bottom: 100px;
+}
+.demo-hd{
+  margin: 10px 0;
+  font-size: 30px;
+}
+.demo-bd{}
+
+
+.demo-box2{
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+}
+.demo-hd2{
+  margin: 0 0 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #999;
+}
+.demo-bd2{}
+
+
+.demo-nav{
+  position: fixed;
+}
+
+
+.demo-form{
+  h4+div{
+    margin-bottom: 50px;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,243 @@
+// ======================S list =============================
+
+// list1
+.lc-list-1 {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+  }
+  .meta {
+    height: 40px;
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .media-left {
+    padding-right: 20px;
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .media-heading {
+    font-size: 24px;
+    font-weight: 700;
+    a {
+      color: #333;
+      &:hover {
+        //color: @color-primary;
+      }
+    }
+  }
+  .price {
+    color: #666;
+    span {
+      font-size: 24px;
+      //color: @color-primary;
+    }
+  }
+}
+
+// list2
+.lc-list-2 {
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 975px;
+    overflow: hidden;
+  }
+  li {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    list-style: none;
+  }
+}
+
+.lc-listItem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .cnt {
+    display: table;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    //background-color: fade(@color-primary, 50%);
+    .inner {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 20px;
+      color: #fff;
+      text-align: center;
+      h2 {
+        font-size: 22px;
+        font-weight: 700;
+      }
+      .price {
+        font-style: normal;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+// list3
+.lc-list-3 {
+  ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  li {
+    float: left;
+    width: 48.75%;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+    list-style: none;
+    &:nth-child(odd) {
+      margin-left: 0;
+    }
+  }
+  .media {
+    border: 1px solid #ddd;
+    background-color: lighten(#ddd, 10%);
+    padding: 20px;
+  }
+  .media-left {
+    padding-right: 30px;
+  }
+  .media-heading {
+    margin-bottom: 15px;
+    a {
+      color: #000;
+      font-weight: 700;
+    }
+    .label {
+      margin-left: 10px;
+      border-radius: 24px;
+    }
+  }
+  .media-foot {
+    margin-top: 20px;
+    color: #777;
+  }
+}
+
+// ======================E list =============================
+
+
+
+// ====================== S 首页 =============================
+// 头部
+.m-header{
+  padding: 14px 0;
+  border-bottom: none;
+  background-color: rgba(255,255,255,.3);
+  .form-group{
+    position: relative;
+    input{
+      width: 100%;
+      padding-left: 30px;
+    }
+    span{
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      //color: @color-gray;
+    }
+  }
+
+  .navbar-header{
+    margin-right: 42px;
+  }
+  .navbar-brand{
+    padding:0;
+  }
+}
+
+// 底部
+.m-footer{
+  padding: 11px 0;
+  margin-bottom: 0;
+  border: none;
+  font-size: 12px;
+  background-color: #eaeaea;
+  .info span{
+    margin-right: 15px;
+  }
+  .link a{
+    display: inline-block;
+    padding: 0 5px;
+  }
+  .fa{
+    font-size: 16px;
+    color: #272636;
+  }
+  .fa:hover{
+    color: #000;
+  }
+  .fa-weixin{
+    margin-left: 20px;
+  }
+}
+
+// banner
+.m-banner{
+  height: 500px;
+  margin-bottom: 130px;
+  background: center top url(../img/banner.jpg) no-repeat;
+  .container{
+    height: 500px;
+  }
+  .info{
+    position: absolute;
+    bottom: -87px;
+    width: 100%;
+    height: 175px;
+    background-color: #fff;
+    li{
+      float: left;
+
+      width: 33.333%;
+      .inner{
+        padding: 27px 42px;
+        height: 175px;
+      }
+    }
+    .media-body{
+      h2{ font-weight: 700; margin-bottom: 10px;}
+      p{ margin-bottom: 5px;color: #757575;}
+    }
+  }
+
+}
+// ====================== E 首页 =============================
+

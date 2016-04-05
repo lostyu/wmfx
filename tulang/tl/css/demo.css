@@ -1,0 +1,177 @@
+.f-pr {
+  position: relative;
+}
+.f-fz12 {
+  font-size: 12px;
+}
+.f-fz14 {
+  font-size: 14px;
+}
+.f-fz16 {
+  font-size: 16px;
+}
+.f-fz18 {
+  font-size: 18px;
+}
+.f-fz20 {
+  font-size: 20px;
+}
+.f-mb5 {
+  margin-bottom: 5px;
+}
+.f-mb10 {
+  margin-bottom: 10px;
+}
+.f-mb15 {
+  margin-bottom: 15px;
+}
+.f-mb20 {
+  margin-bottom: 20px;
+}
+.f-mb25 {
+  margin-bottom: 25px;
+}
+.f-mb30 {
+  margin-bottom: 30px;
+}
+.f-mb35 {
+  margin-bottom: 35px;
+}
+.f-mb40 {
+  margin-bottom: 40px;
+}
+.f-mr5 {
+  margin-right: 5px;
+}
+.f-mr10 {
+  margin-right: 10px;
+}
+.f-mr15 {
+  margin-right: 15px;
+}
+.f-mr20 {
+  margin-right: 20px;
+}
+.f-mr25 {
+  margin-right: 25px;
+}
+.f-mr30 {
+  margin-right: 30px;
+}
+.f-mr35 {
+  margin-right: 35px;
+}
+.f-mr40 {
+  margin-right: 40px;
+}
+.f-pb5 {
+  padding-bottom: 5px;
+}
+.f-pb10 {
+  padding-bottom: 10px;
+}
+.f-pb15 {
+  padding-bottom: 15px;
+}
+.f-pb20 {
+  padding-bottom: 20px;
+}
+.f-pb25 {
+  padding-bottom: 25px;
+}
+.f-pb30 {
+  padding-bottom: 30px;
+}
+.f-pb35 {
+  padding-bottom: 35px;
+}
+.f-pb40 {
+  padding-bottom: 40px;
+}
+.f-pr5 {
+  padding-right: 5px;
+}
+.f-pr10 {
+  padding-right: 10px;
+}
+.f-pr15 {
+  padding-right: 15px;
+}
+.f-pr20 {
+  padding-right: 20px;
+}
+.f-pr25 {
+  padding-right: 25px;
+}
+.f-pr30 {
+  padding-right: 30px;
+}
+.f-pr35 {
+  padding-right: 35px;
+}
+.f-pr40 {
+  padding-right: 40px;
+}
+.f-bd {
+  border: 1px solid #eeeeee;
+}
+.f-shadow {
+  box-shadow: 0 3px 10px rgba(7, 0, 2, 0.15);
+}
+.text-black {
+  color: #222222;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 14px;
+}
+html,
+body {
+  background-color: #fff;
+}
+.label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 8px 16px;
+  border-radius: 0;
+}
+.demo-box {
+  margin-bottom: 100px;
+}
+.demo-hd {
+  margin: 10px 0;
+  font-size: 30px;
+}
+.demo-box2 {
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+}
+.demo-hd2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #999;
+}
+.demo-nav {
+  position: fixed;
+}
+.demo-form h4 + div {
+  margin-bottom: 50px;
+}
