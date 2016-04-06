@@ -145,6 +145,20 @@ html,
 body {
   background-color: #fff;
 }
+.btn {
+  border-radius: 0;
+}
+.form-control {
+  height: 40px;
+  border-color: #ced3d7;
+  box-shadow: none;
+  border-radius: 0;
+}
+.form-control-feedback {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
 .label {
   display: inline-block;
   font-size: 14px;

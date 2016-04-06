@@ -1,3 +1,106 @@
+html,
+body {
+  font-family: 'Microsoft YaHei';
+}
+.m-header {
+  padding: 14px 0;
+}
+.m-header .form-group {
+  position: relative;
+}
+.m-header .form-group input {
+  width: 100%;
+  padding-left: 30px;
+}
+.m-header .form-group span {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.m-header .navbar-header {
+  margin-right: 42px;
+}
+.m-header .navbar-brand {
+  padding: 0;
+}
+.m-footer {
+  padding: 11px 0;
+  margin-bottom: 0;
+  border: none;
+  font-size: 12px;
+  background-color: #eaeaea;
+}
+.m-footer .info span {
+  margin-right: 15px;
+}
+.m-footer .link a {
+  display: inline-block;
+  padding: 0 5px;
+}
+.m-footer .fa {
+  font-size: 16px;
+  color: #272636;
+}
+.m-footer .fa:hover {
+  color: #000;
+}
+.m-footer .fa-weixin {
+  margin-left: 20px;
+}
+.m-footer .concat {
+  margin-left: 50px;
+  margin-top: 9px;
+}
+.m-footer .concat li {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+  background: url(../img/sprite-icon.png) no-repeat;
+  cursor: pointer;
+}
+.m-footer .concat li .pic {
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 150px;
+  height: 170px;
+  margin-left: -60px;
+  background-color: #398dee;
+}
+.m-footer .concat li .pic .caret {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  margin-left: -12px;
+  border-top: 12px dashed;
+  border-top: 12px solid \9;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-top-color: #398dee;
+}
+.m-footer .concat li:hover .pic {
+  display: block;
+}
+.m-footer .concat .weibo {
+  background-position: 0 0;
+}
+.m-footer .concat .weibo:hover {
+  background-position: -40px 0;
+}
+.m-footer .concat .weixin {
+  background-position: 0 -40px;
+}
+.m-footer .concat .weixin:hover {
+  background-position: -40px -40px;
+}
+.m-footer .concat .qq {
+  background-position: 0 -80px;
+}
+.m-footer .concat .qq:hover {
+  background-position: -40px -80px;
+}
 .lc-list-1 ul {
   padding: 0;
   margin: 0;
@@ -8,7 +111,7 @@
   list-style: none;
 }
 .lc-list-1 .meta {
-  height: 40px;
+  height: 50px;
 }
 .lc-list-1 .meta span {
   margin-right: 10px;
@@ -17,21 +120,26 @@
   padding-right: 20px;
 }
 .lc-list-1 .media-left img {
-  width: 150px;
-  height: 150px;
+  width: 206px;
+  height: 162px;
+  border: 1px solid #b3b3b3;
 }
 .lc-list-1 .media-heading {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 4px;
 }
 .lc-list-1 .media-heading a {
-  color: #333;
+  color: #282828;
+}
+.lc-list-1 .media-heading a:hover {
+  color: #008ad3;
+}
+.lc-list-1 .media-body p {
+  line-height: 24px;
 }
 .lc-list-1 .price {
-  color: #666;
-}
-.lc-list-1 .price span {
-  font-size: 24px;
+  color: #f16125;
+  font-size: 18px;
 }
 .lc-list-2 {
   width: 950px;
@@ -132,53 +240,6 @@
   margin-top: 20px;
   color: #777;
 }
-.m-header {
-  padding: 14px 0;
-  border-bottom: none;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.m-header .form-group {
-  position: relative;
-}
-.m-header .form-group input {
-  width: 100%;
-  padding-left: 30px;
-}
-.m-header .form-group span {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-}
-.m-header .navbar-header {
-  margin-right: 42px;
-}
-.m-header .navbar-brand {
-  padding: 0;
-}
-.m-footer {
-  padding: 11px 0;
-  margin-bottom: 0;
-  border: none;
-  font-size: 12px;
-  background-color: #eaeaea;
-}
-.m-footer .info span {
-  margin-right: 15px;
-}
-.m-footer .link a {
-  display: inline-block;
-  padding: 0 5px;
-}
-.m-footer .fa {
-  font-size: 16px;
-  color: #272636;
-}
-.m-footer .fa:hover {
-  color: #000;
-}
-.m-footer .fa-weixin {
-  margin-left: 20px;
-}
 .m-banner {
   height: 500px;
   margin-bottom: 130px;
@@ -195,6 +256,7 @@
   background-color: #fff;
 }
 .m-banner .info li {
+  position: relative;
   float: left;
   width: 33.333%;
 }
@@ -202,11 +264,92 @@
   padding: 27px 42px;
   height: 175px;
 }
+.m-banner .info .line:after {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  content: '';
+  height: 96px;
+  border-left: 1px solid #c8c8c8;
+}
+.m-banner .info .media-body {
+  text-align: right;
+}
 .m-banner .info .media-body h2 {
-  font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #282828;
 }
 .m-banner .info .media-body p {
-  margin-bottom: 5px;
+  margin-bottom: 0;
   color: #757575;
+  font-size: 14px;
+  line-height: 20px;
+}
+.m-banner .info .media-body .last {
+  margin-bottom: 6px;
+}
+.m-banner .info .media-body .link a {
+  color: #008ad3;
+}
+.m-itemList .title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.m-itemList .title span {
+  cursor: pointer;
+}
+.m-itemList .footer {
+  text-align: center;
+  padding: 28px;
+}
+.m-loginBox .line {
+  height: 87px;
+}
+.m-login {
+  position: relative;
+  width: 1100px;
+  height: 720px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.m-login .form {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  width: 250px;
+  margin-left: -125px;
+}
+.m-login .form .img {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.m-login .info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 127px;
+  border-top: 1px solid #e8e8e8;
+  background-color: #f0f0f0;
+}
+.m-login .info .col {
+  width: 50%;
+  padding: 30px 30px 20px;
+  float: left;
+}
+.m-login .info .col.br {
+  border-right: 1px solid #e8e8e8;
+}
+.m-login .info .media-left {
+  padding-right: 30px;
+}
+.m-login .info .media-heading {
+  font-size: 18px;
+  color: #a2a2a2;
+  margin-bottom: 4px;
+}
+.m-login .info p {
+  color: #a2a2a2;
+  font-size: 14px;
+  line-height: 22px;
 }
