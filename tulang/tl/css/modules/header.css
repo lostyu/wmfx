@@ -1,0 +1,9 @@
+.m-header {
+  padding: 20px 0;
+}
+.m-header h1 {
+  margin: 0;
+}
+.m-header .navbar-header {
+  margin-right: 42px;
+}

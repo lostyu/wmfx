@@ -1,0 +1,114 @@
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+.m-header {
+  padding: 20px 0;
+}
+.m-header h1 {
+  margin: 0;
+}
+.m-header .navbar-header {
+  margin-right: 42px;
+}
+.m-footer {
+  font-size: 12px;
+}
+.m-footer .navbar-text,
+.m-footer a {
+  color: #b8b8b8 !important;
+}
+.m-footer a:hover {
+  color: #282828 !important;
+}
+.m-footer .concat {
+  padding: 0;
+  margin: 0;
+  float: right;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.m-footer .concat li {
+  float: left;
+  list-style: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+  background: url(../img/sprite-icon.png) no-repeat;
+  cursor: pointer;
+}
+.m-footer .concat li .pic {
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 150px;
+  height: 170px;
+  margin-left: -60px;
+  background-color: #398dee;
+}
+.m-footer .concat li .pic .caret {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  margin-left: -12px;
+  border-top: 12px dashed;
+  border-top: 12px solid \9;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-top-color: #398dee;
+}
+.m-footer .concat li:hover .pic {
+  display: block;
+}
+.m-footer .concat a {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.m-footer .concat .weibo {
+  background-position: 0 0;
+}
+.m-footer .concat .weibo:hover {
+  background-position: -40px 0;
+}
+.m-footer .concat .weixin {
+  background-position: 0 -40px;
+}
+.m-footer .concat .weixin:hover {
+  background-position: -40px -40px;
+}
+.m-footer .concat .qq {
+  background-position: 0 -80px;
+}
+.m-footer .concat .qq:hover {
+  background-position: -40px -80px;
+}
+.m-footer .link span {
+  padding: 0 8px;
+}
+.m-footer .info span,
+.m-footer .info a {
+  padding-right: 10px;
+}
+.has-feedback2 .form-control {
+  padding-right: 12px;
+  padding-left: 42.5px;
+}
+.has-feedback2 .form-control-feedback {
+  left: 0;
+  right: auto;
+  color: #aeaeae;
+}
+.m-form-login {
+  width: 250px;
+}
+.m-form-login .logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
