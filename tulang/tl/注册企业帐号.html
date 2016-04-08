@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>注册企业帐号</title>
+    <!-- bootstap -->
+    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+    <!-- linkcloud -->
+    <!--<link rel="stylesheet" href="../css/demo.css">-->
+
+    <!-- your css -->
+    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <link rel="stylesheet" href="css/all.css"/>
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: #f7fafc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="p-wrap">
+
+    <div class="p-formBox2 f-shadow">
+        <div class="p-formBox2-hd">
+            <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
+
+            <h2 class="text"><span>|</span> 注册帐号</h2>
+        </div>
+        <div class="p-formBox2-bd">
+            <div class="p-personRegister clearfix">
+
+                <div class="col1">
+                    <h2 class="title">注册个人帐号</h2>
+
+                    <div class="form">
+                        <div class="row">
+
+                            <div class="col-md-6 col-md-offset-3">
+                                <form id="f-form-person">
+                                    <div class="form-group">
+                                        <label class="sr-only">用户名或邮箱</label>
+                                        <input name="uname" type="text" class="form-control" placeholder="用户名或邮箱">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only">验证码</label>
+
+                                        <div class="input-group">
+                                            <input name="ucode" type="text" class="form-control" placeholder="输入验证码">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">发送验证码</button>
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only">邀请码</label>
+                                        <input name="ucode2" type="text" class="form-control" placeholder="邀请码（必填）">
+                                    </div>
+                                    <p class="text-right"><a href="javascript:;">如何获得邀请码？</a></p>
+                                    <div class="form-group">
+                                        <label class="sr-only">输入密码</label>
+                                        <input id="pass1" name="upass" type="password" class="form-control" placeholder="请输入密码（不少于6位）">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only">确认密码</label>
+                                        <input name="upass2" type="password" class="form-control" placeholder="确认密码">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input name="ucheck" type="checkbox"> 点击“注册”，即表示同意并遵守
+                                        </label>
+                                        <a href="javascript:;">《图狼网用户协议》</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block">注册</button>
+                                </form>
+
+                            </div>
+                            <div class="col-md-3" style="display: none;">
+                                <div class="j-errBox"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col2">
+                    <h2 class="title active">注册企业帐号</h2>
+
+                    <div class="form">
+                        <div class="text-center">
+                            <img class="f-mb30" src="img/login-info2.png" alt=""/>
+                            <p>已有企业账号，<a href="javascript:;">我要登录</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="p-getPassForm" style="display: none;">
+                <!--  S 手机找回密码 -->
+                <div class="m-formBox">
+                    <form id="f-form-getPass">
+                        <div class="form-group">
+                            <label>注册手机号</label>
+                            <input name="utel" type="tel" class="form-control" placeholder="手机号">
+                        </div>
+                        <div class="form-group">
+                            <label>验证码</label>
+
+                            <div class="input-group">
+                                <input name="ucode" type="text" class="form-control" placeholder="输入验证码">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">发送验证码</button>
+                                        </span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">下一步</button>
+                    </form>
+                </div>
+                <!--  E 手机找回密码 -->
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- S 底部 -->
+<nav class="navbar navbar-default m-footer">
+    <div class="container">
+        <p class="navbar-text info"><span>Copyright © 2014-2016</span><a href="javascript:;">kaistart.com</a><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
+        <ul class="concat">
+            <li class="weibo"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="weixin"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="qq"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+        </ul>
+
+        <p class="navbar-text navbar-right link">
+            <a href="#">关于</a><span>|</span><a href="#">我们是谁</a><span>|</span><a href="#">帮助</a><span>|</span><a
+                href="#">用户协议</a><span>|</span><a href="#">信任与安全</a>
+        </p>
+
+    </div>
+</nav>
+<!-- E 底部 -->
+
+
+<!-- jquery -->
+<script src="libs/jquery-2.2.2/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="plugins/jquery-validation/localization/messages_zh.min.js"></script>
+
+<!-- linkcloud -->
+<script src="js/main.js"></script>
+
+<!-- your js -->
+<script src=""></script>
+</body>
+</html>

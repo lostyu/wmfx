@@ -12,99 +12,87 @@
     <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
 
     <!-- linkcloud -->
-    <link rel="stylesheet" href="css/demo.css">
+    <!--<link rel="stylesheet" href="../css/demo.css">-->
 
     <!-- your css -->
-    <link rel="stylesheet" href="css/customer.css">
+    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <link rel="stylesheet" href="css/all.css"/>
 
     <style>
         html, body {
-            background-color: #f7fafc;
+            width: 100%;
             height: 100%;
+            background-color: #f7fafc;
         }
     </style>
 </head>
 <body>
 
+<div class="p-wrap">
 
-<div class="m-wrap">
-
-    <div class="m-box f-shadow m-formBox">
-        <div class="m-box-hd">
-            <h2><a href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a> <span>找回密码</span>
-            </h2>
+    <div class="p-formBox2 f-shadow">
+        <div class="p-formBox2-hd">
+            <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
+            <h2 class="text"><span>|</span> 找回密码</h2>
         </div>
-        <div class="m-box-bd">
-            <div class="row box1">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <form class="form-horizontal">
-                        <div class="form-group f-mb25">
-                            <label for="inputPassword3" class="col-sm-2 control-label">注册手机</label>
-
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group f-mb25">
-                            <label for="inputPassword3" class="col-sm-2 control-label">验证码</label>
-
-                            <div class="col-sm-10">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">发送验证码</button>
-                                    </span>
-                                </div>
-                                <!-- /input-group -->
-                            </div>
+        <div class="p-formBox2-bd">
+            <div class="p-getPassForm">
+                <!--  S 手机找回密码 -->
+                <div class="m-formBox">
+                    <form id="f-form-getPass">
+                        <div class="form-group">
+                            <label class="sr-only">注册手机号</label>
+                            <input name="utel" type="tel" class="form-control" placeholder="手机号">
                         </div>
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary btn-w">下一步</button>
+                            <label class="sr-only">验证码</label>
+
+                            <div class="input-group">
+                                <input name="ucode" type="text" class="form-control" placeholder="输入验证码">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">发送验证码</button>
+                                        </span>
                             </div>
                         </div>
+                        <button type="submit" class="btn btn-primary btn-block">下一步</button>
                     </form>
                 </div>
-                <div class="col-md-3"></div>
+                <!--  E 手机找回密码 -->
             </div>
-
         </div>
+
     </div>
 
 </div>
 
+
 <!-- S 底部 -->
-<nav class="m-footer m-footer2">
+<nav class="navbar navbar-default m-footer">
     <div class="container">
-        <p class="navbar-text info"><span>Copyright © 2014-2016 <a class="navbar-link"
-                                                                   href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        <p class="navbar-text info"><span>Copyright © 2014-2016</span><a href="javascript:;">kaistart.com</a><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
         </p>
 
-        <ul class="nav navbar-nav navbar-right concat">
-            <li class="weibo">
+        <ul class="concat">
+            <li class="weibo"><a href="#">
                 <div class="pic"><span class="caret"></span></div>
-            </li>
-            <li class="weixin">
+            </a></li>
+            <li class="weixin"><a href="#">
                 <div class="pic"><span class="caret"></span></div>
-            </li>
-            <li class="qq">
+            </a></li>
+            <li class="qq"><a href="#">
                 <div class="pic"><span class="caret"></span></div>
-            </li>
+            </a></li>
         </ul>
 
-        <div class="navbar-text navbar-right link">
-            <a class="navbar-link" href="javascript:;">关于</a>|
-            <a class="navbar-link" href="javascript:;">我们是谁</a>|
-            <a class="navbar-link" href="javascript:;">帮助</a>|
-            <a class="navbar-link" href="javascript:;">用户协议</a>|
-            <a class="navbar-link" href="javascript:;">信任与安全</a>
-        </div>
-
+        <p class="navbar-text navbar-right link">
+            <a href="#">关于</a><span>|</span><a href="#">我们是谁</a><span>|</span><a href="#">帮助</a><span>|</span><a
+                href="#">用户协议</a><span>|</span><a href="#">信任与安全</a>
+        </p>
 
     </div>
 </nav>
 <!-- E 底部 -->
+
 
 <!-- jquery -->
 <script src="libs/jquery-2.2.2/jquery.min.js"></script>
@@ -112,10 +100,14 @@
 <!-- bootsrap -->
 <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
+<!-- plugins -->
+<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="plugins/jquery-validation/localization/messages_zh.min.js"></script>
+
 <!-- linkcloud -->
 <script src="js/main.js"></script>
 
-<!-- your js-->
+<!-- your js -->
 <script src=""></script>
 </body>
 </html>
