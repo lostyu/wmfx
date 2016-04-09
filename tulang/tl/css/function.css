@@ -97,6 +97,9 @@
 .f-pr40 {
   padding-right: 40px;
 }
+.f-p40 {
+  padding: 40px;
+}
 .f-shadow {
   box-shadow: 0 3px 10px rgba(7, 0, 2, 0.15);
 }

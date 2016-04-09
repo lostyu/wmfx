@@ -21,6 +21,11 @@ h2 {
 .form-control {
   height: 40px;
 }
+.form-control-feedback {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
 .f-pr {
   position: relative;
 }
@@ -119,6 +124,9 @@ h2 {
 }
 .f-pr40 {
   padding-right: 40px;
+}
+.f-p40 {
+  padding: 40px;
 }
 .f-shadow {
   box-shadow: 0 3px 10px rgba(7, 0, 2, 0.15);
@@ -221,6 +229,9 @@ h2 {
 .m-footer .info a {
   padding-right: 10px;
 }
+.m-footer2 {
+  margin-top: 0;
+}
 .has-feedback2 .form-control {
   padding-right: 12px;
   padding-left: 42.5px;
@@ -249,6 +260,24 @@ h2 {
 }
 .m-formBox2 .btn-w {
   width: 300px;
+}
+.m-formStep {
+  margin: 0;
+  padding: 0;
+}
+.m-formStep li {
+  float: left;
+  width: 25%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  list-style: none;
+  color: #757575;
+  background-color: #edf4f7;
+}
+.m-formStep li.active {
+  background-color: #398dee;
+  color: #fff;
 }
 .p-wrap {
   width: 100%;
@@ -341,6 +370,19 @@ h2 {
   width: 300px;
   margin: 110px auto 0;
 }
+.p-formBox3 {
+  height: auto;
+  min-height: 700px;
+}
+.p-formBox3 .p-personRegister .form {
+  height: 510px;
+  margin-bottom: 40px;
+}
+.p-formBox4 {
+  height: auto;
+  min-height: 600px;
+  margin: 85px auto 70px;
+}
 .p-formTips {
   width: 300px;
   margin: 140px auto 0;
@@ -378,4 +420,61 @@ h2 {
 }
 .p-personRegister .form {
   height: 400px;
+}
+.j-tips {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+.tipsBox {
+  width: 600px;
+  margin: 100px auto 0;
+  color: #757575;
+}
+.tipsBox .email {
+  padding-right: 20px;
+}
+.tipsBox .email span {
+  font-size: 40px;
+  color: #65a6f2;
+}
+.p-qiyeFormBox {
+  padding: 40px;
+  color: #757575;
+}
+.p-qiyeFormBox .title {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.p-qiyeFormBox .title h2 {
+  font-size: 14px;
+}
+.p-qiyeFormBox .p-qiyeFormBox-bd {
+  padding: 30px 0;
+}
+.p-qiyeFormBox .iptw {
+  width: 370px;
+}
+.p-qiyeFormBox .form-group {
+  margin-bottom: 30px;
+}
+.p-qiyeFormBox .p-errContainer {
+  display: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ececec;
+}
+.p-qiyeFormBox .p-errContainer ul {
+  margin: 0;
+  padding: 0;
+}
+.p-qiyeFormBox .p-errContainer li {
+  float: left;
+  width: 50%;
+  line-height: 30px;
+  list-style: none;
+}
+.p-qiyeFormBox .p-errContainer li span {
+  color: #ff0000;
 }

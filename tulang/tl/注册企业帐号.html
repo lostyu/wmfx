@@ -46,10 +46,18 @@
                         <div class="row">
 
                             <div class="col-md-6 col-md-offset-3">
-                                <form id="f-form-person">
-                                    <div class="form-group">
-                                        <label class="sr-only">用户名或邮箱</label>
-                                        <input name="uname" type="text" class="form-control" placeholder="用户名或邮箱">
+                                <form id="f-form-qiye" method="post">
+                                    <div class="form-group has-feedback">
+                                        <label class="sr-only">请输入邮箱地址</label>
+                                        <input name="uemail" type="text" class="form-control" placeholder="请输入邮箱地址" autocomplete="off">
+                                        <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback text-primary" aria-hidden="true"></span>
+                                        <p class=" j-tips">作为登录账号，请填写未被工作室注册，未被个人账号绑定的邮箱地址</p>
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <label class="sr-only">输入密码</label>
+                                        <input name="upass" type="password" class="form-control" placeholder="请输入密码（不少于8位）">
+                                        <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback text-primary" aria-hidden="true"></span>
+                                        <p class="j-tips">字母、数字或者英文符号，最短8位，区分大小写</p>
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only">验证码</label>
@@ -62,25 +70,14 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="sr-only">邀请码</label>
-                                        <input name="ucode2" type="text" class="form-control" placeholder="邀请码（必填）">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name="ucheck" type="checkbox" checked> 点击“注册”，即表示同意并遵守
+                                            </label>
+                                            <a href="javascript:;">《图狼网用户协议》</a>
+                                        </div>
                                     </div>
-                                    <p class="text-right"><a href="javascript:;">如何获得邀请码？</a></p>
-                                    <div class="form-group">
-                                        <label class="sr-only">输入密码</label>
-                                        <input id="pass1" name="upass" type="password" class="form-control" placeholder="请输入密码（不少于6位）">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only">确认密码</label>
-                                        <input name="upass2" type="password" class="form-control" placeholder="确认密码">
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input name="ucheck" type="checkbox"> 点击“注册”，即表示同意并遵守
-                                        </label>
-                                        <a href="javascript:;">《图狼网用户协议》</a>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-block">注册</button>
+                                    <button type="submit" class="btn btn-primary btn-block j-register">注册</button>
                                 </form>
 
                             </div>
@@ -103,29 +100,7 @@
                 </div>
 
             </div>
-            <div class="p-getPassForm" style="display: none;">
-                <!--  S 手机找回密码 -->
-                <div class="m-formBox">
-                    <form id="f-form-getPass">
-                        <div class="form-group">
-                            <label>注册手机号</label>
-                            <input name="utel" type="tel" class="form-control" placeholder="手机号">
-                        </div>
-                        <div class="form-group">
-                            <label>验证码</label>
 
-                            <div class="input-group">
-                                <input name="ucode" type="text" class="form-control" placeholder="输入验证码">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button">发送验证码</button>
-                                        </span>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">下一步</button>
-                    </form>
-                </div>
-                <!--  E 手机找回密码 -->
-            </div>
         </div>
 
     </div>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>信息登记</title>
+    <!-- bootstap -->
+    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+    <!-- linkcloud -->
+    <!--<link rel="stylesheet" href="../css/demo.css">-->
+
+    <!-- your css -->
+    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <link rel="stylesheet" href="css/all.css"/>
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: #f7fafc;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="p-formBox2 p-formBox4 f-shadow">
+        <div class="p-formBox2-hd">
+            <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
+
+            <h2 class="text"><span>|</span> 注册帐号</h2>
+        </div>
+        <div class="p-formBox2-bd">
+
+            <ul class="m-formStep clearfix">
+                <li>1.基本信息 &gt;</li>
+                <li>2.激活邮箱 &gt;</li>
+                <li class="active">3.信息登记 &gt;</li>
+                <li>4.企业信息 &gt;</li>
+            </ul>
+
+            <div class="p-qiyeFormBox">
+                <div class="title clearfix"><h2 class="pull-left">企业信息登记</h2> <span class="pull-right">咨询电话：40000000</span></div>
+
+                <div class="p-qiyeFormBox-bd">
+                    <div class="p-errContainer">
+                        <ul class="clearfix"></ul>
+                    </div>
+                    <form id="f-form-xinxi" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>企业全称</label>
+                            <div class="col-sm-10">
+                                <input name="uname" type="text" class="form-control iptw" required isPass="true">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>工商执照注册号</label>
+                            <div class="col-sm-10">
+                                <input name="uzhucehao" type="text" class="form-control iptw" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>营业执照副本</label>
+                            <div class="col-sm-10">
+                                <input name="uyingyezhizhao" type="file" required>
+                                <p class="j-tips">证件号码清晰可见</p>
+                            </div>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>公司所在地</label>
+                            <div class="col-sm-10">
+                                <div id="city">
+                                    <select class="prov"></select>
+                                    <select class="city" disabled="disabled"></select>
+                                    <select class="dist" disabled="disabled"></select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>常用地址</label>
+                            <div class="col-sm-10">
+                                <input name="uaddr" type="text" class="form-control iptw" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">资质证书名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control iptw">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>营业执照副本</label>
+                            <div class="col-sm-10">
+                                <input type="file" required>
+                                <p class="j-tips">资质名称和资质证书需一致，证书编号和主要信息需清晰可见</p>
+                                <button class="btn btn-primary" type="button">添加资质</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>联系手机</label>
+                            <div class="col-sm-10">
+                                <input type="tel" class="form-control iptw" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>验证码</label>
+                            <div class="col-sm-10">
+                                <div class="input-group iptw">
+                                    <input type="text" class="form-control" required>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">发送验证码</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary iptw">提交认证</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+<!-- S 底部 -->
+<nav class="navbar navbar-default m-footer m-footer2">
+    <div class="container">
+        <p class="navbar-text info"><span>Copyright © 2014-2016</span><a href="javascript:;">kaistart.com</a><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
+        <ul class="concat">
+            <li class="weibo"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="weixin"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="qq"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+        </ul>
+
+        <p class="navbar-text navbar-right link">
+            <a href="#">关于</a><span>|</span><a href="#">我们是谁</a><span>|</span><a href="#">帮助</a><span>|</span><a
+                href="#">用户协议</a><span>|</span><a href="#">信任与安全</a>
+        </p>
+
+    </div>
+</nav>
+<!-- E 底部 -->
+
+
+<!-- jquery -->
+<script src="libs/jquery-2.2.2/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="plugins/jquery-validation/localization/messages_zh.min.js"></script>
+
+<script src="plugins/jquery-city/jquery.cityselect.js"></script>
+
+<!-- linkcloud -->
+<script src="js/main.js"></script>
+
+<!-- your js -->
+<script src=""></script>
+</body>
+</html>

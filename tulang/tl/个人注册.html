@@ -30,14 +30,14 @@
 
 <div class="p-wrap">
 
-    <div class="p-formBox2 f-shadow">
+    <div class="p-formBox2 p-formBox3 f-shadow">
         <div class="p-formBox2-hd">
             <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
 
             <h2 class="text"><span>|</span> 注册帐号</h2>
         </div>
         <div class="p-formBox2-bd">
-            <div class="p-personRegister clearfix">
+            <div class="p-personRegister  clearfix">
 
                 <div class="col1">
                     <h2 class="title active">注册个人帐号</h2>
@@ -74,11 +74,13 @@
                                         <label class="sr-only">确认密码</label>
                                         <input name="upass2" type="password" class="form-control" placeholder="确认密码">
                                     </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input name="ucheck" type="checkbox"> 点击“注册”，即表示同意并遵守
-                                        </label>
-                                        <a href="javascript:;">《图狼网用户协议》</a>
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name="ucheck" type="checkbox" checked> 点击“注册”，即表示同意并遵守
+                                            </label>
+                                            <a href="javascript:;">《图狼网用户协议》</a>
+                                        </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-block">注册</button>
                                 </form>
@@ -104,29 +106,7 @@
                 </div>
 
             </div>
-            <div class="p-getPassForm" style="display: none;">
-                <!--  S 手机找回密码 -->
-                <div class="m-formBox">
-                    <form id="f-form-getPass">
-                        <div class="form-group">
-                            <label>注册手机号</label>
-                            <input name="utel" type="tel" class="form-control" placeholder="手机号">
-                        </div>
-                        <div class="form-group">
-                            <label>验证码</label>
 
-                            <div class="input-group">
-                                <input name="ucode" type="text" class="form-control" placeholder="输入验证码">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button">发送验证码</button>
-                                        </span>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">下一步</button>
-                    </form>
-                </div>
-                <!--  E 手机找回密码 -->
-            </div>
         </div>
 
     </div>

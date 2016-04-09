@@ -27,3 +27,21 @@
 .m-formBox2 .btn-w {
   width: 300px;
 }
+.m-formStep {
+  margin: 0;
+  padding: 0;
+}
+.m-formStep li {
+  float: left;
+  width: 25%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  list-style: none;
+  color: #757575;
+  background-color: #edf4f7;
+}
+.m-formStep li.active {
+  background-color: #398dee;
+  color: #fff;
+}
