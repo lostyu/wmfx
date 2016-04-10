@@ -214,6 +214,94 @@
 
 
 
+
+
+
+
+
+    <!-- 表单验证 -->
+    <div class="box">
+        <div id="myerror"></div>
+        <form id="f-form-xinxi" class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><span class="text-danger">*</span>企业全称</label>
+                <div class="col-sm-10">
+                    <input name="uname" type="text" class="form-control iptw validate[required]" data-prompt-target="myerror">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><span class="text-danger">*</span>工商执照注册号</label>
+                <div class="col-sm-10">
+                    <input name="uzhucehao" type="text" class="form-control iptw validate[required]">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><span class="text-danger">*</span>营业执照副本</label>
+                <div class="col-sm-10">
+                    <input name="uyingyezhizhao" type="file">
+                    <p class="j-tips">证件号码清晰可见</p>
+                </div>
+            </div>
+            <div class="form-group form-inline">
+                <label class="col-sm-2 control-label"><span class="text-danger">*</span>公司所在地</label>
+                <div class="col-sm-10">
+                    <div id="city">
+                        <select class="prov"></select>
+                        <select class="city" disabled="disabled"></select>
+                        <select class="dist" disabled="disabled"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><span class="text-danger">*</span>常用地址</label>
+                <div class="col-sm-10">
+                    <input name="uaddr" type="text" class="form-control iptw">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">资质证书名称</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control iptw">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><span class="text-danger">*</span>营业执照副本</label>
+                <div class="col-sm-10">
+                    <input type="file">
+                    <p class="j-tips">资质名称和资质证书需一致，证书编号和主要信息需清晰可见</p>
+                    <button class="btn btn-primary" type="button">添加资质</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><span class="text-danger">*</span>联系手机</label>
+                <div class="col-sm-10">
+                    <input type="tel" class="form-control iptw">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><span class="text-danger">*</span>验证码</label>
+                <div class="col-sm-10">
+                    <div class="input-group iptw">
+                        <input type="text" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">发送验证码</button>
+                                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary iptw">提交认证</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
 </div>
 
 
@@ -229,6 +317,10 @@
 
 <script src="../plugins/jquery-city/city.min.js"></script>
 <script src="../plugins/jquery-city/jquery.cityselect.js"></script>
+
+<link rel="stylesheet" href="../plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="../plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="../plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
 <!-- linkcloud -->
 <script src="../js/main.js"></script>
@@ -291,6 +383,24 @@
         });
     });
 
+
+
+
+
+
+    $('#f-form-xinxi').validationEngine({
+        promptPosition: 'inline',
+        addPromptClass: 'formError-noArrow formError-small',
+        showOneMessage: true
+
+    });
+
+    $('#f-form-xinxi').validationEngine('showPrompt','提示内容','load');
+//    'formError-noArrow' -- 无箭头样式
+//    'formError-text' -- 纯文字样式
+//    'formError-small' -- 精简版样式
+//    'formError-white' -- 白色版样式
+//    可以叠加使用，如：addPromptClass: 'formError-noArrow formError-small'
 </script>
 </body>
 </html>

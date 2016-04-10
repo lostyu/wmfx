@@ -15,6 +15,9 @@
   -o-box-pack: center;
   box-pack: center;
 }
+.iptw {
+  width: 370px;
+}
 .p-formBox {
   position: relative;
   width: 1100px;
@@ -172,9 +175,6 @@
 .p-qiyeFormBox .p-qiyeFormBox-bd {
   padding: 30px 0;
 }
-.p-qiyeFormBox .iptw {
-  width: 370px;
-}
 .p-qiyeFormBox .form-group {
   margin-bottom: 30px;
 }
@@ -196,4 +196,30 @@
 }
 .p-qiyeFormBox .p-errContainer li span {
   color: #ff0000;
+}
+.p-box {
+  width: 1100px;
+  margin: 0 auto;
+  border: 1px solid #dce0e2;
+}
+.p-box .p-box-hd {
+  padding: 30px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.p-box .p-box-hd h2 {
+  float: left;
+}
+.p-box .p-box-hd span {
+  float: right;
+}
+.p-box .p-box-bd .tips {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #f4f5f9;
+}
+.p-box .p-box-bd .tips .media-left {
+  padding-right: 20px;
+}
+.p-box .p-box-bd .tips .media-left .glyphicon {
+  font-size: 30px;
 }

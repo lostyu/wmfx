@@ -9,6 +9,7 @@ a:hover {
 html,
 body {
   font-family: "Microsoft YaHei";
+  background-color: #f7fafc;
 }
 h2 {
   font-size: 18px;
@@ -128,6 +129,9 @@ h2 {
 .f-p40 {
   padding: 40px;
 }
+.f-bg {
+  background-color: #fff;
+}
 .f-shadow {
   box-shadow: 0 3px 10px rgba(7, 0, 2, 0.15);
 }
@@ -143,6 +147,9 @@ h2 {
 }
 .m-header .navbar-header {
   margin-right: 42px;
+}
+.m-headerSpace {
+  height: 117px;
 }
 .m-footer {
   height: 70px;
@@ -295,6 +302,9 @@ h2 {
   -moz-box-pack: center;
   -o-box-pack: center;
   box-pack: center;
+}
+.iptw {
+  width: 370px;
 }
 .p-formBox {
   position: relative;
@@ -453,9 +463,6 @@ h2 {
 .p-qiyeFormBox .p-qiyeFormBox-bd {
   padding: 30px 0;
 }
-.p-qiyeFormBox .iptw {
-  width: 370px;
-}
 .p-qiyeFormBox .form-group {
   margin-bottom: 30px;
 }
@@ -477,4 +484,30 @@ h2 {
 }
 .p-qiyeFormBox .p-errContainer li span {
   color: #ff0000;
+}
+.p-box {
+  width: 1100px;
+  margin: 0 auto;
+  border: 1px solid #dce0e2;
+}
+.p-box .p-box-hd {
+  padding: 30px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.p-box .p-box-hd h2 {
+  float: left;
+}
+.p-box .p-box-hd span {
+  float: right;
+}
+.p-box .p-box-bd .tips {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #f4f5f9;
+}
+.p-box .p-box-bd .tips .media-left {
+  padding-right: 20px;
+}
+.p-box .p-box-bd .tips .media-left .glyphicon {
+  font-size: 30px;
 }
