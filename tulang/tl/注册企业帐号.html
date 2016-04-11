@@ -49,21 +49,21 @@
                                 <form id="f-form-qiye" method="post">
                                     <div class="form-group has-feedback">
                                         <label class="sr-only">请输入邮箱地址</label>
-                                        <input name="uemail" type="text" class="form-control" placeholder="请输入邮箱地址" autocomplete="off">
+                                        <input name="uemail" type="text" class="form-control validate[required, custom[email], ajax[r_ajaxCheckUname]]" placeholder="请输入邮箱地址" autocomplete="off">
                                         <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback text-primary" aria-hidden="true"></span>
                                         <p class=" j-tips">作为登录账号，请填写未被工作室注册，未被个人账号绑定的邮箱地址</p>
                                     </div>
                                     <div class="form-group has-feedback">
                                         <label class="sr-only">输入密码</label>
-                                        <input name="upass" type="password" class="form-control" placeholder="请输入密码（不少于8位）">
+                                        <input name="upass" type="password" class="form-control validate[required, custom[r_passWord]]" placeholder="请输入密码（不少于6位）">
                                         <span style="display: none;" class="glyphicon glyphicon-ok form-control-feedback text-primary" aria-hidden="true"></span>
-                                        <p class="j-tips">字母、数字或者英文符号，最短8位，区分大小写</p>
+                                        <p class="j-tips">字母、数字或者英文符号，最短6位</p>
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only">验证码</label>
 
                                         <div class="input-group">
-                                            <input name="ucode" type="text" class="form-control" placeholder="输入验证码">
+                                            <input name="ucode" type="text" class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="输入验证码" data-prompt-position="centerRight:100,5">
                                         <span class="input-group-btn">
                                             <button class="btn btn-default" type="button">发送验证码</button>
                                         </span>
@@ -143,8 +143,9 @@
 <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="plugins/jquery-validation/localization/messages_zh.min.js"></script>
+<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>

@@ -48,14 +48,14 @@
                             <div class="col-md-6 col-md-offset-3">
                                 <form id="f-form-person">
                                     <div class="form-group">
-                                        <label class="sr-only">用户名或邮箱</label>
-                                        <input name="uname" type="text" class="form-control" placeholder="用户名或邮箱">
+                                        <label class="sr-only">请输入手机号/邮箱</label>
+                                        <input name="uname" type="text" class="form-control validate[required, custom[r_phoneOrEmail]]" placeholder="请输入手机号/邮箱">
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only">验证码</label>
 
                                         <div class="input-group">
-                                            <input name="ucode" type="text" class="form-control" placeholder="输入验证码">
+                                            <input name="ucode" type="text" class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="输入验证码" data-prompt-position="centerRight:100,5">
                                         <span class="input-group-btn">
                                             <button class="btn btn-default" type="button">发送验证码</button>
                                         </span>
@@ -63,21 +63,21 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only">邀请码</label>
-                                        <input name="ucode2" type="text" class="form-control" placeholder="邀请码（必填）">
+                                        <input name="ucode2" type="text" class="form-control validate[required]" placeholder="邀请码（必填）">
                                     </div>
                                     <p class="text-right"><a href="javascript:;">如何获得邀请码？</a></p>
                                     <div class="form-group">
                                         <label class="sr-only">输入密码</label>
-                                        <input id="pass1" name="upass" type="password" class="form-control" placeholder="请输入密码（不少于6位）">
+                                        <input id="pass1" name="upass" type="password" class="form-control validate[required, custom[r_passWord]]" placeholder="请输入密码（不少于6位）">
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only">确认密码</label>
-                                        <input name="upass2" type="password" class="form-control" placeholder="确认密码">
+                                        <input name="upass2" type="password" class="form-control validate[required, equals[pass1]]" placeholder="确认密码">
                                     </div>
                                     <div class="form-group">
                                         <div class="checkbox">
                                             <label>
-                                                <input name="ucheck" type="checkbox" checked> 点击“注册”，即表示同意并遵守
+                                                <input name="ucheck" type="checkbox" checked class="validate[required]" data-prompt-position="centerRight:240,5"> 点击“注册”，即表示同意并遵守
                                             </label>
                                             <a href="javascript:;">《图狼网用户协议》</a>
                                         </div>
@@ -149,8 +149,9 @@
 <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="plugins/jquery-validation/localization/messages_zh.min.js"></script>
+<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>

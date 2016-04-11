@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>信息登记</title>
+    <title>工作室详情</title>
     <!-- bootstap -->
     <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
 
@@ -37,8 +37,8 @@
             <ul class="m-formStep clearfix">
                 <li>1.基本信息 &gt;</li>
                 <li>2.激活邮箱 &gt;</li>
-                <li class="active">3.信息登记 &gt;</li>
-                <li>4.企业信息 &gt;</li>
+                <li>3.信息登记 &gt;</li>
+                <li class="active">4.企业信息 &gt;</li>
             </ul>
 
             <div class="p-qiyeFormBox">
@@ -61,81 +61,92 @@
 
 
 
-                    <form id="f-form-xinxi" class="form-horizontal">
+                    <form id="f-form-cj" class="form-horizontal">
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>企业全称</label>
+                            <label class="col-sm-2 control-label">企业简称</label>
                             <div class="col-sm-10">
                                 <input name="uname" type="text" class="form-control iptw validate[required]">
+                                <p class="help-block">工作室名字创建后不可修改</p>
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>工商执照注册号</label>
-                            <div class="col-sm-10">
-                                <input name="uzhucehao" type="text" class="form-control iptw validate[required]">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>营业执照副本</label>
+                            <label class="col-sm-2 control-label">LOGO</label>
                             <div class="col-sm-10">
                                 <div class="f-pr"><input type="hidden" class="validate[required]" data-prompt-position="inline"></div>
                                 <ul class="list-unstyled list-inline j-uploadImgBox"></ul>
                                 <div id="j-upload1"></div>
                                 <!--<input name="uyingyezhizhao" type="file">-->
-                                <p class="j-tips">证件号码清晰可见</p>
+                                <p class="j-tips">2M以内，每月有3次修改机会</p>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">一句话简介</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control iptw validate[required]" style="width: 500px;">
+                                <p class="help-block">每月有3次修改机会</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">擅长专业</label>
+                            <div class="col-sm-10">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox1" value="option1" checked> 规划
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox2" value="option2"> 建筑
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 给排水
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 园林
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 电气
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 结构
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 隧道
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 桥梁
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 道路
+                                </label>
+                                <p class="help-block">每年有1次修改机会</p>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">详细描述</label>
+                            <div class="col-sm-10">
+                                <textarea rows="5" class="form-control" style="width: 500px;"></textarea>
+                            </div>
+                        </div>
+
+
                         <div class="form-group form-inline">
-                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>公司所在地</label>
+                            <label class="col-sm-2 control-label">地理位置</label>
                             <div class="col-sm-10">
                                 <div id="city">
                                     <select class="prov"></select>
                                     <select class="city" disabled="disabled"></select>
                                     <select class="dist" disabled="disabled"></select>
                                 </div>
+                                <p class="help-block">创建后不可以修改</p>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>常用地址</label>
-                            <div class="col-sm-10">
-                                <input name="uaddr" type="text" class="form-control iptw validate[required]">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">资质证书名称</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control iptw">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>营业执照副本</label>
-                            <div class="col-sm-10">
-                                <div class="f-pr"><input type="hidden" class="validate[required]" data-prompt-position="inline"></div>
-                                <ul class="list-unstyled list-inline j-uploadImgBox"></ul>
-                                <div id="j-upload2"></div>
-                                <!--<input name="uyingyezhizhao" type="file">-->
-                                <p class="j-tips">资质名称和资质证书需一致，证书编号和主要信息需清晰可见</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>联系手机</label>
-                            <div class="col-sm-10">
-                                <input type="tel" class="form-control iptw  validate[required, custom[r_phone]]">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>验证码</label>
-                            <div class="col-sm-10">
-                                <div class="input-group iptw">
-                                    <input name="ucode" type="text" class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="输入验证码" data-prompt-position="centerRight:100,5">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">发送验证码</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary btn-w">提交认证</button>
+                                <button type="submit" class="btn btn-primary btn-w">确认创建</button>
                             </div>
                         </div>
                     </form>

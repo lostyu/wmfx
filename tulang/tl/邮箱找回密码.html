@@ -42,13 +42,13 @@
                     <form id="f-form-getPass2">
                         <div class="form-group">
                             <label class="sr-only">用户名或邮箱</label>
-                            <input name="utel" type="tel" class="form-control" placeholder="用户名或邮箱">
+                            <input name="utel" type="tel" class="form-control validate[required]" placeholder="用户名或邮箱">
                         </div>
                         <div class="form-group">
                             <label class="sr-only">验证码</label>
 
                             <div class="input-group">
-                                <input name="ucode" type="text" class="form-control" placeholder="输入验证码">
+                                <input name="ucode" type="text" class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="输入验证码" data-prompt-position="centerRight:100,5">
                                         <span class="input-group-btn">
                                             <button class="btn btn-default" type="button">发送验证码</button>
                                         </span>
@@ -101,8 +101,9 @@
 <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="plugins/jquery-validation/localization/messages_zh.min.js"></script>
+<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>

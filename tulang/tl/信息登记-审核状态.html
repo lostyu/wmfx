@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>信息登记</title>
+    <title>信息登记-审核状态</title>
     <!-- bootstap -->
     <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
 
@@ -46,18 +46,10 @@
 
                 <div class="p-qiyeFormBox-bd">
 
-                    <!--  错误提示 -->
-                    <div class="p-errContainer" style="display: -block;">
-                        <ul class="clearfix">
-                            <li>fdsf</li>
-                            <li>fdsf</li>
-                            <li>fdsf</li>
-                            <li>fdsf</li>
-                        </ul>
+
+                    <div class="p-tips">
+                        您的信息正在审核中，随后将通知您！
                     </div>
-                    <!--<div class="p-tips">-->
-                        <!--您的信息正在审核中，随后将通知您！-->
-                    <!--</div>-->
 
 
 
@@ -65,77 +57,62 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label"><span class="text-danger">*</span>企业全称</label>
                             <div class="col-sm-10">
-                                <input name="uname" type="text" class="form-control iptw validate[required]">
+                                <input name="uname" type="text" class="form-control iptw" value="重庆市风物闲美科技有限公司" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label"><span class="text-danger">*</span>工商执照注册号</label>
                             <div class="col-sm-10">
-                                <input name="uzhucehao" type="text" class="form-control iptw validate[required]">
+                                <input name="uzhucehao" type="text" class="form-control iptw" value="46579656234683125" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label"><span class="text-danger">*</span>营业执照副本</label>
                             <div class="col-sm-10">
-                                <div class="f-pr"><input type="hidden" class="validate[required]" data-prompt-position="inline"></div>
-                                <ul class="list-unstyled list-inline j-uploadImgBox"></ul>
-                                <div id="j-upload1"></div>
-                                <!--<input name="uyingyezhizhao" type="file">-->
+                                <div>
+                                    <img width="200" height="200" src="" alt=""/>
+                                </div>
                                 <p class="j-tips">证件号码清晰可见</p>
                             </div>
                         </div>
-                        <div class="form-group form-inline">
+                        <div class="form-group">
                             <label class="col-sm-2 control-label"><span class="text-danger">*</span>公司所在地</label>
                             <div class="col-sm-10">
-                                <div id="city">
-                                    <select class="prov"></select>
-                                    <select class="city" disabled="disabled"></select>
-                                    <select class="dist" disabled="disabled"></select>
-                                </div>
+
+                                <input type="text" class="form-control iptw" value="重庆市渝北区新南路11号人和天地4栋3单元302" disabled>
+
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label"><span class="text-danger">*</span>常用地址</label>
                             <div class="col-sm-10">
-                                <input name="uaddr" type="text" class="form-control iptw validate[required]">
+                                <input type="text" class="form-control iptw" value="重庆市渝北区新南路11号人和天地4栋3单元302" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">资质证书名称</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control iptw">
+                                <input type="text" class="form-control iptw" value="重庆市风物闲美科技有限公司" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label"><span class="text-danger">*</span>营业执照副本</label>
                             <div class="col-sm-10">
-                                <div class="f-pr"><input type="hidden" class="validate[required]" data-prompt-position="inline"></div>
-                                <ul class="list-unstyled list-inline j-uploadImgBox"></ul>
-                                <div id="j-upload2"></div>
-                                <!--<input name="uyingyezhizhao" type="file">-->
+                                <div>
+                                    <img width="200" height="200" src="" alt=""/>
+                                </div>
                                 <p class="j-tips">资质名称和资质证书需一致，证书编号和主要信息需清晰可见</p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label"><span class="text-danger">*</span>联系手机</label>
                             <div class="col-sm-10">
-                                <input type="tel" class="form-control iptw  validate[required, custom[r_phone]]">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="text-danger">*</span>验证码</label>
-                            <div class="col-sm-10">
-                                <div class="input-group iptw">
-                                    <input name="ucode" type="text" class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="输入验证码" data-prompt-position="centerRight:100,5">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">发送验证码</button>
-                                    </span>
-                                </div>
+                                <input type="text" class="form-control iptw" value="15023361515" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary btn-w">提交认证</button>
+                                <button type="submit" class="btn btn-primary btn-w">下一步</button>
                             </div>
                         </div>
                     </form>
@@ -197,6 +174,21 @@
 <script src="js/main.js"></script>
 
 <!-- your js -->
-<script src=""></script>
+<script>
+    $(function() {
+        var aElements = $('#f-form-xinxi').get(0).elements;
+
+
+        for(var i=0;i<aElements.length;i++){
+            aElements[i].disabled = true;
+        }
+
+        var  $select = $('#city').find('select');
+
+        setTimeout(function(){
+            $select.attr('disabled', true);
+        }, 2000);
+    });
+</script>
 </body>
 </html>

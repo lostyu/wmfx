@@ -48,7 +48,7 @@
 
 
                                         <label class="control-label sr-only">新密码</label>
-                                        <input id="pass1" name="upass" type="password" class="form-control" placeholder="新密码">
+                                        <input id="pass1" name="upass" type="password" class="form-control validate[required]" placeholder="新密码">
 
 
 
@@ -57,7 +57,7 @@
                                     <label class="control-label sr-only">确认密码</label>
 
 
-                                        <input name="upass2" type="password" class="form-control" placeholder="确认密码">
+                                        <input name="upass2" type="password" class="form-control validate[required, equals[pass1]]" placeholder="确认密码">
 
 
                                 </div>
@@ -65,7 +65,7 @@
                                     <label class="control-label sr-only">验证码</label>
 
                                         <div class="input-group">
-                                            <input name="ucode" type="text" class="form-control" placeholder="输入验证码">
+                                            <input name="ucode" type="text" class="form-control validate[required, ajax[r_ajaxImgCode]]" placeholder="输入验证码" data-prompt-position="centerRight:100,5">
                                             <span class="input-group-addon" id="basic-addon2" style="padding: 0"><img width="100" height="38" src="http://reg.email.163.com/mailregAll/regvf1/verifyCodeImgF.jsp?env=488381217144&amp;type=en&amp;t=1333003692444" alt=""></span>
                                         </div>
 
@@ -126,8 +126,9 @@
 <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="plugins/jquery-validation/localization/messages_zh.min.js"></script>
+<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>

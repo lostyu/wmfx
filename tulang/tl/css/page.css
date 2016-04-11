@@ -181,8 +181,9 @@
 .p-qiyeFormBox .p-errContainer {
   display: none;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background-color: #ececec;
+  color: #ff0000;
 }
 .p-qiyeFormBox .p-errContainer ul {
   margin: 0;
@@ -196,6 +197,12 @@
 }
 .p-qiyeFormBox .p-errContainer li span {
   color: #ff0000;
+}
+.p-qiyeFormBox .p-tips {
+  background-color: #daebff;
+  color: #282828;
+  padding: 10px;
+  margin-bottom: 30px;
 }
 .p-box {
   width: 1100px;
