@@ -227,6 +227,51 @@
 .p-box .p-box-bd .tips .media-left {
   padding-right: 20px;
 }
-.p-box .p-box-bd .tips .media-left .glyphicon {
+.p-box .p-box-bd .tips .glyphicon {
   font-size: 30px;
+}
+.p-box .p-box-bd .form-box {
+  padding: 20px 0;
+}
+.p-userSetting .u-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.p-userSetting .u-nav .active a {
+  background-color: #fff;
+  color: #398dee;
+}
+.p-userSetting .u-nav li {
+  width: 25%;
+  float: left;
+  background-color: #edf4f7;
+}
+.p-userSetting .u-nav a {
+  display: block;
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #757575;
+  text-decoration: none;
+}
+.p-userSetting .form-text {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  margin-left: 2em;
+  color: #bec3c7;
+}
+.p-userSetting .line {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #dce0e2;
+}
+.p-userSetting .j-tagBox span {
+  margin-right: 10px;
+}
+.p-userSetting .j-liveBox li input,
+.p-userSetting .j-teachBox li input {
+  margin-right: 10px;
 }

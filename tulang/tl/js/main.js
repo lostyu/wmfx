@@ -26,7 +26,7 @@ $(function () {
             'alertText': '* 请输入手机号或者邮箱'
         };
 
-        $.validationEngineLanguage.allRules.r_ajaxCheckUname= {
+        $.validationEngineLanguage.allRules.r_ajaxCheckUname = {
             'url': 'phpajax/ajaxValidateFieldUser.php', /* 验证程序地址 */
             'extraData': '', /* 额外参数 */
             'alertTextOk': '验证通过时的提示信息',
@@ -49,7 +49,6 @@ $(function () {
             'alertText': '验证不通过时的提示信息',
             'alertTextLoad': '正在验证时的提示信息'
         };
-
 
 
         // 表单提交默认设置
@@ -88,14 +87,13 @@ $(function () {
         }
 
 
-
         // 城市级联
-        if($('#city').length){
+        if ($('#city').length) {
             $("#city").citySelect({
-                url:"plugins/jquery-city/city.min.js",
-                prov:"重庆", //省份
-                city:"渝中区", //城市
-                nodata:"none" //当子集无数据时，隐藏select
+                url: "plugins/jquery-city/city.min.js",
+                prov: "重庆", //省份
+                city: "渝中区", //城市
+                nodata: "none" //当子集无数据时，隐藏select
             });
 
             $('#city select').addClass('form-control');
@@ -268,8 +266,6 @@ $(function () {
     })();
 
 
-
-
     // 个人注册
     (function () {
         $('#f-form-person').validationEngine();
@@ -351,13 +347,13 @@ $(function () {
                     debug: true,
 
                     rules: {
-                        uemail: {required:true, email:true},
+                        uemail: {required: true, email: true},
                         upass: "required",
                         ucode: "required",
                         ucheck: "required"
                     },
                     messages: {
-                        uemail: {required:"请输入邮箱地址", email:"请输入正确的邮箱"},
+                        uemail: {required: "请输入邮箱地址", email: "请输入正确的邮箱"},
                         upass: "请输入密码",
                         ucode: "请输入验证码",
                         ucheck: "同意图狼网用户协议"
@@ -370,10 +366,10 @@ $(function () {
                     },
 
                     success: function (e) {
-                        if(e.closest(".form-group").hasClass('has-feedback')){
+                        if (e.closest(".form-group").hasClass('has-feedback')) {
                             e.closest(".form-group").removeClass("has-error").addClass("success");
                             //$(e).parent().find('.form-control-feedback').show();
-                        }else{
+                        } else {
                             e.closest(".form-group").removeClass("has-error");
                         }
 
@@ -411,7 +407,7 @@ $(function () {
             showUploadedPercent: false,//是否实时显示上传的百分比，如20%
             showUploadedSize: false,
             removeTimeout: 9999999,
-            buttonText:'上传图片',//上传按钮上的文字
+            buttonText: '上传图片',//上传按钮上的文字
             uploader: 'http://www.zcxf.com/admin/upload/upload',
             onUploadStart: function () {
                 console.log('start');
@@ -456,7 +452,7 @@ $(function () {
             showUploadedPercent: false,//是否实时显示上传的百分比，如20%
             showUploadedSize: false,
             removeTimeout: 9999999,
-            buttonText:'上传图片',//上传按钮上的文字
+            buttonText: '上传图片',//上传按钮上的文字
             uploader: 'http://www.zcxf.com/admin/upload/upload',
             onUploadStart: function () {
                 console.log('start');
@@ -515,8 +511,6 @@ $(function () {
                     focusInvalid: false,
 
 
-
-
                     //rules: {
                     //    uemail: {required:true, email:true},
                     //    upass: "required",
@@ -551,13 +545,160 @@ $(function () {
                         }
 
 
-
                     }
 
                 });
 
             }
         }
+
+    })();
+
+
+    // 个人认证
+    (function () {
+        $('#f-form-grrz').validationEngine({
+            validateNonVisibleFields: true, // 验证隐藏表单
+            binded: false,   // 提交时验证
+            autoHidePrompt: true,   // 自动隐藏提示信息
+            autoHideDelay: 5000,
+            showOneMessage: false,
+            scroll: false
+        });
+    })();
+
+
+    // 个人设置-基本资料
+    (function () {
+        var $form = $('#f-form-userSetting-base');
+
+        // 添加标签
+        var $tagBox = $form.find('.j-tagBox');
+        var $tagBtn = $form.find('.j-addTag');
+        var $tagIpt = $form.find('.j-tagIpt');
+        var tagLen = 5;
+        var curLen = 0;
+
+        $tagBtn.click(function () {
+            curLen = $tagBox.children().length;
+            var _str = $.trim($tagIpt.val());
+
+            if(_str.length >0 ){
+                if(curLen < tagLen){
+                    var $label = $('<span class="label label-info">' + _str + '</span> ');
+                    $tagBox.show().append($label);
+                    $tagIpt.val('');
+                }
+            }
+        });
+
+
+        // 添加工作地
+        var $placeBox = $form.find('.j-placeBox');
+        var $placeBtn = $form.find('.j-addPlace');
+        var $placeIpt = $form.find('.j-placeIpt');
+
+        $placeBtn.click(function() {
+            var _str = $.trim( $placeIpt.val() );
+            if(_str.length > 0){
+                var $li = $('<li>'+ _str +'</li>');
+                $placeBox.show().append($li);
+                $placeIpt.val('');
+            }
+        });
+
+
+        // 职业经历
+        var $liveBox = $form.find('.j-liveBox');
+        var $liveBtn = $form.find('.j-addLive');
+        var curLiveLen = 0;
+
+        $liveBtn.click(function() {
+            curLiveLen++;
+
+            var _str = $('<li class="f-mb10">'+
+                '<input name="lives['+ curLiveLen +'][company]" type="text" class="form-control" placeholder="公司或组织名称">'+
+                '<input name="lives['+ curLiveLen +'][job]" type="text" class="form-control" placeholder="你的职位（选填）">'+
+                '<a href="javascript:;"><span class="glyphicon glyphicon-remove"></span></a>'+
+            '</li>');
+
+            $liveBox.append(_str);
+
+        });
+
+        $liveBox.click(function(e) {
+            var $target = $(e.target);
+            if(e.target.nodeName.toLowerCase() == 'span'){
+                $target.parents('li').remove();
+            }
+        });
+
+
+
+
+        // 教育经历
+        var $teachBox = $form.find('.j-teachBox');
+        var $teachBtn = $form.find('.j-addTeach');
+        var curTeachLen = 0;
+
+        $teachBtn.click(function() {
+            curTeachLen++;
+
+            var _str = $('<li class="f-mb10">'+
+                '<input name="teach['+ curTeachLen +'][school]" type="text" class="form-control" placeholder="学校或教育机构名称">'+
+                '<input name="teach['+ curTeachLen +'][specialty]" type="text" class="form-control" placeholder="专业方向（选填）">'+
+                '<a href="javascript:;"><span class="glyphicon glyphicon-remove"></span></a>'+
+                '</li>');
+
+            $teachBox.append(_str);
+
+        });
+
+        $teachBox.click(function(e) {
+            var $target = $(e.target);
+            if(e.target.nodeName.toLowerCase() == 'span'){
+                $target.parents('li').remove();
+            }
+        });
+
+
+
+
+        function getAllTags() {
+            var sTags = '';
+            $tagBox.children().each(function(index, elem) {
+                sTags += $(this).html() + ',';
+            });
+
+            if(sTags.length>0){
+                sTags = sTags.substring(0, sTags.length-1);
+            }
+            return sTags;
+        }
+
+
+        var $btnSave = $('.j-btnSave');
+
+        $btnSave.click(function() {
+            var seri = $form.serialize();
+            //console.log(getAllTags());
+            console.log(seri);
+
+            //$.post(
+            //    // 接收数据的PHP页面
+            //    url : 'action.php',
+            //    // 传给PHP的数据，多个参数用&连接或者使用json格式数据：{a:'value1',b:'value2'}
+            //    data : "a=value1&b=value2",
+            //    function(msg){
+            //        // 这里是请求发送成功后的回调函数。
+            //        // msg是返回的数据，数据类型在type参数里定义！
+            //    },
+            //    // 默认返回字符串，设置值等于json则返回json数据
+            //    type:'json',
+            //)
+
+            //$form.submit();
+        });
 
     })();
 });

@@ -1,5 +1,6 @@
 .m-header {
   padding: 20px 0;
+  background-color: #384858;
 }
 .m-header h1 {
   margin: 0;
@@ -8,5 +9,5 @@
   margin-right: 42px;
 }
 .m-headerSpace {
-  height: 117px;
+  height: 137px;
 }

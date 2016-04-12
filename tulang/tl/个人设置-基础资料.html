@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人设置-基础资料</title>
+    <!-- bootstap -->
+    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+    <!-- linkcloud -->
+    <!--<link rel="stylesheet" href="../css/demo.css">-->
+
+    <!-- your css -->
+    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <link rel="stylesheet" href="css/all.css"/>
+
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top m-header">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <h1><a href="#"><img src="img/logo.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">了解我们</a></li>
+                <li><a href="#">设计机构</a></li>
+                <li><a href="#">寻找任务</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">注册</a></li>
+                <li><a href="#">登陆</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group has-feedback has-feedback2">
+                    <input type="text" class="form-control" placeholder="1623,32 个项目"/>
+                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">发布任务</button>
+            </form>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<div class="m-headerSpace"></div>
+
+<div class="container f-mb40">
+
+    <div class="p-userSetting">
+        <div class="p-box f-bg">
+            <div class="p-box-hd clearfix">
+                <h2>个人设置</h2>
+            </div>
+            <div class="p-box-bd">
+
+                <ul class="u-nav clearfix">
+                    <li class="active"><a href="">基本资料</a></li>
+                    <li><a href="">账号和密码</a></li>
+                    <li><a href="">绑定微信</a></li>
+                    <li><a href="">消息和好友</a></li>
+                </ul>
+
+                <div class="form-box">
+                    <form method="post" class="form-horizontal" id="f-form-userSetting-base">
+
+
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">头像</label>
+                            <div class="col-sm-10">
+                                <div>
+                                    <img class="img-circle" width="120" height="120" src="" alt="120x120"/>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group form-inline">
+                            <label class="col-sm-2 control-label">认证信息</label>
+                            <div class="col-sm-10">
+                                <div class="f-mb10">
+                                    <input type="text" class="form-control" value="文沛霖"/>　认证信息 <a href="#">去认证</a>
+                                </div>
+                                <div class="">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" value="option1" checked> 展示认证
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" value="option2"> 不展示认证
+                                    </label>
+                                     <span class="form-text">认证展示的用户将被推荐到达人区</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-inline">
+                            <label class="col-sm-2 control-label">昵称</label>
+                            <div class="col-sm-10">
+
+                                <input name="nickName" type="text" class="form-control" value="文沛霖"/>
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">个人简介</label>
+                            <div class="col-sm-10">
+                                <div class="f-pr40">
+                                    <textarea class="form-control" rows="3">天行健，君子当自强不息。地势坤，君子以厚德载物。</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">我的标签</label>
+                            <div class="col-sm-10 f-pt7">
+                                <div class="f-mb20 j-tagBox" style="display: none"></div>
+                                <div>
+                                    <div class="input-group iptw">
+                                        <input maxlength="20" type="text" class="form-control j-tagIpt" placeholder="20个字以内，最多可以添加5个标签">
+                                      <span class="input-group-btn">
+                                        <button class="btn btn-info j-addTag" type="button">添加</button>
+                                      </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">详细描述</label>
+                            <div class="col-sm-10">
+                                <div class="f-pr40">
+                                    <textarea class="form-control" rows="5">深圳利好政策频出，房价直线飙升，有不少媒体解读认为，杠杆资金和“炒房客”趁机杀入市场，形成新一轮的房价推手。近日，《证券日报》记者赶赴深圳，对房地产市场进行了实地调查，发现购房主力依然是刚需人群。深圳利好政策频出，房价直线飙升，有不少媒体解读认为，杠杆资金和“炒房客”趁机　</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="line"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">工作地</label>
+                            <div class="col-sm-10">
+
+                                <div class="f-mb20">
+                                    <div class="input-group iptw">
+                                        <input type="text" class="form-control j-placeIpt" placeholder="添加工作地">
+                                      <span class="input-group-btn">
+                                        <button class="btn btn-info j-addPlace" type="button">添加</button>
+                                      </span>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled list-inline j-placeBox" style="display: none;"></ul>
+
+                            </div>
+                        </div>
+
+
+                        <div class="line"></div>
+
+
+
+                        <div class="form-group form-inline">
+                            <label class="col-sm-2 control-label">职业经历</label>
+                            <div class="col-sm-10">
+
+                                <div class="f-mb20">
+                                    <ul class="list-unstyled j-liveBox">
+                                        <li class="f-mb10">
+                                            <input name="lives[0][company]" type="text" class="form-control" placeholder="公司或组织名称"><input name="lives[0][job]" type="text" class="form-control" placeholder="你的职位（选填）">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-info j-addLive">添加</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group form-inline">
+                            <label class="col-sm-2 control-label">教育经历</label>
+                            <div class="col-sm-10">
+
+                                <div class="f-mb20">
+                                    <ul class="list-unstyled j-teachBox">
+                                        <li class="f-mb10">
+                                            <input name="teach[0][school]" type="text" class="form-control" placeholder="学校或教育机构名称"><input name="teach[0][specialty]" type="text" class="form-control" placeholder="专业方向（选填）">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-info j-addTeach">添加</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="line"></div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary btn-w j-btnSave"><span class="glyphicon glyphicon-ok"></span> 保存修改</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- S 底部 -->
+<nav class="navbar navbar-default m-footer m-footer2">
+    <div class="container">
+        <p class="navbar-text info"><span>Copyright © 2014-2016</span><a href="javascript:;">kaistart.com</a><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
+        <ul class="concat">
+            <li class="weibo"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="weixin"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="qq"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+        </ul>
+
+        <p class="navbar-text navbar-right link">
+            <a href="#">关于</a><span>|</span><a href="#">我们是谁</a><span>|</span><a href="#">帮助</a><span>|</span><a
+                href="#">用户协议</a><span>|</span><a href="#">信任与安全</a>
+        </p>
+
+    </div>
+</nav>
+<!-- E 底部 -->
+
+
+<!-- jquery -->
+<script src="libs/jquery-2.2.2/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
+
+<link rel="stylesheet" href="plugins/jquery-upload/Huploadify.css"/>
+<script src="plugins/jquery-upload/jquery.Huploadify.js"></script>
+
+<script src="plugins/jquery-city/jquery.cityselect.js"></script>
+
+<!-- linkcloud -->
+<script src="js/main.js"></script>
+
+<!-- your js -->
+<script src=""></script>
+</body>
+</html>
