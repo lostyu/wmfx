@@ -113,3 +113,6 @@
 .f-vama * {
   vertical-align: middle;
 }
+.f-bd {
+  border: 1px solid #eee;
+}

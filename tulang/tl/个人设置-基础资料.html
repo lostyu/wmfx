@@ -82,6 +82,8 @@
                             <div class="col-sm-10">
                                 <div>
                                     <img class="img-circle" width="120" height="120" src="" alt="120x120"/>
+                                    <div id="j-prevImgBox"></div>
+                                    <input id="j-fileImg" type="file" class="j-uploadtx"/>
                                 </div>
                             </div>
                         </div>
@@ -265,6 +267,40 @@
 <!-- E 底部 -->
 
 
+
+<!-- Large modal -->
+<div class="modal fade j-txpopBox" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">上传头像</h4>
+            </div>
+            <div class="modal-body text-center">
+
+                <form id="f-form-crop" action="crop.php" method="post" onsubmit="return checkCoords();">
+                    <input type="hidden" id="x" name="x" />
+                    <input type="hidden" id="y" name="y" />
+                    <input type="hidden" id="w" name="w" />
+                    <input type="hidden" id="h" name="h" />
+                <!--<input type="submit" value="Crop Image" class="btn btn-large btn-inverse" />-->
+                </form>
+                <script>
+                    function checkCoords(){
+                        if (parseInt($('#w').val())) return true;
+//                        alert('Please select a crop region then press submit.');
+                        return false;
+                    }
+                </script>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary j-btn-saveCrop">保存图片</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <!-- jquery -->
 <script src="libs/jquery-2.2.2/jquery.min.js"></script>
 
@@ -281,10 +317,15 @@
 
 <script src="plugins/jquery-city/jquery.cityselect.js"></script>
 
+<link rel="stylesheet" href="plugins/jquery-jcrop/css/jquery.Jcrop.min.css"/>
+<script src="plugins/jquery-jcrop/js/jquery.Jcrop.min.js"></script>
+
+<script src="plugins/jquery-prevImg/jquery-prevImg.js"></script>
+
 <!-- linkcloud -->
 <script src="js/main.js"></script>
 
 <!-- your js -->
 <script src=""></script>
 </body>
-</html>
+</html

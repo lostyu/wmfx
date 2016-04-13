@@ -9,7 +9,6 @@ a:hover {
 html,
 body {
   font-family: "Microsoft YaHei";
-  background-color: #f7fafc;
 }
 h2 {
   font-size: 18px;
@@ -18,6 +17,12 @@ h2 {
 }
 .btn {
   padding: 9px 12px;
+}
+.btn-sm {
+  padding: 5px 10px;
+}
+.btn-xs {
+  padding: 1px 5px;
 }
 .btn-w {
   width: 200px;
@@ -154,8 +159,12 @@ label {
 .f-vama * {
   vertical-align: middle;
 }
+.f-bd {
+  border: 1px solid #eee;
+}
 .m-header {
-  padding: 20px 0;
+  height: 78px;
+  padding: 10px 0;
   background-color: #384858;
 }
 .m-header h1 {
@@ -165,7 +174,7 @@ label {
   margin-right: 42px;
 }
 .m-headerSpace {
-  height: 137px;
+  height: 108px;
 }
 .m-footer {
   height: 70px;
@@ -301,6 +310,16 @@ label {
 .m-formStep li.active {
   background-color: #398dee;
   color: #fff;
+}
+.m-title {
+  height: 30px;
+  line-height: 30px;
+  border-left: 10px solid #eee;
+}
+.m-title h2 {
+  padding-left: 15px;
+  line-height: 30px;
+  font-size: 18px;
 }
 .p-wrap {
   width: 100%;
@@ -578,4 +597,57 @@ label {
 .p-userSetting .j-liveBox li input,
 .p-userSetting .j-teachBox li input {
   margin-right: 10px;
+}
+.j-prevImg {
+  margin: 0 auto;
+}
+.jcrop-keymgr {
+  visibility: hidden;
+}
+.jcrop-holder {
+  margin: 0 auto;
+}
+.p-userCenter .userInfo {
+  margin-bottom: 50px;
+}
+.p-userCenter .userInfo .info1 {
+  padding: 30px;
+  border-bottom: 1px solid #eee;
+}
+.p-userCenter .userInfo .info2 {
+  padding: 30px;
+  line-height: 24px;
+  color: #000;
+}
+.p-userCenter .userInfo .info2 .tag {
+  margin-bottom: 20px;
+}
+.p-userCenter .anliList .anliList-item {
+  margin: 0;
+  padding: 30px 0;
+  border-bottom: 1px solid #eee;
+}
+.p-userCenter .anliList .anliList-item .media-left {
+  padding-right: 30px;
+}
+.p-userCenter .anliList .anliList-item .media-body p {
+  margin-bottom: 12px;
+}
+.p-userCenter .anliList .anliList-item .media-body .meta {
+  color: #999999;
+}
+.p-userCenter .anliList .anliList-item .media-body .meta span {
+  margin-right: 15px;
+}
+.p-userCenter .anliList .anliList-item .media-heading {
+  height: 34px;
+  margin-bottom: 0;
+}
+.p-userCenter .anliList .anliList-item .media-heading a {
+  font-size: 16px;
+  color: #000;
+  vertical-align: top;
+}
+.p-userCenter .anliList .anliList-item .media-heading a:hover {
+  color: #3c8bee;
 }
