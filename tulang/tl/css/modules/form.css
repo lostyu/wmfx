@@ -15,7 +15,10 @@
   margin-bottom: 30px;
 }
 .m-formBox {
-  width: 300px;
+  width: 250px;
+}
+.m-formBox .form-group {
+  margin-bottom: 15px;
 }
 .m-formBox2 .form-control,
 .m-formBox2 .input-group {

@@ -40,54 +40,22 @@
   height: 720px;
   margin-bottom: 70px;
   background-color: #fff;
-
-  .p-loginForm {
-    width: 300px;
-    margin: 150px auto 0;
-  }
-
-  .info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 127px;
-    border-top: 1px solid #e8e8e8;
-    background-color: #f0f0f0;
-    .col {
-      width: 50%;
-      padding: 30px 30px 20px;
-      float: left;
-      &.br {
-        border-right: 1px solid #e8e8e8;
-      }
-    }
-    .media-left {
-      padding-right: 30px;
-    }
-    .media-heading {
-      font-size: 18px;
-      color: #a2a2a2;
-      margin-bottom: 4px;
-    }
-    p {
-      color: #a2a2a2;
-      font-size: 14px;
-      line-height: 22px;
-    }
-  }
 }
-
 .p-formBox2{
   position: relative;
   width: 1100px;
-  height: 634px;
+  height: 720px;
   margin-bottom: 70px;
   background-color: #fff;
 
   .p-formBox2-hd{
     height: 98px;
-    padding: 30px 0 0 30px;
+    padding: 30px 30px 0;
     border-bottom: 1px solid #e8e8e8;
+
+    .ss{
+      margin-top: 18px;
+    }
 
     .img{
       float: left;
@@ -105,32 +73,55 @@
     }
   }
 
-  .p-getPassForm{
-    width: 300px;
-    margin: 140px auto 0;
+  .p-formBox2-bd{
+    padding: 30px 0;
   }
 
-  .p-changePassForm{
-    width: 300px;
-    margin: 110px auto 0;
+  .form-group{
+    margin-bottom: 15px;
   }
 }
 
-.p-formBox3{
-  height: auto;
-  min-height: 700px;
+.p-loginForm {
+  width: 250px;
+  margin: 214px auto 0;
 
-  .p-personRegister .form{
-    height: 510px;
-    margin-bottom: 40px;
+  .logo{
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .form-group{
+    margin-bottom: 15px;
   }
 }
-.p-formBox4{
-  height: auto;
-  min-height: 600px;
-  margin: 85px auto 70px;
-}
+.p-personRegister{
+  height: 560px;
 
+  .col1{
+    width: 698px;
+    float: left;
+    
+    .form{
+      width: 250px;
+      margin: 0 auto;
+      padding-top: 60px;
+    }
+    .form-group{
+      margin-bottom: 15px;
+    }
+  }
+  .col2{
+    width: 400px;
+    height: 560px;
+    padding: 0 20px;
+    float: left;
+    border-left: 1px solid #f1f3f6;
+    .form{
+      padding-top: 180px;
+    }
+  }
+}
 .p-formTips{
   width: 300px;
   margin: 140px auto 0;
@@ -140,44 +131,66 @@
     color: #81cb2d;
   }
 }
-
-.p-personRegister{
-  .col1{
-    width: 50%;
-    float: left;
-
-    .form{
-      border-right: 1px solid #e8e8e8;
-    }
-  }
-  .col2{
-    width: 50%;
-    float: left;
-
-    .form{
-      padding: 50px 150px 0;
-    }
-  }
-
-  .title{
-    height: 50px;
-    line-height: 50px;
-    margin-bottom: 44px;
-    text-align: center;
-    font-size: 14px;
-    background-color: #edf4f7;
-    color: #757575;
-
-    &.active{
-      color: #fff;
-      background-color: #398dee;
-    }
-  }
-
-  .form{
-    height: 400px;
-  }
+.p-getPassForm{
+  width: 250px;
+  margin: 140px auto 0;
 }
+.p-changePassForm{
+  width: 250px;
+  margin: 110px auto 0;
+}
+
+
+
+.p-formBox3{
+  height: auto;
+  min-height: 700px;
+}
+.p-formBox4{
+  height: auto;
+  min-height: 600px;
+  margin: 85px auto 70px;
+}
+
+
+
+//.p-personRegister{
+//  .col1{
+//    width: 50%;
+//    float: left;
+//
+//    .form{
+//      border-right: 1px solid #e8e8e8;
+//    }
+//  }
+//  .col2{
+//    width: 50%;
+//    float: left;
+//
+//    .form{
+//      padding: 50px 150px 0;
+//    }
+//  }
+//
+//  .title{
+//    height: 50px;
+//    line-height: 50px;
+//    margin-bottom: 44px;
+//    text-align: center;
+//    font-size: 14px;
+//    background-color: #edf4f7;
+//    color: #757575;
+//
+//    &.active{
+//      color: #fff;
+//      background-color: #398dee;
+//    }
+//  }
+//
+//  .form{
+//    height: 400px;
+//  }
+//}
 
 .j-tips{
   display: block;
@@ -398,6 +411,15 @@
           color: #999999;
           span{
             margin-right: 15px;
+          }
+        }
+        .control {
+          margin-bottom: 0;
+          a{
+            color: #999;
+            &:hover{
+              color: #3c8bee;
+            }
           }
         }
       }

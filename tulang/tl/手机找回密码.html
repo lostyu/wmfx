@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>手机找回密码</title>
+    <title>找回密码</title>
     <!-- bootstap -->
     <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
 
@@ -22,7 +22,6 @@
         html, body {
             width: 100%;
             height: 100%;
-            background-color: #f7fafc;
         }
     </style>
 </head>
@@ -30,34 +29,36 @@
 
 <div class="p-wrap">
 
-    <div class="p-formBox2 f-shadow">
+    <div class="p-formBox2 f-bd">
         <div class="p-formBox2-hd">
             <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
+
             <h2 class="text"><span>|</span> 找回密码</h2>
+            <a class="pull-right ss" href="javascript:;">人工申述</a>
         </div>
         <div class="p-formBox2-bd">
             <div class="p-getPassForm">
-                <!--  S 手机找回密码 -->
-                <div class="m-formBox">
-                    <form id="f-form-getPass">
-                        <div class="form-group">
-                            <label class="sr-only">注册手机号</label>
-                            <input name="utel" type="tel" class="form-control validate[required, custom[r_phone]]" placeholder="手机号">
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only">验证码</label>
+                <form id="f-form-getPass">
+                    <!--<div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign"></span> 请输入你需要找回登录密码的账户名</div>-->
+                    <div class="form-group">
+                        <label class="sr-only">注册手机号</label>
+                        <input name="utel" type="tel" class="form-control validate[required, custom[r_phoneOrEmail]]"
+                               placeholder="手机号/邮箱">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only">验证码</label>
 
-                            <div class="input-group">
-                                <input name="ucode" type="text" class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="输入验证码" data-prompt-position="centerRight:100,5">
+                        <div class="input-group">
+                            <input name="ucode" type="text" class="form-control validate[required, ajax[r_ajaxCode]]"
+                                   placeholder="输入验证码" data-prompt-position="centerRight:95,5">
                                         <span class="input-group-btn">
                                             <button class="btn btn-default" type="button">发送验证码</button>
                                         </span>
-                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">下一步</button>
-                    </form>
-                </div>
-                <!--  E 手机找回密码 -->
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">确定</button>
+                </form>
+
             </div>
         </div>
 
