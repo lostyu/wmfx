@@ -840,6 +840,65 @@ $(function () {
         });
 
     })();
+
+
+
+
+    // 用户中心-帐号密码
+    (function() {
+
+        $('.j-changeEmail').click(function() {
+            var $formMail = $('#f-form-userSettings-mail');
+
+            resetForm($formMail);
+            $formMail.validationEngine({
+                binded: false
+            });
+            $('.j-mailBox').modal();
+        });
+
+
+        $('.j-changePhone').click(function() {
+            var $form = $('#f-form-userSettings-phone');
+
+            resetForm($form);
+            $form.validationEngine({
+                binded: false
+            });
+            $('.j-phoneBox').modal();
+        });
+
+        $('.j-changePassWord').click(function() {
+            var $form = $('#f-form-userSettings-passWord');
+
+            resetForm($form);
+            $form.validationEngine({
+                binded: false
+            });
+            $('.j-passWordBox').modal();
+        });
+
+
+
+
+
+        $('.j-mailBox').on('hidden.bs.modal', function (e) {
+            $('#f-form-userSettings-mail').validationEngine('hideAll');
+        });
+        $('.j-phoneBox').on('hidden.bs.modal', function (e) {
+            $('#f-form-userSettings-phone').validationEngine('hideAll');
+        });
+        $('.j-passWordBox').on('hidden.bs.modal', function (e) {
+            $('#f-form-userSettings-passWord').validationEngine('hideAll');
+        });
+
+
+
+
+        function resetForm(form){
+            form.get(0).reset();
+        }
+    })();
 });
 
 

@@ -173,14 +173,7 @@
   border: 1px solid #dce0e2;
 }
 .p-box .p-box-hd {
-  padding: 30px;
-  border-bottom: 1px solid #e8e8e8;
-}
-.p-box .p-box-hd h2 {
-  float: left;
-}
-.p-box .p-box-hd span {
-  float: right;
+  margin-bottom: 30px;
 }
 .p-box .p-box-bd .tips {
   padding: 30px;
@@ -196,24 +189,47 @@
 .p-box .p-box-bd .form-box {
   padding: 20px 0;
 }
+.p-box .p-box-bd .form-box2 {
+  width: 410px;
+  margin: 0 auto;
+  padding: 70px 0;
+  text-align: center;
+}
+.p-userSetting .m-title {
+  margin: 25px 0 0 25px;
+  border-bottom: none;
+}
 .p-userSetting .u-nav {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  border-bottom: 1px solid #f1f3f6;
 }
 .p-userSetting .u-nav .active a {
   background-color: #fff;
   color: #398dee;
+  border-bottom: 3px solid #398dee;
 }
 .p-userSetting .u-nav li {
-  width: 25%;
+  position: relative;
+  width: 16.6%;
   float: left;
-  background-color: #edf4f7;
+  text-align: center;
+}
+.p-userSetting .u-nav li:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 18px;
+  height: 26px;
+  border-right: 1px solid #ecedef;
+}
+.p-userSetting .u-nav .last:after {
+  display: none;
 }
 .p-userSetting .u-nav a {
-  display: block;
-  padding: 0;
+  display: inline-block;
+  padding: 0 20px;
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -247,56 +263,128 @@
 .jcrop-holder {
   margin: 0 auto;
 }
+.p-userCenter {
+  margin-top: 78px;
+  margin-bottom: 30px;
+  color: #757575;
+}
 .p-userCenter .userInfo {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  height: 280px;
+  background-color: #f1f3f6;
 }
-.p-userCenter .userInfo .info1 {
+.p-userCenter .userInfo .inner {
+  position: relative;
+  top: 30px;
   padding: 30px;
-  border-bottom: 1px solid #eee;
-}
-.p-userCenter .userInfo .info2 {
-  padding: 30px;
-  line-height: 24px;
-  color: #000;
-}
-.p-userCenter .userInfo .info2 .tag {
-  margin-bottom: 20px;
-}
-.p-userCenter .anliList .anliList-item {
-  margin: 0;
-  padding: 30px 0;
-  border-bottom: 1px solid #eee;
-}
-.p-userCenter .anliList .anliList-item .media-left {
-  padding-right: 30px;
-}
-.p-userCenter .anliList .anliList-item .media-body p {
-  margin-bottom: 12px;
-}
-.p-userCenter .anliList .anliList-item .media-body .meta {
-  color: #999999;
-}
-.p-userCenter .anliList .anliList-item .media-body .meta span {
-  margin-right: 15px;
-}
-.p-userCenter .anliList .anliList-item .media-body .control {
-  margin-bottom: 0;
-}
-.p-userCenter .anliList .anliList-item .media-body .control a {
+  height: 220px;
+  border: 1px solid #e5e7e9;
+  background-color: #fff;
   color: #999;
 }
-.p-userCenter .anliList .anliList-item .media-body .control a:hover {
+.p-userCenter .userInfo .media-left {
+  padding-right: 30px;
+}
+.p-userCenter .userInfo .media-body .text {
+  margin-bottom: 34px;
+}
+.p-userCenter .userInfo .media-body ul li {
+  float: left;
+  text-align: center;
+}
+.p-userCenter .userInfo .media-body ul li .num {
+  width: 138px;
+  padding: 0 40px 0;
+  border-right: 1px solid #e0e0e0;
+  font-size: 24px;
   color: #3c8bee;
 }
-.p-userCenter .anliList .anliList-item .media-heading {
-  height: 34px;
+.p-userCenter .userInfo .media-heading {
+  font-size: 18px;
+  color: #333;
+  vertical-align: middle;
+  margin-bottom: 20px;
+}
+.p-userCenter .userInfo .media-heading span {
+  margin-left: 15px;
+  font-weight: normal;
+  font-size: 12px;
+}
+.p-userCenter .userInfo .control {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.p-userCenter .userInfo .control a {
+  margin-left: 30px;
+}
+.p-userCenter .introduce {
+  height: 190px;
+}
+.p-userCenter .introduce .text {
+  padding: 15px 0;
+  margin-bottom: 0;
+  height: 126px;
+  line-height: 24px;
+}
+.p-userCenter .case {
+  margin-bottom: 30px;
+}
+.p-userCenter .appraise .pf {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f3f6;
+}
+.p-userCenter .appraise .pf li {
+  float: left;
+  width: 32%;
+  border-right: 1px solid #f1f3f6;
+  margin-right: 10px;
+}
+.p-userCenter .appraise .pf li:last-child {
+  margin-right: 0;
+  border-right: 0;
+}
+.p-userCenter .appraise .pf p {
+  vertical-align: middle;
+}
+.p-userCenter .appraise .pf .score {
+  font-size: 24px;
+  color: #ff4848;
+  vertical-align: middle;
+}
+.p-userCenter .appraise .pf .score2 {
+  font-size: 14px;
+}
+.p-userCenter .appraise .pf .text {
+  position: relative;
+  top: 8px;
+}
+.p-userCenter .appraise .media {
+  padding: 0 30px 30px;
+  margin-top: 30px;
+  border-bottom: 1px solid #f1f3f6;
+}
+.p-userCenter .appraise .media-left {
+  padding-right: 20px;
+}
+.p-userCenter .appraise .media-heading {
+  font-size: 14px;
+  margin-bottom: 18px;
+  color: #333333;
+}
+.p-userCenter .appraise .media-body p:last-child {
   margin-bottom: 0;
 }
-.p-userCenter .anliList .anliList-item .media-heading a {
-  font-size: 16px;
-  color: #000;
-  vertical-align: top;
+.p-userCenter .appraise .media-body .text {
+  color: #282828;
 }
-.p-userCenter .anliList .anliList-item .media-heading a:hover {
-  color: #3c8bee;
+.p-userCenter .addr {
+  height: 190px;
+}
+.p-userCenter .tag span {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-weight: normal;
 }

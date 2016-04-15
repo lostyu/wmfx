@@ -1,3 +1,65 @@
+.g-container {
+  width: 1100px;
+  margin: 0 auto;
+}
+.g-main {
+  width: 715px;
+}
+.g-side {
+  width: 320px;
+}
+.u-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-sprite.png) no-repeat;
+  vertical-align: middle;
+}
+.u-icon-time {
+  background-position: 0 0;
+}
+.u-icon-bridge {
+  background-position: 0 -40px;
+}
+.u-icon-addr {
+  background-position: 0 -80px;
+}
+.u-icon-addr2 {
+  background-position: -40px -80px;
+}
+.u-icon-v {
+  background-position: 0 -120px;
+}
+.u-icon-v2 {
+  background-position: -40px -120px;
+}
+.u-icon-star {
+  background-position: 0 -160px;
+}
+.u-icon-star2 {
+  background-position: -40px -160px;
+}
+.u-icon-halfStar {
+  background-position: 0 -200px;
+}
+.u-icon-halfStar2 {
+  background-position: -40px -200px;
+}
+.u-icon-message {
+  width: 27px;
+  height: 27px;
+  background-position: 0 -240px;
+}
+.u-icon-settings {
+  width: 28px;
+  height: 28px;
+  background-position: 0 -287px;
+}
+.u-icon-search {
+  width: 21px;
+  height: 21px;
+  background-position: 0 -335px;
+}
 .m-title {
   padding-bottom: 15px;
   border-bottom: 1px solid #f1f3f6;
@@ -7,6 +69,7 @@
   line-height: 24px;
   border-left: 4px solid #398dee;
   font-size: 18px;
+  color: #333;
 }
 .m-list {
   margin-top: 30px;
