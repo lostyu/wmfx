@@ -3,31 +3,31 @@ $(function () {
     var app = {};
 
     app.ui = {};
-    app.ui.preImg = function (iptFileId, endFn) {
-
-        $('#'+iptFileId).change(function() {
-            $.post('url', {data: 1}, function(result){
-                endFn();
-            });
-        });
-
-        //= function() {
-        //    var prevDiv = document.getElementById(imgBoxId);
-
-
-            //if (this.files && this.files[0]) {
-            //    var reader = new FileReader();
-            //    reader.onload = function (evt) {
-            //        prevDiv.innerHTML = '<img src="' + evt.target.result + '" />';
-            //    };
-            //    reader.readAsDataURL(this.file.files[0]);
-            //}
-            //else {
-            //    prevDiv.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + this.value + '\'"></div>';
-            //}
-        //};
-
-    };
+    //app.ui.preImg = function (iptFileId, endFn) {
+    //
+    //    $('#'+iptFileId).change(function() {
+    //        $.post('url', {data: 1}, function(result){
+    //            endFn();
+    //        });
+    //    });
+    //
+    //    //= function() {
+    //    //    var prevDiv = document.getElementById(imgBoxId);
+    //
+    //
+    //        //if (this.files && this.files[0]) {
+    //        //    var reader = new FileReader();
+    //        //    reader.onload = function (evt) {
+    //        //        prevDiv.innerHTML = '<img src="' + evt.target.result + '" />';
+    //        //    };
+    //        //    reader.readAsDataURL(this.file.files[0]);
+    //        //}
+    //        //else {
+    //        //    prevDiv.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + this.value + '\'"></div>';
+    //        //}
+    //    //};
+    //
+    //};
 
     (function () {
         // 表单验证
@@ -847,57 +847,10 @@ $(function () {
     // 用户中心-帐号密码
     (function() {
 
-        $('.j-changeEmail').click(function() {
-            var $formMail = $('#f-form-userSettings-mail');
-
-            resetForm($formMail);
-            $formMail.validationEngine({
-                binded: false
-            });
-            $('.j-mailBox').modal();
-        });
-
-
-        $('.j-changePhone').click(function() {
-            var $form = $('#f-form-userSettings-phone');
-
-            resetForm($form);
-            $form.validationEngine({
-                binded: false
-            });
-            $('.j-phoneBox').modal();
-        });
-
-        $('.j-changePassWord').click(function() {
-            var $form = $('#f-form-userSettings-passWord');
-
-            resetForm($form);
-            $form.validationEngine({
-                binded: false
-            });
-            $('.j-passWordBox').modal();
-        });
 
 
 
 
-
-        $('.j-mailBox').on('hidden.bs.modal', function (e) {
-            $('#f-form-userSettings-mail').validationEngine('hideAll');
-        });
-        $('.j-phoneBox').on('hidden.bs.modal', function (e) {
-            $('#f-form-userSettings-phone').validationEngine('hideAll');
-        });
-        $('.j-passWordBox').on('hidden.bs.modal', function (e) {
-            $('#f-form-userSettings-passWord').validationEngine('hideAll');
-        });
-
-
-
-
-        function resetForm(form){
-            form.get(0).reset();
-        }
     })();
 });
 
