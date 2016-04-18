@@ -22,6 +22,8 @@
         html, body {
             width: 100%;
             height: 100%;
+            background-color: #f1f3f6;
+
         }
     </style>
 </head>
@@ -29,57 +31,58 @@
 
 <div class="p-wrap">
 
-    <div class="p-formBox2 f-bd">
-        <div class="p-formBox2-hd">
+    <div class="p-formBox f-bd">
+        <div class="form-title clearfix">
             <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
-            <h2 class="text"><span>|</span> 修改密码</h2>
+            <h2 class="text">修改密码</h2>
         </div>
-        <div class="p-formBox2-bd">
-            <div class="p-changePassForm">
-                <form id="f-form-changePass">
-                    <div class="form-group">
+
+        <div class="p-changePassForm">
+            <form id="f-form-changePass">
+                <div class="form-group">
 
 
-                        <label class="control-label sr-only">新密码</label>
-                        <input id="pass1" name="upass" type="password" class="form-control validate[required, custom[r_passWord]]"
-                               placeholder="新密码">
+                    <label class="control-label">新密码</label>
+                    <input id="pass1" name="upass" type="password" class="form-control validate[required, custom[r_passWord]]"
+                           placeholder="新密码">
+                    <p class="help-block" style="font-size: 12px">密码至少由8个字符组成，必须包含数字、字母，区分大小写</p>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label">确认密码</label>
 
 
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label sr-only">确认密码</label>
+                    <input name="upass2" type="password" class="form-control validate[required, equals[pass1]]"
+                           placeholder="确认密码">
 
 
-                        <input name="upass2" type="password" class="form-control validate[required, equals[pass1]]"
-                               placeholder="确认密码">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">验证码</label>
 
-
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label sr-only">验证码</label>
-
-                        <div class="input-group">
-                            <input name="ucode" type="text"
-                                   class="form-control validate[required, ajax[r_ajaxImgCode]]" placeholder="输入验证码"
-                                   data-prompt-position="centerRight:100,5">
+                    <div class="input-group">
+                        <input name="ucode" type="text"
+                               class="form-control validate[required, ajax[r_ajaxImgCode]]" placeholder="输入验证码"
+                               data-prompt-position="centerRight:100,5">
                                 <span class="input-group-addon" id="basic-addon2" style="padding: 0"><img width="100"
                                                                                                           height="38"
                                                                                                           src="http://reg.email.163.com/mailregAll/regvf1/verifyCodeImgF.jsp?env=488381217144&amp;type=en&amp;t=1333003692444"
                                                                                                           alt=""></span>
-                        </div>
-
                     </div>
 
-                    <div class="form-group">
+                </div>
 
-                        <button type="submit" class="btn btn-primary btn-block">下一步</button>
+                <div class="form-group">
 
-                    </div>
-                </form>
-            </div>
+                    <button type="submit" class="btn btn-primary btn-block">确定</button>
+
+                </div>
+            </form>
         </div>
 
+
     </div>
+
 
 </div>
 
@@ -127,6 +130,14 @@
 <script src="js/main.js"></script>
 
 <!-- your js -->
-<script src=""></script>
+<script>
+    $(function() {
+        // 修改密码
+        (function () {
+            $('#f-form-changePass').validationEngine();
+
+        })();
+    });
+</script>
 </body>
 </html>

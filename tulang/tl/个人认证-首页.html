@@ -48,30 +48,59 @@
                 </div>
                 <button type="submit" class="btn btn-primary">发布任务</button>
             </form>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
 </nav>
 <div class="m-headerSpace"></div>
 
 <div class="container f-mb40">
     <div class="p-renzheng">
         <div class="p-box f-bg">
-        <div class="p-box-hd">
-            <div class="m-title">
-                <h2>图狼认证申请</h2>
+            <div class="p-box-hd">
+                <div class="m-title">
+                    <h2>图狼认证申请</h2>
+                </div>
 
             </div>
+            <div class="p-box-bd">
+                <div class="form-box">
+                    <div class="p-rzindex clearfix">
+                        <div class="c1">
+                            <p>想发布任务？快来实名认证吧！</p>
+                        </div>
+                        <div class="c2">
+                            <p>想抢任务？那就技能认证吧！</p>
+                        </div>
+                        <div class="col1">
+                            <div class="cnt">
+                                <a href="javascript:;" data-toggle="modal" data-target="#chooseModal">
+                                    <img src="img/id.png" alt=""/>
 
-        </div>
-        <div class="p-box-bd">
-            <div class="form-box">
-                fdsfsf
+                                    <h3>实名认证</h3>
+
+                                    <p>认证后可发布任务进行招标</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="cnt">
+                                <a href="javascript:;">
+                                    <img src="img/jn.png" alt=""/>
+
+                                    <h3>实名认证</h3>
+
+                                    <p>认证后可发布任务进行招标</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </div>
-
 
 
 <!-- S 底部 -->
@@ -100,6 +129,37 @@
     </div>
 </nav>
 <!-- E 底部 -->
+
+
+<div class="modal fade" id="chooseModal" tabindex="-1" role="dialog">
+    <div class="m-modal rz-modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <div class="inner">
+            <div class="title">
+                <h2>实名认证类型选择</h2>
+            </div>
+            <ul class="clearfix">
+                <li>
+                    <p><img src="img/rzxz1.png" alt=""/></p>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" value="option1" checked> 我是企业
+                    </label>
+                </li>
+                <li>
+                    <p><img src="img/rzxz2.png" alt=""/></p>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" value="option1"> 我是个人
+                    </label>
+                </li>
+            </ul>
+            <p class="err">提交审核后不可更改认证类型，请谨慎选择！</p>
+
+            <p>
+                <button class="btn btn-primary" type="button">确认申请</button>
+            </p>
+        </div>
+    </div>
+</div>
 
 
 <!-- jquery -->

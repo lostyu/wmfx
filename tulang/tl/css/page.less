@@ -1,3 +1,25 @@
+.m-modal{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 690px;
+  height: 400px;
+  margin-left: -345px;
+  margin-top: -200px;
+  background-color: #fff;
+
+  .inner{
+    padding: 20px;
+    text-align: center;
+  }
+  .close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+  }
+}
+
 
 
 
@@ -29,10 +51,31 @@
 // 登录注册表单
 .p-formBox {
   position: relative;
-  width: 1100px;
-  height: 720px;
+  width: 685px;
+  height: 647px;
   margin-bottom: 70px;
   background-color: #fff;
+
+  .form-title{
+    padding: 20px 30px;
+    .img{
+      float: left;
+    }
+    .text{
+      margin: 14px 0 0 20px;
+      float: left;
+      height: 24px;
+      line-height: 24px;
+      padding-left: 20px;
+      border-left: 4px solid #398dee;
+      font-size: 14px;
+      color: #737f8a;
+    }
+  }
+}
+.p-formBox10{
+  width: 1100px;
+  height: 647px;
 }
 .p-formBox2{
   position: relative;
@@ -76,8 +119,8 @@
 }
 
 .p-loginForm {
-  width: 250px;
-  margin: 214px auto 0;
+  width: 370px;
+  margin: 74px auto 0;
 
   .logo{
     margin-bottom: 30px;
@@ -85,18 +128,27 @@
   }
 
   .form-group{
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    label{
+      font-weight: normal;
+    }
   }
 }
 .p-personRegister{
   height: 560px;
 
+  .tips{
+    width: 380px;
+    margin: 0 auto;
+    padding-top: 100px;
+    text-align: center;
+  }
   .col1{
     width: 698px;
     float: left;
     
     .form{
-      width: 250px;
+      width: 370px;
       margin: 0 auto;
       padding-top: 60px;
     }
@@ -105,19 +157,21 @@
     }
   }
   .col2{
-    width: 400px;
-    height: 560px;
-    padding: 0 20px;
     float: left;
+    width: 400px;
+    height: 400px;
+    padding: 0 20px;
+    margin-top: 55px;
     border-left: 1px solid #f1f3f6;
     .form{
-      padding-top: 180px;
+      padding-top: 105px;
     }
   }
 }
 .p-formTips{
   width: 300px;
-  margin: 140px auto 0;
+  margin: 50px auto 0;
+  text-align: center;
 
   .media-left{
     font-size: 40px;
@@ -125,12 +179,41 @@
   }
 }
 .p-getPassForm{
-  width: 250px;
-  margin: 140px auto 0;
+  width: 370px;
+  margin: 80px auto 0;
+  .title2{
+    position: relative;
+    width: 295px;
+    margin:0 auto 40px;
+    text-align: center;
+    color: #b8b8b8;
+    &:after{
+      content: '';
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 10px;
+      width: 100%;
+      border-bottom: 1px solid #b8b8b8;
+    }
+    span{
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      padding: 0 20px;
+      background-color: #fff;
+    }
+  }
 }
 .p-changePassForm{
-  width: 250px;
+  width: 370px;
   margin: 110px auto 0;
+
+  .form-group{
+    label{
+      font-weight: normal;
+    }
+  }
 }
 
 
@@ -432,13 +515,93 @@
 
 
 // ========================== 个人认证
-.p-renzheng{
+.p-renzheng, .p-renzheng2{
   .m-title{
     margin: 25px 25px 0 25px;
     border-bottom: none;
     span{
       font-size:14px;
       color: #757575;
+    }
+  }
+}
+
+.p-rzindex{
+  width: 910px;
+  padding-top: 147px;
+  padding-bottom: 244px;
+  margin: 0 auto;
+  background: url(../img/rz.png) 346px 32px no-repeat;
+
+  .c1, .c2{
+    float: left;
+    width: 455px;
+    text-align: center;
+    font-size: 16px;
+    color: #757575;
+  }
+  .col1, .col2{
+    float: left;
+    width: 455px;
+    height: 213px;
+    padding-top: 28px;
+    border: 1px solid #dde3e9;
+    background-color: #fbfdff;
+    text-align: center;
+
+    h3{
+      font-size: 22px;
+      color: #737f8a;
+    }
+    p{
+      font-size: 16px;
+      color: #737f8a;
+    }
+    .cnt a{
+      display: block;
+      text-decoration: none;
+      outline: none;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.rz-modal{
+
+  .inner {
+    width: 490px;
+    margin: 0 auto;
+    text-align: center;
+
+    .title{
+      padding: 15px 0 40px ;
+    }
+    ul{
+      margin:0;
+      padding:0;
+      margin-bottom: 40px;
+    }
+    li{
+      list-style: none;
+      float: left;
+      width: 50%;
+    }
+    .err{
+      color: #fe4848;
+    }
+  }
+}
+.ssModal{
+  .inner{
+    padding-top: 100px;
+    p{
+      margin-bottom: 40px;
+    }
+    .link{
+      font-size: 20px;
     }
   }
 }
@@ -648,3 +811,17 @@
 
 
 
+// laydate
+.laydate_box{
+  box-sizing: content-box;
+}
+.laydate_box *{
+  box-sizing: content-box;
+}
+.laydate-icon,
+.laydate-icon-default,
+.laydate-icon-danlan,
+.laydate-icon-dahong,
+.laydate-icon-molv{
+  height: auto !important;
+}

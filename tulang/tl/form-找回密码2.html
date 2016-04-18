@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>login</title>
+    <title>找回密码2</title>
     <!-- bootstap -->
     <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
 
@@ -22,37 +22,51 @@
         html, body {
             width: 100%;
             height: 100%;
+            background-color: #f1f3f6;
         }
     </style>
 </head>
 <body>
 
 <div class="p-wrap">
-    <div class="p-formBox f-bd">
-        <div class="p-loginForm">
-            <div class="logo">
-                <a href="#"><img width="195" height="81" src="img/logo2.png" alt=""/></a>
-            </div>
-            <form method="post" id="f-form-login">
-                <div class="form-group">
-                    <label class="sr-only">请输入手机号/邮箱</label>
-                    <input name="uname" type="text" class="form-control validate[required]"  placeholder="请输入手机号/邮箱">
-                </div>
-                <div class="form-group">
-                    <label class="sr-only">请输入密码</label>
-                    <input name="upass" type="password" class="form-control validate[required]" placeholder="请输入密码">
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">立即登录</button>
-                <div class="checkbox">
-                    <label>
-                        <input name="usave" type="checkbox" checked> 记住密码
-                    </label>
-                    <div class="pull-right"><a href="javascript:;">忘记密码？</a><span class="text-muted">&nbsp;|&nbsp;&nbsp;</span><a href="javascript:;">注册账号</a></div>
 
-                </div>
-            </form>
+    <div class="p-formBox f-bd">
+        <div class="form-title clearfix">
+            <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
+            <h2 class="text">找回密码</h2>
         </div>
+
+        <div class="p-getPassForm">
+                <div class="title2"><span>请输入您要找回的登录密码的手机号</span></div>
+                <form id="f-form-getPass">
+                    <!--<div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign"></span> 请输入你需要找回登录密码的账户名</div>-->
+                    <div class="form-group">
+                        <label class="sr-only">注册手机号</label>
+                        <input autocomplete="off" name="utel" type="tel" class="form-control validate[required, custom[r_phone]]"
+                               placeholder="手机号">
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input name="ucode" type="text"
+                                   class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="输入验证码"
+                                   data-prompt-position="centerRight:95,5">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">发送验证码</button>
+                                        </span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">下一步</button>
+                    <!--<div class="checkbox text-right">-->
+                        <!--<a href="javascript:;">人工申述</a>-->
+                    <!--</div>-->
+                </form>
+
+            </div>
+
+
+
     </div>
+
 </div>
 
 
@@ -99,6 +113,15 @@
 <script src="js/main.js"></script>
 
 <!-- your js -->
-<script src=""></script>
+<script>
+    $(function() {
+        // 手机找回密码
+        (function () {
+            $('#f-form-getPass').validationEngine();
+
+
+        })();
+    });
+</script>
 </body>
 </html>

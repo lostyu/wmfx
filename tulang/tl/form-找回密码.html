@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>找回密码</title>
+    <!-- bootstap -->
+    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+    <!-- linkcloud -->
+    <!--<link rel="stylesheet" href="../css/demo.css">-->
+
+    <!-- your css -->
+    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <link rel="stylesheet" href="css/all.css"/>
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: #f1f3f6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="p-wrap">
+
+    <div class="p-formBox f-bd">
+        <div class="form-title clearfix">
+            <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
+
+            <h2 class="text">找回密码</h2>
+        </div>
+
+        <div class="p-getPassForm">
+            <div class="title2"><span>请输入您要找回的登录密码的账户名</span></div>
+            <form id="f-form-getPass">
+                <!--<div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign"></span> 请输入你需要找回登录密码的账户名</div>-->
+                <div class="form-group">
+                    <label class="sr-only">注册手机号</label>
+                    <input name="utel" type="tel" class="form-control validate[required, custom[r_phoneOrEmail]]"
+                           placeholder="手机号/邮箱">
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control validate[required, ajax[r_ajaxImgCode]]"
+                               placeholder="输入验证码" data-prompt-position="centerRight:100,5">
+                        <span class="input-group-addon" id="basic-addon2" style="padding: 0"><img width="100"
+                                                                                                  height="38"
+                                                                                                  src="http://reg.email.163.com/mailregAll/regvf1/verifyCodeImgF.jsp?env=488381217144&amp;type=en&amp;t=1333003692444"
+                                                                                                  alt=""></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">确定</button>
+                <div class="checkbox text-right">
+                    <a href="javascript:;" data-toggle="modal" data-target="#ssModal">人工申述</a>
+                </div>
+            </form>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- S 底部 -->
+<nav class="navbar navbar-default m-footer">
+    <div class="container">
+        <p class="navbar-text info"><span>Copyright © 2014-2016</span><a href="javascript:;">kaistart.com</a><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
+        <ul class="concat">
+            <li class="weibo"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="weixin"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="qq"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+        </ul>
+
+        <p class="navbar-text navbar-right link">
+            <a href="#">关于</a><span>|</span><a href="#">我们是谁</a><span>|</span><a href="#">帮助</a><span>|</span><a
+                href="#">用户协议</a><span>|</span><a href="#">信任与安全</a>
+        </p>
+
+    </div>
+</nav>
+<!-- E 底部 -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="ssModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+    <div class="m-modal ssModal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <div class="inner">
+            <p>请将您注册时使用的真实姓名及手机号码发送至邮箱：</p>
+            <p><a class="link" href="mailto:mail.xxx.com">zhss@图狼.com</a></p>
+            <p>工作人员会联系您</p>
+            <p><a class="btn btn-primary" href="javascript:;" data-dismiss="modal" aria-label="Close">我知道了</a></p>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- jquery -->
+<script src="libs/jquery-2.2.2/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
+
+<!-- linkcloud -->
+<script src="js/main.js"></script>
+
+<!-- your js -->
+<script>
+    $(function () {
+        // 手机找回密码
+        (function () {
+            $('#f-form-getPass').validationEngine();
+
+
+        })();
+    });
+</script>
+</body>
+</html>

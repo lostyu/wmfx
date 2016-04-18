@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>企业认证-申请</title>
+    <!-- bootstap -->
+    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+    <!-- linkcloud -->
+    <!--<link rel="stylesheet" href="../css/demo.css">-->
+
+    <!-- your css -->
+    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <link rel="stylesheet" href="css/all.css"/>
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top m-header">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <h1><a href="#"><img src="img/logo.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">了解我们</a></li>
+                <li><a href="#">设计机构</a></li>
+                <li><a href="#">寻找任务</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">注册</a></li>
+                <li><a href="#">登陆</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group has-feedback has-feedback2">
+                    <input type="text" class="form-control" placeholder="1623,32 个项目"/>
+                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">发布任务</button>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="m-headerSpace"></div>
+
+<div class="container f-mb40">
+
+    <div class="p-renzheng2">
+        <div class="p-box f-bg">
+        <div class="p-box-hd">
+            <div class="m-title">
+                <h2>图狼企业实名认证<span class="pull-right">咨询电话：40000000</span></h2>
+
+            </div>
+        </div>
+        <div class="p-box-bd">
+
+            <p class="text-center f-mb30"><img src="img/step1.jpg" alt=""></p>
+            <div class="form-boxp">
+                <div class="tips">
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <span class="glyphicon glyphicon-remove-circle text-danger"></span>
+                        </div>
+                        <div class="media-body">
+                            <ul class="list-unstyled">
+                                <li>认证未通过：</li>
+                                <li>·身份证信息与姓名不一致</li>
+                                <li>·身份证照片不清晰，无法看到详细信息</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="f-form-xinxi" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>企业全称</label>
+                        <div class="col-sm-10">
+                            <input name="uname" type="text" class="form-control iptw validate[required]">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>工商执照注册号</label>
+                        <div class="col-sm-10">
+                            <input name="uzhucehao" type="text" class="form-control iptw validate[required]">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>营业执照副本</label>
+                        <div class="col-sm-10">
+                            <div class="f-pr"><input type="hidden" class="validate[required]" data-prompt-position="inline"></div>
+                            <ul class="list-unstyled list-inline j-uploadImgBox"></ul>
+                            <div id="j-upload1"></div>
+                            <!--<input name="uyingyezhizhao" type="file">-->
+                            <p class="j-tips">证件号码清晰可见</p>
+                        </div>
+                    </div>
+                    <div class="form-group form-inline">
+                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>公司所在地</label>
+                        <div class="col-sm-10">
+                            <div id="city">
+                                <select class="prov"></select>
+                                <select class="city" disabled="disabled"></select>
+                                <select class="dist" disabled="disabled"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>常用地址</label>
+                        <div class="col-sm-10">
+                            <input name="uaddr" type="text" class="form-control iptw validate[required]">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">资质证书名称</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control iptw">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>营业执照副本</label>
+                        <div class="col-sm-10">
+                            <div class="f-pr"><input type="hidden" class="validate[required]" data-prompt-position="inline"></div>
+                            <ul class="list-unstyled list-inline j-uploadImgBox"></ul>
+                            <div id="j-upload2"></div>
+                            <!--<input name="uyingyezhizhao" type="file">-->
+                            <p class="j-tips">资质名称和资质证书需一致，证书编号和主要信息需清晰可见</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>联系手机</label>
+                        <div class="col-sm-10">
+                            <input type="tel" class="form-control iptw  validate[required, custom[r_phone]]">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>验证码</label>
+                        <div class="col-sm-10">
+                            <div class="input-group iptw">
+                                <input name="ucode" type="text" class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="输入验证码" data-prompt-position="centerRight:100,5">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">发送验证码</button>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary btn-w">提交认证</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+</div>
+
+
+
+<!-- S 底部 -->
+<nav class="navbar navbar-default m-footer m-footer2">
+    <div class="container">
+        <p class="navbar-text info"><span>Copyright © 2014-2016</span><a href="javascript:;">kaistart.com</a><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
+        <ul class="concat">
+            <li class="weibo"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="weixin"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="qq"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+        </ul>
+
+        <p class="navbar-text navbar-right link">
+            <a href="#">关于</a><span>|</span><a href="#">我们是谁</a><span>|</span><a href="#">帮助</a><span>|</span><a
+                href="#">用户协议</a><span>|</span><a href="#">信任与安全</a>
+        </p>
+
+    </div>
+</nav>
+<!-- E 底部 -->
+
+
+<!-- jquery -->
+<script src="libs/jquery-2.2.2/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
+
+<script src="plugins/jquery-city/jquery.cityselect.js"></script>
+
+<link rel="stylesheet" href="plugins/jquery-upload/Huploadify.css"/>
+<script src="plugins/jquery-upload/jquery.Huploadify.js"></script>
+
+<!-- linkcloud -->
+<script src="js/main.js"></script>
+
+<!-- your js -->
+<script>
+    $(function() {
+        // 信息登记
+        (function () {
+            $('#f-form-xinxi').validationEngine({
+                validateNonVisibleFields: true, // 验证隐藏表单
+                binded: false,   // 提交时验证
+                autoHidePrompt: true,   // 自动隐藏提示信息
+                autoHideDelay: 5000,
+                showOneMessage: false,
+                scroll: false
+            });
+
+
+            // 图片上传
+            var up1 = $('#j-upload1').Huploadify({
+                auto: true,
+                fileTypeExts: '*.jpg;*.png;*.exe;*.mp3;*.mp4;*.zip;*.doc;*.docx;*.ppt;*.pptx;*.xls;*.xlsx;*.pdf',
+                multi: true,
+                fileSizeLimit: 99999999,
+                breakPoints: true,
+                saveInfoLocal: true,
+                showUploadedPercent: false,//是否实时显示上传的百分比，如20%
+                showUploadedSize: false,
+                removeTimeout: 9999999,
+                buttonText: '上传图片',//上传按钮上的文字
+                uploader: 'http://www.zcxf.com/admin/upload/upload',
+                onUploadStart: function () {
+                    console.log('start');
+                    //up.settings('formData', {aaaaa:'1111111',bb:'2222'});
+                    up1.Huploadify('settings', 'formData', {aaaaa: '1111111', bb: '2222'});
+                },
+                onUploadSuccess: function (file) {
+                    alert('上传成功');
+                },
+                onUploadComplete: function () {
+                    //alert('上传完成');
+                }
+//        getUploadedSize: function (file) {
+//            var data = {
+//                data: {
+//                    fileName: file.name,
+//                    lastModifiedDate: file.lastModifiedDate.getTime()
+//                }
+//            };
+//            var url = 'http://49.4.132.173:8080/admin/uploadfile/index/';
+//            var uploadedSize = 0;
+//            $.ajax({
+//                url: url,
+//                data: data,
+//                async: false,
+//                type: 'POST',
+//                success: function (returnData) {
+//                    returnData = JSON.parse(returnData);
+//                    uploadedSize = returnData.uploadedSize;
+//                }
+//            });
+//            return uploadedSize;
+//        }
+            });
+            var up2 = $('#j-upload2').Huploadify({
+                auto: true,
+                fileTypeExts: '*.jpg;*.png;*.exe;*.mp3;*.mp4;*.zip;*.doc;*.docx;*.ppt;*.pptx;*.xls;*.xlsx;*.pdf',
+                multi: true,
+                fileSizeLimit: 99999999,
+                breakPoints: true,
+                saveInfoLocal: true,
+                showUploadedPercent: false,//是否实时显示上传的百分比，如20%
+                showUploadedSize: false,
+                removeTimeout: 9999999,
+                buttonText: '上传图片',//上传按钮上的文字
+                uploader: 'http://www.zcxf.com/admin/upload/upload',
+                onUploadStart: function () {
+                    console.log('start');
+                    //up.settings('formData', {aaaaa:'1111111',bb:'2222'});
+                    up2.Huploadify('settings', 'formData', {aaaaa: '1111111', bb: '2222'});
+                },
+                onUploadSuccess: function (file) {
+                    alert('上传成功');
+                },
+                onUploadComplete: function () {
+                    //alert('上传完成');
+                }
+//        getUploadedSize: function (file) {
+//            var data = {
+//                data: {
+//                    fileName: file.name,
+//                    lastModifiedDate: file.lastModifiedDate.getTime()
+//                }
+//            };
+//            var url = 'http://49.4.132.173:8080/admin/uploadfile/index/';
+//            var uploadedSize = 0;
+//            $.ajax({
+//                url: url,
+//                data: data,
+//                async: false,
+//                type: 'POST',
+//                success: function (returnData) {
+//                    returnData = JSON.parse(returnData);
+//                    uploadedSize = returnData.uploadedSize;
+//                }
+//            });
+//            return uploadedSize;
+//        }
+            });
+        })();
+    });
+</script>
+</body>
+</html>

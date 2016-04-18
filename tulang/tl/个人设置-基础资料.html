@@ -331,6 +331,245 @@
 <script src="js/main.js"></script>
 
 <!-- your js -->
-<script src=""></script>
+<script>
+    $(function() {
+        // 个人设置-基本资料
+        (function () {
+            var $form = $('#f-form-userSetting-base');
+
+
+            //================= 修改头像 ==================
+            var $btntx = $form.find('.j-uploadtx');
+            var $btnSave = $('.j-btn-saveCrop');
+            var $formCrop = $('#f-form-crop');
+            var api;
+
+            $btntx.change(function (ev) {
+
+                //app.ui.preImg('j-fileImg', 'j-prevImgBox');
+                $("#j-fileImg").uploadPreview({ Img: "j-prevImgBox", Width: 120, Height: 120 });
+                //preImg('j-fileImg', 'j-prevImg');
+
+                //var $content = $modal.find('.modal-content img');
+                //
+                //console.log(ev.target.files[0]);
+                ////$content.attr('src',);
+                ////var f =  $(this).get(0).files[0];
+                ////var src = window.URL.createObjectURL(f);
+
+                ////$(this).val('');
+            });
+
+            function preImg(sourceId, targetId) {
+                var url = getFileUrl(sourceId);
+
+                if (url) {
+                    var $modal = $('.j-txpopBox');
+
+                    //var imgPre = document.getElementById(targetId);
+                    //imgPre.src = url;
+
+                    $('#j-prevImg').Jcrop({
+                        aspectRatio: 1,
+                        boxHeight: 500,
+                        onSelect: updateCoords
+                    }, function () {
+                        api = this;
+                    });
+
+                    api.setImage(url);
+
+                    $modal.modal();
+                }
+
+            }
+
+            $('.j-txpopBox').on('hidden.bs.modal', function (e) {
+                api.destroy();
+                $btntx.val('');
+            });
+
+            $btnSave.click(function () {
+                //console.log(api.tellSelect());
+                if (api.tellSelect().w > 0) {
+                    $.post('crop.php', {}, function (text) {
+                        alert(text);
+                    });
+                }
+            });
+
+            function updateCoords(c) {
+                $('#x').val(Math.floor(c.x));
+                $('#y').val(Math.floor(c.y));
+                $('#w').val(Math.floor(c.w));
+                $('#h').val(Math.floor(c.h));
+            }
+
+
+            function getFullPath(obj) {
+                // 得到图片的完整路径
+                if (obj) {
+                    // ie
+                    if (window.navigator.userAgent.indexOf("MSIE") >= 1) {
+                        obj.select();
+                        return document.selection.createRange().text;
+                    }
+                    // firefox
+                    else if (window.navigator.userAgent.indexOf("Firefox") >= 1) {
+                        if (obj.files) {
+                            return obj.files.item(0).getAsDataURL();
+                        }
+                        return obj.value;
+                    }
+                    return obj.value;
+                }
+            }
+
+            //function getFileUrl(sourceId) {
+            //    if (!document.getElementById(sourceId).value.match(/.jpg|.gif|.png|.bmp/i)) {
+            //        alert('图片格式无效！');
+            //        return false;
+            //    }
+            //    var url;
+            //    if (navigator.userAgent.indexOf("MSIE") >= 1) { // IE
+            //        url = document.getElementById(sourceId).value;
+            //    } else if (navigator.userAgent.indexOf("Firefox") > 0) { // Firefox
+            //        url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+            //    } else if (navigator.userAgent.indexOf("Chrome") > 0) { // Chrome
+            //        url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+            //    }
+            //    return url;
+            //}
+
+            //================= / 修改头像 ==================
+
+
+            // 添加标签
+            var $tagBox = $form.find('.j-tagBox');
+            var $tagBtn = $form.find('.j-addTag');
+            var $tagIpt = $form.find('.j-tagIpt');
+            var tagLen = 5;
+            var curLen = 0;
+
+            $tagBtn.click(function () {
+                curLen = $tagBox.children().length;
+                var _str = $.trim($tagIpt.val());
+
+                if (_str.length > 0) {
+                    if (curLen < tagLen) {
+                        var $label = $('<span class="label label-info">' + _str + '</span> ');
+                        $tagBox.show().append($label);
+                        $tagIpt.val('');
+                    }
+                }
+            });
+
+
+            // 添加工作地
+            var $placeBox = $form.find('.j-placeBox');
+            var $placeBtn = $form.find('.j-addPlace');
+            var $placeIpt = $form.find('.j-placeIpt');
+
+            $placeBtn.click(function () {
+                var _str = $.trim($placeIpt.val());
+                if (_str.length > 0) {
+                    var $li = $('<li>' + _str + '</li>');
+                    $placeBox.show().append($li);
+                    $placeIpt.val('');
+                }
+            });
+
+
+            // 职业经历
+            var $liveBox = $form.find('.j-liveBox');
+            var $liveBtn = $form.find('.j-addLive');
+            var curLiveLen = 0;
+
+            $liveBtn.click(function () {
+                curLiveLen++;
+
+                var _str = $('<li class="f-mb10">' +
+                        '<input name="lives[' + curLiveLen + '][company]" type="text" class="form-control" placeholder="公司或组织名称">' +
+                        '<input name="lives[' + curLiveLen + '][job]" type="text" class="form-control" placeholder="你的职位（选填）">' +
+                        '<a href="javascript:;"><span class="glyphicon glyphicon-remove"></span></a>' +
+                        '</li>');
+
+                $liveBox.append(_str);
+
+            });
+
+            $liveBox.click(function (e) {
+                var $target = $(e.target);
+                if (e.target.nodeName.toLowerCase() == 'span') {
+                    $target.parents('li').remove();
+                }
+            });
+
+
+            // 教育经历
+            var $teachBox = $form.find('.j-teachBox');
+            var $teachBtn = $form.find('.j-addTeach');
+            var curTeachLen = 0;
+
+            $teachBtn.click(function () {
+                curTeachLen++;
+
+                var _str = $('<li class="f-mb10">' +
+                        '<input name="teach[' + curTeachLen + '][school]" type="text" class="form-control" placeholder="学校或教育机构名称">' +
+                        '<input name="teach[' + curTeachLen + '][specialty]" type="text" class="form-control" placeholder="专业方向（选填）">' +
+                        '<a href="javascript:;"><span class="glyphicon glyphicon-remove"></span></a>' +
+                        '</li>');
+
+                $teachBox.append(_str);
+
+            });
+
+            $teachBox.click(function (e) {
+                var $target = $(e.target);
+                if (e.target.nodeName.toLowerCase() == 'span') {
+                    $target.parents('li').remove();
+                }
+            });
+
+
+            function getAllTags() {
+                var sTags = '';
+                $tagBox.children().each(function (index, elem) {
+                    sTags += $(this).html() + ',';
+                });
+
+                if (sTags.length > 0) {
+                    sTags = sTags.substring(0, sTags.length - 1);
+                }
+                return sTags;
+            }
+
+
+            var $btnSave = $('.j-btnSave');
+
+            $btnSave.click(function () {
+                var seri = $form.serialize();
+                //console.log(getAllTags());
+                console.log(seri);
+
+                //$.post(
+                //    // 接收数据的PHP页面
+                //    url : 'action.php',
+                //    // 传给PHP的数据，多个参数用&连接或者使用json格式数据：{a:'value1',b:'value2'}
+                //    data : "a=value1&b=value2",
+                //    function(msg){
+                //        // 这里是请求发送成功后的回调函数。
+                //        // msg是返回的数据，数据类型在type参数里定义！
+                //    },
+                //    // 默认返回字符串，设置值等于json则返回json数据
+                //    type:'json',
+                //)
+
+                //$form.submit();
+            });
+
+        })();
+    });
+</script>
 </body>
 </html>
