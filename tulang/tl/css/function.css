@@ -1,6 +1,9 @@
 .f-pr {
   position: relative;
 }
+.f-mb0 {
+  margin-bottom: 0;
+}
 .f-mb5 {
   margin-bottom: 5px;
 }
@@ -106,6 +109,12 @@
 .f-pt20 {
   padding-top: 20px;
 }
+.f-pt30 {
+  padding-top: 30px;
+}
+.f-pt40 {
+  padding-top: 40px;
+}
 .f-pl10 {
   padding-left: 10px;
 }
@@ -139,4 +148,10 @@
 }
 .f-bd {
   border: 1px solid #eee;
+}
+.f-fz20 {
+  font-size: 20px;
+}
+.f-fz22 {
+  font-size: 22px;
 }
