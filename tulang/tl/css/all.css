@@ -179,6 +179,9 @@ label {
 .f-p40 {
   padding: 40px;
 }
+.f-p20 {
+  padding: 20px;
+}
 .f-bg {
   background-color: #fff;
 }
@@ -200,6 +203,12 @@ label {
 }
 .f-fz22 {
   font-size: 22px;
+}
+.f-fz14 {
+  font-size: 14px;
+}
+.f-ofh {
+  overflow: hidden;
 }
 .m-header {
   height: 78px;
@@ -460,6 +469,18 @@ label {
 .m-list .meta span {
   margin-right: 50px;
 }
+.m-c1 {
+  color: #ff6a0f;
+}
+.m-c2 {
+  color: #65a5f2;
+}
+.m-c3 {
+  color: #ff4848;
+}
+.m-c4 {
+  color: #384b5d;
+}
 .m-modal {
   position: fixed;
   left: 50%;
@@ -478,6 +499,63 @@ label {
   position: absolute;
   right: 10px;
   top: 10px;
+}
+.m-bb {
+  border-bottom: 1px solid #f1f3f6;
+}
+.m-colBox .col {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.m-colBox .col .item {
+  position: relative;
+  float: left;
+  list-style: none;
+  text-align: center;
+}
+.m-colBox .col .item:after {
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: 0;
+  height: 90%;
+  border-right: 1px solid #dee2e9;
+}
+.m-colBox .col .last:after {
+  border-right: none;
+}
+.m-colBox5 .item {
+  width: 20%;
+}
+.m-panel {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+.g-box2 {
+  position: relative;
+  min-height: 878px;
+  background-color: #fff;
+  border-top: 1px solid #f1f3f6;
+}
+.g-box2:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 166px;
+  height: 100%;
+  border-left: 1px solid #f1f3f6;
+}
+.g-side2 {
+  position: absolute;
+  width: 166px;
+  height: auto;
+}
+.g-main2 {
+  padding-left: 166px;
+}
+.g-main2 .inner {
+  padding: 30px;
 }
 .p-wrap {
   width: 100%;
@@ -1126,6 +1204,10 @@ label {
   width: 100%;
   border-bottom: 1px solid #f1f3f6;
 }
+.m-subTitle2 h3 {
+  margin-left: 20px;
+  color: #757575;
+}
 .m-step {
   position: relative;
   width: 933px;
@@ -1201,7 +1283,7 @@ label {
 }
 .zhaobiao .total .col {
   float: right;
-  width: 458px;
+  width: 485px;
   height: 144px;
   background-color: #f1f3f6;
 }
@@ -1254,15 +1336,6 @@ label {
   padding: 20px;
   line-height: 30px;
   color: #757575;
-}
-.m-c1 {
-  color: #ff6a0f;
-}
-.m-c2 {
-  color: #65a5f2;
-}
-.m-c3 {
-  color: #ff4848;
 }
 .m-tblist {
   padding-left: 25px;
@@ -1320,4 +1393,216 @@ label {
   position: absolute;
   top: -25px;
   left: 200px;
+}
+.sjmx .title {
+  margin-bottom: 20px;
+  color: #292929;
+  font-size: 18px;
+}
+.sjmx .cnt {
+  border: 1px solid #e2e2e2;
+  padding: 20px;
+}
+.sjmx .cnt ul {
+  margin: 0;
+  padding: 0;
+}
+.sjmx .cnt li {
+  line-height: 30px;
+  list-style: none;
+}
+.sjmx .cnt li .col1 {
+  display: inline-block;
+  min-width: 250px;
+}
+.m-pf {
+  padding: 10px 0;
+  color: #999;
+}
+.m-pf li {
+  display: inline-block;
+  border-right: 1px solid #f1f3f6;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+.m-pf li:last-child {
+  margin-right: 0;
+  border-right: 0;
+}
+.m-pf p {
+  vertical-align: middle;
+}
+.m-pf .score {
+  font-size: 24px;
+  color: #ff4848;
+  vertical-align: middle;
+}
+.m-pf .score2 {
+  font-size: 14px;
+}
+.m-pf .text {
+  position: relative;
+  top: 8px;
+}
+.tbzt {
+  height: 133px;
+  margin-bottom: 40px;
+  background: #f1f3f6;
+}
+.tbzt .media-left {
+  padding-right: 25px;
+}
+.tbzt .media-body p {
+  font-size: 18px;
+  color: #757575;
+}
+.tbzt .col1 {
+  float: left;
+  width: 780px;
+  padding: 25px;
+}
+.tbzt .col2 {
+  position: relative;
+  float: right;
+  width: 320px;
+  height: 133px;
+  line-height: 133px;
+  border: 1px solid #e5ebf3;
+  text-align: center;
+  background-color: #fff;
+}
+.tbzt .col2:after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #e5ebf3;
+  border-left: 1px solid #e5ebf3;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.tbzt .col2 .btn {
+  min-width: 127px;
+}
+.nav-side .title {
+  margin: 0;
+  padding: 30px 0;
+}
+.nav-side .title h3 {
+  margin: 0;
+  padding-left: 57px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #b8b8b8;
+  background: url(../img/nav-side.png) 10px 10px no-repeat;
+}
+.nav-side .title .mytoub {
+  background-position: 30px 0;
+}
+.nav-side .title .myzhaob {
+  background-position: 30px -30px;
+}
+.nav-side .title .myzhangb {
+  background-position: 30px -60px;
+}
+.nav-side ul {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #f1f3f6;
+}
+.nav-side li {
+  margin-bottom: 18px;
+  list-style: none;
+}
+.nav-side li a {
+  display: block;
+  line-height: 30px;
+  padding-left: 57px;
+  color: #757575;
+}
+.nav-side li.active a {
+  color: #fff;
+  background-color: #3c8bee;
+}
+.nav-side .nbb {
+  border-bottom: none;
+}
+.ywgl-zbrw .tongji {
+  background-color: #e8f1fb;
+  color: #abbdd3;
+}
+.ywgl-zbrw .tongji .num {
+  font-size: 22px;
+  color: #6082ac;
+}
+.ywgl-zbrw .list .title,
+.ywgl-zbrw .list .itemcol {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.ywgl-zbrw .list .title li,
+.ywgl-zbrw .list .itemcol li {
+  float: left;
+  list-style: none;
+  color: #757575;
+}
+.ywgl-zbrw .list .title .one,
+.ywgl-zbrw .list .itemcol .one {
+  width: 334px;
+}
+.ywgl-zbrw .list .title .two,
+.ywgl-zbrw .list .itemcol .two {
+  width: 118px;
+}
+.ywgl-zbrw .list .title .three,
+.ywgl-zbrw .list .itemcol .three {
+  width: 123px;
+}
+.ywgl-zbrw .list .title .four,
+.ywgl-zbrw .list .itemcol .four {
+  width: 93px;
+}
+.ywgl-zbrw .list .title .five,
+.ywgl-zbrw .list .itemcol .five {
+  width: 168px;
+  text-align: right;
+}
+.ywgl-zbrw .list .title {
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+.ywgl-zbrw .list .itemcol {
+  padding: 10px;
+  background-color: #fff;
+  font-size: 16px;
+  color: #292929;
+}
+.ywgl-zbrw .list .item {
+  margin-top: 10px;
+  border: 1px solid #f1f3f6;
+}
+.ywgl-zbrw .list .item .subtitle {
+  padding: 10px;
+  border-bottom: 1px solid #f1f3f6;
+  color: #b8b8b8;
+  background-color: #f7f7f7;
+  font-size: 12px;
+}
+.ywgl-zbrw .control-label {
+  font-weight: normal;
+}
+.ywgl-zbrw .btnw {
+  min-width: 75px;
+}
+.ywgl-pingjia .pingfen h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #999999;
 }

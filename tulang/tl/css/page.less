@@ -1,3 +1,15 @@
+.m-c1{
+  color: #ff6a0f;
+}
+.m-c2{
+  color: #65a5f2;
+}
+.m-c3{
+  color: #ff4848;
+}
+.m-c4{
+  color: #384b5d;
+}
 .m-modal{
   position: fixed;
   left: 50%;
@@ -19,6 +31,79 @@
 
   }
 }
+.m-bb{
+  border-bottom: 1px solid #f1f3f6;
+}
+
+
+.m-colBox{
+  .col{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    .item{
+      position: relative;
+      float: left;
+      list-style: none;
+      text-align: center;
+      &:after{
+        content: '';
+        position: absolute;
+        top: 5%;
+        right: 0;
+        height: 90%;
+        border-right: 1px solid #dee2e9;
+      }
+    }
+    .last:after{
+      border-right: none;
+    }
+  }
+}
+.m-colBox5{
+  .item{
+    width: 20%;
+  }
+}
+
+.m-panel{
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+
+
+// ==================布局
+.g-box2{
+  position: relative;
+  min-height: 878px;
+  background-color: #fff;
+  border-top: 1px solid #f1f3f6;
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 166px;
+    height: 100%;
+    border-left: 1px solid #f1f3f6;
+  }
+}
+.g-side2{
+  position: absolute;
+  width: 166px;
+  height: auto;
+}
+.g-main2{
+  padding-left: 166px;
+  .inner{
+    padding: 30px;
+  }
+}
+
+// ==================布局
+
+
 
 
 
@@ -898,6 +983,12 @@
     border-bottom: 1px solid #f1f3f6;
   }
 }
+.m-subTitle2{
+  h3{
+    margin-left: 20px;
+    color: #757575;
+  }
+}
 
 
 .m-step{
@@ -992,7 +1083,7 @@
     }
     .col{
       float: right;
-      width: 458px;
+      width: 485px;
       height: 144px;
       background-color: #f1f3f6;
     }
@@ -1058,15 +1149,7 @@
   }
 }
 
-.m-c1{
-  color: #ff6a0f;
-}
-.m-c2{
-  color: #65a5f2;
-}
-.m-c3{
-  color: #ff4848;
-}
+
 
 .m-tblist{
   padding-left: 25px;
@@ -1129,7 +1212,269 @@
     left: 200px;
   }
 }
+
+
+
+.sjmx{
+  .title{
+    margin-bottom: 20px;
+    color: #292929;
+    font-size: 18px;
+  }
+  .cnt{
+    border: 1px solid #e2e2e2;
+    padding: 20px;
+    
+    ul{
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      line-height: 30px;
+      list-style: none;
+
+      .col1{
+        display: inline-block;
+        min-width: 250px;
+      }
+    }
+  }
+}
+
+
+.m-pf{
+
+  padding: 10px 0;
+  color: #999;
+  //border-bottom: 1px solid #f1f3f6;
+
+  li{
+    display: inline-block;
+
+    border-right: 1px solid #f1f3f6;
+    margin-right: 10px;
+    padding-right: 10px;
+    &:last-child{
+      margin-right: 0;
+      border-right: 0;
+    }
+  }
+
+  p{
+    vertical-align: middle;
+  }
+
+  .score{
+    font-size: 24px;
+    color: #ff4848;
+    vertical-align: middle;
+  }
+  .score2{
+    font-size: 14px;
+  }
+
+  .text{
+    position: relative;
+    top: 8px;
+  }
+
+}
+
+
+.tbzt{
+  height: 133px;
+  margin-bottom: 40px;
+  background: #f1f3f6;
+
+  .media-left{
+    padding-right: 25px;
+  }
+  .media-body{
+    p{
+      font-size: 18px;
+      color: #757575;
+    }
+  }
+  .col1{
+    float: left;
+    width: 780px;
+    padding: 25px;
+  }
+  .col2{
+    position: relative;
+    float: right;
+    width: 320px;
+    height: 133px;
+    line-height: 133px;
+    border: 1px solid #e5ebf3;
+    text-align: center;
+    background-color: #fff;
+
+    &:after{
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid #e5ebf3;
+      border-left: 1px solid #e5ebf3;
+      background-color: #fff;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+
+    }
+    .btn{
+      min-width: 127px;
+    }
+  }
+}
 // =========================招标==================
+
+
+
+
+// =========================业务管理==================
+
+
+.nav-side{
+  .title{
+    margin: 0;
+    padding: 30px 0;
+
+    h3{
+      margin:0;
+      padding-left: 57px;
+      line-height: 20px;
+      font-size: 16px;
+      color: #b8b8b8;
+      background: url(../img/nav-side.png) 10px 10px no-repeat;
+    }
+
+    .mytoub{background-position: 30px 0;}
+    .myzhaob{background-position: 30px -30px;}
+    .myzhangb{background-position: 30px -60px;}
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    //padding-bottom: 30px;
+    border-bottom: 1px solid #f1f3f6;
+  }
+  li{
+    margin-bottom: 18px;
+    list-style: none;
+    a{
+      display: block;
+      line-height: 30px;
+      padding-left: 57px;
+      color: #757575;
+    }
+    &.active a{
+      color: #fff;
+      background-color: #3c8bee;
+    }
+  }
+  .nbb{
+    border-bottom: none;
+  }
+
+
+}
+
+// 招标任务
+.ywgl-zbrw{
+  .tongji{
+    background-color: #e8f1fb;
+    color: #abbdd3;
+
+    .num{
+      font-size: 22px;
+      color: #6082ac;
+    }
+  }
+
+
+
+  .list{
+    .title, .itemcol{
+      margin:0;
+      padding: 0;
+      overflow: hidden;
+      li{
+        float: left;
+        list-style: none;
+        color: #757575;
+      }
+      .one{width:334px;}
+      .two{width:118px;}
+      .three{width:123px;}
+      .four{width:93px;}
+      .five{width: 168px; text-align: right}
+    }
+    .title{
+      padding: 10px;
+      background-color: #f7f7f7;
+    }
+    .itemcol{
+      padding: 10px;
+      background-color: #fff;
+      font-size: 16px;
+      color: #292929;
+    }
+
+    .item{
+      margin-top: 10px;
+      border: 1px solid #f1f3f6;
+      .subtitle{
+        padding: 10px;
+        border-bottom: 1px solid #f1f3f6;
+        color: #b8b8b8;
+        background-color: #f7f7f7;
+        font-size: 12px;
+      }
+    }
+}
+
+
+
+
+  .control-label{
+    font-weight: normal;
+  }
+  .btnw{
+    min-width: 75px;
+  }
+}
+// 投标评价
+.ywgl-pingjia{
+  .pingfen{
+    h3{
+      margin: 0;
+      font-size: 18px;
+      color: #999999;
+    }
+  }
+}
+// =========================业务管理==================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

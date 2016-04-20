@@ -133,6 +133,9 @@
 .f-p40 {
   padding: 40px;
 }
+.f-p20 {
+  padding: 20px;
+}
 .f-bg {
   background-color: #fff;
 }
@@ -154,4 +157,10 @@
 }
 .f-fz22 {
   font-size: 22px;
+}
+.f-fz14 {
+  font-size: 14px;
+}
+.f-ofh {
+  overflow: hidden;
 }
