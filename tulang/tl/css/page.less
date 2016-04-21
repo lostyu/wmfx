@@ -10,6 +10,9 @@
 .m-c4{
   color: #384b5d;
 }
+.m-c5{
+  color: #72c72e;
+}
 .m-modal{
   position: fixed;
   left: 50%;
@@ -65,13 +68,168 @@
     width: 20%;
   }
 }
+.m-colBox3{
+  .item{
+    width: 33.333%;
+  }
+}
 
 .m-panel{
   padding: 20px;
   background-color: #f7f7f7;
 }
+.m-panel2{
+  padding: 30px 20px;
+  border-top: 1px solid #f1f3f6;
+}
+
+.m-tabs{
+  .nav-tabs{
+    li{
+
+    }
+    a{
+      font-size: 16px;
+      color: #b8b8b8;
+      border: none;
+      &:hover{
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+  .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    background: none;
+    border: 2px solid #3c8bee;
+    border-width: 0 0 2px;
+    color: #3c8bee;
+
+  }
+
+  .tab-content{
+    padding: 20px 0;
+  }
 
 
+
+}
+
+.m-pinglun{
+  .media{
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid #f1f3f6;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  .media-left{
+    padding-right: 20px;
+  }
+
+  .media-heading{
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: #333333;
+    .date{
+      float: right;
+      color: #999;
+    }
+  }
+
+  .media-body{
+    p:last-child{
+      margin-bottom: 0;
+    }
+    .text2{
+      color: #757575;
+    }
+    .text{
+      color: #282828;
+    }
+  }
+}
+
+
+.table.tam td{
+  vertical-align: middle;
+}
+
+
+
+.m-cmBox{
+  min-height: 620px;
+  background: #fff;
+}
+
+
+.m-title3{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f1f3f6;
+  color: #757575;
+  h2{
+    padding-left: 20px;
+    line-height: 24px;
+    border-left: 4px solid #398dee;
+    font-size: 18px;
+    color: #333;
+    display: inline-block;
+  }
+  .text{
+    line-height: 24px;
+    font-size: 14px;
+  }
+  .err {
+    color: #fe4e4e;
+  }
+  &.nbb{
+    border-bottom: none;
+  }
+}
+.m-title4{
+  margin-bottom: 15px;
+  h3{
+    margin: 0;
+    font-size: 18px;
+    color: #282828;
+    span{
+      font-size: 14px;
+      color: #b8b8b8;
+    }
+  }
+}
+
+
+.m-paypal{
+  margin: 0;
+  padding: 0;
+  li{
+    margin-right: 50px;
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+  }
+}
+
+
+
+.m-tips{
+  text-align: center;
+  .pic{
+    margin-bottom: 35px;
+  }
+  .text1{
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .text2{
+    margin-bottom: 58px;
+    color: #757575;
+  }
+  .button{}
+}
 
 // ==================布局
 .g-box2{
@@ -939,26 +1097,7 @@
     color: #757575;
   }
 }
-.m-title3{
-  padding-bottom: 15px;
-  border-bottom: 1px solid #f1f3f6;
-  color: #757575;
-  h2{
-    padding-left: 20px;
-    line-height: 24px;
-    border-left: 4px solid #398dee;
-    font-size: 18px;
-    color: #333;
-    display: inline-block;
-  }
-  .text{
-    line-height: 24px;
-    font-size: 14px;
-  }
-  .err {
-    color: #fe4e4e;
-  }
-}
+
 
 
 
@@ -1448,6 +1587,9 @@
   .btnw{
     min-width: 75px;
   }
+  .btnw2{
+    min-width: 136px;
+  }
 }
 // 投标评价
 .ywgl-pingjia{
@@ -1456,6 +1598,45 @@
       margin: 0;
       font-size: 18px;
       color: #999999;
+    }
+  }
+}
+
+.choosePay{
+  margin: 0;
+  margin-left: -30px;
+  padding: 0;
+  li{
+    position: relative;
+    float: left;
+    width: 271px;
+    height: 150px;
+    line-height: 150px;
+    margin-left: 30px;
+    border: 1px solid #e5e5e5;
+    vertical-align: middle;
+    list-style: none;
+    text-align: center;
+    color: #757575;
+    font-size: 16px;
+    cursor: pointer;
+    span{
+      display: inline-block;
+      line-height: normal;
+      vertical-align: middle;
+    }
+    &.active{
+      border-color: #9dc5f6;
+    }
+    &.active:after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      margin-left: -5px;
+      border-top: 10px solid #9dc5f6;
+      border-left:  10px solid transparent;
+      border-right: 10px solid transparent;
     }
   }
 }

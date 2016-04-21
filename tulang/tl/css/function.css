@@ -161,6 +161,17 @@
 .f-fz14 {
   font-size: 14px;
 }
+.f-fz12 {
+  font-size: 12px;
+}
 .f-ofh {
   overflow: hidden;
+}
+.f-tof {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.f-lh20 {
+  line-height: 20px;
 }

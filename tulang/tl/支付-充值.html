@@ -4,18 +4,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>header</title>
+    <title>支付-充值</title>
     <!-- bootstap -->
-    <link rel="stylesheet" href="../bootstrap-3.3.5/css/bootstrap.min.css">
-    <!-- 字体图标 -->
-    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/all.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
 
-<nav style="display: none" class="m-header navbar-fixed-top">
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+    <!-- linkcloud -->
+    <!--<link rel="stylesheet" href="../css/demo.css">-->
+
+    <!-- your css -->
+    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <link rel="stylesheet" href="css/all.css"/>
+
+
+</head>
+<body class="f-bg2">
+<nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="../img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -34,7 +42,7 @@
                 <a class="button" href="javascript:;">发布任务</a>
             </li>
             <li class="item msg">
-                <img src="../img/icon-msg.png" alt=""/>
+                <img src="img/icon-msg.png" alt=""/>
                 <div class="msgList">
                     <div class="inner">
                         <div class="text-center f-mb20">
@@ -80,7 +88,7 @@
                         </ul>
                     </div>
                     <div class="more">
-                        <img src="../img/icon-settings.png" alt=""/>
+                        <img src="img/icon-settings.png" alt=""/>
                         <a class="pull-right" href="javascript:;">查看更多</a>
                     </div>
                 </div>
@@ -101,32 +109,104 @@
 
     </div>
 </nav>
-
-<!-- 未登陆 -->
-<nav class="m-header navbar-fixed-top">
-    <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="../img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+<div class="m-headerSpace"></div>
 
 
+<div class="g-container f-mb30">
+    <div class="m-cmBox f-p20">
+        <div class="m-title3 nbb">
+            <h2>图狼网-支付</h2>
+        </div>
+        <p style="padding-left: 20px; margin-bottom: 30px;" class="text-muted">（定金支付类别）提示：如果72小时之内未付款，该订单将自动关闭。</p>
+        <div class="m-panel2">
+            <p>账户可用余额：2604元</p>
+            <div class="form-inline">
+                　　充值金额：<input class="form-control" type="text" placeholder="请输入充值金额"> 元
+            </div>
+        </div>
 
-        <ul class="nav2">
-            <li class="item fb" style="padding-right:0;">
-                <a class="button" href="javascript:;">发布任务</a>
-            </li>
+
+
+
+        <div class="m-panel2">
+            <div class="m-title4" style="margin-bottom: 40px;">
+                <h3>第三方支付 <span>支持微信支付、支付宝、银联支付等多种支付方式</span></h3>
+            </div>
+            <ul class="m-paypal f-mb40">
+                <li>
+                    <p><img src="img/zhifubao.png" alt=""/></p>
+                    <label class="radio-inline">
+                        <input name="pay" type="radio" checked> 支付宝
+                    </label>
+                </li>
+                <li>
+                    <p><img src="img/weixin.png" alt=""/></p>
+                    <label class="radio-inline">
+                        <input name="pay" type="radio"> 微信支付
+                    </label>
+                </li>
+                <li>
+                    <p><img src="img/yinlian.png" alt=""/></p>
+                    <label class="radio-inline">
+                        <input name="pay" type="radio"> 银联在线
+                    </label>
+                </li>
+            </ul>
+            <div class="text-right">
+                <a class="btn btn-primary btn-w" href="javascript:;">确认支付</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+<!-- S 底部 -->
+<nav class="navbar navbar-default m-footer m-footer2">
+    <div class="container">
+        <p class="navbar-text info"><span>Copyright © 2014-2016</span><a href="javascript:;">kaistart.com</a><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
+        <ul class="concat">
+            <li class="weibo"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="weixin"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="qq"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
         </ul>
+
+        <p class="navbar-text navbar-right link">
+            <a href="#">关于</a><span>|</span><a href="#">我们是谁</a><span>|</span><a href="#">帮助</a><span>|</span><a
+                href="#">用户协议</a><span>|</span><a href="#">信任与安全</a>
+        </p>
 
     </div>
 </nav>
+<!-- E 底部 -->
 
 
 <!-- jquery -->
-<script src="../libs/jquery-2.2.2/jquery.min.js"></script>
+<script src="libs/jquery-2.2.2/jquery.min.js"></script>
 
 <!-- bootsrap -->
-<script src="../bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+
 
 <!-- linkcloud -->
-<script src="../js/main.js"></script>
+<script src="js/main.js"></script>
 
 <!-- your js -->
 <script src=""></script>

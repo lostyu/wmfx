@@ -1,14 +1,228 @@
 .m-header{
   height: 78px;
-  padding:10px 0;
-  background-color: #384858;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
 
   h1{
+    float: left;
     margin: 0;
+    margin-right: 67px;
+    padding-top: 15px;
   }
+  .nav-main{
+    float: left;
+    margin: 0;
+    padding: 0;
 
-  .navbar-header{
-    margin-right: 42px;
+    li{
+      float: left;
+      list-style: none;
+      &.active a, a:hover{
+        color: #398dee;
+        border-bottom-color: #398dee;
+      }
+    }
+    a{
+      display: block;
+      width: 100px;
+      height: 78px;
+      line-height: 78px;
+      border-bottom: 3px solid transparent;
+      text-align: center;
+      color: #b8b8b8;
+      text-decoration: none;
+    }
+  }
+  .nav2{
+    float: right;
+    margin: 0;
+    padding: 0;
+    .item{
+      float: left;
+      list-style: none;
+    }
+
+    .tx{
+      position: relative;
+      width: 70px;
+      height: 77px;
+      padding-top: 13px;
+      border-top: 2px solid transparent;
+      text-align: center;
+      .pic{
+        position: relative;
+        .u-icon{
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+      .subNav{
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 208px;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #d9d9d9;
+        border-bottom: none;
+        background-color: #fff;
+        li{
+          list-style: none;
+          border-bottom: 1px solid #d9d9d9;
+        }
+        a{
+          display: block;
+          line-height: 60px;
+          color: #757575;
+          font-size: 16px;
+          text-decoration: none;
+          &:hover{
+            background-color: #f2f8ff;
+          }
+        }
+      }
+
+      &:hover{
+        border-top-color: #3c8bee;
+        background-color: #f2f8ff;
+      }
+      &:hover .subNav{
+        display: block;
+      }
+    }
+
+    .msg{
+      position: relative;
+      width: 70px;
+      height: 77px;
+      padding-top: 27px;
+      border-top: 2px solid transparent;
+      text-align: center;
+
+      .msgList{
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 374px;
+        //padding: 12px;
+        border: 1px solid #d9d9d9;
+        border-bottom: none;
+        text-align: left;
+        background-color: #fff;
+
+        .inner{
+          padding: 12px;
+          border-bottom: 1px solid #d9d9d9;
+        }
+
+        .tabs{
+          display: inline-block;
+          overflow: hidden;
+          border: 1px solid #3c8bee;
+          .active{
+            color: #fff;
+            background-color: #3c8bee;
+          }
+          a{
+            float: left;
+            width: 110px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #3c8bee;
+            background-color: #fff;
+          }
+        }
+
+        ul{
+          margin: 0;
+          padding: 0;
+          li{
+            list-style: none;
+            margin-bottom: 10px;
+            &:last-child{
+              margin-bottom: 0;
+            }
+            &:last-child .media-body{
+              border-bottom: none;
+            }
+          }
+
+          .media-body{
+            border-bottom: 1px solid #f1f3f6;
+            .media-heading{
+              color: #65a5f2;
+            }
+            p {
+              width: 288px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              color: #757575;
+            }
+          }
+        }
+
+        .more{
+          padding: 0 30px;
+          line-height: 60px;
+          border-bottom: 1px solid #d9d9d9;
+        }
+      }
+
+      &:hover{
+        border-top-color: #3c8bee;
+        background-color: #f2f8ff;
+      }
+      &:hover .msgList{
+        display: block;
+      }
+    }
+
+
+    .fb{
+      padding-top: 24px;
+      padding-right: 15px;
+      .button{
+        display: block;
+        width: 127px;
+        height: 30px;
+        line-height: 30px;
+        background-color: #3c8bee;
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    .search{
+      padding-top: 24px;
+      padding-right: 15px;
+
+      .input{
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        background: #f1f3f6 url(../img/icon-search.png) 15px 6px no-repeat;
+        border-radius: 20px;
+
+
+        input{
+          float: right;
+          margin-right: 20px;
+          width: 140px;
+          height: 30px;
+          line-height: 30px;
+          background-color: transparent;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+
+
   }
 }
 

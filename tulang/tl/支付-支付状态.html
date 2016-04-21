@@ -4,18 +4,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>header</title>
+    <title>支付-支付状态</title>
     <!-- bootstap -->
-    <link rel="stylesheet" href="../bootstrap-3.3.5/css/bootstrap.min.css">
-    <!-- 字体图标 -->
-    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/all.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
 
-<nav style="display: none" class="m-header navbar-fixed-top">
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+    <!-- linkcloud -->
+    <!--<link rel="stylesheet" href="../css/demo.css">-->
+
+    <!-- your css -->
+    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <link rel="stylesheet" href="css/all.css"/>
+
+
+</head>
+<body class="f-bg2">
+<nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="../img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -34,7 +42,7 @@
                 <a class="button" href="javascript:;">发布任务</a>
             </li>
             <li class="item msg">
-                <img src="../img/icon-msg.png" alt=""/>
+                <img src="img/icon-msg.png" alt=""/>
                 <div class="msgList">
                     <div class="inner">
                         <div class="text-center f-mb20">
@@ -80,7 +88,7 @@
                         </ul>
                     </div>
                     <div class="more">
-                        <img src="../img/icon-settings.png" alt=""/>
+                        <img src="img/icon-settings.png" alt=""/>
                         <a class="pull-right" href="javascript:;">查看更多</a>
                     </div>
                 </div>
@@ -101,32 +109,81 @@
 
     </div>
 </nav>
-
-<!-- 未登陆 -->
-<nav class="m-header navbar-fixed-top">
-    <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="../img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+<div class="m-headerSpace"></div>
 
 
+<div class="g-container f-mb30">
+    <div class="m-cmBox f-p20">
+        <div class="m-title3 nbb">
+            <h2>图狼网-支付</h2>
+        </div>
 
-        <ul class="nav2">
-            <li class="item fb" style="padding-right:0;">
-                <a class="button" href="javascript:;">发布任务</a>
-            </li>
+
+        <div class="m-tips f-pt40">
+            <p class="pic"><img src="img/status-success.png" alt=""/></p>
+            <p class="text1"><span class="m-c1">您已付款成功！</span></p>
+            <p class="text2">订单号：R47348034480340945</p>
+            <div class="button">
+                <button class="btn btn-primary" type="button">查看订单状态</button>
+            </div>
+        </div>
+
+        <!-- 支付失败 -->
+        <div class="m-tips f-pt40" style="display: none;">
+            <p class="pic"><img src="img/status-error.png" alt=""/></p>
+            <p class="text1"><span class="m-c3">您付款失败！</span></p>
+            <p class="text2">操作提示</p>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+<!-- S 底部 -->
+<nav class="navbar navbar-default m-footer m-footer2">
+    <div class="container">
+        <p class="navbar-text info"><span>Copyright © 2014-2016</span><a href="javascript:;">kaistart.com</a><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
+        <ul class="concat">
+            <li class="weibo"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="weixin"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
+            <li class="qq"><a href="#">
+                <div class="pic"><span class="caret"></span></div>
+            </a></li>
         </ul>
+
+        <p class="navbar-text navbar-right link">
+            <a href="#">关于</a><span>|</span><a href="#">我们是谁</a><span>|</span><a href="#">帮助</a><span>|</span><a
+                href="#">用户协议</a><span>|</span><a href="#">信任与安全</a>
+        </p>
 
     </div>
 </nav>
+<!-- E 底部 -->
 
 
 <!-- jquery -->
-<script src="../libs/jquery-2.2.2/jquery.min.js"></script>
+<script src="libs/jquery-2.2.2/jquery.min.js"></script>
 
 <!-- bootsrap -->
-<script src="../bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+
 
 <!-- linkcloud -->
-<script src="../js/main.js"></script>
+<script src="js/main.js"></script>
 
 <!-- your js -->
 <script src=""></script>
