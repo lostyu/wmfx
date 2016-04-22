@@ -21,35 +21,94 @@
 
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top m-header">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <h1><a href="#"><img src="img/logo.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
-        </div>
+<nav class="m-header navbar-fixed-top">
+    <div class="g-container">
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="#">了解我们</a></li>
-                <li><a href="#">设计机构</a></li>
-                <li><a href="#">寻找任务</a></li>
-            </ul>
+        <ul class="nav-main">
+            <li class="active"><a href="#">了解我们</a></li>
+            <li><a href="#">设计机构</a></li>
+            <li><a href="#">寻找任务</a></li>
+            <li><a href="#">图狼达人</a></li>
+        </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">注册</a></li>
-                <li><a href="#">登陆</a></li>
-            </ul>
-
-            <form class="navbar-form navbar-right" role="search">
-                <div class="form-group has-feedback has-feedback2">
-                    <input type="text" class="form-control" placeholder="1623,32 个项目"/>
-                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+        <ul class="nav2">
+            <li class="item search">
+                <div class="input">
+                    <input type="text"/>
                 </div>
-                <button type="submit" class="btn btn-primary">发布任务</button>
-            </form>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+            </li>
+            <li class="item fb">
+                <a class="button" href="javascript:;">发布任务</a>
+            </li>
+            <li class="item msg">
+                <span class="dot"></span>
+                <img src="img/icon-msg.png" alt=""/>
+                <div class="msgList">
+                    <div class="inner">
+                        <div class="text-center f-mb20">
+                            <div class="tabs">
+                                <a class="active" href="javascript:;">私信</a>
+                                <a href="javascript:;">通知</a>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img class="img-circle" width="50" height="50" src="" alt=""/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">用户名<span class="pull-right">3月15日</span></div>
+                                        <p class="text-overflow">省深圳市南山区留仙大道世外桃源创意园省深圳市南山区留仙大道世外桃源创意园</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img class="img-circle" width="50" height="50" src="" alt=""/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">用户名<span class="pull-right">3月15日</span></div>
+                                        <p class="text-overflow">省深圳市南山区留仙大道世外桃源创意园省深圳市南山区留仙大道世外桃源创意园</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img class="img-circle" width="50" height="50" src="" alt=""/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">用户名<span class="pull-right">3月15日</span></div>
+                                        <p class="text-overflow">省深圳市南山区留仙大道世外桃源创意园省深圳市南山区留仙大道世外桃源创意园</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <img src="img/icon-settings.png" alt=""/>
+                        <a class="pull-right" href="javascript:;">查看更多</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item tx">
+                <div class="pic">
+                    <span class="u-icon u-icon-v2"></span>
+                    <img class="img-circle" width="50" height="50" src="img/tx-default.png" alt=""/>
+                </div>
+                <ul class="subNav">
+                    <li><a href="javascript:;">我的主页</a></li>
+                    <li><a href="javascript:;">我的账簿</a></li>
+                    <li><a href="javascript:;">账号设置</a></li>
+                    <li><a href="javascript:;"><span style="color: #ff4e4e;">退出</span></a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
 </nav>
 <div class="m-headerSpace"></div>
 
@@ -129,28 +188,19 @@
 
 
 <!-- S 底部 -->
-<nav class="navbar navbar-default m-footer m-footer2">
-    <div class="container">
-        <p class="navbar-text info"><span>Copyright © 2014-2016</span><a href="javascript:;">kaistart.com</a><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+<nav class="m-footer">
+    <div class="g-container">
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="link">
+            <a class="navbar-link" href="javascript:;">关于</a>|
+            <a class="navbar-link" href="javascript:;">我们是谁</a>|
+            <a class="navbar-link" href="javascript:;">帮助</a>|
+            <a class="navbar-link" href="javascript:;">用户协议</a>|
+            <a class="navbar-link" href="javascript:;">信任与安全</a>
+
+            <a class="fa fa-weixin" href="javascript:;"></a>
+            <a class="fa fa-weibo" href="javascript:;"></a>
         </p>
-
-        <ul class="concat">
-            <li class="weibo"><a href="#">
-                <div class="pic"><span class="caret"></span></div>
-            </a></li>
-            <li class="weixin"><a href="#">
-                <div class="pic"><span class="caret"></span></div>
-            </a></li>
-            <li class="qq"><a href="#">
-                <div class="pic"><span class="caret"></span></div>
-            </a></li>
-        </ul>
-
-        <p class="navbar-text navbar-right link">
-            <a href="#">关于</a><span>|</span><a href="#">我们是谁</a><span>|</span><a href="#">帮助</a><span>|</span><a
-                href="#">用户协议</a><span>|</span><a href="#">信任与安全</a>
-        </p>
-
     </div>
 </nav>
 <!-- E 底部 -->

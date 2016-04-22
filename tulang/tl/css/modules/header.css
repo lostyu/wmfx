@@ -99,6 +99,14 @@
   border-top: 2px solid transparent;
   text-align: center;
 }
+.m-header .nav2 .msg .dot {
+  position: absolute;
+  right: 24px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ff4e4e;
+}
 .m-header .nav2 .msg .msgList {
   display: none;
   position: absolute;

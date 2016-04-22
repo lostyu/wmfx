@@ -1,3 +1,29 @@
+.btn {
+  border-radius: 0;
+  padding: 9px 12px;
+}
+.label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 8px 16px;
+  border-radius: 0;
+  border: 1px solid transparent;
+}
+
+.label-1{
+  background-color: #398dee;
+  color: #fff;
+}
+.label-2{
+  background-color: #fff;
+  color: #398dee;
+  border-color: #398dee;
+}
+a.label-2:focus, a.label-2:hover{
+  color: #398dee;
+}
+
 .m-c1{
   color: #ff6a0f;
 }
@@ -156,6 +182,18 @@
 .table.tam td{
   vertical-align: middle;
 }
+.table-s1{
+  tbody>tr>td, tbody>tr>th, tfoot>tr>td, tfoot>tr>th, thead>tr>td, thead>tr>th{
+    padding: 12px 10px;
+    color: #757575;
+  }
+  thead>tr>th{
+    border-bottom: none;
+    background-color: #f7f7f7;
+    color: #757575;
+    font-weight: normal;
+  }
+}
 
 
 
@@ -231,6 +269,37 @@
   .button{}
 }
 
+.mbtn{
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 20px;
+  min-width: 100px;
+  border: 1px solid transparent;
+  text-align: center;
+  
+  &:hover,
+  &:active,
+  &:focus{
+    text-decoration: none;
+  }
+}
+.mbtn-primary{
+  background-color: #398dee;
+  color: #fff;
+}
+.mbtn-default{
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+.mbtn-lg{
+  height: 40px;
+  line-height: 40px;
+  min-width: 210px;
+}
+
+
 // ==================布局
 .g-box2{
   position: relative;
@@ -259,7 +328,30 @@
   }
 }
 
-// ==================布局
+.g-box3{
+  position: relative;
+  min-height: 586px;
+  background-color: #fff;
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 200px;
+    height: 100%;
+    border-left: 1px solid #f1f3f6;
+  }
+}
+.g-side3{
+  position: absolute;
+  width: 200px;
+  height: auto;
+}
+.g-main3{
+  padding-left: 200px;
+}
+
+// ================== /布局
 
 
 
@@ -461,64 +553,6 @@
 
 
 
-//.p-formBox3{
-//  height: auto;
-//  min-height: 700px;
-//}
-//.p-formBox4{
-//  height: auto;
-//  min-height: 600px;
-//  margin: 85px auto 70px;
-//}
-
-
-
-//.p-personRegister{
-//  .col1{
-//    width: 50%;
-//    float: left;
-//
-//    .form{
-//      border-right: 1px solid #e8e8e8;
-//    }
-//  }
-//  .col2{
-//    width: 50%;
-//    float: left;
-//
-//    .form{
-//      padding: 50px 150px 0;
-//    }
-//  }
-//
-//  .title{
-//    height: 50px;
-//    line-height: 50px;
-//    margin-bottom: 44px;
-//    text-align: center;
-//    font-size: 14px;
-//    background-color: #edf4f7;
-//    color: #757575;
-//
-//    &.active{
-//      color: #fff;
-//      background-color: #398dee;
-//    }
-//  }
-//
-//  .form{
-//    height: 400px;
-//  }
-//}
-
-//.j-tips{
-//  display: block;
-//  margin-top: 5px;
-//  margin-bottom: 10px;
-//  color: #737373;
-//}
-
-
 // 提示文字信息
 .tipsBox{
   width: 600px;
@@ -588,79 +622,6 @@
 }
 
 
-
-// 个人认证
-.p-box{
-  width:1100px;
-  margin: 0 auto;
-  border:1px solid #dce0e2;
-
-  .p-box-hd{
-    //margin-bottom: 30px;
-  }
-
-  .p-box-bd{
-    padding: 30px 0;
-    .tips{
-      padding: 30px;
-      margin-bottom: 30px;
-      background-color: #f4f5f9;
-
-      .media-left{
-        padding-right: 20px;
-      }
-      .glyphicon{
-        font-size:30px;
-      }
-    }
-
-    .form-boxp{
-      padding:0 40px;
-    }
-    .form-box{
-      //padding: 20px 0;
-    }
-    .form-box2{
-      width: 410px;
-      margin: 0 auto;
-      padding: 70px 0;
-      text-align: center;
-    }
-
-    .rzList{
-      margin: 0;
-      padding: 0 60px;
-      li{
-        height:50px;
-        margin-bottom:35px;
-        list-style: none;
-      }
-      .title{
-        float: left;
-        height:50px;
-        line-height:50px;
-        p{
-          display: inline-block;
-          line-height:normal;
-          vertical-align: middle;
-          strong{
-            font-size:18px;
-            font-weight:normal;
-            color: #757575;
-          }
-          span{
-            font-size:12px;
-          }
-        }
-      }
-      .text{
-        float: right;
-        line-height:50px;
-      }
-
-    }
-  }
-}
 
 
 
@@ -753,11 +714,82 @@
   font-size:18px;
   color: #757575;
 }
-//  =========================个人设置
+//  ========================= /个人设置
 
 
 
 // ========================== 个人认证
+.p-box{
+  width:1100px;
+  margin: 0 auto;
+  border:1px solid #dce0e2;
+
+  .p-box-hd{
+    //margin-bottom: 30px;
+  }
+
+  .p-box-bd{
+    padding: 30px 0;
+    .tips{
+      padding: 30px;
+      margin-bottom: 30px;
+      background-color: #f4f5f9;
+
+      .media-left{
+        padding-right: 20px;
+      }
+      .glyphicon{
+        font-size:30px;
+      }
+    }
+
+    .form-boxp{
+      padding:0 40px;
+    }
+    .form-box{
+      //padding: 20px 0;
+    }
+    .form-box2{
+      width: 410px;
+      margin: 0 auto;
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .rzList{
+      margin: 0;
+      padding: 0 60px;
+      li{
+        height:50px;
+        margin-bottom:35px;
+        list-style: none;
+      }
+      .title{
+        float: left;
+        height:50px;
+        line-height:50px;
+        p{
+          display: inline-block;
+          line-height:normal;
+          vertical-align: middle;
+          strong{
+            font-size:18px;
+            font-weight:normal;
+            color: #757575;
+          }
+          span{
+            font-size:12px;
+          }
+        }
+      }
+      .text{
+        float: right;
+        line-height:50px;
+      }
+
+    }
+  }
+}
 .p-renzheng, .p-renzheng2{
   .m-title{
     margin: 25px 25px 0 25px;
@@ -849,7 +881,7 @@
   }
 }
 
-// ========================== 个人认证
+// ========================== /个人认证
 
 
 
@@ -873,7 +905,7 @@
 
 
 
-// 用户中心
+// ========================= 用户中心
 .p-userCenter{
   margin-top: 78px;
   margin-bottom: 30px;
@@ -1034,6 +1066,7 @@
     }
   }
 }
+// ========================= /用户中心
 
 
 
@@ -1054,6 +1087,7 @@
 
 
 
+//================== plugins ==================
 // laydate
 .laydate_box{
   box-sizing: content-box;
@@ -1068,6 +1102,8 @@
 .laydate-icon-molv{
   height: auto !important;
 }
+//================== /plugins ==================
+
 
 
 
@@ -1471,7 +1507,7 @@
     }
   }
 }
-// =========================招标==================
+// ========================= /招标==================
 
 
 
@@ -1640,7 +1676,7 @@
     }
   }
 }
-// =========================业务管理==================
+// ========================= /业务管理==================
 
 
 
@@ -1654,6 +1690,393 @@
 
 
 
+
+
+// ===============================帮助
+.helpPage{
+  .pic{
+    position: relative;
+    height: 130px;
+    margin-bottom: 30px;
+
+    .text{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding: 50px 60px 0 22px;
+      h2{
+        float: left;
+        margin-top: 3px;
+        padding-left: 22px;
+        line-height: 24px;
+        border-left: 4px solid #fff;
+        color: #fff;
+      }
+      a{
+        float: right;
+        display: inline-block;
+        width: 140px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #398dee;
+        color: #fff;
+      }
+    }
+  }
+  .cntBox{
+    padding: 30px;
+
+    .title{
+      margin-bottom: 26px;
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+    }
+    .article{
+      p{
+        margin-bottom: 20px;
+        color: #757575;
+      }
+    }
+  }
+}
+.nav-help{
+  margin: 0;
+  padding: 0;
+  li{
+    margin-top: 20px;
+    list-style: none;
+    a{
+      display: block;
+      line-height: 30px;
+      padding-right: 48px;
+      text-align: right;
+      color: #999;
+    }
+    &.active a{
+      border-left: 3px solid #398dee;
+      background-color: #f1f3f6;
+      color: #398dee;
+    }
+  }
+}
+// =============================== /帮助
+
+
+
+// =============================== 首页
+.m-banner {
+  height: 420px;
+  margin-bottom: 148px;
+  background: center top url(../img/banner.jpg) no-repeat;
+  .info {
+    position: absolute;
+    top: 334px;
+    width: 100%;
+    height: 175px;
+    border: 1px solid #f2f2f2;
+    background-color: #fff;
+    li {
+      position: relative;
+      float: left;
+      width: 33.333%;
+      .inner {
+        padding: 27px 42px;
+        height: 175px;
+      }
+    }
+    .line {
+      &:after {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        content: '';
+        height: 96px;
+        border-left: 1px solid #c8c8c8;
+      }
+    }
+    .media {
+
+    }
+    .media-body {
+      text-align: right;
+      h2 {
+        margin-bottom: 12px;
+        font-size: 24px;
+        a{
+          color: #282828;
+          &:hover{
+            color: #398dee;
+          }
+        }
+      }
+      p {
+        margin-bottom: 0;
+        color: #757575;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .last {
+        margin-bottom: 6px;
+      }
+      .link a {
+        color: #008ad3;
+      }
+    }
+  }
+
+  .text{
+    padding-top: 124px;
+    text-align: center;
+    color: #fff;
+    h2{
+      margin-bottom: 35px;
+      font-size: 60px;
+      font-weight: lighter;
+    }
+    p{
+      margin-bottom: 65px;
+      font-size: 24px;
+    }
+    .button{}
+  }
+}
+.m-banner2{
+  height: 420px;
+  background: url(../img/banner.jpg) center top no-repeat;
+
+  .text{
+    padding-top: 124px;
+    text-align: center;
+    color: #fff;
+    h2{
+      margin-bottom: 35px;
+      font-size: 60px;
+      font-weight: lighter;
+    }
+    p{
+      margin-bottom: 65px;
+      font-size: 24px;
+    }
+    .button{}
+  }
+}
+.intro-index{
+  height: 540px;
+  padding: 70px 0;
+
+  ul{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    li{
+      float: left;
+      width:366px;
+      list-style: none;
+      text-align: center;
+
+      .pic{
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          top: 48px;
+          right: 0;
+          height: 96px;
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+      h2{
+        margin-top: 45px;
+        font-size: 24px;
+        color: #282828;
+        a{
+          color: #282828;
+          &:hover{
+            color: #398dee;
+          }
+        }
+      }
+      p{
+        margin-top: 17px;
+        color: #757575;
+      }
+      .mbtn{
+        margin-top: 25px;
+        min-width: 150px;
+      }
+    }
+
+    li:last-child .pic:after{
+      display: none;
+    }
+  }
+}
+.m-itemList {
+  .title {
+    text-align: center;
+    margin-bottom: 40px;
+    span {
+      cursor: pointer;
+    }
+  }
+  .footer {
+    text-align: center;
+    padding: 28px;
+  }
+}
+// list1
+.lc-list-1 {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+  }
+  .meta {
+    height: 50px;
+    line-height: 30px;
+    h2{
+      line-height: 30px;
+      a{
+        font-size: 20px;
+        color: #282828;
+        &:hover{
+          color: #398dee;
+        }
+      }
+    }
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .media-left {
+    padding-right: 20px;
+    img {
+      width: 206px;
+      height: 162px;
+      border: 1px solid #b3b3b3;
+    }
+  }
+  .media-heading {
+    font-size: 20px;
+    margin-bottom: 4px;
+    a {
+      color: #282828;
+      &:hover {
+        color: #008ad3;
+      }
+    }
+  }
+  .media-body {
+    p {
+      line-height: 24px;
+    }
+  }
+  .price {
+    color: #f16125;
+    font-size: 18px;
+  }
+}
+// =============================== /首页
+
+
+
+// =============================== 项目列表
+.lc-listItem {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .bj {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .cnt {
+    display: table;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    .inner {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 20px;
+      color: #fff;
+      text-align: center;
+      .line{
+        margin-bottom: 10px;
+        opacity: .2;
+        border-bottom: 1px solid #fff;
+      }
+      h2 {
+        margin-bottom: 10px;
+        font-size: 22px;
+        font-weight: 700;
+      }
+      .price {
+        font-style: normal;
+        font-size: 24px;
+        color: #ff8a2b;
+      }
+    }
+  }
+}
+.lc-list-2 {
+  overflow: hidden;
+  ul {
+    padding: 0;
+    margin: -70px 0 0 -70px;
+    overflow: hidden;
+  }
+  li {
+    position: relative;
+    float: left;
+    width: 320px;
+    height: 345px;
+    margin-left: 70px;
+    margin-top: 70px;
+    list-style: none;
+  }
+}
+.itemList{
+  .jine{
+    margin-bottom: 40px;
+    padding: 45px 0;
+    text-align: center;
+    border-bottom: 1px solid #e7ebee;
+    color: #b8b8b8;
+    font-size: 16px;
+    .price{
+      color: #ff8a2b;
+      font-size: 36px;
+    }
+  }
+
+  .title{
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+// =============================== /项目列表
 
 
 
