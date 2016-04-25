@@ -2,6 +2,12 @@
   border-radius: 0;
   padding: 9px 12px;
 }
+.btn-sm{
+  padding: 5px 10px;
+}
+.btn-w{
+  min-width: 100px;
+}
 .label {
   display: inline-block;
   font-size: 14px;
@@ -23,6 +29,21 @@
 a.label-2:focus, a.label-2:hover{
   color: #398dee;
 }
+
+
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+  background-color: #fff;
+}
+.formPlace{
+  display: inline-block;
+  line-height: 20px;
+  padding-top: 7px;
+}
+
+
+
+
 
 .m-c1{
   color: #ff6a0f;
@@ -844,42 +865,8 @@ a.label-2:focus, a.label-2:hover{
   }
 }
 
-.rz-modal{
 
-  .inner {
-    width: 490px;
-    margin: 0 auto;
-    text-align: center;
 
-    .title{
-      padding: 15px 0 40px ;
-    }
-    ul{
-      margin:0;
-      padding:0;
-      margin-bottom: 40px;
-    }
-    li{
-      list-style: none;
-      float: left;
-      width: 50%;
-    }
-    .err{
-      color: #fe4848;
-    }
-  }
-}
-.ssModal{
-  .inner{
-    padding-top: 100px;
-    p{
-      margin-bottom: 40px;
-    }
-    .link{
-      font-size: 20px;
-    }
-  }
-}
 
 // ========================== /个人认证
 
@@ -1257,8 +1244,6 @@ a.label-2:focus, a.label-2:hover{
       font-size: 20px;
     }
     .col{
-      float: right;
-      width: 485px;
       height: 144px;
       background-color: #f1f3f6;
     }
@@ -2077,6 +2062,158 @@ a.label-2:focus, a.label-2:hover{
   }
 }
 // =============================== /项目列表
+
+
+
+
+
+// ================================== layer
+.layui-layer-tl{
+  width: 690px;
+  //min-height: 400px;
+  -webkit-background-clip: border-box !important;
+
+}
+
+
+.modal-rz{
+  padding: 20px;
+  display: none;
+  .inner {
+    width: 490px;
+    margin: 0 auto;
+    text-align: center;
+
+    .title{
+      padding: 15px 0 40px ;
+    }
+    ul{
+      margin:0;
+      padding:0;
+      margin-bottom: 40px;
+    }
+    li{
+      list-style: none;
+      float: left;
+      width: 50%;
+    }
+    .err{
+      color: #fe4848;
+    }
+  }
+}
+
+.modal-ss{
+  padding: 20px;
+  display: none;
+  text-align: center;
+  .inner{
+    padding-top: 50px;
+    p{
+      margin-bottom: 40px;
+    }
+    .link{
+      font-size: 20px;
+    }
+  }
+}
+
+.modal-pingjia{
+  display: none;
+  .title{
+    padding: 0 20px;
+    height: 40px;
+    background-color: #f1f3f6;
+
+    h2{
+      line-height: 40px;
+      font-size: 16px;
+    }
+  }
+  .bd{
+    padding: 30px;
+  }
+  .pingfen{
+    margin-bottom: 20px;
+  }
+  .text{
+    textarea{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.modal-tuku{
+  display: none;
+  .title{
+    height: 30px;
+    line-height: 30px;
+    background-color: #f2f2f2;
+    h2{
+      padding:0 20px;
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+  .bd{
+    padding: 20px;
+    ul{
+      overflow: hidden;
+      margin: -10px 0 0 -10px;
+      padding: 0;
+      li{
+        float: left;
+        width: 102px;
+        height: 82px;
+        margin-left: 10px;
+        margin-top: 10px;
+        list-style: none;
+        border: 1px solid transparent;
+        img{
+          width: 100px;
+          height: 80px;
+        }
+      }
+    }
+    .active{
+      border-color: #9cc6f6;
+    }
+  }
+}
+// ================================== /layer
+
+
+
+
+
+
+
+// =============================== 评分插件
+.raty{
+  display: inline-block;
+  .star, .hint{
+    display: inline-block;
+  }
+  .star img{
+    //width: 24px;
+    //height: 24px;
+  }
+}
+// =============================== / 评分插件
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

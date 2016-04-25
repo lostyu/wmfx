@@ -118,13 +118,11 @@
         <h2>发布招标项目</h2><span class="pull-right">咨询电话：40000000</span>
     </div>
 
-    <div class="m-step f-mb40">
-        <div class="one">填写项目需求</div>
-        <div class="two">确定赏金，并托管定金</div>
-        <div class="three">发布</div>
+    <div class="text-center f-mb40">
+        <img src="img/step-zhaobiao1.png" alt=""/>
     </div>
 
-    <form class="f-pb20">
+    <form class="f-pb20" id="f-form-fabuzhaobiao">
         <div class="m-subTitle f-mb40">
             <h3>项目内容信息</h3>
         </div>
@@ -132,21 +130,20 @@
 
             <div class="form-horizontal">
                 <div class="form-group">
-                    <label class="control-label fromlabel">任务名称：</label>
+                    <label class="control-label fromlabel"><span class="text-danger">*</span>任务名称：</label>
 
                     <div class="fromipt">
-                        <input type="text" class="form-control iptw1" placeholder="">
-
+                        <input name="mingchen" type="text" class="form-control iptw1 validate[required]">
                         <p class="help-block">（认证后，认证后作为用户昵称不能修改）</p>
                     </div>
                 </div>
 
 
                 <div class="form-group">
-                    <label class="control-label fromlabel">任务描述：</label>
+                    <label class="control-label fromlabel"><span class="text-danger">*</span>任务描述：</label>
 
                     <div class="fromipt">
-                        <textarea rows="10" class="form-control"></textarea>
+                        <textarea rows="10" class="form-control validate[required]"></textarea>
                     </div>
                 </div>
 
@@ -156,45 +153,44 @@
 
                     <div class="fromipt">
                         <input type="file">
-                        <span>（认证后，认证后作为用户昵称不能修改）</span>
+                        <p class="help-block">附件最大支持10MB  支持格式：zip，rar</p>
                     </div>
                 </div>
 
 
                 <div class="form-group">
-                    <label class="control-label fromlabel">需要专业：</label>
+                    <label class="control-label fromlabel"><span class="text-danger">*</span>需要专业：</label>
 
                     <div class="fromipt">
                         <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 规划
+                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="0" name="zhuanye" data-prompt-position="bottomLeft:0,5"> 规划
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 建筑
+                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="1" name="zhuanye"> 建筑
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox3" value="option3"> 给排水
+                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="2" name="zhuanye"> 给排水
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 园林
+                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="3" name="zhuanye"> 园林
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 电气
+                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="4" name="zhuanye"> 电气
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox3" value="option3"> 结构
-                        </label>
-                        <br/>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 隧道
+                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="5" name="zhuanye"> 结构
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 桥梁
+                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="6" name="zhuanye"> 隧道
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox3" value="option3"> 道路
+                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="7" name="zhuanye"> 桥梁
                         </label>
                         <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox3" value="option3"> 其他
+                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="8" name="zhuanye"> 道路
+                        </label>
+                        <label class="checkbox-inline">
+                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="9" name="zhuanye"> 其他
                         </label>
                     </div>
                 </div>
@@ -206,13 +202,12 @@
                     <div class="fromipt">
                         <div class="media">
                             <div class="media-left">
-                                <img width="360" height="240" src="" alt=""/>
+                                <img id="tp1" width="100" height="80" src="" alt="" style="width: 100px; height: 80px;"/>
                             </div>
                             <div class="media-body">
-                                <a class="btn btn-primary" href="javascript:;">本地上传</a>
+                                <a class="btn btn-primary btn-sm j-chooseImg" href="javascript:;">从图片库选择</a>
                             </div>
                         </div>
-                        <p class="help-block">建议尺寸360*240</p>
 
                     </div>
                 </div>
@@ -267,26 +262,19 @@
             <div class="form-horizontal">
 
                 <div class="form-group form-inline">
-                    <label class="control-label fromlabel">报名截止：</label>
+                    <label class="control-label fromlabel"><span class="text-danger">*</span>报名截止：</label>
 
                     <div class="fromipt">
-                        <input id="date1" type="text" class="form-control laydate-icon">
+                        <input readonly id="date1" type="text" class="form-control laydate-icon validate[required]">
                     </div>
                 </div>
 
-                <div class="form-group form-inline">
-                    <label class="control-label fromlabel">评论截止：</label>
-
-                    <div class="fromipt">
-                        <input id="date2" type="text" class="form-control laydate-icon">
-                    </div>
-                </div>
 
                 <div class="form-group form-inline">
-                    <label class="control-label fromlabel">任务完成：</label>
+                    <label class="control-label fromlabel"><span class="text-danger">*</span>任务完成：</label>
 
                     <div class="fromipt">
-                        <input id="date3" type="text" class="form-control laydate-icon">
+                        <input readonly id="date3" type="text" class="form-control laydate-icon validate[required]">
                     </div>
                 </div>
 
@@ -302,7 +290,7 @@
                 <div class="form-group">
                     <label class="control-label fromlabel"></label>
 
-                    <div class="fromipt">
+                    <div class="fromipt text-right">
                         <input class="btn btn-primary" type="submit" value="下一步，填写任务赏金">
                     </div>
                 </div>
@@ -313,6 +301,31 @@
 
 
 </div>
+
+
+
+
+
+<div class="modal-tuku">
+    <div class="title">
+        <h2>图库</h2>
+    </div>
+    <div class="bd">
+        <ul>
+            <li class="active"><img width="100" height="80" src="img/banner.jpg" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+        </ul>
+    </div>
+</div>
+
 
 <!-- S 底部 -->
 <nav class="m-footer">
@@ -346,6 +359,7 @@
 
 
 <script src="plugins/laydate/laydate.js"></script>
+<script src="plugins/layer/layer.js"></script>
 
 
 <!-- linkcloud -->
@@ -356,20 +370,77 @@
     $(function () {
 
 
+
+        $('#f-form-fabuzhaobiao').validationEngine({
+            binded: false,
+            scroll: false,
+            autoHidePrompt: true,
+            autoHideDelay: 3000,
+            onValidationComplete: function(form, valid) {
+
+                // 组装form表单数据
+                console.log( $('#f-form-fabuzhaobiao').serialize() );
+
+                // ajax post 验证通过
+                 if(valid){
+
+                 }
+            }
+        });
+
+
+
+
+
         laydate({
             elem: '#date1', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
             event: 'focus' //响应事件。如果没有传入event，则按照默认的click
         });
 
-        laydate({
-            elem: '#date2', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
-            event: 'focus' //响应事件。如果没有传入event，则按照默认的click
-        });
 
         laydate({
             elem: '#date3', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
             event: 'focus' //响应事件。如果没有传入event，则按照默认的click
         });
+
+
+
+
+        // 图库图片选择
+        (function() {
+            var myLayer;
+
+            $('.j-chooseImg').click(function () {
+                //自定页
+                myLayer = layer.open({
+                    title: false,
+                    type: 1,
+                    skin: 'layui-layer-tl', //样式类名
+                    closeBtn: 1, //不显示关闭按钮
+                    shift: 2,
+                    shadeClose: true,
+                    content: $('.modal-tuku'),
+                    area: 'auto',
+                    maxWidth: 590
+                });
+            });
+
+            var $modal = $('.modal-tuku');
+            var $li = $modal.find('li');
+            var $tp1 = $('#tp1');
+
+            $li.click(function() {
+                $li.removeClass('active');
+                $(this).addClass('active');
+                setImage($(this).children().eq(0), $tp1);
+                layer.close(myLayer);
+            });
+
+
+            function setImage(curImg, targetImg) {
+                targetImg.attr('src', curImg.attr('src'));
+            }
+        })();
 
     });
 </script>

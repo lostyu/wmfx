@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>弹层提示</title>
+    <!-- bootstap -->
+    <link rel="stylesheet" href="../bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/all.css"/>
+
+    <style>
+        .box {
+            padding: 20px;
+            margin-bottom: 100px;
+            background-color: #ddd;
+        }
+
+        .box .title {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #000;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="g-container">
+    <div class="box">
+        <a class="btn btn-primary j-popup" href="javascript:;">实名认证</a>
+        <a class="btn btn-primary j-popup3" href="javascript:;">人工申述</a>
+        <a class="btn btn-primary j-popup4" href="javascript:;">任务评价</a>
+        <a class="btn btn-primary j-popup2" href="javascript:;">确认申请个人认证</a>
+    </div>
+    <div class="box">
+        <a class="btn btn-primary j-popup5" href="javascript:;">从图片库选择</a>
+        <img id="tp1" src="" alt="" style="width: 100px; height: 80px;" />
+    </div>
+</div>
+
+
+<!-- 1.实名认证类型选择 -->
+<div class="modal-rz">
+    <div class="inner">
+        <div class="title">
+            <h2>实名认证类型选择</h2>
+        </div>
+        <ul class="clearfix">
+            <li>
+                <p><img src="../img/rzxz1.png" alt=""/></p>
+                <label class="radio-inline">
+                    <input type="radio" name="rz" value="0" checked> 我是企业
+                </label>
+            </li>
+            <li>
+                <p><img src="../img/rzxz2.png" alt=""/></p>
+                <label class="radio-inline">
+                    <input type="radio" name="rz" value="1"> 我是个人
+                </label>
+            </li>
+        </ul>
+        <p class="err">提交审核后不可更改认证类型，请谨慎选择！</p>
+
+        <p>
+            <button class="btn btn-primary btn-w j-ok" type="button">确认申请</button>
+        </p>
+    </div>
+</div>
+<!-- /实名认证类型选择 -->
+
+
+<!-- 2.人工申述 -->
+<div class="modal-ss">
+    <div class="inner">
+        <p>请将您注册时使用的真实姓名及手机号码发送至邮箱：</p>
+
+        <p><a class="link" href="mailto:mail.xxx.com">zhss@图狼.com</a></p>
+
+        <p>工作人员会联系您</p>
+
+        <p><a class="btn btn-primary j-ok" href="javascript:;" data-dismiss="modal" aria-label="Close">我知道了</a></p>
+    </div>
+</div>
+<!-- /人工申述 -->
+
+
+<!-- 评分 -->
+<div class="modal-pingjia">
+    <div class="title">
+        <h2>任务执行评价</h2>
+    </div>
+    <div class="bd">
+        <div class="pingfen">
+            综合评分：
+            <div class="raty">
+                <div id="star1" class="star"></div>
+                <div id="hint1" class="hint"></div>
+            </div>
+        </div>
+        <div class="text">
+            <textarea rows="5" class="form-control"></textarea>
+
+            <div class="text-right">
+                <a class="btn btn-primary btn-sm btn-w" href="javascript:;">提交</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /评分 -->
+
+
+
+
+<!-- 图库 -->
+<div class="modal-tuku">
+    <div class="title">
+        <h2>图库</h2>
+    </div>
+    <div class="bd">
+        <ul>
+            <li class="active"><img width="100" height="80" src="../img/banner.jpg" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+            <li><img width="100" height="80" src="" alt=""/></li>
+        </ul>
+    </div>
+</div>
+<!-- /图库 -->
+
+
+
+
+
+<!-- jquery -->
+<script src="../libs/jquery-2.2.2/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="../bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+<!--<link rel="stylesheet" href="../plugins/jquery-upload/Huploadify.css"/>-->
+<!--<script src="../plugins/jquery-upload/jquery.Huploadify.js"></script>-->
+
+<!--<script src="../plugins/jquery-city/city.min.js"></script>-->
+<!--<script src="../plugins/jquery-city/jquery.cityselect.js"></script>-->
+
+<script src="../plugins/layer/layer.js"></script>
+
+<script src="../plugins/jquery-raty/jquery.raty.js"></script>
+
+
+<!-- linkcloud -->
+<!--<script src="../js/main.js"></script>-->
+
+<!-- your js -->
+<script>
+
+    // layer api: http://layer.layui.com/api.html
+    $(function () {
+
+
+        // 实名认证选择弹层 page
+        (function () {
+            $('.j-popup').click(function () {
+                //自定页
+                layer.open({
+                    title: false,
+                    type: 1,
+                    skin: 'layui-layer-tl', //样式类名
+                    closeBtn: 1, //不显示关闭按钮
+                    shift: 2,
+                    shadeClose: true, //开启遮罩关闭
+                    content: $('.modal-rz'),
+                    area: 'auto',
+                    maxWidth: 690
+                });
+            });
+
+            var $modal_rz = $('.modal-rz');
+            var $input = $modal_rz.find('input');
+            var $btn = $modal_rz.find('.j-ok');
+
+            $btn.click(function () {
+                if ($input.eq(0).get(0).checked) {
+                    // 实名认证跳转页面
+                    window.location.href = 'xxxx';
+                } else {
+                    // 技能认证跳转页面
+                    window.location.href = 'yyyy';
+                }
+            });
+        })();
+
+
+        // 个人申述弹层 page
+        (function () {
+            var myLayer;
+
+            $('.j-popup3').click(function () {
+                //自定页
+                myLayer = layer.open({
+                    title: false,
+                    type: 1,
+                    skin: 'layui-layer-tl', //样式类名
+                    closeBtn: 1, //不显示关闭按钮
+                    shift: 2,
+                    shadeClose: true,
+                    content: $('.modal-ss'),
+                    area: 'auto',
+                    maxWidth: 690
+                });
+            });
+
+            var $btnOk = $('.modal-ss .j-ok');
+
+            $btnOk.click(function () {
+                layer.close(myLayer);
+            });
+        })();
+
+
+        // 任务执行评价
+        (function () {
+            var myLayer;
+
+            $.fn.raty.defaults.path = '../plugins/jquery-raty/img';
+
+
+            $('#star1').raty({
+                cancelOff : 'cancel-off-big.png',
+                cancelOn  : 'cancel-on-big.png',
+                size      : 24,
+                starHalf  : 'star-half-big.png',
+                starOff   : 'star-off-big.png',
+                starOn    : 'star-on-big.png',
+                target    : '#hint1',
+                targetKeep: true,
+                targetType: 'score',
+                half: true
+            });
+
+//            $('#star1').raty({
+//                cancelOff : 'cancel-off-big.png',
+//                cancelOn  : 'cancel-on-big.png',
+//                size      : 24,
+//                starHalf  : 'star-half-big.png',
+//                starOff   : 'star-off-big.png',
+//                starOn    : 'star-on-big.png',
+//                target    : '#hint1',
+//                cancel    : true,
+//                targetKeep: true,
+//                precision : true
+//                score: 5,
+//                half: true,
+//                target: '#hint1',
+//                precision: true,
+//                targetType: 'score',
+//                targetKeep: true,
+//                round: { full:.1 }
+
+//                precision: true,
+//                size: 24,
+//                starHalf: 'star-half-big.png',
+//                starOff: 'star-off-big.png',
+//                starOn: 'star-on-big.png'
+//            });
+
+//            $('#star1').raty({
+//                targetScore: 'hint1'
+//            });
+
+            $('.j-popup4').click(function () {
+                //自定页
+                myLayer = layer.open({
+                    title: false,
+                    type: 1,
+                    skin: 'layui-layer-tl', //样式类名
+                    closeBtn: 1, //不显示关闭按钮
+                    shift: 2,
+                    shadeClose: true,
+                    content: $('.modal-pingjia'),
+                    area: 'auto',
+                    maxWidth: 690
+                });
+            });
+
+            var $btnOk = $('.modal-ss .j-ok');
+
+            $btnOk.click(function () {
+                layer.close(myLayer);
+            });
+        })();
+
+
+
+
+
+        // 图库图片选择
+        (function() {
+            var myLayer;
+
+            $('.j-popup5').click(function () {
+                //自定页
+                myLayer = layer.open({
+                    title: false,
+                    type: 1,
+                    skin: 'layui-layer-tl', //样式类名
+                    closeBtn: 1, //不显示关闭按钮
+                    shift: 2,
+                    shadeClose: true,
+                    content: $('.modal-tuku'),
+                    area: 'auto',
+                    maxWidth: 590
+                });
+            });
+
+            var $modal = $('.modal-tuku');
+            var $li = $modal.find('li');
+            var $tp1 = $('#tp1');
+
+            $li.click(function() {
+                $li.removeClass('active');
+                $(this).addClass('active');
+                setImage($(this).children().eq(0), $tp1);
+                layer.close(myLayer);
+            });
+
+
+            function setImage(curImg, targetImg) {
+                targetImg.attr('src', curImg.attr('src'));
+            }
+        })();
+
+
+
+
+        // 确认申请个人认证 confirm
+        (function () {
+            $('.j-popup2').click(function () {
+
+                //询问框
+                var myLayer = layer.confirm(
+                        '确认申请个人认证？',
+                        {
+                            title: '提示',
+                            btn: ['确认申请', '取消'] //可以无限个按钮
+                        },
+                        function () {
+                            // 成功回调
+                            layer.close(myLayer);
+                        },
+                        function () {
+                            // 取消回调
+                        }
+                );
+
+
+            });
+        })();
+
+
+    });
+
+</script>
+</body>
+</html>

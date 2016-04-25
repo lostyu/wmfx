@@ -2,6 +2,12 @@
   border-radius: 0;
   padding: 9px 12px;
 }
+.btn-sm {
+  padding: 5px 10px;
+}
+.btn-w {
+  min-width: 100px;
+}
 .label {
   display: inline-block;
   font-size: 14px;
@@ -22,6 +28,16 @@
 a.label-2:focus,
 a.label-2:hover {
   color: #398dee;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: #fff;
+}
+.formPlace {
+  display: inline-block;
+  line-height: 20px;
+  padding-top: 7px;
 }
 .m-c1 {
   color: #ff6a0f;
@@ -719,36 +735,6 @@ a.label-2:hover {
 .p-rzindex .col2 .cnt a:hover {
   text-decoration: none;
 }
-.rz-modal .inner {
-  width: 490px;
-  margin: 0 auto;
-  text-align: center;
-}
-.rz-modal .inner .title {
-  padding: 15px 0 40px ;
-}
-.rz-modal .inner ul {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 40px;
-}
-.rz-modal .inner li {
-  list-style: none;
-  float: left;
-  width: 50%;
-}
-.rz-modal .inner .err {
-  color: #fe4848;
-}
-.ssModal .inner {
-  padding-top: 100px;
-}
-.ssModal .inner p {
-  margin-bottom: 40px;
-}
-.ssModal .inner .link {
-  font-size: 20px;
-}
 .j-prevImg {
   margin: 0 auto;
 }
@@ -1006,8 +992,6 @@ a.label-2:hover {
   font-size: 20px;
 }
 .zhaobiao .total .col {
-  float: right;
-  width: 485px;
   height: 144px;
   background-color: #f1f3f6;
 }
@@ -1714,4 +1698,112 @@ a.label-2:hover {
 .itemList .title {
   margin-bottom: 40px;
   text-align: center;
+}
+.layui-layer-tl {
+  width: 690px;
+  -webkit-background-clip: border-box !important;
+}
+.modal-rz {
+  padding: 20px;
+  display: none;
+}
+.modal-rz .inner {
+  width: 490px;
+  margin: 0 auto;
+  text-align: center;
+}
+.modal-rz .inner .title {
+  padding: 15px 0 40px ;
+}
+.modal-rz .inner ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.modal-rz .inner li {
+  list-style: none;
+  float: left;
+  width: 50%;
+}
+.modal-rz .inner .err {
+  color: #fe4848;
+}
+.modal-ss {
+  padding: 20px;
+  display: none;
+  text-align: center;
+}
+.modal-ss .inner {
+  padding-top: 50px;
+}
+.modal-ss .inner p {
+  margin-bottom: 40px;
+}
+.modal-ss .inner .link {
+  font-size: 20px;
+}
+.modal-pingjia {
+  display: none;
+}
+.modal-pingjia .title {
+  padding: 0 20px;
+  height: 40px;
+  background-color: #f1f3f6;
+}
+.modal-pingjia .title h2 {
+  line-height: 40px;
+  font-size: 16px;
+}
+.modal-pingjia .bd {
+  padding: 30px;
+}
+.modal-pingjia .pingfen {
+  margin-bottom: 20px;
+}
+.modal-pingjia .text textarea {
+  margin-bottom: 20px;
+}
+.modal-tuku {
+  display: none;
+}
+.modal-tuku .title {
+  height: 30px;
+  line-height: 30px;
+  background-color: #f2f2f2;
+}
+.modal-tuku .title h2 {
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 30px;
+}
+.modal-tuku .bd {
+  padding: 20px;
+}
+.modal-tuku .bd ul {
+  overflow: hidden;
+  margin: -10px 0 0 -10px;
+  padding: 0;
+}
+.modal-tuku .bd ul li {
+  float: left;
+  width: 102px;
+  height: 82px;
+  margin-left: 10px;
+  margin-top: 10px;
+  list-style: none;
+  border: 1px solid transparent;
+}
+.modal-tuku .bd ul li img {
+  width: 100px;
+  height: 80px;
+}
+.modal-tuku .bd .active {
+  border-color: #9cc6f6;
+}
+.raty {
+  display: inline-block;
+}
+.raty .star,
+.raty .hint {
+  display: inline-block;
 }
