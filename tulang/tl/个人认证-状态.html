@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>招标-招标方（托管赏金订单）</title>
+    <title>个人认证-状态</title>
     <!-- bootstap -->
     <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
 
@@ -20,10 +20,12 @@
 
 
 </head>
-<body class="f-bg2">
+<body>
+
 <nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -44,6 +46,7 @@
             <li class="item msg">
                 <span class="dot"></span>
                 <img src="img/icon-msg.png" alt=""/>
+
                 <div class="msgList">
                     <div class="inner">
                         <div class="text-center f-mb20">
@@ -112,128 +115,60 @@
 </nav>
 <div class="m-headerSpace"></div>
 
-<div class="g-container f-mb40 f-bg">
+<div class="container f-mb40">
+    <div class="p-renzheng">
+        <div class="p-box f-bg">
+            <div class="p-box-hd">
+                <div class="m-title">
+                    <h2>图狼个人实名认证<span class="pull-right">咨询电话：40000000</span></h2>
 
-    <div class="zhaobiao">
-        <div class="m-title m-title2">
-            <h2>赏金支付</h2><span class="pull-right">咨询电话：40000000</span>
-        </div>
+                </div>
+            </div>
+            <div class="p-box-bd">
+                <p class="text-center f-mb30"><img src="img/step1.jpg" alt=""></p>
+                <p class="text-center f-mb30"><img src="img/step2.jpg" alt=""></p>
+                <p class="text-center f-mb30"><img src="img/step3.jpg" alt=""></p>
 
-        <div class="text-right" style="padding:20px 50px 40px;">
-            <img src="img/zbstep-s1.png" alt=""/>
-        </div>
+                <div class="form-boxp">
 
-        <form class="f-pb20">
-
-            <div class="m-line" style="margin-bottom: 40px"></div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="m-mfromBox ">
-
-                        <div class="sjmx">
-                            <div class="title">
-                                本次支付赏金明细
+                    <div class="tips" style="display: -none;">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <span class="glyphicon glyphicon-remove-circle text-danger"></span>
                             </div>
-                            <div class="cnt">
-                                <ul>
-                                    <li><span class="col1">招标金额</span><span class="m-c1">20000.00</span></li>
-                                    <li><span class="col1">已付定金</span>2000.00</li>
-                                    <li><span class="col1">本次支付比例</span>60%</li>
-                                    <li><span class="col1">本次支付金额</span><span class="m-c1">12000.00</span></li>
+                            <div class="media-body">
+                                <ul class="list-unstyled">
+                                    <li>认证未通过：</li>
+                                    <li>·身份证信息与姓名不一致</li>
+                                    <li>·身份证照片不清晰，无法看到详细信息</li>
                                 </ul>
                             </div>
                         </div>
-
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div style="padding-right: 26px;">
-                        <div class="media media-info">
-                            <div class="media-left">
-                                <img src="img/icon-m.png" alt=""/>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">零中介费</h4>
 
-                                <p>在项目招投标部分，图狼网不收任何中介费。</p>
-                            </div>
-                        </div>
-                        <div class="media media-info">
-                            <div class="media-left">
-                                <img src="img/icon-success.png" alt=""/>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">保障交易部分</h4>
-
-                                <p>招标方需托管10%的招标金额作为定金，方可进行招标。招标成功后，将转付给中
-                                    标方。若招标失败，可全额退还给发布者。</p>
-
-                                <p>当招标方验收完PDF版设计图纸后，需至少托管最终中标金额的60%，此后方可获
-                                    得图纸源文件。确认收到源文件后，图狼网将该部分赏金转付给中标方。</p>
-                            </div>
-                        </div>
-                        <div class="media media-info f-mb40">
-                            <div class="media-left">
-                                <img src="img/icon-err.png" alt=""/>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">非保障交易部分</h4>
-
-                                <p>如招标方选择维保服务，则最高可以设置30%的赏金，在维保期内按年限逐年支付
-                                    给图狼网。经由招标方验收维保服务后，再转付给中标方。</p>
-
-                                <p>如若招标方维保部分赏金未支付，会扣除招标方信誉值，并承担相应法律风险。</p>
-                            </div>
-                        </div>
-
-                        <p class="text-right f-mb40">
-                            <a href="javascript:;">保障交易说明</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                href="javascript:;">维保金说明</a>
-                        </p>
+                    <div class="tips" style="display: -none">
+                        <span class="glyphicon glyphicon-time f-vam text-danger"></span>　您的认证信息正在审核中，随后将通知您！
                     </div>
+
+                    <div class="tips" style="display: -none;">
+                        <span class="glyphicon glyphicon-ok-circle f-vam text-success"></span>　图狼网已认证！您可以开通个人工作室了，<a
+                            href="#">前往设置</a>
+                    </div>
+
                 </div>
             </div>
-
-
-
-            <div class="total clearfix">
-                <div class="col">
-                    <ul class="list-unstyled">
-                        <li>招标金额：<span class="c1">20000</span></li>
-                        <li>本次支付比例：<span>60%</span></li>
-                        <li>应付金额：<span class="c1">12000</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="m-line"></div>
-
-            <div class="m-mfromBox" style="padding-right: 26px;">
-
-                <div class="form-horizontal">
-                    <div class="form-group  form-inline">
-                        <label class="control-label formlabel"></label>
-
-                        <div class="formipt text-right">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" checked> 同意<a href="javascript:;">《图狼网投标协议书》</a>
-                            </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="btn btn-primary" type="submit" value="继续，支付定金">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </form>
+        </div>
     </div>
-
 </div>
+
 
 <!-- S 底部 -->
 <nav class="m-footer">
     <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link"
+                                                       href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
         <p class="link">
             <a class="navbar-link" href="javascript:;">关于</a>|
             <a class="navbar-link" href="javascript:;">我们是谁</a>|
@@ -256,20 +191,12 @@
 <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
-<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
-<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
-
-
-<script src="plugins/laydate/laydate.js"></script>
 
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>
 
 <!-- your js -->
-<script>
-
-</script>
+<script src=""></script>
 </body>
 </html>

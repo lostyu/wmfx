@@ -1,3 +1,7 @@
+html,
+body {
+  background-color: #f1f3f6;
+}
 .btn {
   border-radius: 0;
   padding: 9px 12px;
@@ -8,13 +12,24 @@
 .btn-w {
   min-width: 100px;
 }
+.btn-r {
+  border-radius: 15px;
+}
+.btn-1 {
+  background-color: #fff;
+  color: #398dee;
+  border-color: #398dee;
+}
 .label {
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
   padding: 8px 16px;
   border-radius: 0;
   border: 1px solid transparent;
+}
+.label-r {
+  border-radius: 10px;
 }
 .label-1 {
   background-color: #398dee;
@@ -25,9 +40,18 @@
   color: #398dee;
   border-color: #398dee;
 }
+.label-3 {
+  background-color: #fff;
+  color: #5f5f5f;
+  border-color: #5f5f5f;
+}
 a.label-2:focus,
 a.label-2:hover {
   color: #398dee;
+}
+.form-control {
+  border-radius: 0;
+  box-shadow: none;
 }
 .form-control[disabled],
 .form-control[readonly],
@@ -38,6 +62,22 @@ fieldset[disabled] .form-control {
   display: inline-block;
   line-height: 20px;
   padding-top: 7px;
+}
+.m-formtips {
+  margin-bottom: 20px;
+  line-height: 20px;
+  color: #ff0000;
+  font-size: 16px;
+}
+.m-formtips .glyphicon {
+  font-size: 20px;
+  vertical-align: text-bottom;
+}
+.m-mimatips .formError {
+  width: 135px;
+}
+.j-sendCode {
+  width: 96px;
 }
 .m-c1 {
   color: #ff6a0f;
@@ -456,7 +496,7 @@ fieldset[disabled] .form-control {
 }
 .p-getPassForm {
   width: 370px;
-  margin: 80px auto 0;
+  margin: 20px auto 0;
 }
 .p-getPassForm .title2 {
   position: relative;
@@ -480,6 +520,11 @@ fieldset[disabled] .form-control {
   display: inline-block;
   padding: 0 20px;
   background-color: #fff;
+}
+.p-getPassForm .tips {
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
 }
 .p-changePassForm {
   width: 370px;
@@ -750,9 +795,12 @@ fieldset[disabled] .form-control {
   color: #757575;
 }
 .p-userCenter .userInfo {
-  margin-bottom: 30px;
   height: 280px;
   background-color: #f1f3f6;
+}
+.p-userCenter .userInfo .label {
+  padding: 0 8px;
+  border-radius: 10px;
 }
 .p-userCenter .userInfo .inner {
   position: relative;
@@ -952,23 +1000,31 @@ fieldset[disabled] .form-control {
 .m-mfromBox {
   padding: 0 50px 0;
 }
-.m-mfromBox .form-horizontal .form-group {
-  margin-left: 0;
-  margin-right: 0;
-}
-.m-mfromBox .form-horizontal .fromlabel {
-  float: left;
-  width: 90px;
-  text-align: left;
-}
-.m-mfromBox .form-horizontal .fromipt {
-  margin-left: 100px;
-}
 .m-mfromBox .iptw1 {
   width: 370px;
 }
 .m-mfromBox .iptw2 {
   width: 280px;
+}
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+.form-horizontal .formlabel {
+  float: left;
+  width: 90px;
+  text-align: left;
+}
+.form-horizontal .formipt {
+  margin-left: 100px;
+}
+.form-horizontal2 .formlabel {
+  float: left;
+  width: 110px;
+  text-align: left;
+}
+.form-horizontal2 .formipt {
+  margin-left: 120px;
 }
 .media-info .media-heading {
   margin-bottom: 17px;
@@ -1801,9 +1857,30 @@ fieldset[disabled] .form-control {
   border-color: #9cc6f6;
 }
 .raty {
+  overflow: hidden;
   display: inline-block;
+  line-height: 20px;
+  margin-right: 10px;
+  min-width: 195px;
+}
+.raty .tit {
+  float: left;
 }
 .raty .star,
 .raty .hint {
+  float: left;
   display: inline-block;
+}
+.raty .hint {
+  margin-left: 5px;
+  line-height: 20px;
+  color: #ff4848;
+}
+.raty-big {
+  line-height: 24px;
+}
+.raty-big .hint {
+  margin-left: 10px;
+  line-height: 24px;
+  font-size: 24px;
 }

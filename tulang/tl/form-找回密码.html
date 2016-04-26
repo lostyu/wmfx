@@ -30,26 +30,27 @@
 
 <div class="p-wrap">
 
-    <div class="p-formBox f-bd">
+    <div class="p-formBox p-formBox10 f-bd">
         <div class="form-title clearfix">
             <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
 
             <h2 class="text">找回密码</h2>
         </div>
 
-        <div class="p-getPassForm">
+        <div class="p-getPassForm" style="margin-top: 80px;">
             <div class="title2"><span>请输入您要找回的登录密码的账户名</span></div>
             <form id="f-form-getPass">
                 <!--<div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign"></span> 请输入你需要找回登录密码的账户名</div>-->
+                <div class="m-formtips"><span class="glyphicon glyphicon-remove-sign"></span> 用户名或密码错误</div>
                 <div class="form-group">
-                    <label class="sr-only">注册手机号</label>
-                    <input name="utel" type="tel" class="form-control validate[required, custom[r_phoneOrEmail]]"
-                           placeholder="手机号/邮箱">
+                    <label class="sr-only">注册时手机/邮箱</label>
+                    <input name="utel" type="tel" class="form-control j-yhm validate[required, custom[r_phoneOrEmail]]"
+                           placeholder="注册时手机/邮箱">
                 </div>
                 <div class="form-group">
                     <div class="input-group">
-                        <input type="text" class="form-control validate[required, ajax[r_ajaxImgCode]]"
-                               placeholder="输入验证码" data-prompt-position="centerRight:100,5">
+                        <input type="text" class="form-control validate[required]"
+                               placeholder="输入验证码" data-prompt-position="centerRight:110,10">
                         <span class="input-group-addon" id="basic-addon2" style="padding: 0"><img width="100"
                                                                                                   height="38"
                                                                                                   src="http://reg.email.163.com/mailregAll/regvf1/verifyCodeImgF.jsp?env=488381217144&amp;type=en&amp;t=1333003692444"
@@ -58,7 +59,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">确定</button>
                 <div class="checkbox text-right">
-                    <a href="javascript:;" data-toggle="modal" data-target="#ssModal">人工申述</a>
+                    <a href="javascript:;" class="j-popup3">人工申述</a>
                 </div>
             </form>
 
@@ -89,20 +90,19 @@
 <!-- E 底部 -->
 
 
-<!-- Modal -->
-<div class="modal fade" id="ssModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!-- 2.人工申述 -->
+<div class="modal-ss">
+    <div class="inner">
+        <p>请将您注册时使用的真实姓名及手机号码发送至邮箱：</p>
 
-    <div class="m-modal ssModal">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <div class="inner">
-            <p>请将您注册时使用的真实姓名及手机号码发送至邮箱：</p>
-            <p><a class="link" href="mailto:mail.xxx.com">zhss@图狼.com</a></p>
-            <p>工作人员会联系您</p>
-            <p><a class="btn btn-primary" href="javascript:;" data-dismiss="modal" aria-label="Close">我知道了</a></p>
-        </div>
+        <p><a class="link" href="mailto:mail.xxx.com">zhss@图狼.com</a></p>
+
+        <p>工作人员会联系您</p>
+
+        <p><a class="btn btn-primary j-ok" href="javascript:;" data-dismiss="modal" aria-label="Close">我知道了</a></p>
     </div>
-
 </div>
+<!-- /人工申述 -->
 
 
 <!-- jquery -->
@@ -116,17 +116,64 @@
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
+<script src="plugins/layer/layer.js"></script>
+
 <!-- linkcloud -->
 <script src="js/main.js"></script>
 
 <!-- your js -->
 <script>
     $(function () {
-        // 手机找回密码
+
         (function () {
-            $('#f-form-getPass').validationEngine();
+            $('#f-form-getPass').validationEngine({
+                ajaxFormValidation: true,
+                ajaxFormValidationMethod: 'post',
+                onBeforeAjaxFormValidation: function(form, options) {
+                    var isEmail = false;
+                    var isPhone = false;
+                    var regPhone = /^1\d{10}$/;
+                    var regEmail = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+                    var $input = $('.j-yhm');
+
+                    if (regPhone.test($input.val())) {
+                        // 跳转到手机找回密码
+                        app.ui.changePage('/', 1000);
+                    } else if (regEmail.test($input.val())) {
+                        // 跳转到邮箱找回密码
+                        app.ui.changePage('http://baidu.com', 1000);
+                    }
+                }
+            });
 
 
+        })();
+
+
+        // 个人申述弹层 page
+        (function () {
+            var myLayer;
+
+            $('.j-popup3').click(function () {
+                //自定页
+                myLayer = layer.open({
+                    title: false,
+                    type: 1,
+                    skin: 'layui-layer-tl', //样式类名
+                    closeBtn: 1, //不显示关闭按钮
+                    shift: 2,
+                    shadeClose: true,
+                    content: $('.modal-ss'),
+                    area: 'auto',
+                    maxWidth: 690
+                });
+            });
+
+            var $btnOk = $('.modal-ss .j-ok');
+
+            $btnOk.click(function () {
+                layer.close(myLayer);
+            });
         })();
     });
 </script>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>修改密码</title>
+    <title>找回密码-手机</title>
     <!-- bootstap -->
     <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
 
@@ -23,7 +23,6 @@
             width: 100%;
             height: 100%;
             background-color: #f1f3f6;
-
         }
     </style>
 </head>
@@ -31,58 +30,52 @@
 
 <div class="p-wrap">
 
-    <div class="p-formBox f-bd">
+    <div class="p-formBox p-formBox10 f-bd">
         <div class="form-title clearfix">
             <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
-            <h2 class="text">修改密码</h2>
+
+            <h2 class="text">找回密码</h2>
         </div>
 
-        <div class="p-changePassForm">
-            <form id="f-form-changePass">
-                <div class="form-group">
+        <div class="p-getPassForm">
 
+            <!--  手机 -->
+            <div>
+                <div class="tips">
+                    <p><img src="img/tips-phone.png" alt=""/></p>
 
-                    <label class="control-label">新密码</label>
-                    <input id="pass1" name="upass" type="password" class="form-control validate[required, custom[r_passWord]]"
-                           placeholder="新密码">
-                    <p class="help-block" style="font-size: 12px">密码至少由8个字符组成，必须包含数字、字母，区分大小写</p>
-
+                    <p>验证码已发送到您注册的手机 15023361515</p>
                 </div>
-                <div class="form-group">
-                    <label class="control-label">确认密码</label>
-
-
-                    <input name="upass2" type="password" class="form-control validate[required, equals[pass1]]"
-                           placeholder="确认密码">
-
-
-                </div>
-                <div class="form-group">
-                    <label class="control-label">验证码</label>
-
-                    <div class="input-group">
-                        <input name="ucode" type="text"
-                               class="form-control validate[required, ajax[r_ajaxImgCode]]" placeholder="输入验证码"
-                               data-prompt-position="centerRight:100,5">
-                                <span class="input-group-addon" id="basic-addon2" style="padding: 0"><img width="100"
-                                                                                                          height="38"
-                                                                                                          src="http://reg.email.163.com/mailregAll/regvf1/verifyCodeImgF.jsp?env=488381217144&amp;type=en&amp;t=1333003692444"
-                                                                                                          alt=""></span>
+                <form id="f-form-getPass">
+                    <div class="m-formtips"><span class="glyphicon glyphicon-remove-sign"></span> 用户名或密码错误</div>
+                    <div class="form-group">
+                        <label class="sr-only">密码（不少于8位）</label>
+                        <input autocomplete="off" name="utel" type="password"
+                               class="form-control validate[required, custom[r_passWord]]"
+                               placeholder="密码（不少于8位）">
                     </div>
-
-                </div>
-
-                <div class="form-group">
-
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input name="ucode" type="text"
+                                   class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="验证码"
+                                   data-prompt-position="centerRight:106,10">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary j-sendCode" type="button">发送验证码</button>
+                                        </span>
+                        </div>
+                    </div>
                     <button type="submit" class="btn btn-primary btn-block">确定</button>
+                    <!--<div class="checkbox text-right">-->
+                    <!--<a href="javascript:;">人工申述</a>-->
+                    <!--</div>-->
+                </form>
+            </div>
 
-                </div>
-            </form>
+
         </div>
 
 
     </div>
-
 
 </div>
 
@@ -90,7 +83,10 @@
 <!-- S 底部 -->
 <nav class="m-footer" style="margin-top: -70px;">
     <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link"
+                                                       href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
         <p class="link">
             <a class="navbar-link" href="javascript:;">关于</a>|
             <a class="navbar-link" href="javascript:;">我们是谁</a>|
@@ -122,10 +118,11 @@
 
 <!-- your js -->
 <script>
-    $(function() {
-        // 修改密码
+    $(function () {
+        // 手机找回密码
         (function () {
-            $('#f-form-changePass').validationEngine();
+            $('#f-form-getPass').validationEngine();
+
 
         })();
     });

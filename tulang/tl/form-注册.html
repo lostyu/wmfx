@@ -41,7 +41,7 @@
 
         <div class="p-personRegister  clearfix">
 
-            <div class="cnt clearfix">
+            <div style="display: -none;" class="cnt clearfix">
                 <div class="col1">
 
 
@@ -49,21 +49,22 @@
 
 
                         <form id="f-form-person">
+                            <div class="m-formtips"><span class="glyphicon glyphicon-remove-sign"></span> 这里是错误提示</div>
                             <div class="form-group">
-                                <label class="sr-only">请输入手机号/邮箱</label>
+                                <label class="sr-only">手机号（仅支持大陆）</label>
                                 <input name="uname" type="text"
-                                       class="form-control validate[required, custom[r_phoneOrEmail]]"
-                                       placeholder="请输入手机号/邮箱">
+                                       class="form-control validate[required, custom[r_phone]]"
+                                       placeholder="手机号（仅支持大陆）">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only">验证码</label>
 
                                 <div class="input-group">
                                     <input name="ucode" type="text"
-                                           class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="输入验证码"
-                                           data-prompt-position="centerRight:95,5">
+                                           class="form-control validate[required]" placeholder="验证码"
+                                           data-prompt-position="centerRight:106,10">
                                         <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button">发送验证码</button>
+                                            <button class="btn btn-primary j-sendCode" type="button">发送验证码</button>
                                         </span>
                                 </div>
                             </div>
@@ -74,16 +75,11 @@
                             </div>
                             <p class="text-right"><a href="javascript:;">如何获得邀请码？</a></p>
 
-                            <div class="form-group">
+                            <div class="form-group m-mimatips">
                                 <label class="sr-only">输入密码</label>
                                 <input id="pass1" name="upass" type="password"
                                        class="form-control validate[required, custom[r_passWord]]"
-                                       placeholder="请输入密码（不少于6位）">
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only">确认密码</label>
-                                <input name="upass2" type="password"
-                                       class="form-control validate[required, equals[pass1]]" placeholder="确认密码">
+                                       placeholder="密码（不少于8位）">
                             </div>
                             <div class="form-group">
                                 <div class="checkbox">
@@ -169,6 +165,12 @@
             $('#f-form-person').validationEngine();
 
         })();
+
+
+
+        // 页面3秒后跳转 (默认值3秒)
+        // app.ui.changePage('http://baidu.com', 2000);
+
     });
 </script>
 </body>

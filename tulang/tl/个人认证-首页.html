@@ -133,7 +133,7 @@
                         </div>
                         <div class="col1">
                             <div class="cnt">
-                                <a href="javascript:;" data-toggle="modal" data-target="#chooseModal">
+                                <a href="javascript:;" class="j-popup">
                                     <img src="img/id.png" alt=""/>
 
                                     <h3>实名认证</h3>
@@ -161,54 +161,37 @@
 </div>
 
 
-<!-- S 底部 -->
-<nav class="m-footer">
-    <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
-        <p class="link">
-            <a class="navbar-link" href="javascript:;">关于</a>|
-            <a class="navbar-link" href="javascript:;">我们是谁</a>|
-            <a class="navbar-link" href="javascript:;">帮助</a>|
-            <a class="navbar-link" href="javascript:;">用户协议</a>|
-            <a class="navbar-link" href="javascript:;">信任与安全</a>
 
-            <a class="fa fa-weixin" href="javascript:;"></a>
-            <a class="fa fa-weibo" href="javascript:;"></a>
+
+<!-- 1.实名认证类型选择 -->
+<div class="modal-rz">
+    <div class="inner">
+        <div class="title">
+            <h2>实名认证类型选择</h2>
+        </div>
+        <ul class="clearfix">
+            <li>
+                <p><img src="img/rzxz1.png" alt=""/></p>
+                <label class="radio-inline">
+                    <input type="radio" name="rz" value="0" checked> 我是企业
+                </label>
+            </li>
+            <li>
+                <p><img src="img/rzxz2.png" alt=""/></p>
+                <label class="radio-inline">
+                    <input type="radio" name="rz" value="1"> 我是个人
+                </label>
+            </li>
+        </ul>
+        <p class="err">提交审核后不可更改认证类型，请谨慎选择！</p>
+
+        <p>
+            <button class="btn btn-primary btn-w j-ok" type="button">确认申请</button>
         </p>
     </div>
-</nav>
-<!-- E 底部 -->
-
-
-<div class="modal fade" id="chooseModal" tabindex="-1" role="dialog">
-    <div class="m-modal rz-modal">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <div class="inner">
-            <div class="title">
-                <h2>实名认证类型选择</h2>
-            </div>
-            <ul class="clearfix">
-                <li>
-                    <p><img src="img/rzxz1.png" alt=""/></p>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" value="option1" checked> 我是企业
-                    </label>
-                </li>
-                <li>
-                    <p><img src="img/rzxz2.png" alt=""/></p>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" value="option1"> 我是个人
-                    </label>
-                </li>
-            </ul>
-            <p class="err">提交审核后不可更改认证类型，请谨慎选择！</p>
-
-            <p>
-                <button class="btn btn-primary" type="button">确认申请</button>
-            </p>
-        </div>
-    </div>
 </div>
+<!-- /实名认证类型选择 -->
+
 
 
 <!-- jquery -->
@@ -218,19 +201,49 @@
 <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
-<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
-<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
+<script src="plugins/layer/layer.js"></script>
 
-<link rel="stylesheet" href="plugins/jquery-upload/Huploadify.css"/>
-<script src="plugins/jquery-upload/jquery.Huploadify.js"></script>
 
-<script src="plugins/jquery-city/jquery.cityselect.js"></script>
+
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>
 
 <!-- your js -->
-<script src=""></script>
+<script>
+    $(function() {
+        // 实名认证选择弹层 page
+        (function () {
+            $('.j-popup').click(function () {
+                //自定页
+                layer.open({
+                    title: false,
+                    type: 1,
+                    skin: 'layui-layer-tl', //样式类名
+                    closeBtn: 1, //不显示关闭按钮
+                    shift: 2,
+                    shadeClose: true, //开启遮罩关闭
+                    content: $('.modal-rz'),
+                    area: 'auto',
+                    maxWidth: 690
+                });
+            });
+
+            var $modal_rz = $('.modal-rz');
+            var $input = $modal_rz.find('input');
+            var $btn = $modal_rz.find('.j-ok');
+
+            $btn.click(function () {
+                if ($input.eq(0).get(0).checked) {
+                    // 实名认证跳转页面
+                    window.location.href = 'xxxx';
+                } else {
+                    // 技能认证跳转页面
+                    window.location.href = 'yyyy';
+                }
+            });
+        })();
+    });
+</script>
 </body>
 </html>

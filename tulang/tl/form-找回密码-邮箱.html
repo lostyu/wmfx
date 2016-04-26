@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>找回密码2</title>
+    <title>找回密码-邮箱</title>
     <!-- bootstap -->
     <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
 
@@ -30,39 +30,48 @@
 
 <div class="p-wrap">
 
-    <div class="p-formBox f-bd">
+    <div class="p-formBox p-formBox10 f-bd">
         <div class="form-title clearfix">
             <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
+
             <h2 class="text">找回密码</h2>
         </div>
 
         <div class="p-getPassForm">
-                <div class="title2"><span>请输入您要找回的登录密码的手机号</span></div>
+
+            <!--  手机 -->
+            <div>
+                <div class="tips">
+                    <p><img src="img/tips-email.png" alt=""/></p>
+                    <p>验证码已发送到您绑定的邮箱 wp_zr@163.com</p>
+                </div>
                 <form id="f-form-getPass">
-                    <!--<div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-info-sign"></span> 请输入你需要找回登录密码的账户名</div>-->
+                    <div class="m-formtips"><span class="glyphicon glyphicon-remove-sign"></span> 用户名或密码错误</div>
                     <div class="form-group">
-                        <label class="sr-only">注册手机号</label>
-                        <input autocomplete="off" name="utel" type="tel" class="form-control validate[required, custom[r_phone]]"
-                               placeholder="手机号">
+                        <label class="sr-only">密码（不少于8位）</label>
+                        <input autocomplete="off" name="utel" type="password"
+                               class="form-control validate[required, custom[r_passWord]]"
+                               placeholder="密码（不少于8位）">
                     </div>
                     <div class="form-group">
                         <div class="input-group">
                             <input name="ucode" type="text"
-                                   class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="输入验证码"
-                                   data-prompt-position="centerRight:95,5">
+                                   class="form-control validate[required, ajax[r_ajaxCode]]" placeholder="验证码"
+                                   data-prompt-position="centerRight:106,10">
                                         <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button">发送验证码</button>
+                                            <button class="btn btn-primary j-sendCode" type="button">发送验证码</button>
                                         </span>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">下一步</button>
+                    <button type="submit" class="btn btn-primary btn-block">确定</button>
                     <!--<div class="checkbox text-right">-->
-                        <!--<a href="javascript:;">人工申述</a>-->
+                    <!--<a href="javascript:;">人工申述</a>-->
                     <!--</div>-->
                 </form>
-
             </div>
 
+
+        </div>
 
 
     </div>
@@ -73,7 +82,10 @@
 <!-- S 底部 -->
 <nav class="m-footer" style="margin-top: -70px;">
     <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link"
+                                                       href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
         <p class="link">
             <a class="navbar-link" href="javascript:;">关于</a>|
             <a class="navbar-link" href="javascript:;">我们是谁</a>|
@@ -105,7 +117,7 @@
 
 <!-- your js -->
 <script>
-    $(function() {
+    $(function () {
         // 手机找回密码
         (function () {
             $('#f-form-getPass').validationEngine();

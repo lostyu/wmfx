@@ -39,7 +39,7 @@
     </div>
     <div class="box">
         <a class="btn btn-primary j-popup5" href="javascript:;">从图片库选择</a>
-        <img id="tp1" src="" alt="" style="width: 100px; height: 80px;" />
+        <img id="tp1" src="" alt="" style="width: 100px; height: 80px;"/>
     </div>
 </div>
 
@@ -96,24 +96,42 @@
     </div>
     <div class="bd">
         <div class="pingfen">
-            综合评分：
-            <div class="raty">
-                <div id="star1" class="star"></div>
-                <div id="hint1" class="hint"></div>
+
+            <div class="f-mb10">
+                <div class="raty raty-big">
+                    <div class="tit">综合评分：</div>
+                    <div id="star1" class="star"></div>
+                    <div id="hint1" class="hint hint-big"></div>
+                </div>
             </div>
+            <div>
+                <div class="raty">
+                    <div class="tit">付款进度：</div>
+                    <div id="star2" class="star"></div>
+                    <div id="hint2" class="hint hint-big"></div>
+                </div>
+                <div class="raty">
+                    <div class="tit">沟通态度：</div>
+                    <div id="star3" class="star"></div>
+                    <div id="hint3" class="hint hint-big"></div>
+                </div>
+                <div class="raty">
+                    <div class="tit">任务明确：</div>
+                    <div id="star4" class="star"></div>
+                    <div id="hint4" class="hint hint-big"></div>
+                </div>
+            </div>
+
         </div>
         <div class="text">
-            <textarea rows="5" class="form-control"></textarea>
-
+            <textarea name="text" rows="5" class="form-control"></textarea>
             <div class="text-right">
-                <a class="btn btn-primary btn-sm btn-w" href="javascript:;">提交</a>
+                <a class="btn btn-primary btn-sm btn-w j-submit" href="javascript:;">提交</a>
             </div>
         </div>
     </div>
 </div>
 <!-- /评分 -->
-
-
 
 
 <!-- 图库 -->
@@ -137,9 +155,6 @@
     </div>
 </div>
 <!-- /图库 -->
-
-
-
 
 
 <!-- jquery -->
@@ -203,6 +218,10 @@
         })();
 
 
+
+
+
+
         // 个人申述弹层 page
         (function () {
             var myLayer;
@@ -230,6 +249,11 @@
         })();
 
 
+
+
+
+
+
         // 任务执行评价
         (function () {
             var myLayer;
@@ -238,47 +262,46 @@
 
 
             $('#star1').raty({
-                cancelOff : 'cancel-off-big.png',
-                cancelOn  : 'cancel-on-big.png',
-                size      : 24,
-                starHalf  : 'star-half-big.png',
-                starOff   : 'star-off-big.png',
-                starOn    : 'star-on-big.png',
-                target    : '#hint1',
+                scoreName: 'pingfen1',
+                score: 5,
+                size: 24,
+                cancelOff: 'cancel-off-big.png',
+                cancelOn: 'cancel-on-big.png',
+                starHalf: 'star-half-big.png',
+                starOff: 'star-off-big.png',
+                starOn: 'star-on-big.png',
+                target: '#hint1',
                 targetKeep: true,
                 targetType: 'score',
                 half: true
             });
 
-//            $('#star1').raty({
-//                cancelOff : 'cancel-off-big.png',
-//                cancelOn  : 'cancel-on-big.png',
-//                size      : 24,
-//                starHalf  : 'star-half-big.png',
-//                starOff   : 'star-off-big.png',
-//                starOn    : 'star-on-big.png',
-//                target    : '#hint1',
-//                cancel    : true,
-//                targetKeep: true,
-//                precision : true
-//                score: 5,
-//                half: true,
-//                target: '#hint1',
-//                precision: true,
-//                targetType: 'score',
-//                targetKeep: true,
-//                round: { full:.1 }
+            $('#star2').raty({
+                scoreName: 'pingfen2',
+                score: 5.0,
+                target: '#hint2',
+                targetKeep: true,
+                targetType: 'score',
+                half: true
+            });
 
-//                precision: true,
-//                size: 24,
-//                starHalf: 'star-half-big.png',
-//                starOff: 'star-off-big.png',
-//                starOn: 'star-on-big.png'
-//            });
+            $('#star3').raty({
+                scoreName: 'pingfen3',
+                score: 5.0,
+                target: '#hint3',
+                targetKeep: true,
+                targetType: 'score',
+                half: true
+            });
 
-//            $('#star1').raty({
-//                targetScore: 'hint1'
-//            });
+            $('#star4').raty({
+                scoreName: 'pingfen4',
+                score: 5.0,
+                target: '#hint4',
+                targetKeep: true,
+                targetType: 'score',
+                half: true
+            });
 
             $('.j-popup4').click(function () {
                 //自定页
@@ -295,10 +318,33 @@
                 });
             });
 
-            var $btnOk = $('.modal-ss .j-ok');
+            var $modal = $('.modal-pingjia');
+            var $btnOk = $modal.find('.j-submit');
+
 
             $btnOk.click(function () {
-                layer.close(myLayer);
+                // ajax post
+                var $aipt = $modal.find('input');
+                var $text = $modal.find('textarea');
+                var data = [];
+
+                if( !$.trim($text.val()) ){
+                     alert('说点什么？');
+                }else{
+                    $aipt.each(function(index, elem) {
+                        data.push(elem.name+'='+elem.value);
+                    });
+
+                    data.push($text.attr('name') + '=' + $text.val());
+                    var str = data.join('&');
+
+                    console.log(str);
+                    // pingfen1=5&pingfen2=5&pingfen3=3.5&pingfen4=5&text=bbr57676767
+
+                    layer.close(myLayer);
+                }
+
+
             });
         })();
 
@@ -306,8 +352,9 @@
 
 
 
+
         // 图库图片选择
-        (function() {
+        (function () {
             var myLayer;
 
             $('.j-popup5').click(function () {
@@ -329,7 +376,7 @@
             var $li = $modal.find('li');
             var $tp1 = $('#tp1');
 
-            $li.click(function() {
+            $li.click(function () {
                 $li.removeClass('active');
                 $(this).addClass('active');
                 setImage($(this).children().eq(0), $tp1);
@@ -341,6 +388,8 @@
                 targetImg.attr('src', curImg.attr('src'));
             }
         })();
+
+
 
 
 

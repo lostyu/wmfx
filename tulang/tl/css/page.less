@@ -1,3 +1,7 @@
+//========================== 站点样式重置==================
+html, body{
+  background-color: #f1f3f6;
+}
 .btn {
   border-radius: 0;
   padding: 9px 12px;
@@ -8,13 +12,26 @@
 .btn-w{
   min-width: 100px;
 }
+.btn-r{
+  border-radius: 15px;
+}
+.btn-1{
+  background-color: #fff;
+  color: #398dee;
+  border-color: #398dee;
+}
+
+
 .label {
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
   padding: 8px 16px;
   border-radius: 0;
   border: 1px solid transparent;
+}
+.label-r{
+  border-radius: 10px;
 }
 
 .label-1{
@@ -26,11 +43,20 @@
   color: #398dee;
   border-color: #398dee;
 }
+.label-3{
+  background-color: #fff;
+  color: #5f5f5f;
+  border-color: #5f5f5f;
+}
 a.label-2:focus, a.label-2:hover{
   color: #398dee;
 }
 
 
+.form-control{
+  border-radius: 0;
+  box-shadow: none;
+}
 
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
   background-color: #fff;
@@ -41,6 +67,32 @@ a.label-2:focus, a.label-2:hover{
   padding-top: 7px;
 }
 
+//========================== /站点样式重置 ==================
+
+
+.m-formtips{
+  margin-bottom: 20px;
+  line-height: 20px;
+  color: #ff0000;
+  font-size: 16px;
+  .glyphicon{
+    font-size: 20px;
+    vertical-align: text-bottom;
+  }
+}
+.m-mimatips{
+  .formError{
+    width: 135px;
+  }
+  //.formError-text .formErrorContent{
+  //  height: 40px;
+  //  line-height: 40px;
+  //}
+}
+
+.j-sendCode{
+  width: 96px;
+}
 
 
 
@@ -536,7 +588,7 @@ a.label-2:focus, a.label-2:hover{
 }
 .p-getPassForm{
   width: 370px;
-  margin: 80px auto 0;
+  margin: 20px auto 0;
   .title2{
     position: relative;
     width: 295px;
@@ -559,6 +611,11 @@ a.label-2:focus, a.label-2:hover{
       padding: 0 20px;
       background-color: #fff;
     }
+  }
+  .tips{
+    margin-bottom: 40px;
+    text-align: center;
+    color: #333;
   }
 }
 .p-changePassForm{
@@ -899,10 +956,14 @@ a.label-2:focus, a.label-2:hover{
   color: #757575;
 
   .userInfo{
-    margin-bottom: 30px;
     height: 280px;
     background-color: #f1f3f6;
 
+    .label{
+      padding: 0 8px;
+      border-radius: 10px;
+
+    }
     .inner{
       position: relative;
       top: 30px;
@@ -1192,20 +1253,7 @@ a.label-2:focus, a.label-2:hover{
 .m-mfromBox{
   padding: 0 50px 0;
 
-  .form-horizontal {
-    .form-group{
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .fromlabel {
-      float: left;
-      width: 90px;
-      text-align: left;
-    }
-    .fromipt {
-      margin-left: 100px;
-    }
-  }
+
   .iptw1{
      width: 370px;
    }
@@ -1213,6 +1261,34 @@ a.label-2:focus, a.label-2:hover{
     width: 280px;
   }
 }
+
+.form-horizontal {
+  .form-group{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .formlabel {
+    float: left;
+    width: 90px;
+    text-align: left;
+  }
+  .formipt {
+    margin-left: 100px;
+  }
+}
+
+.form-horizontal2 {
+  .formlabel {
+    float: left;
+    width: 110px;
+    text-align: left;
+  }
+  .formipt {
+    margin-left: 120px;
+  }
+}
+
+
 
 .media-info{
   .media-heading{
@@ -2190,13 +2266,32 @@ a.label-2:focus, a.label-2:hover{
 
 // =============================== 评分插件
 .raty{
+  overflow: hidden;
   display: inline-block;
+  line-height: 20px;
+  margin-right: 10px;
+  min-width: 195px;
+
+
+  .tit{
+    float: left;
+  }
   .star, .hint{
+    float: left;
     display: inline-block;
   }
-  .star img{
-    //width: 24px;
-    //height: 24px;
+  .hint{
+    margin-left: 5px;
+    line-height: 20px;
+    color: #ff4848;
+  }
+}
+.raty-big{
+  line-height: 24px;
+  .hint{
+    margin-left: 10px;
+    line-height: 24px;
+    font-size: 24px;
   }
 }
 // =============================== / 评分插件

@@ -14,7 +14,7 @@
   width: 20px;
   height: 20px;
   background: url(../img/icon-sprite.png) no-repeat;
-  vertical-align: middle;
+  vertical-align: text-bottom;
 }
 .u-icon-time {
   background-position: 0 0;

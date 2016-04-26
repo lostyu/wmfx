@@ -23,7 +23,8 @@
 <body>
 <nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -44,6 +45,7 @@
             <li class="item msg">
                 <span class="dot"></span>
                 <img src="img/icon-msg.png" alt=""/>
+
                 <div class="msgList">
                     <div class="inner">
                         <div class="text-center f-mb20">
@@ -115,95 +117,79 @@
 <div class="container f-mb40">
     <div class="p-renzheng">
         <div class="p-box f-bg">
-        <div class="p-box-hd">
-            <div class="m-title">
-                <h2>图狼个人实名认证<span class="pull-right">咨询电话：40000000</span></h2>
+            <div class="p-box-hd">
+                <div class="m-title">
+                    <h2>图狼个人实名认证<span class="pull-right">咨询电话：40000000</span></h2>
 
-            </div>
-
-        </div>
-        <div class="p-box-bd">
-            <p class="text-center f-mb30"><img src="img/step1.jpg" alt=""></p>
-            <div class="form-boxp">
-                <div class="tips">
-                    <div class="media">
-                        <div class="media-left media-middle">
-                            <span class="glyphicon glyphicon-remove-circle text-danger"></span>
-                        </div>
-                        <div class="media-body">
-                            <ul class="list-unstyled">
-                                <li>认证未通过：</li>
-                                <li>·身份证信息与姓名不一致</li>
-                                <li>·身份证照片不清晰，无法看到详细信息</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="form-box">
-                    <form class="form-horizontal" id="f-form-grrz">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>真实姓名</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control iptw validate[required]">
-                            <p class="help-block">（认证后，系统优先使用tt您的真实姓名作为昵称，您可以在个人设置里面关闭该功能）</p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>身份证号</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control iptw validate[required, custom[chinaIdLoose]]">
-                            <p class="help-block">（不会公开）</p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>身份证照</label>
-                        <div class="col-sm-10">
-                            <div class="f-pr"><input type="hidden" class="validate[required]" data-prompt-position="inline"></div>
-                            <ul class="list-unstyled list-inline j-uploadImgBox"></ul>
-                            <div id="j-upload1"></div>
-                            <p class="help-block">（不会公开）</p>
-                            <p class="help-block">（上传本人手持身份证照片，需清晰可见身份证详细信息）</p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label"><span class="text-danger">*</span>注册电话</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control iptw" value="15023361515" disabled>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-primary btn-w">提交认证</button>
-                        </div>
-                    </div>
-                </form>
+            </div>
+            <div class="p-box-bd">
+                <p class="text-center f-mb30"><img src="img/step1.jpg" alt=""></p>
+
+                <div class="form-boxp">
+
+
+
+
+
+                        <form id="f-form-grrz">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="formlabel control-label"><span class="text-danger">*</span>真实姓名</label>
+
+                                    <div class="formipt">
+                                        <input type="text" class="form-control iptw validate[required]">
+
+                                        <p class="help-block">（认证后，系统优先使用tt您的真实姓名作为昵称，您可以在个人设置里面关闭该功能）</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="formlabel control-label"><span class="text-danger">*</span>身份证号</label>
+
+                                    <div class="formipt">
+                                        <input type="text"
+                                               class="form-control iptw validate[required, custom[chinaIdLoose]]">
+
+                                        <p class="help-block">（不会公开）</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="formlabel control-label"><span class="text-danger">*</span>身份证照</label>
+
+                                    <div class="formipt">
+                                        <div class="f-pr"><input type="hidden" class="validate[required]"
+                                                                 data-prompt-position="inline"></div>
+                                        <ul class="list-unstyled list-inline j-uploadImgBox"></ul>
+                                        <div id="j-upload1"></div>
+                                        <p class="help-block">（不会公开）</p>
+
+                                        <p class="help-block">（上传本人手持身份证照片，需清晰可见身份证详细信息）</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="formlabel control-label"><span class="text-danger">*</span>注册电话</label>
+
+                                    <div class="formipt">
+                                        <input type="text" class="form-control iptw" value="15023361515" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="formlabel control-label"></label>
+                                    <div class=" formipt">
+                                        <button type="submit" class="btn btn-primary btn-w">提交认证</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </div>
 
 
-
-<!-- S 底部 -->
-<nav class="m-footer">
-    <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
-        <p class="link">
-            <a class="navbar-link" href="javascript:;">关于</a>|
-            <a class="navbar-link" href="javascript:;">我们是谁</a>|
-            <a class="navbar-link" href="javascript:;">帮助</a>|
-            <a class="navbar-link" href="javascript:;">用户协议</a>|
-            <a class="navbar-link" href="javascript:;">信任与安全</a>
-
-            <a class="fa fa-weixin" href="javascript:;"></a>
-            <a class="fa fa-weibo" href="javascript:;"></a>
-        </p>
-    </div>
-</nav>
-<!-- E 底部 -->
 
 
 <!-- jquery -->
@@ -227,7 +213,7 @@
 
 <!-- your js -->
 <script>
-    $(function(){
+    $(function () {
         $('#f-form-grrz').validationEngine({
             validateNonVisibleFields: true, // 验证隐藏表单
             binded: false,   // 提交时验证
@@ -238,44 +224,6 @@
         });
 
 
-        //        // （远程验证用户名）ajax远程验证，可以公用
-//        $.validationEngineLanguage.allRules.r_ajaxCheckUname = {
-//            'url': 'phpajax/ajaxValidateFieldUser.php', /* 验证程序地址 */
-//            'extraData': '', /* 额外参数 */
-//            'alertTextOk': '验证通过时的提示信息',
-//            'alertText': '验证不通过时的提示信息',
-//            'alertTextLoad': '正在验证时的提示信息'
-//        };
-//
-//        $('#f-form-userSetting-base').validationEngine({
-//            ajaxFormValidation: true,           // Ajax 提交表单
-//            ajaxFormValidationMethod: 'get',    // 表单提交方式
-//            ajaxFormValidationURL: false,      // 设置 Ajax 提交的 URL，默认使用 form 的 action 属性
-//            onAjaxFormComplete: ajaxValidationCallback,  // 表单提交，Ajax 验证完成后的行为
-//            onBeforeAjaxFormValidation: beforeCall       // 表单提交验证通过后，Ajax 提交之前的回调函数
-//        });
-//
-//
-//        function ajaxValidationCallback(status, form, json, options){
-//            if(window.console){
-//                console.log(status);
-//            }
-//
-//            if(status === true){
-//                alert('the form is valid!');
-//                // uncomment these lines to submit the form to form.action
-//                // form.validationEngine('detach');
-//                // form.submit();
-//                // or you may use AJAX again to submit the data
-//            }
-//        }
-//
-//        function beforeCall(form, options){
-//            if(window.console){
-//                console.log('Right before the AJAX form validation call');
-//            }
-//            return true;
-//        }
     });
 </script>
 </body>
