@@ -14,7 +14,7 @@
   width: 20px;
   height: 20px;
   background: url(../img/icon-sprite.png) no-repeat;
-  vertical-align: text-bottom;
+  vertical-align: bottom;
 }
 .u-icon-time {
   background-position: 0 0;
@@ -37,14 +37,34 @@
 .u-icon-star {
   background-position: 0 -160px;
 }
+.u-icon-star-sm {
+  width: 14px;
+  height: 14px;
+  background-position: -3px -411px;
+}
 .u-icon-star2 {
   background-position: -40px -160px;
+}
+.u-icon-star2-sm {
+  width: 14px;
+  height: 14px;
+  background-position: -43px -411px;
 }
 .u-icon-halfStar {
   background-position: 0 -200px;
 }
+.u-icon-halfStar-sm {
+  width: 14px;
+  height: 14px;
+  background-position: -3px -445px;
+}
 .u-icon-halfStar2 {
   background-position: -40px -200px;
+}
+.u-icon-halfStar2-sm {
+  width: 14px;
+  height: 14px;
+  background-position: -43px -445px;
 }
 .u-icon-message {
   width: 27px;

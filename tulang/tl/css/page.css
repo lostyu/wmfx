@@ -31,6 +31,9 @@ body {
 .label-r {
   border-radius: 10px;
 }
+.label-sm {
+  padding: 4px 10px;
+}
 .label-1 {
   background-color: #398dee;
   color: #fff;
@@ -93,6 +96,9 @@ fieldset[disabled] .form-control {
 }
 .m-c5 {
   color: #72c72e;
+}
+.m-c6 {
+  color: #333;
 }
 .m-modal {
   position: fixed;
@@ -197,6 +203,8 @@ fieldset[disabled] .form-control {
   margin-bottom: 0;
 }
 .m-pinglun .media-body .text2 {
+  margin-bottom: 10px;
+  line-height: 30px;
   color: #757575;
 }
 .m-pinglun .media-body .text {
@@ -306,6 +314,11 @@ fieldset[disabled] .form-control {
   border-color: #fff;
   color: #fff;
 }
+.mbtn-default2 {
+  background-color: #f1f3f6;
+  border-color: #f1f3f6;
+  color: #999;
+}
 .mbtn-lg {
   height: 40px;
   line-height: 40px;
@@ -356,6 +369,15 @@ fieldset[disabled] .form-control {
 }
 .g-main3 {
   padding-left: 200px;
+}
+.g-side4 {
+  float: right;
+  width: 335px;
+  padding-right: 35px;
+}
+.g-main4 {
+  float: left;
+  width: 750px;
 }
 .p-wrap {
   width: 100%;
@@ -642,6 +664,11 @@ fieldset[disabled] .form-control {
 }
 .p-userSetting .j-tagBox span {
   margin-right: 10px;
+  margin-bottom: 10px;
+}
+.p-userSetting .j-tagBox span i {
+  color: #ff4949;
+  cursor: pointer;
 }
 .p-userSetting .j-liveBox li input,
 .p-userSetting .j-teachBox li input {
@@ -651,6 +678,18 @@ fieldset[disabled] .form-control {
   font-size: 14px;
   font-weight: normal;
   color: #b8b8b8;
+}
+.msg-list .media {
+  padding: 0 20px 10px;
+  border-bottom: 1px solid #f1f3f6;
+}
+.msg-list .ctrl {
+  text-align: right;
+}
+.msg-list .ctrl i {
+  padding: 0 5px;
+  color: #ccc;
+  font-style: normal;
 }
 .tlhb .list {
   padding: 0;
@@ -791,16 +830,16 @@ fieldset[disabled] .form-control {
 }
 .p-userCenter {
   margin-top: 78px;
-  margin-bottom: 30px;
   color: #757575;
 }
 .p-userCenter .userInfo {
   height: 280px;
-  background-color: #f1f3f6;
+  background: #f1f3f6 url(../img/userinfo-bg.png) center;
 }
 .p-userCenter .userInfo .label {
   padding: 0 8px;
   border-radius: 10px;
+  line-height: 20px;
 }
 .p-userCenter .userInfo .inner {
   position: relative;
@@ -815,15 +854,16 @@ fieldset[disabled] .form-control {
   padding-right: 30px;
 }
 .p-userCenter .userInfo .media-body .text {
-  margin-bottom: 34px;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 16px;
 }
 .p-userCenter .userInfo .media-body ul li {
   float: left;
+  width: 138px;
   text-align: center;
 }
 .p-userCenter .userInfo .media-body ul li .num {
-  width: 138px;
-  padding: 0 40px 0;
   border-right: 1px solid #e0e0e0;
   font-size: 24px;
   color: #3c8bee;
@@ -833,6 +873,10 @@ fieldset[disabled] .form-control {
   color: #333;
   vertical-align: middle;
   margin-bottom: 20px;
+}
+.p-userCenter .userInfo .media-heading .btn-rz {
+  min-width: 100px;
+  padding: 3px 10px;
 }
 .p-userCenter .userInfo .media-heading span {
   margin-left: 15px;
@@ -847,20 +891,24 @@ fieldset[disabled] .form-control {
 .p-userCenter .userInfo .control a {
   margin-left: 30px;
 }
-.p-userCenter .introduce {
-  height: 190px;
-}
 .p-userCenter .introduce .text {
-  padding: 15px 0;
+  overflow: hidden;
+  margin-top: 15px;
   margin-bottom: 0;
-  height: 126px;
+  height: 100px;
   line-height: 24px;
 }
 .p-userCenter .case {
   margin-bottom: 30px;
 }
+.p-userCenter .appraise {
+  margin-bottom: 30px;
+}
+.p-userCenter .appraise .m-tabs {
+  margin-top: 20px;
+}
 .p-userCenter .appraise .pf {
-  padding: 10px 0;
+  padding: 10px 0 20px;
   border-bottom: 1px solid #f1f3f6;
 }
 .p-userCenter .appraise .pf li {
@@ -876,21 +924,13 @@ fieldset[disabled] .form-control {
 .p-userCenter .appraise .pf p {
   vertical-align: middle;
 }
-.p-userCenter .appraise .pf .score {
-  font-size: 24px;
-  color: #ff4848;
-  vertical-align: middle;
-}
-.p-userCenter .appraise .pf .score2 {
-  font-size: 14px;
-}
 .p-userCenter .appraise .pf .text {
   position: relative;
   top: 8px;
 }
 .p-userCenter .appraise .media {
   padding: 0 30px 30px;
-  margin-top: 30px;
+  margin-top: 20px;
   border-bottom: 1px solid #f1f3f6;
 }
 .p-userCenter .appraise .media-left {
@@ -1819,6 +1859,28 @@ fieldset[disabled] .form-control {
 .modal-pingjia .text textarea {
   margin-bottom: 20px;
 }
+.modal-sx {
+  display: none;
+}
+.modal-sx .title {
+  padding: 0 20px;
+  height: 40px;
+  background-color: #368efc;
+  color: #fff;
+}
+.modal-sx .title h2 {
+  line-height: 40px;
+  font-size: 16px;
+}
+.modal-sx .bd {
+  padding: 30px;
+}
+.modal-sx .formlabel {
+  width: 50px;
+}
+.modal-sx .formipt {
+  margin-left: 60px;
+}
 .modal-tuku {
   display: none;
 }
@@ -1883,4 +1945,102 @@ fieldset[disabled] .form-control {
   margin-left: 10px;
   line-height: 24px;
   font-size: 24px;
+}
+.m-star {
+  overflow: hidden;
+  display: inline-block;
+  line-height: 24px;
+  padding: 0 10px;
+  border-right: 1px solid #f1f3f6;
+}
+.m-star .tit,
+.m-star .star,
+.m-star .score {
+  float: left;
+}
+.m-star .star {
+  margin-right: 10px;
+}
+.m-star .star .u-icon {
+  vertical-align: middle;
+}
+.m-star .score {
+  font-size: 24px;
+  color: #ff4848;
+  vertical-align: middle;
+}
+.m-star-nbr {
+  border-right: none;
+}
+.m-star-sm {
+  line-height: 16px;
+}
+.m-star-sm .score {
+  font-size: 16px;
+}
+.m-empty {
+  min-height: 140px;
+  padding: 30px 0;
+}
+.m-article .title {
+  padding: 30px 30px 10px;
+  border-bottom: 1px solid #f1f3f6;
+}
+.m-article .title h2 {
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 24px;
+}
+.m-article .title .meta {
+  margin: 0;
+}
+.m-article .title .meta span {
+  margin-right: 50px;
+}
+.m-article .cnt {
+  padding: 30px;
+}
+.m-article .cnt img {
+  max-width: 100%;
+}
+.m-article .cnt p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 2;
+}
+.xiangmuItem {
+  padding-top: 30px;
+}
+.xiangmuItem .media {
+  padding-left: 20px;
+}
+.xiangmuItem .pic {
+  position: relative;
+}
+.xiangmuItem .pic .u-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.xiangmuItem .xiangmuItem-list {
+  overflow: hidden;
+  margin: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+  padding: 0;
+}
+.xiangmuItem .xiangmuItem-list li {
+  float: left;
+  width: 145px;
+  height: 97px;
+  margin-left: 10px;
+  margin-top: 10px;
+  list-style: none;
+}
+.huifu {
+  padding: 0 20px 20px;
+  border-bottom: 1px solid #f1f3f6;
+}
+.huifu .huifu-tit {
+  margin-bottom: 10px;
 }

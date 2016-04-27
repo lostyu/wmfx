@@ -8,6 +8,25 @@ $(function () {
             setTimeout(function () {
                 window.location.href = url;
             }, time);
+        },
+
+        // 展开显示文字
+        toggleText: function(toggleClass, togglePanelClass) {
+            var $toggle = $('.'+toggleClass);
+            var $togglePanelClass = $('.'+togglePanelClass);
+            var iH = $togglePanelClass.height();
+            var onOff = true;
+
+            $toggle.click(function() {
+                if(onOff){
+                    onOff = false;
+                    $togglePanelClass.css('height', 'auto');
+                }else{
+                    onOff = true;
+                    $togglePanelClass.css('height', iH);
+                }
+
+            });
         }
     };
 
@@ -104,6 +123,10 @@ $(function () {
                 }, 1000);
             }
         });
+
+
+
+
 
 
         // 城市级联

@@ -33,6 +33,9 @@ html, body{
 .label-r{
   border-radius: 10px;
 }
+.label-sm{
+  padding: 4px 10px;
+}
 
 .label-1{
   background-color: #398dee;
@@ -111,6 +114,9 @@ a.label-2:focus, a.label-2:hover{
 }
 .m-c5{
   color: #72c72e;
+}
+.m-c6{
+  color: #333;
 }
 .m-modal{
   position: fixed;
@@ -243,6 +249,8 @@ a.label-2:focus, a.label-2:hover{
       margin-bottom: 0;
     }
     .text2{
+      margin-bottom: 10px;
+      line-height: 30px;
       color: #757575;
     }
     .text{
@@ -366,6 +374,11 @@ a.label-2:focus, a.label-2:hover{
   border-color: #fff;
   color: #fff;
 }
+.mbtn-default2{
+  background-color: #f1f3f6;
+  border-color: #f1f3f6;
+  color: #999;
+}
 .mbtn-lg{
   height: 40px;
   line-height: 40px;
@@ -424,6 +437,17 @@ a.label-2:focus, a.label-2:hover{
   padding-left: 200px;
 }
 
+
+.g-box4{}
+.g-side4{
+  float: right;
+  width: 335px;
+  padding-right: 35px;
+}
+.g-main4{
+  float: left;
+  width: 750px;
+}
 // ================== /布局
 
 
@@ -764,6 +788,11 @@ a.label-2:focus, a.label-2:hover{
   }
   .j-tagBox span{
     margin-right: 10px;
+    margin-bottom: 10px;
+    i{
+      color: #ff4949;
+      cursor: pointer;
+    }
   }
   .j-liveBox li input, .j-teachBox li input{
     margin-right: 10px;
@@ -774,6 +803,18 @@ a.label-2:focus, a.label-2:hover{
     font-size:14px;
     font-weight:normal;
     color: #b8b8b8;
+  }
+  .media{
+    padding: 0 20px 10px;
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .ctrl{
+    text-align: right;
+    i{
+      padding: 0 5px;
+      color: #ccc;
+      font-style: normal;
+    }
   }
 }
 .tlhb{
@@ -952,17 +993,16 @@ a.label-2:focus, a.label-2:hover{
 // ========================= 用户中心
 .p-userCenter{
   margin-top: 78px;
-  margin-bottom: 30px;
   color: #757575;
 
   .userInfo{
     height: 280px;
-    background-color: #f1f3f6;
+    background: #f1f3f6 url(../img/userinfo-bg.png) center;
 
     .label{
       padding: 0 8px;
       border-radius: 10px;
-
+      line-height: 20px;
     }
     .inner{
       position: relative;
@@ -980,17 +1020,20 @@ a.label-2:focus, a.label-2:hover{
 
     .media-body{
       .text{
-        margin-bottom: 34px;
+        margin-bottom: 25px;
+        color: #333;
+        font-size: 16px;
       }
     }
 
     .media-body ul li{
       float: left;
+      width: 138px;
       text-align: center;
 
       .num{
-        width: 138px;
-        padding: 0 40px 0;
+
+
         border-right: 1px solid #e0e0e0;
         font-size: 24px;
         color: #3c8bee;
@@ -1003,6 +1046,10 @@ a.label-2:focus, a.label-2:hover{
       vertical-align: middle;
       margin-bottom: 20px;
 
+      .btn-rz{
+        min-width: 100px;
+        padding: 3px 10px;
+      }
       span{
         margin-left: 15px;
         font-weight: normal;
@@ -1022,24 +1069,28 @@ a.label-2:focus, a.label-2:hover{
   }
 
   .introduce{
-    height: 190px;
-    //margin-bottom: 30px;
 
     .text{
-      padding: 15px 0;
+      overflow: hidden;
+      margin-top: 15px;
       margin-bottom: 0;
-      height: 126px;
+      height: 100px;
       line-height: 24px;
     }
   }
 
   .case{
     margin-bottom: 30px;
+
   }
 
   .appraise{
+    margin-bottom: 30px;
+    .m-tabs{
+      margin-top: 20px;
+    }
     .pf{
-      padding: 10px 0;
+      padding: 10px 0 20px;
       border-bottom: 1px solid #f1f3f6;
 
       li{
@@ -1057,14 +1108,14 @@ a.label-2:focus, a.label-2:hover{
         vertical-align: middle;
       }
 
-      .score{
-        font-size: 24px;
-        color: #ff4848;
-        vertical-align: middle;
-      }
-      .score2{
-        font-size: 14px;
-      }
+      //.score{
+      //  font-size: 24px;
+      //  color: #ff4848;
+      //  vertical-align: middle;
+      //}
+      //.score2{
+      //  font-size: 14px;
+      //}
 
       .text{
         position: relative;
@@ -1074,7 +1125,7 @@ a.label-2:focus, a.label-2:hover{
 
     .media{
       padding: 0 30px 30px;
-      margin-top: 30px;
+      margin-top: 20px;
       border-bottom: 1px solid #f1f3f6;
     }
 
@@ -2219,6 +2270,33 @@ a.label-2:focus, a.label-2:hover{
   }
 }
 
+
+.modal-sx{
+  display: none;
+  .title{
+    padding: 0 20px;
+    height: 40px;
+    background-color: #368efc;
+    color: #fff;
+
+    h2{
+      line-height: 40px;
+      font-size: 16px;
+    }
+  }
+  .bd{
+    padding: 30px;
+  }
+
+  .formlabel{
+    width: 50px;
+  }
+  .formipt{
+    margin-left: 60px;
+  }
+}
+
+
 .modal-tuku{
   display: none;
   .title{
@@ -2297,6 +2375,84 @@ a.label-2:focus, a.label-2:hover{
 // =============================== / 评分插件
 
 
+.m-star{
+  overflow: hidden;
+  display: inline-block;
+  line-height: 24px;
+  padding: 0 10px;
+  border-right: 1px solid #f1f3f6;
+
+  .tit, .star, .score{
+    float: left;
+  }
+  .tit{}
+  .star{
+    margin-right: 10px;
+    .u-icon{
+      vertical-align: middle;
+    }
+  }
+  .score{
+    font-size: 24px;
+    color: #ff4848;
+    vertical-align: middle;
+  }
+}
+.m-star-nbr{
+  border-right: none;
+}
+.m-star-sm{
+  line-height: 16px;
+  .score{
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+// 无内容
+.m-empty{
+  min-height: 140px;
+  padding: 30px 0;
+}
+
+
+
+
+
+
+// 文章
+.m-article{
+  .title{
+    padding: 30px 30px 10px;
+    border-bottom: 1px solid #f1f3f6;
+    h2{
+      margin-bottom: 20px;
+      color: #000;
+      font-size: 24px;
+    }
+    .meta{
+      margin: 0;
+      span{
+        margin-right: 50px;
+      }
+    }
+  }
+  .cnt{
+    padding: 30px;
+
+    img{
+      max-width: 100%;
+    }
+    p{
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 2;
+    }
+  }
+}
 
 
 
@@ -2307,10 +2463,46 @@ a.label-2:focus, a.label-2:hover{
 
 
 
+// 项目item详情
+.xiangmuItem{
+  padding-top: 30px;
+
+  .media{
+    padding-left: 20px;
+  }
+  .pic{
+    position: relative;
+    .u-icon{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .xiangmuItem-list{
+    overflow: hidden;
+    margin: 0;
+    margin-top: -10px;
+    margin-left: -10px;
+    padding: 0;
+    li{
+      float: left;
+      width: 145px;
+      height: 97px;
+      margin-left: 10px;
+      margin-top: 10px;
+      list-style: none;
+    }
+  }
+}
 
 
 
 
-
-
-
+.huifu{
+  padding:0 20px 20px;
+  border-bottom: 1px solid #f1f3f6;
+  .huifu-tit{
+    margin-bottom: 10px;
+  }
+}

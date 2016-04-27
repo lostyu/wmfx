@@ -23,7 +23,8 @@
 <body class="f-bg2">
 <nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -44,6 +45,7 @@
             <li class="item msg">
                 <span class="dot"></span>
                 <img src="img/icon-msg.png" alt=""/>
+
                 <div class="msgList">
                     <div class="inner">
                         <div class="text-center f-mb20">
@@ -132,18 +134,17 @@
             <div class="p-box-bd">
 
 
-
                 <div class="form-box">
                     <form method="post" class="form-horizontal" id="f-form-userSetting-base">
 
 
-
-
                         <div class="form-group">
                             <label class="col-sm-2 control-label">头像</label>
+
                             <div class="col-sm-10">
                                 <div>
                                     <img class="img-circle" width="120" height="120" src="" alt="120x120"/>
+
                                     <div id="j-prevImgBox"></div>
                                     <input id="j-fileImg" type="file" class="j-uploadtx"/>
                                 </div>
@@ -151,13 +152,13 @@
                         </div>
 
 
-
-
                         <div class="form-group form-inline">
                             <label class="col-sm-2 control-label">认证信息</label>
+
                             <div class="col-sm-10">
                                 <div class="f-mb10">
-                                    <input type="text" class="form-control" value="文沛霖"/>　认证信息 <a href="#">去认证</a>
+                                    <input type="text" class="form-control" value="文沛霖"/>　认证信息 <a class="f-tdu"
+                                                                                                  href="#">去认证</a>
                                 </div>
                                 <div class="">
                                     <label class="radio-inline">
@@ -166,13 +167,14 @@
                                     <label class="radio-inline">
                                         <input type="radio" name="inlineRadioOptions" value="option2"> 不展示认证
                                     </label>
-                                     <span class="form-text">认证展示的用户将被推荐到达人区</span>
+                                    <span class="form-text "><span class="m-c1">(认证展示的用户将被推荐到达人区)</span></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group form-inline">
                             <label class="col-sm-2 control-label">昵称</label>
+
                             <div class="col-sm-10">
 
                                 <input name="nickName" type="text" class="form-control" value="文沛霖"/>
@@ -182,23 +184,27 @@
 
 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">个人简介</label>
+                            <label class="col-sm-2 control-label">一句话简介</label>
+
                             <div class="col-sm-10">
-                                <div class="f-pr40">
-                                    <textarea class="form-control" rows="3">天行健，君子当自强不息。地势坤，君子以厚德载物。</textarea>
-                                </div>
+
+                                <input type="text" class="form-control iptw" value="天行健，君子当自强不息。地势坤，君子以厚德载物。"/>
+
                             </div>
                         </div>
 
 
-
                         <div class="form-group">
                             <label class="col-sm-2 control-label">我的标签</label>
+
                             <div class="col-sm-10 f-pt7">
-                                <div class="f-mb20 j-tagBox" style="display: none"></div>
+                                <div class="j-tagBox">
+                                    <!--<span class="label label-2 label-r label-sm">333 <i class="glyphicon glyphicon-remove"></i></span>-->
+                                </div>
                                 <div>
                                     <div class="input-group iptw">
-                                        <input maxlength="20" type="text" class="form-control j-tagIpt" placeholder="20个字以内，最多可以添加5个标签">
+                                        <input maxlength="20" type="text" class="form-control j-tagIpt"
+                                               placeholder="20个字以内，最多可以添加5个标签">
                                       <span class="input-group-btn">
                                         <button class="btn btn-primary j-addTag" type="button">添加</button>
                                       </span>
@@ -208,9 +214,9 @@
                         </div>
 
 
-
                         <div class="form-group">
                             <label class="col-sm-2 control-label">详细描述</label>
+
                             <div class="col-sm-10">
                                 <div class="f-pr40">
                                     <textarea class="form-control" rows="5">深圳利好政策频出，房价直线飙升，有不少媒体解读认为，杠杆资金和“炒房客”趁机杀入市场，形成新一轮的房价推手。近日，《证券日报》记者赶赴深圳，对房地产市场进行了实地调查，发现购房主力依然是刚需人群。深圳利好政策频出，房价直线飙升，有不少媒体解读认为，杠杆资金和“炒房客”趁机　</textarea>
@@ -219,77 +225,9 @@
                         </div>
 
 
-                        <div class="line"></div>
-
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">工作地</label>
-                            <div class="col-sm-10">
-
-                                <div class="f-mb20">
-                                    <div class="input-group iptw">
-                                        <input type="text" class="form-control j-placeIpt" placeholder="添加工作地">
-                                      <span class="input-group-btn">
-                                        <button class="btn btn-primary j-addPlace" type="button">添加</button>
-                                      </span>
-                                    </div>
-                                </div>
-                                <ul class="list-unstyled list-inline j-placeBox" style="display: none;"></ul>
-
-                            </div>
-                        </div>
-
-
-                        <div class="line"></div>
-
-
-
-                        <div class="form-group form-inline">
-                            <label class="col-sm-2 control-label">职业经历</label>
-                            <div class="col-sm-10">
-
-                                <div class="f-mb20">
-                                    <ul class="list-unstyled j-liveBox">
-                                        <li class="f-mb10">
-                                            <input name="lives[0][company]" type="text" class="form-control" placeholder="公司或组织名称"><input name="lives[0][job]" type="text" class="form-control" placeholder="你的职位（选填）">
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <button type="button" class="btn btn-primary j-addLive">添加</button>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="form-group form-inline">
-                            <label class="col-sm-2 control-label">教育经历</label>
-                            <div class="col-sm-10">
-
-                                <div class="f-mb20">
-                                    <ul class="list-unstyled j-teachBox">
-                                        <li class="f-mb10">
-                                            <input name="teach[0][school]" type="text" class="form-control" placeholder="学校或教育机构名称"><input name="teach[0][specialty]" type="text" class="form-control" placeholder="专业方向（选填）">
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <button type="button" class="btn btn-primary j-addTeach">添加</button>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                        <div class="line"></div>
-
-
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="button" class="btn btn-primary btn-w j-btnSave"><span class="glyphicon glyphicon-ok"></span> 保存修改</button>
+                                <button type="button" class="btn btn-primary btn-w j-btnSave">保存</button>
                             </div>
                         </div>
                     </form>
@@ -304,7 +242,10 @@
 <!-- S 底部 -->
 <nav class="m-footer">
     <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link"
+                                                       href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
         <p class="link">
             <a class="navbar-link" href="javascript:;">关于</a>|
             <a class="navbar-link" href="javascript:;">我们是谁</a>|
@@ -320,26 +261,26 @@
 <!-- E 底部 -->
 
 
-
 <!-- Large modal -->
 <div class="modal fade j-txpopBox" role="dialog" aria-labelledby="gridSystemModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="gridSystemModalLabel">上传头像</h4>
             </div>
             <div class="modal-body text-center">
 
                 <form id="f-form-crop" action="crop.php" method="post" onsubmit="return checkCoords();">
-                    <input type="hidden" id="x" name="x" />
-                    <input type="hidden" id="y" name="y" />
-                    <input type="hidden" id="w" name="w" />
-                    <input type="hidden" id="h" name="h" />
-                <!--<input type="submit" value="Crop Image" class="btn btn-large btn-inverse" />-->
+                    <input type="hidden" id="x" name="x"/>
+                    <input type="hidden" id="y" name="y"/>
+                    <input type="hidden" id="w" name="w"/>
+                    <input type="hidden" id="h" name="h"/>
+                    <!--<input type="submit" value="Crop Image" class="btn btn-large btn-inverse" />-->
                 </form>
                 <script>
-                    function checkCoords(){
+                    function checkCoords() {
                         if (parseInt($('#w').val())) return true;
 //                        alert('Please select a crop region then press submit.');
                         return false;
@@ -350,9 +291,12 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                 <button type="button" class="btn btn-primary j-btn-saveCrop">保存图片</button>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 
 <!-- jquery -->
 <script src="libs/jquery-2.2.2/jquery.min.js"></script>
@@ -380,117 +324,10 @@
 
 <!-- your js -->
 <script>
-    $(function() {
+    $(function () {
         // 个人设置-基本资料
         (function () {
             var $form = $('#f-form-userSetting-base');
-
-
-            //================= 修改头像 ==================
-            var $btntx = $form.find('.j-uploadtx');
-            var $btnSave = $('.j-btn-saveCrop');
-            var $formCrop = $('#f-form-crop');
-            var api;
-
-            $btntx.change(function (ev) {
-
-                //app.ui.preImg('j-fileImg', 'j-prevImgBox');
-                $("#j-fileImg").uploadPreview({ Img: "j-prevImgBox", Width: 120, Height: 120 });
-                //preImg('j-fileImg', 'j-prevImg');
-
-                //var $content = $modal.find('.modal-content img');
-                //
-                //console.log(ev.target.files[0]);
-                ////$content.attr('src',);
-                ////var f =  $(this).get(0).files[0];
-                ////var src = window.URL.createObjectURL(f);
-
-                ////$(this).val('');
-            });
-
-            function preImg(sourceId, targetId) {
-                var url = getFileUrl(sourceId);
-
-                if (url) {
-                    var $modal = $('.j-txpopBox');
-
-                    //var imgPre = document.getElementById(targetId);
-                    //imgPre.src = url;
-
-                    $('#j-prevImg').Jcrop({
-                        aspectRatio: 1,
-                        boxHeight: 500,
-                        onSelect: updateCoords
-                    }, function () {
-                        api = this;
-                    });
-
-                    api.setImage(url);
-
-                    $modal.modal();
-                }
-
-            }
-
-            $('.j-txpopBox').on('hidden.bs.modal', function (e) {
-                api.destroy();
-                $btntx.val('');
-            });
-
-            $btnSave.click(function () {
-                //console.log(api.tellSelect());
-                if (api.tellSelect().w > 0) {
-                    $.post('crop.php', {}, function (text) {
-                        alert(text);
-                    });
-                }
-            });
-
-            function updateCoords(c) {
-                $('#x').val(Math.floor(c.x));
-                $('#y').val(Math.floor(c.y));
-                $('#w').val(Math.floor(c.w));
-                $('#h').val(Math.floor(c.h));
-            }
-
-
-            function getFullPath(obj) {
-                // 得到图片的完整路径
-                if (obj) {
-                    // ie
-                    if (window.navigator.userAgent.indexOf("MSIE") >= 1) {
-                        obj.select();
-                        return document.selection.createRange().text;
-                    }
-                    // firefox
-                    else if (window.navigator.userAgent.indexOf("Firefox") >= 1) {
-                        if (obj.files) {
-                            return obj.files.item(0).getAsDataURL();
-                        }
-                        return obj.value;
-                    }
-                    return obj.value;
-                }
-            }
-
-            //function getFileUrl(sourceId) {
-            //    if (!document.getElementById(sourceId).value.match(/.jpg|.gif|.png|.bmp/i)) {
-            //        alert('图片格式无效！');
-            //        return false;
-            //    }
-            //    var url;
-            //    if (navigator.userAgent.indexOf("MSIE") >= 1) { // IE
-            //        url = document.getElementById(sourceId).value;
-            //    } else if (navigator.userAgent.indexOf("Firefox") > 0) { // Firefox
-            //        url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
-            //    } else if (navigator.userAgent.indexOf("Chrome") > 0) { // Chrome
-            //        url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
-            //    }
-            //    return url;
-            //}
-
-            //================= / 修改头像 ==================
-
 
             // 添加标签
             var $tagBox = $form.find('.j-tagBox');
@@ -500,82 +337,27 @@
             var curLen = 0;
 
             $tagBtn.click(function () {
+
                 curLen = $tagBox.children().length;
                 var _str = $.trim($tagIpt.val());
 
                 if (_str.length > 0) {
                     if (curLen < tagLen) {
-                        var $label = $('<span class="label label-info">' + _str + '</span> ');
-                        $tagBox.show().append($label);
+                        var $label = '<span class="label label-2 label-r label-sm">' + _str + ' <i class="glyphicon glyphicon-remove"></i></span>';
+
+                        $tagBox.append($label);
                         $tagIpt.val('');
+
                     }
                 }
-            });
 
-
-            // 添加工作地
-            var $placeBox = $form.find('.j-placeBox');
-            var $placeBtn = $form.find('.j-addPlace');
-            var $placeIpt = $form.find('.j-placeIpt');
-
-            $placeBtn.click(function () {
-                var _str = $.trim($placeIpt.val());
-                if (_str.length > 0) {
-                    var $li = $('<li>' + _str + '</li>');
-                    $placeBox.show().append($li);
-                    $placeIpt.val('');
-                }
-            });
-
-
-            // 职业经历
-            var $liveBox = $form.find('.j-liveBox');
-            var $liveBtn = $form.find('.j-addLive');
-            var curLiveLen = 0;
-
-            $liveBtn.click(function () {
-                curLiveLen++;
-
-                var _str = $('<li class="f-mb10">' +
-                        '<input name="lives[' + curLiveLen + '][company]" type="text" class="form-control" placeholder="公司或组织名称">' +
-                        '<input name="lives[' + curLiveLen + '][job]" type="text" class="form-control" placeholder="你的职位（选填）">' +
-                        '<a href="javascript:;"><span class="glyphicon glyphicon-remove"></span></a>' +
-                        '</li>');
-
-                $liveBox.append(_str);
 
             });
+            $tagBox.click(function (ev) {
 
-            $liveBox.click(function (e) {
-                var $target = $(e.target);
-                if (e.target.nodeName.toLowerCase() == 'span') {
-                    $target.parents('li').remove();
-                }
-            });
-
-
-            // 教育经历
-            var $teachBox = $form.find('.j-teachBox');
-            var $teachBtn = $form.find('.j-addTeach');
-            var curTeachLen = 0;
-
-            $teachBtn.click(function () {
-                curTeachLen++;
-
-                var _str = $('<li class="f-mb10">' +
-                        '<input name="teach[' + curTeachLen + '][school]" type="text" class="form-control" placeholder="学校或教育机构名称">' +
-                        '<input name="teach[' + curTeachLen + '][specialty]" type="text" class="form-control" placeholder="专业方向（选填）">' +
-                        '<a href="javascript:;"><span class="glyphicon glyphicon-remove"></span></a>' +
-                        '</li>');
-
-                $teachBox.append(_str);
-
-            });
-
-            $teachBox.click(function (e) {
-                var $target = $(e.target);
-                if (e.target.nodeName.toLowerCase() == 'span') {
-                    $target.parents('li').remove();
+                if (ev.target.nodeName.toLowerCase() == 'i') {
+                    curLen = $tagBox.children().length;
+                    $( ev.target ).parent().remove();
                 }
             });
 
@@ -583,7 +365,7 @@
             function getAllTags() {
                 var sTags = '';
                 $tagBox.children().each(function (index, elem) {
-                    sTags += $(this).html() + ',';
+                    sTags += $(this).text() + ',';
                 });
 
                 if (sTags.length > 0) {
@@ -597,7 +379,7 @@
 
             $btnSave.click(function () {
                 var seri = $form.serialize();
-                //console.log(getAllTags());
+                console.log(getAllTags());
                 console.log(seri);
 
                 //$.post(

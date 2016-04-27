@@ -23,7 +23,8 @@
 <body class="f-bg2">
 <nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -44,6 +45,7 @@
             <li class="item msg">
                 <span class="dot"></span>
                 <img src="img/icon-msg.png" alt=""/>
+
                 <div class="msgList">
                     <div class="inner">
                         <div class="text-center f-mb20">
@@ -134,12 +136,18 @@
 
                 <div class="form-box">
                     <div class="form-box2">
-                        <p><img width="205" height="205" src="" alt="205x205"/><br /><br />扫描二维码绑定微信<br /></p>
-                        <p><br /><br /><br />为了更及时收到图狼网任务和交易信息，请绑定个人微信</p>
-                        <p>未关注用户，请先关注图狼网微信账号，并在菜单上点击绑定账号</p>
+                        <p><img width="205" height="205" src="" alt="205x205"/><br/><br/>扫描二维码绑定微信<br/></p>
+
+                        <p>绑定图狼网后，您将可以快查询任务消息</p>
+
+                        <p><br/><br/>您尚未绑定微信号</p>
+
+                        <p class="f-pl30">已绑定微信号：文沛霖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="text-danger j-unbind"
+                                                                                           href="javascript:;">解除绑定</a>
+                        </p>
                     </div>
-                    <div class="line"></div>
-                    <p class="f-pl30">微信绑定：文沛霖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="text-danger" href="javascript:;">解除绑定</a></p>
+
+
                 </div>
 
             </div>
@@ -150,7 +158,10 @@
 <!-- S 底部 -->
 <nav class="m-footer">
     <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link"
+                                                       href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
         <p class="link">
             <a class="navbar-link" href="javascript:;">关于</a>|
             <a class="navbar-link" href="javascript:;">我们是谁</a>|
@@ -304,24 +315,37 @@
 <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
-<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
-<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
+<script src="plugins/layer/layer.js"></script>
 
-<link rel="stylesheet" href="plugins/jquery-upload/Huploadify.css"/>
-<script src="plugins/jquery-upload/jquery.Huploadify.js"></script>
 
-<script src="plugins/jquery-city/jquery.cityselect.js"></script>
 
-<link rel="stylesheet" href="plugins/jquery-jcrop/css/jquery.Jcrop.min.css"/>
-<script src="plugins/jquery-jcrop/js/jquery.Jcrop.min.js"></script>
 
-<script src="plugins/jquery-prevImg/jquery-prevImg.js"></script>
+
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>
 
 <!-- your js -->
-<script src=""></script>
+<script>
+    $(function () {
+        $('.j-unbind').click(function () {
+            //解除图狼网微信绑定
+            var myLayer = layer.confirm(
+                    '解除图狼网微信绑定？',
+                    {
+                        title: '提示',
+                        btn: ['确认', '取消'] //可以无限个按钮
+                    },
+                    function () {
+                        // 成功回调
+                        layer.close(myLayer);
+                    },
+                    function () {
+                        // 取消回调
+                    }
+            );
+        });
+    });
+</script>
 </body>
-</html
+</html>
