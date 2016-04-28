@@ -130,66 +130,63 @@
                 <div class="form-boxp">
 
 
+                    <form id="f-form-grrz">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>真实姓名</label>
 
+                                <div class="formipt">
+                                    <input type="text" class="form-control iptw validate[required]">
 
-
-                        <form id="f-form-grrz">
-                            <div class="form-horizontal">
-                                <div class="form-group">
-                                    <label class="formlabel control-label"><span class="text-danger">*</span>真实姓名</label>
-
-                                    <div class="formipt">
-                                        <input type="text" class="form-control iptw validate[required]">
-
-                                        <p class="help-block">（认证后，系统优先使用tt您的真实姓名作为昵称，您可以在个人设置里面关闭该功能）</p>
-                                    </div>
+                                    <p class="help-block">（认证后，系统优先使用tt您的真实姓名作为昵称，您可以在个人设置里面关闭该功能）</p>
                                 </div>
-                                <div class="form-group">
-                                    <label class="formlabel control-label"><span class="text-danger">*</span>身份证号</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>身份证号</label>
 
-                                    <div class="formipt">
-                                        <input type="text"
-                                               class="form-control iptw validate[required, custom[chinaIdLoose]]">
+                                <div class="formipt">
+                                    <input type="text"
+                                           class="form-control iptw validate[required, custom[chinaIdLoose]]">
 
-                                        <p class="help-block">（不会公开）</p>
-                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="formlabel control-label"><span class="text-danger">*</span>身份证照</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>身份证照</label>
 
-                                    <div class="formipt">
-                                        <div class="f-pr"><input type="hidden" class="validate[required]"
-                                                                 data-prompt-position="inline"></div>
-                                        <ul class="list-unstyled list-inline j-uploadImgBox"></ul>
-                                        <div id="j-upload1"></div>
-                                        <p class="help-block">（不会公开）</p>
+                                <div class="formipt">
 
-                                        <p class="help-block">（上传本人手持身份证照片，需清晰可见身份证详细信息）</p>
-                                    </div>
+
+                                    <input type="file"/>
+
+                                    <p class="help-block">（上传本人手持身份证照片，需清晰可见身份证详细信息）</p>
                                 </div>
-                                <div class="form-group">
-                                    <label class="formlabel control-label"><span class="text-danger">*</span>注册电话</label>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>所在地</label>
 
-                                    <div class="formipt">
-                                        <input type="text" class="form-control iptw" value="15023361515" disabled>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="formlabel control-label"></label>
-                                    <div class=" formipt">
-                                        <button type="submit" class="btn btn-primary btn-w">提交认证</button>
+                                <div class="formipt">
+                                    <div id="city">
+                                        <select class="prov"></select>
+                                        <select class="city" disabled="disabled"></select>
+                                        <select class="dist" disabled="disabled"></select>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                            <div class="form-group">
+                                <label class="formlabel control-label"></label>
+
+                                <div class=" formipt">
+                                    <button type="submit" class="btn btn-primary btn-w">提交认证</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
 
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
 
 
 <!-- jquery -->
@@ -203,10 +200,9 @@
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
-<link rel="stylesheet" href="plugins/jquery-upload/Huploadify.css"/>
-<script src="plugins/jquery-upload/jquery.Huploadify.js"></script>
 
 <script src="plugins/jquery-city/jquery.cityselect.js"></script>
+<script src="plugins/layer/layer.js"></script>
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>
@@ -220,7 +216,28 @@
             autoHidePrompt: true,   // 自动隐藏提示信息
             autoHideDelay: 5000,
             showOneMessage: false,
-            scroll: false
+            scroll: false,
+
+
+            onValidationComplete: function(form, valid){
+                if(valid){
+                    var myLayer = layer.confirm(
+                            '确认申请个人认证？',
+                            {
+                                title: '提示',
+                                btn: ['确认申请', '取消'] //可以无限个按钮
+                            },
+                            function () {
+                                // 成功回调
+                                layer.close(myLayer);
+                            },
+                            function () {
+                                // 取消回调
+                            }
+                    );
+                }
+            }
+
         });
 
 

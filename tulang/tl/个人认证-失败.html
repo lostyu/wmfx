@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>企业认证-审核</title>
+    <title>个人认证-失败</title>
     <!-- bootstap -->
     <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
 
@@ -119,7 +119,7 @@
         <div class="p-box f-bg">
             <div class="p-box-hd">
                 <div class="m-title">
-                    <h2>图狼企业实名认证<span class="pull-right">咨询电话：40000000</span></h2>
+                    <h2>图狼个人实名认证<span class="pull-right">咨询电话：40000000</span></h2>
 
                 </div>
 
@@ -128,99 +128,74 @@
                 <p class="text-center f-mb30"><img src="img/step2.jpg" alt=""></p>
 
                 <div class="form-boxp">
-                    <div class="tips">
-                        <span class="glyphicon glyphicon-time f-vam text-danger"></span>　您的认证信息正在审核中，随后将通知您！
+
+
+                    <div class="tips" style="display: -none;">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <span class="glyphicon glyphicon-remove-circle text-danger"></span>
+                            </div>
+                            <div class="media-body">
+                                <ul class="list-unstyled">
+                                    <li>认证未通过：</li>
+                                    <li>·身份证信息与姓名不一致</li>
+                                    <li>·身份证照片不清晰，无法看到详细信息</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
-                    <form id="f-form-qiyerz">
-                        <div class="form-horizontal form-horizontal2">
 
 
+                    <form id="f-form-grrz">
+                        <div class="form-horizontal">
                             <div class="form-group">
-                                <label class="formlabel control-label"><span class="text-danger">*</span>企业简称</label>
+                                <label class="formlabel control-label"><span class="text-danger">*</span>真实姓名</label>
 
                                 <div class="formipt">
-                                    <p class="formPlace">xxx科技</p>
-                                    <p class="help-block">（认证后，认证后作为用户昵称不能修改）</p>
+                                    <input type="text" class="form-control iptw validate[required]">
+
+                                    <p class="help-block">（认证后，系统优先使用tt您的真实姓名作为昵称，您可以在个人设置里面关闭该功能）</p>
                                 </div>
                             </div>
-
-
-
-
                             <div class="form-group">
-                                <label class="formlabel control-label"><span class="text-danger">*</span>企业全称</label>
+                                <label class="formlabel control-label"><span class="text-danger">*</span>身份证号</label>
 
                                 <div class="formipt">
-                                    <p class="formPlace">xxx科技有限公司</p>
+                                    <input type="text"
+                                           class="form-control iptw validate[required, custom[chinaIdLoose]]">
+
                                 </div>
                             </div>
-
-
-
-
-
                             <div class="form-group">
-                                <label class="formlabel control-label"><span class="text-danger">*</span>工商执照注册号</label>
+                                <label class="formlabel control-label"><span class="text-danger">*</span>身份证照</label>
 
                                 <div class="formipt">
-                                    <p class="formPlace">15465465456132123</p>
+
+
+                                    <input type="file"/>
+
+                                    <p class="help-block">（上传本人手持身份证照片，需清晰可见身份证详细信息）</p>
                                 </div>
                             </div>
-
-
-
-
-
-                            <div class="form-group">
-                                <label class="formlabel control-label"><span class="text-danger">*</span>营业执照副本</label>
-
-                                <div class="formipt">
-                                    <div>
-                                        <img width="200" height="200" src="" alt="">
-                                    </div>
-                                    <p class="help-block">（证件号需清晰可见）</p>
-                                </div>
-                            </div>
-
-
-
-
                             <div class="form-group form-inline">
-                                <label class="formlabel control-label"><span class="text-danger">*</span>公司所在地</label>
+                                <label class="formlabel control-label"><span class="text-danger">*</span>所在地</label>
 
                                 <div class="formipt">
-                                    <p class="formPlace">重庆市渝北区</p>
+                                    <div id="city">
+                                        <select class="prov"></select>
+                                        <select class="city" disabled="disabled"></select>
+                                        <select class="dist" disabled="disabled"></select>
+                                    </div>
                                 </div>
                             </div>
-
-
-
-
                             <div class="form-group">
-                                <label class="formlabel control-label"><span class="text-danger">*</span>常用地址</label>
+                                <label class="formlabel control-label"></label>
 
-                                <div class="formipt">
-                                    <p class="formPlace">重庆市渝北区加州路龙华大道XXX号</p>
+                                <div class=" formipt">
+                                    <button type="submit" class="btn btn-primary btn-w">提交认证</button>
                                 </div>
                             </div>
-
-
-
-
-
-
-                            <!--<div class="form-group">-->
-                                <!--<label class="formlabel control-label"></label>-->
-
-                                <!--<div class=" formipt">-->
-                                    <!--<button type="submit" class="btn btn-primary btn-w">提交认证</button>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-
-
-
                         </div>
                     </form>
 
@@ -242,10 +217,9 @@
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
-<link rel="stylesheet" href="plugins/jquery-upload/Huploadify.css"/>
-<script src="plugins/jquery-upload/jquery.Huploadify.js"></script>
 
 <script src="plugins/jquery-city/jquery.cityselect.js"></script>
+<script src="plugins/layer/layer.js"></script>
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>
@@ -253,13 +227,34 @@
 <!-- your js -->
 <script>
     $(function () {
-        $('#f-form-qiyerz').validationEngine({
+        $('#f-form-grrz').validationEngine({
             validateNonVisibleFields: true, // 验证隐藏表单
             binded: false,   // 提交时验证
             autoHidePrompt: true,   // 自动隐藏提示信息
             autoHideDelay: 5000,
             showOneMessage: false,
-            scroll: false
+            scroll: false,
+
+
+            onValidationComplete: function(form, valid){
+                if(valid){
+                    var myLayer = layer.confirm(
+                            '确认申请个人认证？',
+                            {
+                                title: '提示',
+                                btn: ['确认申请', '取消'] //可以无限个按钮
+                            },
+                            function () {
+                                // 成功回调
+                                layer.close(myLayer);
+                            },
+                            function () {
+                                // 取消回调
+                            }
+                    );
+                }
+            }
+
         });
 
 

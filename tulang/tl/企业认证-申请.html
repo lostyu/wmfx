@@ -244,9 +244,7 @@
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
-<link rel="stylesheet" href="plugins/jquery-upload/Huploadify.css"/>
-<script src="plugins/jquery-upload/jquery.Huploadify.js"></script>
-
+<script src="plugins/layer/layer.js"></script>
 <script src="plugins/jquery-city/jquery.cityselect.js"></script>
 
 <!-- linkcloud -->
@@ -261,7 +259,27 @@
             autoHidePrompt: true,   // 自动隐藏提示信息
             autoHideDelay: 5000,
             showOneMessage: false,
-            scroll: false
+            scroll: false,
+
+
+            onValidationComplete: function(form, valid){
+                if(valid){
+                    var myLayer = layer.confirm(
+                            '确认申请企业认证？',
+                            {
+                                title: '提示',
+                                btn: ['确认申请', '取消'] //可以无限个按钮
+                            },
+                            function () {
+                                // 成功回调
+                                layer.close(myLayer);
+                            },
+                            function () {
+                                // 取消回调
+                            }
+                    );
+                }
+            }
         });
 
 

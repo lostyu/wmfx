@@ -137,7 +137,7 @@
         <div class="m-panel2">
             <p class="m-c1 f-fz22">余额全款支付</p>
             <div class="text-right">
-                <a class="btn btn-primary btn-w" href="javascript:;">确认支付</a>
+                <a class="btn btn-primary btn-w j-pay" href="javascript:;">确认支付</a>
             </div>
         </div>
 
@@ -170,6 +170,15 @@
 <!-- E 底部 -->
 
 
+<div class="modal-prompt">
+    <div class="inner text-center">
+        <p style="font-size:18px; color: #757575;">请在新的窗口完成支付！</p>
+        <p style="font-size:14px; color: #b8b8b8; margin-bottom: 40px;">请根据您的情况进行以下操作</p>
+        <p><a class="mbtn mbtn-success j-ok" href="javascript:;">支付完成</a> <a class="mbtn mbtn-primary j-other" href="javascript:;">选择其他支付方式</a></p>
+    </div>
+</div>
+
+
 <!-- jquery -->
 <script src="libs/jquery-2.2.2/jquery.min.js"></script>
 
@@ -177,12 +186,53 @@
 <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-
+<script src="plugins/layer/layer.js"></script>
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>
 
 <!-- your js -->
-<script src=""></script>
+<script>
+    $(function() {
+
+
+        // 支付弹出
+        (function() {
+            var myLayer;
+
+            $('.j-pay').click(function () {
+                //自定页
+                myLayer = layer.open({
+                    title: false,
+                    type: 1,
+                    skin: 'layui-layer-tl', //样式类名
+                    closeBtn: 1, //不显示关闭按钮
+                    shift: 2,
+                    shadeClose: true,
+                    content: $('.modal-prompt'),
+                    area: 'auto',
+                    maxWidth: 400
+                });
+            });
+
+            var $modal = $('.modal-prompt');
+            var $ok = $modal.find('.j-ok');
+            var $other = $modal.find('.j-other');
+
+
+            // TODO
+            $ok.click(function() {
+                layer.close(myLayer);
+            });
+
+            $other.click(function( ){
+                layer.close(myLayer);
+            });
+
+        })();
+
+
+    });
+</script>
 </body>
 </html>
