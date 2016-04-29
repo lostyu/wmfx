@@ -117,7 +117,7 @@
 
     <div class="f-bg f-mb40">
         <div class="m-title m-title2">
-            <h2>业务管理</h2><span style="padding: 0 20px;"> — </span><span class="f-mr20">申请提现</span><a href="javascript:;">返回</a>
+            <h2>业务管理</h2>
         </div>
 
         <div class="g-box2">
@@ -155,22 +155,16 @@
                     <div class="ywgl-zbrw">
 
 
+                        <div class="breadcrumb2 f-mb20"><a href="javascript:;"><img src="img/icon-back.png" alt=""/></a>　申请提现</div>
 
-                        <div class="m-panel f-mb30 m-bb" style="padding: 30px; background-color:transparent;">
+                        <div class="f-mb20">
                             可提现金额：<span class="f-fz22 m-c1">3560.00</span>
-                            <div class="pull-right">
-                                <!-- Single button -->
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        选择提现渠道 <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                        </div>
+                        
+                        <div class="m-panel f-mb30" style="padding: 30px;">
+                            暂无提现账户
+                            <a class="pull-right" href="javascript:;">设置</a>
+
                         </div>
 
                         <div class="m-panel f-mb30" style="padding: 30px;">
@@ -178,8 +172,8 @@
                             <div class="pull-right">
                                 <span>文沛霖（***2983039）</span>
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        选择提现渠道 <span class="caret"></span>
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        操作 <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Action</a></li>
@@ -191,12 +185,12 @@
                         </div>
 
 
-                        <form class="form-inline f-mb30">
+                        <form class="form-inline f-mb30" id="f-form-tx">
 
                             <div class="f-mb20">
                                 <div class="form-group">
                                     <label class="control-label">提现金额：</label>
-                                    <input type="text" class="form-control f-mr20" placeholder="最多可提取3445.00元">
+                                    <input type="text" class="form-control validate[required, custom[number]]" placeholder="最多可提取3445.00元">
                                 </div>
                             </div>
                             <div class="f-mb20">
@@ -211,7 +205,7 @@
 
                             <div class="form-group">
                                 <div style="padding-left: 70px;">
-                                    <button class="btn btn-primary btnw" type="button">确定提现</button>
+                                    <button class="btn btn-primary btn-w" type="submit">确定提现</button>
                                 </div>
                             </div>
 
@@ -259,8 +253,6 @@
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
 
-<script src="plugins/laydate/laydate.js"></script>
-
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>
@@ -269,21 +261,13 @@
 <script>
     $(function () {
 
-
-        laydate({
-            elem: '#date1', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
-            event: 'focus' //响应事件。如果没有传入event，则按照默认的click
+        $(function(){
+            (function () {
+                $('#f-form-tx').validationEngine();
+            })();
         });
 
-        laydate({
-            elem: '#date2', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
-            event: 'focus' //响应事件。如果没有传入event，则按照默认的click
-        });
 
-        laydate({
-            elem: '#date3', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
-            event: 'focus' //响应事件。如果没有传入event，则按照默认的click
-        });
 
     });
 </script>

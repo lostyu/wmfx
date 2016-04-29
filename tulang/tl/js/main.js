@@ -27,7 +27,39 @@ $(function () {
                 }
 
             });
+        },
+
+        // 发送验证码
+        sendCode: function(objBtn) {
+
+            var timer = null;
+            var onOff = true;
+            var curTime = 60;
+
+            if (onOff) {
+                onOff = false;
+                objBtn.text(curTime + 'S后重发');
+                objBtn.attr('disabled', true);
+
+                timer = setInterval(function () {
+                    curTime--;
+                    if (curTime == 0) {
+                        objBtn.text('发送验证码');
+                        objBtn.attr('disabled', false);
+                        curTime = 60;
+                        onOff = true;
+                        clearInterval(timer);
+                    } else {
+                        objBtn.text(curTime + 'S后重发');
+                    }
+
+                }, 1000);
+            }
+
         }
+
+
+
     };
 
 
@@ -94,41 +126,6 @@ $(function () {
         }
 
 
-
-
-        // 发送验证码
-        var timer = null;
-        var onOff = true;
-        var curTime = 60;
-        var $sendCode = $('.j-sendCode');
-
-        $(document).on('click', '.j-sendCode', function () {
-            if (onOff) {
-                onOff = false;
-                $sendCode.text(curTime + 'S后重发');
-                $sendCode.attr('disabled', true);
-
-                timer = setInterval(function () {
-                    curTime--;
-                    if (curTime == 0) {
-                        $sendCode.text('发送验证码');
-                        $sendCode.attr('disabled', false);
-                        curTime = 60;
-                        onOff = true;
-                        clearInterval(timer);
-                    } else {
-                        $sendCode.text(curTime + 'S后重发');
-                    }
-
-                }, 1000);
-            }
-        });
-
-
-
-
-
-
         // 城市级联
         if ($('#city').length) {
             $("#city").citySelect({
@@ -140,6 +137,12 @@ $(function () {
 
             $('#city select').addClass('form-control');
         }
+
+
+        var $sendCode = $('.j-sendCode');
+        $sendCode.click(function() {
+            app.ui.sendCode($(this));
+        });
 
 
         // icheck

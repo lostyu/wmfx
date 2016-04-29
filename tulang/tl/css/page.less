@@ -54,6 +54,37 @@ html, body{
 a.label-2:focus, a.label-2:hover{
   color: #398dee;
 }
+.label-r1{
+  background-color: #438de2;
+  border-color: #438de2;
+  color: #fff;
+}
+.label-r2{
+  background-color: #ecc13f;
+  border-color: #ecc13f;
+  color: #fff;
+}
+.label-r3{
+  background-color: #6ea8eb;
+  border-color: #6ea8eb;
+  color: #fff;
+}
+.label-r4{
+  background-color: #f8773e;
+  border-color: #f8773e;
+  color: #fff;
+}
+.label-r5{
+  background-color: #f85391;
+  border-color: #f85391;
+  color: #fff;
+}
+.label-r6{
+  background-color: #6fc629;
+  border-color: #6fc629;
+  color: #fff;
+}
+
 
 
 .form-control{
@@ -1454,11 +1485,13 @@ a.label-2:focus, a.label-2:hover{
     .time{
       position: relative;
       overflow: hidden;
-      height: 20px;
+      height: 22px;
       text-align: left;
 
       span{
         position: absolute;
+        width: 100px;
+        text-align: center;
       }
 
       .step1{
@@ -1851,8 +1884,8 @@ a.label-2:focus, a.label-2:hover{
     position: relative;
     float: left;
     width: 271px;
-    height: 150px;
-    line-height: 150px;
+    height: 90px;
+    line-height: 90px;
     margin-left: 30px;
     border: 1px solid #e5e5e5;
     vertical-align: middle;
@@ -1861,6 +1894,13 @@ a.label-2:focus, a.label-2:hover{
     color: #757575;
     font-size: 16px;
     cursor: pointer;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #757575;
+      text-decoration: none;
+    }
     span{
       display: inline-block;
       line-height: normal;
@@ -1868,6 +1908,10 @@ a.label-2:focus, a.label-2:hover{
     }
     &.active{
       border-color: #9dc5f6;
+      background-color: #d7e8fc;
+    }
+    &.active a{
+      color: #3c8bee;
     }
     &.active:after{
       content: '';
@@ -2201,6 +2245,11 @@ a.label-2:focus, a.label-2:hover{
   position: relative;
   width: 100%;
   height: 100%;
+  .price {
+    font-style: normal;
+    font-size: 24px;
+    color: #ff8a2b;
+  }
   .bj {
     position: absolute;
     top: 0;
@@ -2237,11 +2286,7 @@ a.label-2:focus, a.label-2:hover{
         font-size: 22px;
         font-weight: 700;
       }
-      .price {
-        font-style: normal;
-        font-size: 24px;
-        color: #ff8a2b;
-      }
+
     }
   }
 }
@@ -2488,6 +2533,7 @@ a.label-2:focus, a.label-2:hover{
   line-height: 24px;
   padding: 0 10px;
   border-right: 1px solid #f1f3f6;
+  color: #757575;
 
   .tit, .star, .score{
     float: left;
@@ -2704,3 +2750,140 @@ a.label-2:focus, a.label-2:hover{
   }
 }
 
+
+
+
+
+
+
+
+//
+.sfxx{
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f1f3f6;
+
+  .title{
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+  dl{
+    margin-bottom: 0;
+    dt{
+      width: 100px;
+      line-height: 30px;
+      text-align: left;
+      font-weight: normal;
+      color: #757575;
+    }
+    dd{
+      margin-left: 110px;
+      line-height: 30px;
+      color: #333;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// 404
+.fourtofour{
+  padding-top: 170px;
+  text-align: center;
+  .img{
+    margin-bottom: 45px;
+  }
+  h2{
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #3c8bee;
+  }
+}
+
+
+
+
+
+
+.xiangmuliebiao{
+
+  li{
+    width: 320px;
+    height: 250px;
+    &:hover .cnt{
+      background-color: #438de2;
+    }
+    &:hover .price{
+      color: #fff;
+    }
+  }
+  .cnt{
+    background-color: rgba(48, 65, 81, .8);
+  }
+}
+
+
+
+
+
+//
+.breadcrumb2{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eff0f1;
+  color: #757575;
+  font-size: 16px;
+}
+
+
+
+.fankui{
+  padding: 30px;
+  background-color: #fff;
+
+  .title{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8f1fb;
+    font-size: 16px;
+    color: #333;
+  }
+  .title2{
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 按钮组件
+.btn-w{
+
+}

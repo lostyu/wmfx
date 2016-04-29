@@ -734,6 +734,36 @@ a.label-2:focus,
 a.label-2:hover {
   color: #398dee;
 }
+.label-r1 {
+  background-color: #438de2;
+  border-color: #438de2;
+  color: #fff;
+}
+.label-r2 {
+  background-color: #ecc13f;
+  border-color: #ecc13f;
+  color: #fff;
+}
+.label-r3 {
+  background-color: #6ea8eb;
+  border-color: #6ea8eb;
+  color: #fff;
+}
+.label-r4 {
+  background-color: #f8773e;
+  border-color: #f8773e;
+  color: #fff;
+}
+.label-r5 {
+  background-color: #f85391;
+  border-color: #f85391;
+  color: #fff;
+}
+.label-r6 {
+  background-color: #6fc629;
+  border-color: #6fc629;
+  color: #fff;
+}
 .form-control {
   border-radius: 0;
   box-shadow: none;
@@ -1847,11 +1877,13 @@ fieldset[disabled] .form-control {
 .zhaobiao-info .jd .time {
   position: relative;
   overflow: hidden;
-  height: 20px;
+  height: 22px;
   text-align: left;
 }
 .zhaobiao-info .jd .time span {
   position: absolute;
+  width: 100px;
+  text-align: center;
 }
 .zhaobiao-info .jd .time .step1 {
   left: 250px;
@@ -2185,8 +2217,8 @@ fieldset[disabled] .form-control {
   position: relative;
   float: left;
   width: 271px;
-  height: 150px;
-  line-height: 150px;
+  height: 90px;
+  line-height: 90px;
   margin-left: 30px;
   border: 1px solid #e5e5e5;
   vertical-align: middle;
@@ -2196,6 +2228,13 @@ fieldset[disabled] .form-control {
   font-size: 16px;
   cursor: pointer;
 }
+.choosePay li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #757575;
+  text-decoration: none;
+}
 .choosePay li span {
   display: inline-block;
   line-height: normal;
@@ -2203,6 +2242,10 @@ fieldset[disabled] .form-control {
 }
 .choosePay li.active {
   border-color: #9dc5f6;
+  background-color: #d7e8fc;
+}
+.choosePay li.active a {
+  color: #3c8bee;
 }
 .choosePay li.active:after {
   content: '';
@@ -2482,6 +2525,11 @@ fieldset[disabled] .form-control {
   width: 100%;
   height: 100%;
 }
+.lc-listItem .price {
+  font-style: normal;
+  font-size: 24px;
+  color: #ff8a2b;
+}
 .lc-listItem .bj {
   position: absolute;
   top: 0;
@@ -2519,11 +2567,6 @@ fieldset[disabled] .form-control {
   margin-bottom: 10px;
   font-size: 22px;
   font-weight: 700;
-}
-.lc-listItem .cnt .inner .price {
-  font-style: normal;
-  font-size: 24px;
-  color: #ff8a2b;
 }
 .lc-list-2 {
   overflow: hidden;
@@ -2724,6 +2767,7 @@ fieldset[disabled] .form-control {
   line-height: 24px;
   padding: 0 10px;
   border-right: 1px solid #f1f3f6;
+  color: #757575;
 }
 .m-star .tit,
 .m-star .star,
@@ -2879,4 +2923,76 @@ fieldset[disabled] .form-control {
 }
 .out .outimg {
   position: absolute;
+}
+.sfxx {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f1f3f6;
+}
+.sfxx .title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.sfxx dl {
+  margin-bottom: 0;
+}
+.sfxx dl dt {
+  width: 100px;
+  line-height: 30px;
+  text-align: left;
+  font-weight: normal;
+  color: #757575;
+}
+.sfxx dl dd {
+  margin-left: 110px;
+  line-height: 30px;
+  color: #333;
+}
+.fourtofour {
+  padding-top: 170px;
+  text-align: center;
+}
+.fourtofour .img {
+  margin-bottom: 45px;
+}
+.fourtofour h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #3c8bee;
+}
+.xiangmuliebiao li {
+  width: 320px;
+  height: 250px;
+}
+.xiangmuliebiao li:hover .cnt {
+  background-color: #438de2;
+}
+.xiangmuliebiao li:hover .price {
+  color: #fff;
+}
+.xiangmuliebiao .cnt {
+  background-color: rgba(48, 65, 81, 0.8);
+}
+.breadcrumb2 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eff0f1;
+  color: #757575;
+  font-size: 16px;
+}
+.fankui {
+  padding: 30px;
+  background-color: #fff;
+}
+.fankui .title {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8f1fb;
+  font-size: 16px;
+  color: #333;
+}
+.fankui .title2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
 }
