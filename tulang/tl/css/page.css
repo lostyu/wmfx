@@ -2314,3 +2314,20 @@ fieldset[disabled] .form-control {
   font-size: 24px;
   color: #333;
 }
+.xieyi {
+  background-color: #fff;
+}
+.xieyi .title {
+  padding: 20px 0 0;
+}
+.xieyi .title h2 {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cccccc;
+  font-size: 18px;
+  color: #3c8bee;
+}
+.xieyi .cnt {
+  padding: 20px;
+  line-height: 24px;
+}
