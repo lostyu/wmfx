@@ -13,6 +13,8 @@
 
     <!-- linkcloud -->
     <!--<link rel="stylesheet" href="../css/demo.css">-->
+    <link rel="stylesheet" href="plugins/wb02/css/upload.css">
+    <link rel="stylesheet" href="css/wmz.css">
 
     <!-- your css -->
     <!--<link rel="stylesheet" href="../css/customer.css">-->
@@ -128,6 +130,7 @@
                 <p class="text-center f-mb30"><img src="img/step1.jpg" alt=""></p>
 
                 <div class="form-boxp">
+                    <div class="wmz_line_title wmz_mb40"><span>个人认证信息</span><i></i></div>
 
 
                     <form id="f-form-grrz">
@@ -156,7 +159,29 @@
                                 <div class="formipt">
 
 
-                                    <input type="file"/>
+                                    <div class="upload_image_row no_padding">
+                                        <div class="upload_col upload_default_image">
+                                            <div class="upload_img_main"></div>
+                                            <a href="javascript: onCloseFile('file_upload01', '*');"
+                                               class="upload_img_main_close">取消</a>
+                                        </div>
+                                        <div class="upload_col">
+                                            <div class="upload_image_main file_upload01">
+                                                <div class="upload_col upload_input">
+                                                    <input id="file_upload01" class="file_upload" name="file_upload"
+                                                           type="file">
+                                                </div>
+                                                <div class="upload_col upload_info">图片大小2M以内</div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="upload_queue_main">
+                                                <div id="queue01" class="queue file_upload01"></div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
 
                                     <p class="help-block">（上传本人手持身份证照片，需清晰可见身份证详细信息）</p>
                                 </div>
@@ -200,6 +225,7 @@
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
+<script src="plugins/wb02/js/jquery.uploadify.js"></script>
 
 <script src="plugins/jquery-city/jquery.cityselect.js"></script>
 <script src="plugins/layer/layer.js"></script>
@@ -242,6 +268,156 @@
 
 
     });
+
+    //图片上传参数
+    var uploadImageOptions = {
+        buttonClass: "upload_button",
+        width: 77,
+        height: 32,
+        fileSizeLimit: 1024 * 2,// KB
+        buttonText: "上传",
+        swf: 'plugins/wb02/js/uploadify.swf',
+        removeCompleted: false,
+        removeTimeout: 0,
+        fileTypeDesc: 'Image Files',
+        fileTypeExts: '*.jpg;*.jpeg;*.png',
+        multi: false,
+        itemTemplate: '<div id="${fileID}" class="uploadify-queue-item">\
+        <div class="fileName">${fileName}</div>\
+            <div class="fileSize">（${fileSize}）</div>\
+            <div class="uploadify-progress">\
+            <div class="uploadify-progress-bar"><!--Progress Bar--></div>\
+            </div>\
+            <a class="upload_img_close" href="javascript: onCloseFile(\'${instanceID}\', \'${fileID}\');">取消</a>\
+            </div>',
+        //后台地址
+        uploader: 'uploadify.php',
+        method: "post",
+        onSelect: onSelect,
+        onUploadComplete: onUploadComplete,
+        onUploadSuccess: onUploadSuccess,
+        type: 2
+    };
+    var _file_upload01 = $("#file_upload01");
+    uploadImageOptions["queueID"] = "queue01";
+    _file_upload01.uploadify(uploadImageOptions);
+
+    function onUploadSuccess(file, msg, status) {
+        console.log(msg); //这里获得后台的图片路劲 自行赋值
+        var self = this;
+        switch (self.settings.type) {
+            case 2:
+                $(".upload_img_main." + self.settings.id).html('<img src="' + msg + '"/>').addClass("show");
+                break;
+        }
+    }
+
+    function onSelect() {
+        var self = this;
+        switch (self.settings.type) {
+            case 1:
+                //附件
+                $(".upload_none_box." + self.settings.id).hide();
+                break;
+            case 2:
+                //图片
+                var _list = $("#" + self.settings.queueID + " .uploadify-queue-item");
+                if (_list.length > 1) {
+                    _list.eq(0).each(function () {
+                        var id = $(this).attr("id");
+                        $("#" + self.settings.id).uploadify('cancel', id);
+                    });
+                }
+                break;
+        }
+
+    }
+
+    function onSelectError() {
+        var self = this;
+        switch (self.settings.type) {
+            case 1:
+                //附件
+                notUploadQueue(self);
+                break;
+        }
+
+    }
+
+    function onUploadComplete(file) {
+        var self = this;
+        switch (self.settings.type) {
+            case 2:
+                //图片
+                var _file = $("#" + file.id);
+                if (_file.length) {
+                    _file.delay(1000).fadeOut(300);
+                }
+                break;
+        }
+
+    }
+
+    function onCloseFile(instanceID, fileID) {
+
+        layer.confirm('<div class="dialog_content"><i class="upload_bg upload_gt_bg"></i>亲，你真要删掉我吗？</div>', {
+            skin: "dialog_layer",
+            closeBtn: 0, //不显示关闭按钮
+            shade: 0,
+            title: "删除提示",
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            $("#" + instanceID).uploadify('cancel', fileID);
+            notUploadQueue(null, instanceID);
+            layer.closeAll();
+        }, function () {
+            layer.closeAll();
+        });
+
+    }
+
+    function notUploadQueue(uploadify, instanceID) {
+        if (uploadify) {
+            if (uploadify.queueData.filesQueued != 0) {
+                $(".upload_none_box." + uploadify.settings.id).hide();
+            } else {
+                $(".upload_none_box." + uploadify.settings.id).show();
+            }
+        } else {
+            if ($(".queue." + instanceID + " .uploadify-queue-item").length) {
+                $(".upload_none_box." + instanceID).hide();
+            } else {
+                $(".upload_none_box." + instanceID).show();
+            }
+        }
+
+    }
+
+    function layerConfirm(title, content, cb1, cb2) {
+        layer.confirm(content, {
+            skin: "dialog_layer",
+            shade: 0,
+            title: title,
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            cb1 && cb1();
+            layer.closeAll();
+        }, function () {
+            cb2 && cb2();
+            layer.closeAll();
+        });
+    }
+
+    function layerAlert(title, content) {
+        layer.alert(content, {
+            skin: "dialog_layer",
+            shade: 0,
+            title: title,
+            area: ['567px', '211px']
+        });
+    }
 </script>
 </body>
 </html>

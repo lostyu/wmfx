@@ -20,6 +20,9 @@ body {
   color: #398dee;
   border-color: #398dee;
 }
+label {
+  font-weight: 500;
+}
 .label {
   display: inline-block;
   font-size: 12px;
@@ -1641,9 +1644,11 @@ fieldset[disabled] .form-control {
   color: #398dee;
 }
 .m-banner {
+  min-width: 1100px;
   height: 420px;
   margin-bottom: 148px;
   background: center top url(../img/banner.jpg) no-repeat;
+  background-size: cover;
 }
 .m-banner .info {
   position: absolute;
@@ -1933,7 +1938,7 @@ fieldset[disabled] .form-control {
   text-align: center;
 }
 .modal-rz .inner .title {
-  padding: 15px 0 40px ;
+  padding: 15px 0 40px;
 }
 .modal-rz .inner ul {
   margin: 0;
@@ -2330,4 +2335,75 @@ fieldset[disabled] .form-control {
 .xieyi .cnt {
   padding: 20px;
   line-height: 24px;
+}
+.btn {
+  border-radius: 4px;
+  padding: 9px 12px;
+}
+.btn-primary {
+  border-color: #3c8bee;
+  background-color: #3c8bee;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #3479d0;
+  border-color: #3479d0;
+}
+.btn-success {
+  border-color: #3acc73;
+  background-color: #3acc73;
+  color: #fff;
+}
+.btn-success:hover {
+  background-color: #32af64;
+  border-color: #32af64;
+}
+.btn-danger {
+  border-color: #ff0042;
+  background-color: #ff0042;
+  color: #fff;
+}
+.btn-danger:hover {
+  background-color: #e7003c;
+  border-color: #e7003c;
+}
+.btn-default {
+  border-color: #e5e6eb;
+  background-color: #ffffff;
+  color: #333333;
+}
+.btn-default:hover {
+  background-color: #ececec;
+  border-color: #d9d9d9;
+  color: #333;
+}
+.btn-w50 {
+  min-width: 50px;
+}
+.btn-w75 {
+  min-width: 75px;
+}
+.btn-w100 {
+  min-width: 100px;
+}
+.btn-w150 {
+  min-width: 150px;
+}
+.btn-w218 {
+  min-width: 218px;
+}
+.btn-w375 {
+  min-width: 375px;
+}
+.btn-h25 {
+  padding: 3px;
+  font-size: 12px;
+}
+.btn-h30 {
+  padding: 6px;
+  font-size: 12px;
+}
+.btn-h40 {
+  padding: 9px;
+  font-size: 14px;
 }

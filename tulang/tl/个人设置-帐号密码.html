@@ -23,7 +23,8 @@
 <body class="f-bg2">
 <nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -139,14 +140,16 @@
                         <div class="form-group form-inline">
                             <label class="col-sm-2 control-label">邮箱</label>
 
+
                             <div class="col-sm-10">
                                 <div class="f-mb10">
-                                    <input type="text" class="form-control" value="wpl_zero163.com" disabled/>　 <a
+                                    <input type="text" class="form-control" value="wpl_zero163.com" disabled/><a
                                         href="javascript:;" class="j-changeEmail"><span
                                         class="glyphicon glyphicon-pencil"></span> 修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
                                         href="#">绑定邮箱</a>
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="line"></div>
@@ -174,7 +177,8 @@
                             <div class="col-sm-10">
                                 <div class="f-mb10">
                                     <input type="password" class="form-control" value="********" disabled/>　
-                                    <a href="javascript:;" class="j-changePassWord"><span class="glyphicon glyphicon-pencil"></span> 修改</a>
+                                    <a href="javascript:;" class="j-changePassWord"><span
+                                            class="glyphicon glyphicon-pencil"></span> 修改</a>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +196,9 @@
 <!-- S 底部 -->
 <nav class="m-footer">
     <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link"
+                                                       href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
         <p class="link">
             <a class="navbar-link" href="javascript:;">关于</a>|
             <a class="navbar-link" href="javascript:;">我们是谁</a>|
@@ -364,7 +370,7 @@
 
 <!-- your js -->
 <script>
-    $(function() {
+    $(function () {
         var $btnChangeEmail = $('.j-changeEmail');
         var $btnChangePhone = $('.j-changePhone');
         var $btnChangePassWord = $('.j-changePassWord');
@@ -375,14 +381,14 @@
         var $formPhone = $('#f-form-userSettings-phone');
         var $formPassWord = $('#f-form-userSettings-passWord');
 
-        $btnChangeEmail.click(function() {
+        $btnChangeEmail.click(function () {
             $formEmail.get(0).reset();
             $formEmail.validationEngine({
                 binded: false   // 提交时验证
             });
             $mailBox.modal();
         });
-        $btnChangePhone.click(function() {
+        $btnChangePhone.click(function () {
             $formPhone.get(0).reset();
             $formPhone.validationEngine({
                 binded: false
@@ -390,7 +396,7 @@
             $phoneBox.modal();
         });
 
-        $btnChangePassWord.click(function() {
+        $btnChangePassWord.click(function () {
             $formPassWord.get(0).reset();
             $formPassWord.validationEngine({
                 binded: false

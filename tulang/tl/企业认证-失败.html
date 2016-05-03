@@ -13,6 +13,7 @@
 
     <!-- linkcloud -->
     <!--<link rel="stylesheet" href="../css/demo.css">-->
+    <link rel="stylesheet" href="css/wmz.css">
 
     <!-- your css -->
     <!--<link rel="stylesheet" href="../css/customer.css">-->
@@ -131,10 +132,10 @@
 
                     <div class="tips">
                         <div class="media">
-                            <div class="media-left media-middle">
-                                <span class="glyphicon glyphicon-remove-circle text-danger"></span>
+                            <div class="media-left">
+                                <span class="wmz_icon wmz_icon_error"></span>
                             </div>
-                            <div class="media-body">
+                            <div class="media-body wmz_error_info">
                                 <ul class="list-unstyled">
                                     <li>认证未通过：</li>
                                     <li>·身份证信息与姓名不一致</li>
@@ -146,6 +147,9 @@
 
 
                     <form id="f-form-qiyerz">
+
+                        <div class="wmz_line_title wmz_mb40"><span>企业认证信息</span><i></i></div>
+
                         <div class="form-horizontal form-horizontal2">
 
 
@@ -160,8 +164,6 @@
                             </div>
 
 
-
-
                             <div class="form-group">
                                 <label class="formlabel control-label"><span class="text-danger">*</span>企业全称</label>
 
@@ -169,9 +171,6 @@
                                     <input type="text" class="form-control iptw validate[required]">
                                 </div>
                             </div>
-
-
-
 
 
                             <div class="form-group">
@@ -184,9 +183,6 @@
                             </div>
 
 
-
-
-
                             <div class="form-group">
                                 <label class="formlabel control-label"><span class="text-danger">*</span>营业执照副本</label>
 
@@ -195,8 +191,6 @@
                                     <p class="help-block">（证件号需清晰可见）</p>
                                 </div>
                             </div>
-
-
 
 
                             <div class="form-group form-inline">
@@ -212,8 +206,6 @@
                             </div>
 
 
-
-
                             <div class="form-group">
                                 <label class="formlabel control-label"><span class="text-danger">*</span>常用地址</label>
 
@@ -223,10 +215,6 @@
                             </div>
 
 
-
-
-
-
                             <div class="form-group">
                                 <label class="formlabel control-label"></label>
 
@@ -234,8 +222,6 @@
                                     <button type="submit" class="btn btn-primary btn-w">提交认证</button>
                                 </div>
                             </div>
-
-
 
 
                         </div>
@@ -277,8 +263,8 @@
             scroll: false,
 
 
-            onValidationComplete: function(form, valid){
-                if(valid){
+            onValidationComplete: function (form, valid) {
+                if (valid) {
                     var myLayer = layer.confirm(
                             '确认申请企业认证？',
                             {

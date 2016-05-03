@@ -23,7 +23,8 @@
 <body class="f-bg2">
 <nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -44,6 +45,7 @@
             <li class="item msg">
                 <span class="dot"></span>
                 <img src="img/icon-msg.png" alt=""/>
+
                 <div class="msgList">
                     <div class="inner">
                         <div class="text-center f-mb20">
@@ -134,11 +136,11 @@
 
                         <div class="form-horizontal">
                             <div class="form-group">
-                                <label class="control-label formlabel">招标金额：</label>
+                                <label class="control-label formlabel">任务赏金：</label>
 
                                 <div class="formipt">
-                                    <input type="text" class="form-control iptw2 validate[required]" placeholder="不少于500元">
-                                    <div class="text-muted" style="margin-top:5px;">金额不少于5000元的招标，才能设置维保期</div>
+                                    <input id="f-sj" type="text" class="form-control iptw2 validate[required]"
+                                           placeholder="不少于500元">
                                 </div>
                             </div>
 
@@ -147,10 +149,10 @@
 
                                 <div class="formipt">
                                     <label class="radio-inline">
-                                        <input class="j-radiowb1" type="radio" name="wb" value="option1" checked> 无维保
+                                        <input id="f-r1" class="j-radiowb1" type="radio" name="wb" value="option1" checked> 无维保
                                     </label>
                                     <label class="radio-inline">
-                                        <input class="j-radiowb2" type="radio" name="wb" value="option1"> 有维保
+                                        <input id="f-r2" class="j-radiowb2" type="radio" name="wb" value="option1"> 有维保
                                     </label>
                                 </div>
                             </div>
@@ -161,7 +163,8 @@
                                     <label class="control-label formlabel">维保比例：</label>
 
                                     <div class="formipt">
-                                        <input type="text" class="form-control iptw2 validate[required]" data-prompt-position="centerRight:20,10"> %
+                                        <input id="f-bl" type="text" class="form-control iptw2 validate[required]"
+                                               data-prompt-position="centerRight:20,10"> %
                                     </div>
                                 </div>
 
@@ -171,16 +174,16 @@
 
                                     <div class="formipt">
                                         <label class="radio-inline">
-                                            <input type="radio" name="nx" value="option1" checked> 1年
+                                            <input id="f-nx1" type="radio" name="nx" value="option1" checked> 1年
                                         </label>
                                         <label class="radio-inline">
-                                            <input type="radio" name="nx" value="option1"> 2年
+                                            <input id="f-nx2" type="radio" name="nx" value="option1"> 2年
                                         </label>
                                         <label class="radio-inline">
-                                            <input type="radio" name="nx" value="option1"> 3年
+                                            <input id="f-nx3" type="radio" name="nx" value="option1"> 3年
                                         </label>
 
-                                        <p class="help-block">维保金在项目图纸设计完成后，以及维保期间，按年平均支付</p>
+                                        <p class="help-block">维保金在维保期间，按年平均支付</p>
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +251,6 @@
             </div>
 
 
-
             <div class="total clearfix">
                 <div class="col">
                     <ul class="list-unstyled">
@@ -270,11 +272,13 @@
                         <div class="formipt text-right">
                             <div class="checkbox">
                                 <label>
-                                    <input name="ucheck" type="checkbox" checked="" class="validate[required]" data-prompt-position="centerLeft:40,0"> 同意
+                                    <input name="ucheck" type="checkbox" checked="" class="validate[required]"
+                                           data-prompt-position="centerLeft:40,0"> 同意
                                 </label>
                                 <a href="javascript:;">《图狼网用户协议》</a>
                             </div>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="btn btn-primary" type="submit" value="继续，支付定金">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="btn btn-primary j-pay"
+                                                                                   type="button" value="继续，支付定金">
                         </div>
                     </div>
                 </div>
@@ -288,7 +292,10 @@
 <!-- S 底部 -->
 <nav class="m-footer">
     <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link"
+                                                       href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
         <p class="link">
             <a class="navbar-link" href="javascript:;">关于</a>|
             <a class="navbar-link" href="javascript:;">我们是谁</a>|
@@ -324,23 +331,119 @@
 
 <!-- your js -->
 <script>
-    $(function() {
+    $(function () {
 
-        $('#f-form-weibao').validationEngine();
+//        $('#f-form-weibao').validationEngine({
+//            binded: false,
+////            scroll: false,
+//            showOneMessage: false,
+//            autoHidePrompt: true,
+//            autoHideDelay: 5000,
+//            promptPosition: 'inline',
+//            onValidationComplete: function (form, valid) {
+//                    // * 填写错误，任务赏金不少于500元
+//            }
+//        });
 
+//        $('#f-form-weibao')
+        var $form = $('#f-form-weibao');
+        var aElements = $form[0].elements;
+        var form1 = aElements[0];
+        var form_r1 = aElements[1];
+        var form_r2 = aElements[2];
+        var formbl = aElements[3];
+        var formck = aElements[7];
 
-        var $radiowb1 = $('.j-radiowb1');
-        var $radiowb2 = $('.j-radiowb2');
         var $weibaoBox = $('.j-weibao');
+        var bwb = false;
 
+        $('.j-pay').click(function () {
 
-        $radiowb1.click(function(){
+            if(checkFrom()){
+
+            }
+
+        });
+
+        form_r1.onclick = function() {
             $weibaoBox.hide();
-        });
+            $(form_r2).parents('.formipt').find('p').remove();
+        };
 
-        $radiowb2.click(function(){
-            $weibaoBox.show();
-        });
+        form_r2.onclick = function() {
+            var form1 = aElements[0];
+            if( Number(form1.value) < 5000 ){
+                $(form_r2).parents('.formipt').find('p').remove();
+                $('<p style="color: red;">* 金额不少于5000元的招标，才能设置维保期</p>').appendTo($(form_r2).parents('.formipt'));
+            }else{
+                $weibaoBox.show();
+            }
+        };
+
+        formck.onclick = function(){
+            if(this.checked){
+                $('.j-check').remove();
+            }else{
+                $('.j-check').remove();
+                $(formck).parents('.checkbox ').before('<span class="j-check" style="color: red; position: relative; top: 5px;">请同意《图狼网投标协议书》</span>');
+            }
+        };
+
+        form1.onblur = function() {
+            checkFrom();
+        };
+        formbl.onblur = function() {
+            checkFrom();
+        };
+
+        function checkFrom() {
+            var form1 = aElements[0];
+            var formbl = aElements[3];
+            var form7 = aElements[7];
+            var bTrue = true;
+
+            if(form_r1.checked){
+                bwb = false;
+            }
+            if(form_r2.checked){
+                bwb = true;
+            }
+
+            if(Number(form1.value) < 500 ){
+                $(form1).next().remove();
+                $('<p style="color: red;">* 填写错误，任务赏金不少于500元</p>').appendTo($(form1).parent());
+                bTrue = false;
+                return bTrue;
+            }else{
+                $(form1).next().remove();
+            }
+
+            if(Number(form1.value) >= 5000){
+                if(bwb){
+                    $weibaoBox.show();
+                    $(form_r2).parents('.formipt').find('p').remove();
+                }
+            }
+
+            if(bwb){
+                if( Number(formbl.value) <= 0 || Number(formbl.value) > 30){
+                    $(formbl).next().remove();
+                    $('<p style="color: red;">* 填写错误，维保金比例为1-30%，且为整数</p>').appendTo($(formbl).parent());
+                    bTrue = false;
+                    return bTrue;
+                }else{
+                    $(formbl).next().remove();
+                }
+            }
+
+
+            if(!form7.checked){
+                bTrue = false;
+                return bTrue;
+            }
+
+            return bTrue;
+        }
 
     });
 </script>

@@ -13,6 +13,7 @@
 
     <!-- linkcloud -->
     <!--<link rel="stylesheet" href="../css/demo.css">-->
+    <link rel="stylesheet" href="组件/wb02/css/upload.css"/>
 
     <!-- your css -->
     <!--<link rel="stylesheet" href="../css/customer.css">-->
@@ -23,7 +24,8 @@
 <body class="f-bg2">
 <nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -44,6 +46,7 @@
             <li class="item msg">
                 <span class="dot"></span>
                 <img src="img/icon-msg.png" alt=""/>
+
                 <div class="msgList">
                     <div class="inner">
                         <div class="text-center f-mb20">
@@ -133,8 +136,8 @@
                     <label class="control-label formlabel"><span class="text-danger">*</span>任务名称：</label>
 
                     <div class="formipt">
-                        <input name="mingchen" type="text" class="form-control iptw1 validate[required]">
-                        <p class="help-block">（认证后，认证后作为用户昵称不能修改）</p>
+                        <input name="mingchen" type="text" class="form-control iptw1 validate[required, minSize[5], maxSize[30]]">
+
                     </div>
                 </div>
 
@@ -143,18 +146,39 @@
                     <label class="control-label formlabel"><span class="text-danger">*</span>任务描述：</label>
 
                     <div class="formipt">
-                        <textarea rows="10" class="form-control validate[required]" data-prompt-position="topRight: -10, -10"></textarea>
+                        <textarea rows="10" class="form-control validate[required, minSize[50], maxSize[1000]]"></textarea>
                     </div>
                 </div>
 
 
-                <div class="form-group form-inline">
-                    <label class="control-label formlabel">上传附件：</label>
+                <div class="upload_box f-mb40">
 
-                    <div class="formipt">
-                        <input type="file">
-                        <p class="help-block">附件最大支持10MB  支持格式：zip，rar</p>
+                    <div class="upload_row">
+                        <div class="upload_col upload_title">上传附件：</div>
+
+                        <div class="upload_col upload_input">
+                            <input id="file_upload" class="file_upload" name="file_upload"
+                                   type="file" multiple="true">
+                        </div>
+                        <div class="upload_col upload_info">附件最大支持100MB 支持格式：zip，rar</div>
+
+                        <div class="clear"></div>
                     </div>
+
+                    <div class="upload_none_box">
+                        <div class="upload_col upload_title">&nbsp;</div>
+                        <div class="upload_col upload_bg upload_none_bg"></div>
+                        <div class="upload_col upload_info upload_none_info">当前还没有文件哦</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="upload_err">
+                        <div class="err"></div>
+                    </div>
+                    <div class="queue_box">
+                        <div id="queue"></div>
+                        <div class="clear"></div>
+                    </div>
+
                 </div>
 
 
@@ -163,34 +187,35 @@
 
                     <div class="formipt">
                         <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="0" name="zhuanye" data-prompt-position="topLeft:-20,0"> 规划
+                            <input class="validate[minCheckbox[1]]" type="checkbox" value="0" name="zhuanye"
+                                   data-prompt-position="topLeft:-20,0"> 规划
                         </label>
                         <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="1" name="zhuanye"> 建筑
+                            <input class="validate[minCheckbox[1]]" type="checkbox" value="1" name="zhuanye"> 建筑
                         </label>
                         <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="2" name="zhuanye"> 给排水
+                            <input class="validate[minCheckbox[1]]" type="checkbox" value="2" name="zhuanye"> 给排水
                         </label>
                         <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="3" name="zhuanye"> 园林
+                            <input class="validate[minCheckbox[1]]" type="checkbox" value="3" name="zhuanye"> 园林
                         </label>
                         <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="4" name="zhuanye"> 电气
+                            <input class="validate[minCheckbox[1]]" type="checkbox" value="4" name="zhuanye"> 电气
                         </label>
                         <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="5" name="zhuanye"> 结构
+                            <input class="validate[minCheckbox[1]]" type="checkbox" value="5" name="zhuanye"> 结构
                         </label>
                         <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="6" name="zhuanye"> 隧道
+                            <input class="validate[minCheckbox[1]]" type="checkbox" value="6" name="zhuanye"> 隧道
                         </label>
                         <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="7" name="zhuanye"> 桥梁
+                            <input class="validate[minCheckbox[1]]" type="checkbox" value="7" name="zhuanye"> 桥梁
                         </label>
                         <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="8" name="zhuanye"> 道路
+                            <input class="validate[minCheckbox[1]]" type="checkbox" value="8" name="zhuanye"> 道路
                         </label>
                         <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox"  value="9" name="zhuanye"> 其他
+                            <input class="validate[minCheckbox[1]]" type="checkbox" value="9" name="zhuanye"> 其他
                         </label>
                     </div>
                 </div>
@@ -202,7 +227,8 @@
                     <div class="formipt">
                         <div class="media">
                             <div class="media-left">
-                                <img id="tp1" width="100" height="80" src="" alt="" style="width: 100px; height: 80px;"/>
+                                <img id="tp1" width="100" height="80" src="" alt=""
+                                     style="width: 100px; height: 80px;"/>
                             </div>
                             <div class="media-body">
                                 <a class="btn btn-primary btn-sm j-chooseImg" href="javascript:;">从图片库选择</a>
@@ -261,20 +287,24 @@
         <div class="m-mfromBox">
             <div class="form-horizontal">
 
-                <div class="form-group form-inline">
+                <div class="form-group">
                     <label class="control-label formlabel"><span class="text-danger">*</span>报名截止：</label>
 
                     <div class="formipt">
-                        <input readonly id="date1" type="text" class="form-control laydate-icon validate[required]">
+                        <div>
+                            <input readonly id="date1" type="text" class="form-control iptw laydate-icon validate[required]">
+                        </div>
                     </div>
                 </div>
 
 
-                <div class="form-group form-inline">
+                <div class="form-group">
                     <label class="control-label formlabel"><span class="text-danger">*</span>任务完成：</label>
 
                     <div class="formipt">
-                        <input readonly id="date3" type="text" class="form-control laydate-icon validate[required]">
+                        <div>
+                            <input readonly id="date3" type="text" class="form-control iptw laydate-icon validate[required]">
+                        </div>
                     </div>
                 </div>
 
@@ -303,9 +333,6 @@
 </div>
 
 
-
-
-
 <div class="modal-tuku">
     <div class="title">
         <h2>图库</h2>
@@ -330,7 +357,10 @@
 <!-- S 底部 -->
 <nav class="m-footer">
     <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link"
+                                                       href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
         <p class="link">
             <a class="navbar-link" href="javascript:;">关于</a>|
             <a class="navbar-link" href="javascript:;">我们是谁</a>|
@@ -360,6 +390,7 @@
 
 <script src="plugins/laydate/laydate.js"></script>
 <script src="plugins/layer/layer.js"></script>
+<script src="组件/wb02/js/jquery.uploadify.js"></script>
 
 
 <!-- linkcloud -->
@@ -368,28 +399,37 @@
 <!-- your js -->
 <script>
     $(function () {
-
-
-
         $('#f-form-fabuzhaobiao').validationEngine({
             binded: false,
-            scroll: false,
+//            scroll: false,
+            showOneMessage: false,
             autoHidePrompt: true,
-            autoHideDelay: 3000,
-            onValidationComplete: function(form, valid) {
+            autoHideDelay: 5000,
+            promptPosition: 'inline',
+            'custom_error_messages': {
+
+            },
+            onValidationComplete: function (form, valid) {
+                console.log(form);
+
+                if (valid) {
+                    if ($('#queue').children().length > 0) {
+                         alert('可以提交');
+                    } else {
+                        $('.upload_err .err').validationEngine('showPrompt', '* 请上传附件', 'error');
+                    }
+                }
+
 
                 // 组装form表单数据
-                console.log( $('#f-form-fabuzhaobiao').serialize() );
+                console.log($('#f-form-fabuzhaobiao').serialize());
 
                 // ajax post 验证通过
-                 if(valid){
+                if (valid) {
 
-                 }
+                }
             }
         });
-
-
-
 
 
         laydate({
@@ -404,10 +444,8 @@
         });
 
 
-
-
         // 图库图片选择
-        (function() {
+        (function () {
             var myLayer;
 
             $('.j-chooseImg').click(function () {
@@ -429,7 +467,7 @@
             var $li = $modal.find('li');
             var $tp1 = $('#tp1');
 
-            $li.click(function() {
+            $li.click(function () {
                 $li.removeClass('active');
                 $(this).addClass('active');
                 setImage($(this).children().eq(0), $tp1);
@@ -442,7 +480,129 @@
             }
         })();
 
+
     });
+
+
+    // 附件上传
+    var _document = $(document);
+    var _upload_none_box = $(".upload_none_box");
+    var _file_upload = $("#file_upload");
+
+    _file_upload.uploadify({
+        queueID: "queue",
+        queueSizeLimit: 100,
+        buttonClass: "upload_button",
+        width: 75,
+        height: 30,
+        fileSizeLimit: 1024 * 10,// KB
+        buttonText: "选择文件",
+        swf: '组件/wb02/js/uploadify.swf',
+        removeCompleted: false,
+        removeTimeout: 0,
+        itemTemplate: '<div id="${fileID}" class="uploadify-queue-item">\
+            <a class="upload_bg upload_close_bg" href="javascript: onCloseFile(\'${instanceID}\', \'${fileID}\');"></a>\
+            <div class="upload_bg upload_other_bg ${suffix}_bg"></div>\
+            <div class="fileName">${fileName} （${fileSize}）</div>\
+            <div class="uploadify-progress">\
+            <div class="uploadify-progress-bar"><!--Progress Bar--></div>\
+            <div class="upload_data"><span class="data"></span></div>\
+            </div>\
+            </div>',
+        //后台地址
+        uploader: 'uploadify.php',
+        method: "post",
+        onSelect: onSelect,
+        onSelectError: onSelectError,
+        onUploadStart: onUploadStart,
+        onUploadSuccess: onUploadSuccess
+    });
+
+    function onUploadSuccess() {
+
+    }
+
+    function onSelect() {
+        _upload_none_box.hide();
+    }
+
+    function onSelectError() {
+        notUploadQueue(this);
+    }
+
+    function onUploadStart() {
+        $('.upload_err .formError').remove();
+    }
+
+    function onCloseFile(instanceID, fileID) {
+
+        layer.confirm('<div class="dialog_content"><i class="upload_bg upload_gt_bg"></i>亲，你真要删掉我吗？</div>', {
+            skin: "dialog_layer",
+            closeBtn: 0, //不显示关闭按钮
+            shade: 0,
+            title: "删除提示",
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            _file_upload.uploadify('cancel', fileID);
+            notUploadQueue();
+            layer.closeAll();
+        }, function () {
+            layer.closeAll();
+        });
+
+    }
+
+
+    _document.on("mouseenter", ".uploadify-queue-item", function () {
+        $(this).addClass("active");
+    });
+
+    _document.on("mouseleave", ".uploadify-queue-item", function () {
+        $(this).removeClass("active");
+    });
+
+    function notUploadQueue(uploadify) {
+        if (uploadify) {
+            if (uploadify.queueData.filesQueued != 0) {
+                _upload_none_box.hide();
+            } else {
+                _upload_none_box.show();
+            }
+        } else {
+            if ($("#queue .uploadify-queue-item").length) {
+                _upload_none_box.hide();
+            } else {
+                _upload_none_box.show();
+            }
+        }
+
+    }
+
+    function layerConfirm(title, content, cb1, cb2) {
+        layer.confirm(content, {
+            skin: "dialog_layer",
+            shade: 0,
+            title: title,
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            cb1 && cb1();
+            layer.closeAll();
+        }, function () {
+            cb2 && cb2();
+            layer.closeAll();
+        });
+    }
+
+    function layerAlert(title, content) {
+        layer.alert(content, {
+            skin: "dialog_layer",
+            shade: 0,
+            title: title,
+            area: ['567px', '211px']
+        });
+    }
 </script>
 </body>
 </html>

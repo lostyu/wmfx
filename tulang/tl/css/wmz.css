@@ -1,0 +1,87 @@
+.wmz_icon{
+    display: inline-block;
+    width:17px;
+    height:17px;
+    vertical-align: middle;
+    position: relative;
+    top:-2px;
+}
+
+.wmz_icon_ok{
+    background: url(../img/wmz_icon_ok.png) center no-repeat;
+}
+
+.wmz_icon_error{
+    background: url(../img/wmz_icon_error.png) center no-repeat;
+}
+
+.wmz_icon_dd{
+    background: url(../img/wmz_icon_dd.png) center no-repeat;
+}
+
+.wmz_error_info{
+    color: #ff0000;
+}
+
+.wmz_error_info ul{
+    margin-bottom: 0;
+}
+
+.p-box .p-box-bd .tips.wmz_error_tips{
+    background: #f1f3f6;
+}
+
+.wmz_line_title{
+    font-size: 18px;
+    color: #3c8bee;
+    position: relative;
+}
+
+.wmz_line_title span{
+    display: inline-block;
+    background: #fff;
+    z-index:2;
+    position: relative;
+    padding-right: 5px;
+}
+
+.wmz_line_title i{
+    display: block;
+    width:100%;
+    border-top: 1px #e6e6e6 solid;
+    position: absolute;
+    top:12px;
+    left:0;
+    z-index:1;
+}
+
+.wmz_mb40{
+    margin-bottom: 40px;
+}
+
+.wmz_p-rzindex.p-rzindex .col1{
+    background: #65a5f2;
+}
+.wmz_p-rzindex.p-rzindex .col2{
+    background: #3acc73;
+}
+
+.wmz_p-rzindex.p-rzindex .col1 h3, .wmz_p-rzindex.p-rzindex .col2 h3,
+.wmz_p-rzindex.p-rzindex .col1 p, .wmz_p-rzindex.p-rzindex .col2 p{
+    color: #fff;
+}
+
+.wmz_p-rzindex.p-rzindex .c1, .wmz_p-rzindex.p-rzindex .c2{
+    color: #333333;
+}
+
+.wmz_p-rzindex.p-rzindex .c2{
+    text-indent: 80px;
+}
+
+.wmz_static_queue .uploadify-queue-item{
+    padding: 0;
+    padding-top: 15px;
+    padding-right: 15px;
+    border:none !important;
+}

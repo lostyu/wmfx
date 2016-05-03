@@ -13,6 +13,8 @@
 
     <!-- linkcloud -->
     <!--<link rel="stylesheet" href="../css/demo.css">-->
+    <link rel="stylesheet" href="plugins/wb02/css/upload.css"/>
+    <link rel="stylesheet" href="css/wmz.css">
 
     <!-- your css -->
     <!--<link rel="stylesheet" href="../css/customer.css">-->
@@ -129,113 +131,341 @@
 
                 <div class="form-boxp">
 
-
-                    <div class="sfxx">
-                        <p class="title">身份证信息</p>
-                        <dl class="dl-horizontal">
-                            <dt><span class="m-c3">*</span>真实姓名：</dt>
-                            <dd>文沛霖</dd>
-                            <dt><span class="m-c3">*</span>真实姓名：</dt>
-                            <dd>213729873934983409843</dd>
-                            <dt><span class="m-c3">*</span>真实姓名：</dt>
-                            <dd>重庆市  渝北区</dd>
-                        </dl>
-                    </div>
-
-
-                    <div class="sfxx">
-                        <p class="title">身份证信息</p>
-                        <dl class="dl-horizontal">
-                            <dt><span class="m-c3">*</span>企业全称：</dt>
-                            <dd>重庆耍耍科技有限公司</dd>
-                            <dt><span class="m-c3">*</span>工商执照号：</dt>
-                            <dd>213729873934983409843</dd>
-                            <dt><span class="m-c3">*</span>所在地：</dt>
-                            <dd>重庆市  渝北区</dd>
-                            <dt><span class="m-c3">*</span>常用地址：</dt>
-                            <dd>重庆市  渝北区</dd>
-                        </dl>
-                    </div>
-
-
+                    <div class="wmz_line_title wmz_mb40"><span>个人认证信息</span><i></i></div>
                     <form id="f-form-grrz">
+
+                        <!--<div class="m-subTitle f-mb40">-->
+                            <!--<h3>个人认证信息</h3>-->
+                        <!--</div>-->
+
                         <div class="form-horizontal">
 
-                            <h2 style="font-size:16px; color: #333; margin-bottom:20px;">填写技能认证信息</h2>
+
+                            <!-- 个人认证信息 -->
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>真实姓名</label>
+
+                                <div class="formipt">
+                                    <input type="text" class="form-control iptw validate[required]"/>
+                                    <p class="help-block">（认证后，系统优先使用您的真实姓名作为昵称，您可以在个人设置里面关闭该功能）</p>
+                                </div>
+                            </div>
+
 
                             <div class="form-group">
-                                <label class="control-label formlabel"><span class="text-danger">*</span>擅长专业：</label>
+                                <label class="formlabel control-label"><span class="text-danger">*</span>身份证号</label>
+
+                                <div class="formipt">
+                                    <input type="text" class="form-control iptw validate[required]"/>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>身份证照</label>
+
+                                <div class="formipt">
+                                    <!--<div>图片上传</div>-->
+                                    <!--<p class="help-block">上传本人手持身份证照片，需清晰可见身份证详细信息</p>-->
+                                    <div class="upload_image_row no_padding">
+                                        <div class="upload_col upload_default_image">
+                                            <div class="upload_img_main"></div>
+                                            <a href="javascript: onCloseFile('file_upload01', '*');"
+                                               class="upload_img_main_close">取消</a>
+                                        </div>
+                                        <div class="upload_col">
+                                            <div class="upload_image_main file_upload01">
+                                                <div class="upload_col upload_input">
+                                                    <input id="file_upload01" class="file_upload" name="file_upload"
+                                                           type="file">
+                                                </div>
+                                                <div class="upload_col upload_info">图片大小2M以内</div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="upload_queue_main">
+                                                <div id="queue01" class="queue file_upload01"></div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                    <p class="help-block">上传本人手持身份证照片，需清晰可见身份证详细信息</p>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group form-inline">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>所在地</label>
+
+                                <div class="formipt">
+                                    <div id="city">
+                                        <select class="prov"></select>
+                                        <select class="city" disabled="disabled"></select>
+                                        <select class="dist" disabled="disabled"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / 个人认证信息 -->
+
+
+                            <!-- 技能认证信息 -->
+                            <!--<div class="m-subTitle f-mb40">-->
+                                <!--<h3>技能认证信息</h3>-->
+                            <!--</div>-->
+                            <div class="wmz_line_title wmz_mb40"><span>技能认证信息</span><i></i></div>
+
+
+                            <div class="form-group">
+                                <label class="control-label formlabel"><span class="text-danger">*</span>擅长专业</label>
 
                                 <div class="formipt">
                                     <label class="checkbox-inline">
-                                        <input class="validate[minCheckbox[1]]" type="checkbox"  value="0" name="zhuanye" data-prompt-position="topLeft:-20,0"> 规划
+                                        <input class="validate[minCheckbox[1]]" type="checkbox" value="0" name="zhuanye"
+                                               data-prompt-position="topLeft:-20,0"> 规划
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input class="validate[minCheckbox[1]]" type="checkbox"  value="1" name="zhuanye"> 建筑
+                                        <input class="validate[minCheckbox[1]]" type="checkbox" value="1"
+                                               name="zhuanye"> 建筑
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input class="validate[minCheckbox[1]]" type="checkbox"  value="2" name="zhuanye"> 给排水
+                                        <input class="validate[minCheckbox[1]]" type="checkbox" value="2"
+                                               name="zhuanye"> 给排水
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input class="validate[minCheckbox[1]]" type="checkbox"  value="3" name="zhuanye"> 园林
+                                        <input class="validate[minCheckbox[1]]" type="checkbox" value="3"
+                                               name="zhuanye"> 园林
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input class="validate[minCheckbox[1]]" type="checkbox"  value="4" name="zhuanye"> 电气
+                                        <input class="validate[minCheckbox[1]]" type="checkbox" value="4"
+                                               name="zhuanye"> 电气
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input class="validate[minCheckbox[1]]" type="checkbox"  value="5" name="zhuanye"> 结构
+                                        <input class="validate[minCheckbox[1]]" type="checkbox" value="5"
+                                               name="zhuanye"> 结构
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input class="validate[minCheckbox[1]]" type="checkbox"  value="6" name="zhuanye"> 隧道
+                                        <input class="validate[minCheckbox[1]]" type="checkbox" value="6"
+                                               name="zhuanye"> 隧道
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input class="validate[minCheckbox[1]]" type="checkbox"  value="7" name="zhuanye"> 桥梁
+                                        <input class="validate[minCheckbox[1]]" type="checkbox" value="7"
+                                               name="zhuanye"> 桥梁
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input class="validate[minCheckbox[1]]" type="checkbox"  value="8" name="zhuanye"> 道路
+                                        <input class="validate[minCheckbox[1]]" type="checkbox" value="8"
+                                               name="zhuanye"> 道路
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input class="validate[minCheckbox[1]]" type="checkbox"  value="9" name="zhuanye"> 其他
+                                        <input class="validate[minCheckbox[1]]" type="checkbox" value="9"
+                                               name="zhuanye"> 其他
                                     </label>
                                 </div>
                             </div>
 
 
                             <div class="form-group">
-                                <label class="formlabel control-label" style="width: 100px;"><span class="text-danger">*</span>项目案例简述</label>
+                                <label class="formlabel control-label" style="width: 100px;"><span
+                                        class="text-danger">*</span>项目案例简述</label>
 
                                 <div class="formipt">
-                                    <textarea rows="20" class="form-control validate[required]" data-prompt-position="topRight: -10, -10"></textarea>
-                                    <p class="help-block">请准确描述自己参与的相关专业典型工程项目（至少3个）</p>
+                                    <div>
+                                        <p class="help-block" style="color: #333;">
+                                            请准确描述自己参与的相关专业典型工程项目（至少3个）<br/>
+                                            项目一，请描述项目实施情况
+                                        </p>
+
+                                        <div class="f-mb30">
+                                            <input class="form-control iptw validate[required]" type="text"
+                                                   placeholder="项目名称"/>
+                                        </div>
+
+                                        <div class="f-mb30">
+                                            <textarea class="form-control validate[required]" rows="10"
+                                                      placeholder="文字描述1000字以内"></textarea>
+                                        </div>
+
+                                        <div class="upload_box f-mb40">
+
+                                            <div class="upload_row">
+                                                <div class="upload_col upload_title">上传附件：</div>
+
+                                                <div class="upload_col upload_input">
+                                                    <input id="file_upload02" class="file_upload" name="file_upload"
+                                                           type="file" multiple="true">
+                                                </div>
+                                                <div class="upload_col upload_info">附件最大支持100MB 支持格式：zip，rar</div>
+
+                                                <div class="clear"></div>
+                                            </div>
+
+                                            <div class="upload_none_box file_upload02">
+                                                <div class="upload_col upload_title">&nbsp;</div>
+                                                <div class="upload_col upload_bg upload_none_bg"></div>
+                                                <div class="upload_col upload_info upload_none_info">当前还没有文件哦</div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div class="upload_err">
+                                                <div class="err"></div>
+                                            </div>
+                                            <div class="queue_box">
+                                                <div id="queue02" class="queue file_upload02"></div>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div>
+                                        <p class="help-block" style="color: #333;">
+                                            项目二，请描述项目实施情况
+                                        </p>
+
+                                        <div class="f-mb30">
+                                            <input class="form-control iptw validate[required]" type="text"
+                                                   placeholder="项目名称"/>
+                                        </div>
+
+                                        <div class="f-mb30">
+                                            <textarea class="form-control validate[required]" rows="10"
+                                                      placeholder="文字描述1000字以内"></textarea>
+                                        </div>
+
+                                        <div class="upload_box f-mb40">
+
+                                            <div class="upload_row">
+                                                <div class="upload_col upload_title">上传附件：</div>
+
+                                                <div class="upload_col upload_input">
+                                                    <input id="file_upload03" class="file_upload" name="file_upload"
+                                                           type="file" multiple="true">
+                                                </div>
+                                                <div class="upload_col upload_info">附件最大支持100MB 支持格式：zip，rar</div>
+
+                                                <div class="clear"></div>
+                                            </div>
+
+                                            <div class="upload_none_box file_upload03">
+                                                <div class="upload_col upload_title">&nbsp;</div>
+                                                <div class="upload_col upload_bg upload_none_bg"></div>
+                                                <div class="upload_col upload_info upload_none_info">当前还没有文件哦</div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div class="upload_err">
+                                                <div class="err"></div>
+                                            </div>
+                                            <div class="queue_box">
+                                                <div id="queue03" class="queue file_upload03"></div>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div>
+                                        <p class="help-block" style="color: #333;">
+                                            项目三，请描述项目实施情况
+                                        </p>
+
+                                        <div class="f-mb30">
+                                            <input class="form-control iptw validate[required]" type="text"
+                                                   placeholder="项目名称"/>
+                                        </div>
+
+                                        <div class="f-mb30">
+                                            <textarea class="form-control validate[required]" rows="10"
+                                                      placeholder="文字描述1000字以内"></textarea>
+                                        </div>
+
+                                        <div class="upload_box f-mb40">
+
+                                            <div class="upload_row">
+                                                <div class="upload_col upload_title">上传附件：</div>
+
+                                                <div class="upload_col upload_input">
+                                                    <input id="file_upload04" class="file_upload" name="file_upload"
+                                                           type="file" multiple="true">
+                                                </div>
+                                                <div class="upload_col upload_info">附件最大支持100MB 支持格式：zip，rar</div>
+
+                                                <div class="clear"></div>
+                                            </div>
+
+                                            <div class="upload_none_box file_upload04">
+                                                <div class="upload_col upload_title">&nbsp;</div>
+                                                <div class="upload_col upload_bg upload_none_bg"></div>
+                                                <div class="upload_col upload_info upload_none_info">当前还没有文件哦</div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            <div class="upload_err">
+                                                <div class="err"></div>
+                                            </div>
+                                            <div class="queue_box">
+                                                <div id="queue04" class="queue file_upload04"></div>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
 
 
-
-                            <div class="form-group">
+                            <div class="form-group wmz_zs_title">
                                 <label class="formlabel control-label"><span class="text-danger">*</span>证书名称</label>
 
                                 <div class="formipt">
                                     <input type="text" class="form-control iptw validate[required]">
+                                    <p class="help-block">请填写并上传相关资质证书扫描件</p>
                                 </div>
                             </div>
 
-
-
-
-
-                            <div class="form-group">
+                            <div class="form-group wmz_zs_file">
                                 <label class="formlabel control-label"><span class="text-danger">*</span>证书扫描件</label>
 
                                 <div class="formipt">
+                                    <div class="upload_image_row no_padding">
+                                        <div class="upload_col upload_default_image">
+                                            <div class="upload_img_main file_zs_01"></div>
+                                            <a href="javascript: onCloseFile('file_zs_01', '*');"
+                                               class="upload_img_main_close">取消</a>
+                                        </div>
+                                        <div class="upload_col">
+                                            <div class="upload_image_main">
+                                                <div class="upload_col upload_input">
+                                                    <input id="file_zs_01" class="file_upload" name="file_upload"
+                                                           type="file">
+                                                </div>
+                                                <div class="upload_col upload_info">图片大小5M以内</div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="upload_queue_main">
+                                                <div id="queue_zs_01" class="queue file_zs_01"></div>
+                                            </div>
 
+                                        </div>
 
-                                    <input type="file"/>
+                                        <div class="clear"></div>
+                                    </div>
 
-                                    <p class="help-block">关键信息需清晰可见</p>
+                                    <p class="help-block">上传证件扫描件，关键信息需清晰可见</p>
                                 </div>
+
+
                             </div>
 
+                            <div class="wmz_zs_box"></div>
+
+                            <div class="form-group">
+                                <label class="formlabel control-label"></label>
+                                <div class=" formipt">
+                                    <a href="javascript: addZS();" class="btn btn-default btn-w wmz_zs_add">添加证书</a>
+                                </div>
+                            </div>
 
 
                             <div class="form-group">
@@ -269,6 +499,7 @@
 
 <script src="plugins/jquery-city/jquery.cityselect.js"></script>
 <script src="plugins/layer/layer.js"></script>
+<script src="plugins/wb02/js/jquery.uploadify.js"></script>
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>
@@ -279,14 +510,15 @@
         $('#f-form-grrz').validationEngine({
             validateNonVisibleFields: true, // 验证隐藏表单
             binded: false,   // 提交时验证
-            autoHidePrompt: true,   // 自动隐藏提示信息
-            autoHideDelay: 5000,
+//            autoHidePrompt: true,   // 自动隐藏提示信息
+//            autoHideDelay: 5000,
             showOneMessage: false,
             scroll: false,
+            promptPosition: 'inline',
 
 
-            onValidationComplete: function(form, valid){
-                if(valid){
+            onValidationComplete: function (form, valid) {
+                if (valid) {
                     var myLayer = layer.confirm(
                             '确认申请技能认证？',
                             {
@@ -308,6 +540,260 @@
 
 
     });
+
+
+    //附件上传参数
+    var uploadFileOptions = {
+
+        queueSizeLimit: 100,
+        buttonClass: "upload_button",
+        width: 130,
+        height: 42,
+        fileSizeLimit: 1024 * 10,// KB
+        buttonText: "选择文件",
+        swf: 'plugins/wb02/js/uploadify.swf',
+        removeCompleted: false,
+        removeTimeout: 0,
+        itemTemplate: '<div id="${fileID}" class="uploadify-queue-item">\
+            <a class="upload_bg upload_close_bg" href="javascript: onCloseFile(\'${instanceID}\', \'${fileID}\');"></a>\
+            <div class="upload_bg upload_other_bg ${suffix}_bg"></div>\
+            <div class="fileName">${fileName} （${fileSize}）</div>\
+            <div class="uploadify-progress">\
+            <div class="uploadify-progress-bar"><!--Progress Bar--></div>\
+            <div class="upload_data"><span class="data"></span></div>\
+            </div>\
+            </div>',
+        //后台地址
+        uploader: 'uploadify.php',
+        method: "post",
+        onSelect: onSelect,
+        onSelectError: onSelectError,
+        onUploadSuccess: onUploadSuccess,
+        type: 1
+    };
+
+    //图片上传参数
+    var uploadImageOptions = {
+        buttonClass: "upload_button",
+        width: 77,
+        height: 32,
+        fileSizeLimit: 1024 * 2,// KB
+        buttonText: "上传",
+        swf: 'plugins/wb02/js/uploadify.swf',
+        removeCompleted: false,
+        removeTimeout: 0,
+        fileTypeDesc: 'Image Files',
+        fileTypeExts: '*.jpg;*.jpeg;*.png',
+        multi: false,
+        itemTemplate: '<div id="${fileID}" class="uploadify-queue-item">\
+        <div class="fileName">${fileName}</div>\
+            <div class="fileSize">（${fileSize}）</div>\
+            <div class="uploadify-progress">\
+            <div class="uploadify-progress-bar"><!--Progress Bar--></div>\
+            </div>\
+            <a class="upload_img_close" href="javascript: onCloseFile(\'${instanceID}\', \'${fileID}\');">取消</a>\
+            </div>',
+        //后台地址
+        uploader: 'uploadify.php',
+        method: "post",
+        onSelect: onSelect,
+        onUploadComplete: onUploadComplete,
+        onUploadSuccess: onUploadSuccess,
+        type: 2
+    };
+
+    // 附件上传
+    var _document = $(document);
+
+    //上传身份证
+    var _file_upload01 = $("#file_upload01");
+    uploadImageOptions["queueID"] = "queue01";
+    _file_upload01.uploadify(uploadImageOptions);
+
+    //项目1
+    var _file_upload02 = $("#file_upload02");
+    uploadFileOptions["queueID"] = "queue02";
+    _file_upload02.uploadify(uploadFileOptions);
+
+    //项目2
+    var _file_upload03 = $("#file_upload03");
+    uploadFileOptions["queueID"] = "queue03";
+    _file_upload03.uploadify(uploadFileOptions);
+
+    //项目3
+    var _file_upload04 = $("#file_upload04");
+    uploadFileOptions["queueID"] = "queue04";
+    _file_upload04.uploadify(uploadFileOptions);
+
+
+
+
+    function onUploadSuccess(file, msg, status) {
+        console.log(msg); //这里获得后台的图片路劲 自行赋值
+        var self = this;
+        switch (self.settings.type) {
+            case 2:
+                $(".upload_img_main." + self.settings.id).html('<img src="' + msg + '"/>').addClass("show");
+                break;
+        }
+    }
+
+    function onSelect() {
+        var self = this;
+        switch (self.settings.type) {
+            case 1:
+                //附件
+                $(".upload_none_box." + self.settings.id).hide();
+                break;
+            case 2:
+                //图片
+                var _list = $("#" + self.settings.queueID + " .uploadify-queue-item");
+                if (_list.length > 1) {
+                    _list.eq(0).each(function () {
+                        var id = $(this).attr("id");
+                        $("#" + self.settings.id).uploadify('cancel', id);
+                    });
+                }
+                break;
+        }
+
+    }
+
+    function onSelectError() {
+        var self = this;
+        switch (self.settings.type) {
+            case 1:
+                //附件
+                notUploadQueue(self);
+                break;
+        }
+
+    }
+
+    function onUploadComplete(file) {
+        var self = this;
+        switch (self.settings.type) {
+            case 2:
+                //图片
+                var _file = $("#" + file.id);
+                if (_file.length) {
+                    _file.delay(1000).fadeOut(300);
+                }
+                break;
+        }
+
+    }
+
+    function onCloseFile(instanceID, fileID) {
+
+        layer.confirm('<div class="dialog_content"><i class="upload_bg upload_gt_bg"></i>亲，你真要删掉我吗？</div>', {
+            skin: "dialog_layer",
+            closeBtn: 0, //不显示关闭按钮
+            shade: 0,
+            title: "删除提示",
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            $("#" + instanceID).uploadify('cancel', fileID);
+            notUploadQueue(null, instanceID);
+            layer.closeAll();
+        }, function () {
+            layer.closeAll();
+        });
+
+    }
+
+
+    _document.on("mouseenter", ".uploadify-queue-item", function () {
+        $(this).addClass("active");
+    });
+
+    _document.on("mouseleave", ".uploadify-queue-item", function () {
+        $(this).removeClass("active");
+    });
+
+    function notUploadQueue(uploadify, instanceID) {
+        if (uploadify) {
+            if (uploadify.queueData.filesQueued != 0) {
+                $(".upload_none_box." + uploadify.settings.id).hide();
+            } else {
+                $(".upload_none_box." + uploadify.settings.id).show();
+            }
+        } else {
+            if ($(".queue." + instanceID + " .uploadify-queue-item").length) {
+                $(".upload_none_box." + instanceID).hide();
+            } else {
+                $(".upload_none_box." + instanceID).show();
+            }
+        }
+
+    }
+
+    function layerConfirm(title, content, cb1, cb2) {
+        layer.confirm(content, {
+            skin: "dialog_layer",
+            shade: 0,
+            title: title,
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            cb1 && cb1();
+            layer.closeAll();
+        }, function () {
+            cb2 && cb2();
+            layer.closeAll();
+        });
+    }
+
+    function layerAlert(title, content) {
+        layer.alert(content, {
+            skin: "dialog_layer",
+            shade: 0,
+            title: title,
+            area: ['567px', '211px']
+        });
+    }
+
+
+    //证书的添加
+    var _wmz_zs_title = $(".wmz_zs_title").clone();
+    var _wmz_zs_file = $(".wmz_zs_file").clone();
+    var _wmz_zs_box = $(".wmz_zs_box");
+
+    //证书01初始化
+    var _file_zs_01 = $("#file_zs_01");
+    uploadImageOptions["queueID"] = "queue_zs_01";
+    uploadImageOptions["fileSizeLimit"] = 1024 * 5;
+    _file_zs_01.uploadify(uploadImageOptions);
+
+    var index = 11;
+    function addZS() {
+        var _clone_title = _wmz_zs_title.clone();
+        var _clone_file = _wmz_zs_file.clone();
+        _clone_file.find(".help-block").after('<a href="javascript:;" onclick="removeZS(this);" class="btn btn-default btn-w wmz_zs_del">删除</a>');
+        var tag = "file_zs_" + index;
+        var qTag = "queue_zs_" + index;
+        _clone_file.find(".upload_img_main").removeClass("file_zs_01").addClass(tag);
+        _clone_file.find(".file_upload").attr("id", tag);
+        _clone_file.find(".queue").removeClass("file_zs_01").addClass(tag).attr("id", qTag);
+
+        var _box = $('<div class="wmz_zs_content"></div>');
+        _box.append(_clone_title);
+        _box.append(_clone_file);
+
+        _wmz_zs_box.append(_box);
+
+
+        var _temp = $("#" + tag);
+        uploadImageOptions["queueID"] = qTag;
+        uploadImageOptions["fileSizeLimit"] = 1024 * 5;
+        _temp.uploadify(uploadImageOptions);
+        index++;
+    }
+
+    function removeZS(obj){
+        $(obj).parents(".wmz_zs_content").remove();
+    }
 </script>
 </body>
 </html>
