@@ -125,9 +125,18 @@
 .m-header .nav2 .msg .msgList .tabs {
   display: inline-block;
   overflow: hidden;
+  height: 30px;
+  line-height: 30px;
   border: 1px solid #3c8bee;
 }
-.m-header .nav2 .msg .msgList .tabs .active {
+.m-header .nav2 .msg .msgList .tabs li {
+  width: 110px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.m-header .nav2 .msg .msgList .tabs .active a {
   color: #fff;
   background-color: #3c8bee;
 }
@@ -139,6 +148,7 @@
   text-align: center;
   color: #3c8bee;
   background-color: #fff;
+  text-decoration: none;
 }
 .m-header .nav2 .msg .msgList ul {
   margin: 0;

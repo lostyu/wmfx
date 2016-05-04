@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="uploadify.css"/>
+</head>
+<body>
+
+<input type="file" name="file_upload" id="file_upload" />
+
+<script src="../../libs/jquery-2.2.2/jquery.min.js"></script>
+<script src="jquery.uploadify.min.js"></script>
+<script>
+    $(function(){
+        $('#file_upload').uploadify({
+            'swf'      : 'uploadify.swf',
+            'uploader' : 'uploadify.php',
+
+            'cancelImg': 'cancel.png'
+            // Put your options here
+        });
+    });
+</script>
+</body>
+</html>

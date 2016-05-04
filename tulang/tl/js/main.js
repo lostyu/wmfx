@@ -127,17 +127,19 @@ $(function () {
 
 
         // 城市级联
-        if ($('#city').length) {
-            $("#city").citySelect({
-                url: "plugins/jquery-city/city.min.js",
-                prov: "重庆", //省份
-                city: "渝中区", //城市
-                nodata: "none" //当子集无数据时，隐藏select
-            });
-
-            $('#city select').addClass('form-control');
+        //if ($('#city').length) {
+        //    $("#city").citySelect({
+        //        url: "plugins/jquery-city/city.min.js",
+        //        prov: "重庆", //省份
+        //        city: "渝中区", //城市
+        //        nodata: "none" //当子集无数据时，隐藏select
+        //    });
+        //
+        //    $('#city select').addClass('form-control');
+        //}
+        if(window.PCAS){
+            new PCAS("Province","City");
         }
-
 
         var $sendCode = $('.j-sendCode');
         $sendCode.click(function() {

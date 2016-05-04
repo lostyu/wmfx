@@ -190,10 +190,9 @@
                                 <label class="formlabel control-label"><span class="text-danger">*</span>所在地</label>
 
                                 <div class="formipt">
-                                    <div id="city">
-                                        <select class="prov"></select>
-                                        <select class="city" disabled="disabled"></select>
-                                        <select class="dist" disabled="disabled"></select>
+                                    <div>
+                                        <select name="Province" class="prov form-control"></select>
+                                        <select name="City" class="city form-control"></select>
                                     </div>
                                 </div>
                             </div>
@@ -227,8 +226,8 @@
 
 <script src="plugins/wb02/js/jquery.uploadify.js"></script>
 
-<script src="plugins/jquery-city/jquery.cityselect.js"></script>
 <script src="plugins/layer/layer.js"></script>
+<script src="plugins/PCASClass2.js"></script>
 
 <!-- linkcloud -->
 <script src="js/main.js"></script>
@@ -296,11 +295,17 @@
         onSelect: onSelect,
         onUploadComplete: onUploadComplete,
         onUploadSuccess: onUploadSuccess,
-        type: 2
+        onUploadStart: onUploadStart,
+        type: 2,
+//        requeueErrors: true
     };
     var _file_upload01 = $("#file_upload01");
     uploadImageOptions["queueID"] = "queue01";
     _file_upload01.uploadify(uploadImageOptions);
+
+    function onUploadStart(){
+        console.log(111);
+    }
 
     function onUploadSuccess(file, msg, status) {
         console.log(msg); //这里获得后台的图片路劲 自行赋值

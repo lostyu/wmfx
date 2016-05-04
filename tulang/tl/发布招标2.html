@@ -254,9 +254,9 @@
             <div class="total clearfix">
                 <div class="col">
                     <ul class="list-unstyled">
-                        <li>招标金额：<span class="c1">20000</span></li>
-                        <li>定金比例：<span>10%</span></li>
-                        <li>定金金额：<span class="c1">2000</span></li>
+                        <li>招标金额：<span class="c1 j-zbje">0</span></li>
+                        <li>定金比例：<span class="j-djbl">10%</span></li>
+                        <li>定金金额：<span class="c1 j-djje">0</span></li>
                     </ul>
                 </div>
             </div>
@@ -354,6 +354,18 @@
         var formbl = aElements[3];
         var formck = aElements[7];
 
+        var $zbje = $('.j-zbje');
+        var $djbl = $('.j-djbl');
+        var $djje = $('.j-djje');
+        var num1 = 0;
+        var num2 = 0.1;
+        var num3 = 0;
+
+        $zbje.text(0);
+        $djbl.text(num2 * 100 + '%');
+        $djje.text(0);
+
+
         var $weibaoBox = $('.j-weibao');
         var bwb = false;
 
@@ -396,6 +408,16 @@
             checkFrom();
         };
 
+        form1.oninput = function() {
+            if(Number(form1.value) > 0 ){
+                num1 = Number(form1.value);
+                num3 = num1 * num2;
+                $zbje.text(num1);
+                $djbl.text(num2);
+                $djje.text(num3);
+            }
+        };
+
         function checkFrom() {
             var form1 = aElements[0];
             var formbl = aElements[3];
@@ -409,6 +431,10 @@
                 bwb = true;
             }
 
+
+            if(isNaN(Number(form1.value))){
+                alert();
+            }
             if(Number(form1.value) < 500 ){
                 $(form1).next().remove();
                 $('<p style="color: red;">* 填写错误，任务赏金不少于500元</p>').appendTo($(form1).parent());

@@ -145,7 +145,7 @@
                         </div>
                         <div class="col2">
                             <div class="cnt">
-                                <a href="javascript:;">
+                                <a href="javascript:;" class="j-popup2">
                                     <img src="img/wmz_rz_icon2.png" alt=""/>
 
                                     <h3>技能认证</h3>
@@ -164,7 +164,7 @@
 
 
 
-<!-- 1.实名认证类型选择 -->
+<!-- 1.身份认证类型选择 -->
 <div class="modal-rz">
     <div class="inner">
         <div class="title">
@@ -191,7 +191,36 @@
         </p>
     </div>
 </div>
-<!-- /实名认证类型选择 -->
+<!-- /身份认证类型选择 -->
+
+<!-- 1.技能认证类型选择 -->
+<div class="modal-rz2">
+    <div class="inner">
+        <div class="title">
+            <h2>实名认证类型选择</h2>
+        </div>
+        <ul class="clearfix">
+            <li>
+                <p><img src="img/rzxz1.png" alt=""/></p>
+                <label class="radio-inline">
+                    <input type="radio" name="rz2" value="0" checked> 我是企业
+                </label>
+            </li>
+            <li>
+                <p><img src="img/rzxz2.png" alt=""/></p>
+                <label class="radio-inline">
+                    <input type="radio" name="rz2" value="1"> 我是个人
+                </label>
+            </li>
+        </ul>
+        <p class="err">提交审核后不可更改认证类型，请谨慎选择！</p>
+
+        <p>
+            <button class="btn btn-primary btn-w j-ok" type="button">确认申请</button>
+        </p>
+    </div>
+</div>
+<!-- /技能认证类型选择 -->
 
 
 
@@ -213,7 +242,7 @@
 <!-- your js -->
 <script>
     $(function() {
-        // 实名认证选择弹层 page
+        // 身份认证
         (function () {
             $('.j-popup').click(function () {
                 //自定页
@@ -231,6 +260,39 @@
             });
 
             var $modal_rz = $('.modal-rz');
+            var $input = $modal_rz.find('input');
+            var $btn = $modal_rz.find('.j-ok');
+
+            $btn.click(function () {
+                if ($input.eq(0).get(0).checked) {
+                    // 实名认证跳转页面
+                    window.location.href = 'xxxx';
+                } else {
+                    // 技能认证跳转页面
+                    window.location.href = 'yyyy';
+                }
+            });
+        })();
+
+
+        // 技能认证
+        (function () {
+            $('.j-popup2').click(function () {
+                //自定页
+                layer.open({
+                    title: false,
+                    type: 1,
+                    skin: 'layui-layer-tl', //样式类名
+                    closeBtn: 1, //不显示关闭按钮
+                    shift: 2,
+                    shadeClose: true, //开启遮罩关闭
+                    content: $('.modal-rz2'),
+                    area: 'auto',
+                    maxWidth: 690
+                });
+            });
+
+            var $modal_rz = $('.modal-rz2');
             var $input = $modal_rz.find('input');
             var $btn = $modal_rz.find('.j-ok');
 

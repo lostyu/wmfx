@@ -44,3 +44,5 @@ Temporary Items
 *.name
 **/.idea
 **/node_modules
+
+**/plugins/jquery.uploadify-v2.1.0
