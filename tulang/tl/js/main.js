@@ -11,17 +11,17 @@ $(function () {
         },
 
         // 展开显示文字
-        toggleText: function(toggleClass, togglePanelClass) {
-            var $toggle = $('.'+toggleClass);
-            var $togglePanelClass = $('.'+togglePanelClass);
+        toggleText: function (toggleClass, togglePanelClass) {
+            var $toggle = $('.' + toggleClass);
+            var $togglePanelClass = $('.' + togglePanelClass);
             var iH = $togglePanelClass.height();
             var onOff = true;
 
-            $toggle.click(function() {
-                if(onOff){
+            $toggle.click(function () {
+                if (onOff) {
                     onOff = false;
                     $togglePanelClass.css('height', 'auto');
-                }else{
+                } else {
                     onOff = true;
                     $togglePanelClass.css('height', iH);
                 }
@@ -30,7 +30,7 @@ $(function () {
         },
 
         // 发送验证码
-        sendCode: function(objBtn) {
+        sendCode: function (objBtn) {
 
             var timer = null;
             var onOff = true;
@@ -57,7 +57,6 @@ $(function () {
             }
 
         }
-
 
 
     };
@@ -137,14 +136,38 @@ $(function () {
         //
         //    $('#city select').addClass('form-control');
         //}
-        if(window.PCAS){
-            new PCAS("Province","City");
+        if (window.PCAS) {
+            new PCAS("Province", "City");
         }
 
         var $sendCode = $('.j-sendCode');
-        $sendCode.click(function() {
+        $sendCode.click(function () {
             app.ui.sendCode($(this));
         });
+
+
+        // date
+        if (window.laydate) {
+            if ($('#start').length || $('#end').length) {
+                var start = {
+                    elem: '#start',
+                    min: laydate.now(), //设定最小日期为当前日期
+                    choose: function (datas) {
+                        end.min = datas; //开始日选好后，重置结束日的最小日期
+                        end.start = datas; //将结束日的初始值设定为开始日
+                    }
+                };
+                var end = {
+                    elem: '#end',
+                    min: laydate.now(),
+                    choose: function (datas) {
+                        start.max = datas; //结束日选好后，重置开始日的最大日期
+                    }
+                };
+                laydate(start);
+                laydate(end);
+            }
+        }
 
 
         // icheck

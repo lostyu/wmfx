@@ -1921,6 +1921,9 @@ fieldset[disabled] .form-control {
 .zhaobiao-info .jd .time .step5 {
   left: 890px;
 }
+.zhaobiao-info .label {
+  margin-right: 5px;
+}
 .zhaobiao-tbs .m-title3 {
   padding-bottom: 75px;
   border-bottom: none;

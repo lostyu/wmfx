@@ -149,7 +149,8 @@
 
                                 <div class="formipt">
                                     <label class="radio-inline">
-                                        <input id="f-r1" class="j-radiowb1" type="radio" name="wb" value="option1" checked> 无维保
+                                        <input id="f-r1" class="j-radiowb1" type="radio" name="wb" value="option1"
+                                               checked> 无维保
                                     </label>
                                     <label class="radio-inline">
                                         <input id="f-r2" class="j-radiowb2" type="radio" name="wb" value="option1"> 有维保
@@ -163,7 +164,8 @@
                                     <label class="control-label formlabel">维保比例：</label>
 
                                     <div class="formipt">
-                                        <input id="f-bl" type="text" class="form-control iptw2 validate[required]"
+                                        <input value="10" id="f-bl" type="text"
+                                               class="form-control iptw2 validate[required]"
                                                data-prompt-position="centerRight:20,10"> %
                                     </div>
                                 </div>
@@ -345,8 +347,12 @@
 //            }
 //        });
 
-//        $('#f-form-weibao')
         var $form = $('#f-form-weibao');
+        var $weibaoBox = $('.j-weibao');
+        var $zbje = $('.j-zbje');
+        var $djbl = $('.j-djbl');
+        var $djje = $('.j-djje');
+
         var aElements = $form[0].elements;
         var form1 = aElements[0];
         var form_r1 = aElements[1];
@@ -354,122 +360,314 @@
         var formbl = aElements[3];
         var formck = aElements[7];
 
-        var $zbje = $('.j-zbje');
-        var $djbl = $('.j-djbl');
-        var $djje = $('.j-djje');
+        var bwb = false;
+        var bcheck = false;
         var num1 = 0;
-        var num2 = 0.1;
+        var num2 = 10;
         var num3 = 0;
 
         $zbje.text(0);
-        $djbl.text(num2 * 100 + '%');
+        $djbl.text(num2 + '%');
         $djje.text(0);
 
 
-        var $weibaoBox = $('.j-weibao');
-        var bwb = false;
-
         $('.j-pay').click(function () {
-
-            if(checkFrom()){
+            if(checkForm()){
 
             }
-
         });
 
-        form_r1.onclick = function() {
-            $weibaoBox.hide();
-            $(form_r2).parents('.formipt').find('p').remove();
+        form_r1.onclick = function () {
+            bcheck = false;
+            checkWb();
+            calcNum();
         };
 
-        form_r2.onclick = function() {
-            var form1 = aElements[0];
-            if( Number(form1.value) < 5000 ){
-                $(form_r2).parents('.formipt').find('p').remove();
-                $('<p style="color: red;">* 金额不少于5000元的招标，才能设置维保期</p>').appendTo($(form_r2).parents('.formipt'));
-            }else{
-                $weibaoBox.show();
+        form_r2.onclick = function () {
+            bcheck = true;
+            checkWb();
+            calcNum();
+        };
+
+        form1.onblur = function () {
+            checkForm();
+        };
+        formbl.onblur = function () {
+            checkForm();
+        };
+
+        form1.onkeyup = function (ev) {
+            if (ev.keyCode >= 48 && ev.keyCode <= 57 || ev.keyCode >= 96 && ev.keyCode <= 105 || ev.keyCode == 8) {
+
+            } else {
+                this.value = this.value.replace(this.value, '');
             }
         };
 
-        formck.onclick = function(){
-            if(this.checked){
+        formbl.onkeyup = function (ev) {
+            if (ev.keyCode >= 48 && ev.keyCode <= 57 || ev.keyCode >= 96 && ev.keyCode <= 105 || ev.keyCode == 8) {
+
+            } else {
+                this.value = this.value.replace(this.value, '');
+            }
+        };
+
+        form1.oninput = function () {
+            calcNum();
+        };
+        formbl.oninput = function () {
+            calcNum();
+        };
+
+        formck.onclick = function () {
+            if (this.checked) {
                 $('.j-check').remove();
-            }else{
+            } else {
                 $('.j-check').remove();
                 $(formck).parents('.checkbox ').before('<span class="j-check" style="color: red; position: relative; top: 5px;">请同意《图狼网投标协议书》</span>');
             }
         };
 
-        form1.onblur = function() {
-            checkFrom();
-        };
-        formbl.onblur = function() {
-            checkFrom();
-        };
-
-        form1.oninput = function() {
-            if(Number(form1.value) > 0 ){
-                num1 = Number(form1.value);
-                num3 = num1 * num2;
-                $zbje.text(num1);
-                $djbl.text(num2);
-                $djje.text(num3);
-            }
-        };
-
-        function checkFrom() {
-            var form1 = aElements[0];
-            var formbl = aElements[3];
-            var form7 = aElements[7];
+        function checkForm() {
             var bTrue = true;
+            var $form1 = $(form1);
+            var $form_r2 = $(form_r2);
+            var $formbl = $(formbl);
+            var form1Val = Number(form1.value);
+            var formblVal = Number(formbl.value);
 
-            if(form_r1.checked){
-                bwb = false;
-            }
-            if(form_r2.checked){
-                bwb = true;
-            }
-
-
-            if(isNaN(Number(form1.value))){
-                alert();
-            }
-            if(Number(form1.value) < 500 ){
-                $(form1).next().remove();
-                $('<p style="color: red;">* 填写错误，任务赏金不少于500元</p>').appendTo($(form1).parent());
+            if (form1Val < 500) {
+                $weibaoBox.hide();
+                $form1.next().remove();
+                $('<p style="color: red;">* 填写错误，任务赏金不少于500元</p>').appendTo($form1.parent());
                 bTrue = false;
                 return bTrue;
-            }else{
-                $(form1).next().remove();
+            } else {
+                $form1.next().remove();
             }
 
-            if(Number(form1.value) >= 5000){
-                if(bwb){
-                    $weibaoBox.show();
-                    $(form_r2).parents('.formipt').find('p').remove();
-                }
-            }
+            checkWb();
 
-            if(bwb){
-                if( Number(formbl.value) <= 0 || Number(formbl.value) > 30){
-                    $(formbl).next().remove();
-                    $('<p style="color: red;">* 填写错误，维保金比例为1-30%，且为整数</p>').appendTo($(formbl).parent());
+            if (bwb) {
+                if (formblVal <= 0 || formblVal > 30) {
+                    $formbl.next().remove();
+                    $('<p style="color: red;">* 填写错误，维保金比例为1-30%，且为整数</p>').appendTo($formbl.parent());
                     bTrue = false;
                     return bTrue;
-                }else{
-                    $(formbl).next().remove();
+                } else {
+                    $formbl.next().remove();
                 }
             }
 
 
-            if(!form7.checked){
+            if (!formck.checked) {
                 bTrue = false;
                 return bTrue;
             }
 
             return bTrue;
         }
+
+        function checkWb() {
+            var $form1 = $(form1);
+            var $form_r2 = $(form_r2);
+            var form1Val = Number(form1.value);
+
+            // 选中无维保
+            if (!bcheck) {
+                bwb = false;
+
+                $weibaoBox.hide();
+                $form_r2.parents('.formipt').find('p').remove();
+            } else {
+                if (form1Val >= 5000) {
+                    bwb = true;
+                } else if (form1Val < 5000) {
+                    bwb = false;
+                }
+
+
+                if (bwb) {
+                    $weibaoBox.show();
+                    $form_r2.parents('.formipt').find('p').remove();
+                } else {
+                    $weibaoBox.hide();
+                    $form_r2.parents('.formipt').find('p').remove();
+                    $('<p style="color: red;">* 金额不少于5000元的招标，才能设置维保期</p>').appendTo($form_r2.parents('.formipt'));
+                }
+            }
+
+
+        }
+
+        function calcNum() {
+            if (checkForm()) {
+                if (!bwb) {
+                    num2 = 10;
+                } else {
+                    num2 = Number(formbl.value);
+                }
+
+                num1 = Number(form1.value);
+                num3 = num1 * num2 / 100;
+
+                if (isNaN(num1)) {
+                    num1 = 0;
+                }
+                if (isNaN(num2)) {
+                    num2 = 10;
+                }
+                if (isNaN(num3)) {
+                    num3 = 0;
+                }
+
+                $zbje.text(num1);
+                $djbl.text(num2 + '%');
+                $djje.text(num3);
+            }
+        }
+
+//        $('.j-pay').click(function () {
+//
+//            if (checkFrom()) {
+//
+//            }
+//
+//        });
+//
+//        form_r1.onclick = function () {
+//            bwb = false;
+//            $weibaoBox.hide();
+//            $(form_r2).parents('.formipt').find('p').remove();
+//        };
+//
+//        form_r2.onclick = function () {
+//            var form1 = aElements[0];
+//            if (Number(form1.value) < 5000) {
+//                $(form_r2).parents('.formipt').find('p').remove();
+//                $('<p style="color: red;">* 金额不少于5000元的招标，才能设置维保期</p>').appendTo($(form_r2).parents('.formipt'));
+//            } else {
+//                bwb = true;
+//                $weibaoBox.show();
+//            }
+//        };
+//
+//        formck.onclick = function () {
+//            if (this.checked) {
+//                $('.j-check').remove();
+//            } else {
+//                $('.j-check').remove();
+//                $(formck).parents('.checkbox ').before('<span class="j-check" style="color: red; position: relative; top: 5px;">请同意《图狼网投标协议书》</span>');
+//            }
+//        };
+//
+//        form1.onblur = function () {
+//            checkFrom();
+//        };
+//        formbl.onblur = function () {
+//            checkFrom();
+//        };
+//
+//
+//        form1.oninput = function () {
+//
+//            // 无维保
+//            if(Number(form1.value) > 5000){
+//
+//            }
+//                if (Number(form1.value) > 0) {
+//                    num1 = Number(form1.value);
+//                    if(bwb){
+//                        num2 = parseInt(formbl.value) / 100;
+//                    }
+//                    num3 = num1 * num2;
+//                    $zbje.text(num1);
+//                    $djbl.text((num2 * 100) + '%');
+//                    $djje.text(num3);
+//                }
+//
+//        };
+//
+//        form1.onkeyup = function (ev) {
+//            if (ev.keyCode >= 48 && ev.keyCode <= 57 || ev.keyCode >= 96 && ev.keyCode <= 105) {
+//
+//            } else {
+//                this.value = this.value.replace(this.value, '');
+//            }
+//        };
+//
+//        formbl.onkeyup = function (ev) {
+//            if (ev.keyCode >= 48 && ev.keyCode <= 57 || ev.keyCode >= 96 && ev.keyCode <= 105) {
+//
+//            } else {
+//                this.value = this.value.replace(this.value, '');
+//            }
+//        };
+//        formbl.oninput = function () {
+//
+//            if (Number(form1.value) > 0) {
+//                num1 = Number(form1.value);
+//                num2 = parseInt(formbl.value) / 100;
+//                console.log(num2);
+//                num3 = num1 * num2;
+//                $zbje.text(num1);
+//                $djbl.text((num2 * 100) + '%');
+//                $djje.text(num3);
+//            }
+//        };
+//
+//        function checkFrom() {
+//            var form1 = aElements[0];
+//            var formbl = aElements[3];
+//            var form7 = aElements[7];
+//            var bTrue = true;
+//
+//            if (form_r1.checked) {
+//                bwb = false;
+//            }
+//            if (form_r2.checked) {
+//                bwb = true;
+//            }
+//
+//
+////            if(isNaN(Number(form1.value))){
+////                alert();
+////            }
+//            if (Number(form1.value) < 500) {
+//                $(form1).next().remove();
+//                $('<p style="color: red;">* 填写错误，任务赏金不少于500元</p>').appendTo($(form1).parent());
+//                bTrue = false;
+//                return bTrue;
+//            } else {
+//                $(form1).next().remove();
+//            }
+//
+//            if (Number(form1.value) >= 5000) {
+//                if (bwb) {
+//                    $weibaoBox.show();
+//                    $(form_r2).parents('.formipt').find('p').remove();
+//                }
+//            }
+//
+//            if (bwb) {
+//                if (Number(formbl.value) <= 0 || Number(formbl.value) > 30) {
+//                    $(formbl).next().remove();
+//                    $('<p style="color: red;">* 填写错误，维保金比例为1-30%，且为整数</p>').appendTo($(formbl).parent());
+//                    bTrue = false;
+//                    return bTrue;
+//                } else {
+//                    $(formbl).next().remove();
+//                }
+//            }
+//
+//
+//            if (!form7.checked) {
+//                bTrue = false;
+//                return bTrue;
+//            }
+//
+//            return bTrue;
+//        }
 
     });
 </script>
