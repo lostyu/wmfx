@@ -205,13 +205,25 @@
       padding-top: 24px;
       padding-right: 15px;
       .button{
-        display: block;
-        width: 127px;
-        height: 30px;
-        line-height: 30px;
-        background-color: #3c8bee;
+        min-width: 128px;
         color: #fff;
-        text-align: center;
+        background-color: #cccccc;
+        border-color: #cccccc;
+        border-radius: 0;
+        &:hover{
+          background-color: #a4a4a4;
+        }
+      }
+      .button2{
+        min-width: 128px;
+        color: #3c8bee;
+        background-color: #fff;
+        border-color: #3c8bee;
+        border-radius: 0;
+        &:hover{
+          background-color: #3c8bee;
+          color: #fff;
+        }
       }
     }
 

@@ -194,13 +194,25 @@
   padding-right: 15px;
 }
 .m-header .nav2 .fb .button {
-  display: block;
-  width: 127px;
-  height: 30px;
-  line-height: 30px;
+  min-width: 128px;
+  color: #fff;
+  background-color: #cccccc;
+  border-color: #cccccc;
+  border-radius: 0;
+}
+.m-header .nav2 .fb .button:hover {
+  background-color: #a4a4a4;
+}
+.m-header .nav2 .fb .button2 {
+  min-width: 128px;
+  color: #3c8bee;
+  background-color: #fff;
+  border-color: #3c8bee;
+  border-radius: 0;
+}
+.m-header .nav2 .fb .button2:hover {
   background-color: #3c8bee;
   color: #fff;
-  text-align: center;
 }
 .m-header .nav2 .search {
   padding-top: 24px;
