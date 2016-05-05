@@ -2293,33 +2293,23 @@ fieldset[disabled] .form-control {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  padding: 50px 60px 0 22px;
+  padding: 50px 40px 0 40px;
 }
 .helpPage .pic .text h2 {
   float: left;
-  margin-top: 3px;
-  padding-left: 22px;
-  line-height: 24px;
-  border-left: 4px solid #fff;
-  color: #fff;
-}
-.helpPage .pic .text a {
-  float: right;
-  display: inline-block;
-  width: 140px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  background-color: #398dee;
-  color: #fff;
+  color: #333333;
+  font-size: 28px;
 }
 .helpPage .cntBox {
-  padding: 30px;
+  padding: 40px;
 }
 .helpPage .cntBox .title {
+  padding-bottom: 20px;
   margin-bottom: 26px;
-  text-align: center;
-  font-size: 16px;
+  border-bottom: 1px solid #ececec;
+}
+.helpPage .cntBox .title h2 {
+  font-size: 24px;
   color: #333;
 }
 .helpPage .cntBox .article p {
@@ -2329,6 +2319,7 @@ fieldset[disabled] .form-control {
 .nav-help {
   margin: 0;
   padding: 0;
+  margin-top: 40px;
 }
 .nav-help li {
   margin-top: 20px;
@@ -2336,13 +2327,14 @@ fieldset[disabled] .form-control {
 }
 .nav-help li a {
   display: block;
-  line-height: 30px;
+  line-height: 40px;
   padding-right: 48px;
   text-align: right;
-  color: #999;
+  color: #333333;
+  font-size: 16px;
 }
 .nav-help li.active a {
-  border-left: 3px solid #398dee;
+  border-left: 10px solid #398dee;
   background-color: #f1f3f6;
   color: #398dee;
 }
@@ -3032,7 +3024,7 @@ fieldset[disabled] .form-control {
   font-size: 16px;
 }
 .fankui {
-  padding: 30px;
+  padding: 45px 65px;
   background-color: #fff;
 }
 .fankui .title {
