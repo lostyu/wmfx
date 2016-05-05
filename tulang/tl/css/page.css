@@ -300,6 +300,13 @@ fieldset[disabled] .form-control {
   font-size: 14px;
   color: #b8b8b8;
 }
+.m-title5 {
+  padding-bottom: 15px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #ececec;
+  font-size: 14px;
+  color: #292929;
+}
 .m-paypal {
   margin: 0;
   padding: 0;
