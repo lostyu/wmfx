@@ -500,6 +500,81 @@ label {
   bottom: 0;
   width: 100%;
 }
+.m-footer .concat {
+  float: right;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+.m-footer .concat li {
+  float: left;
+  margin-left: 30px;
+  padding: 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url(../img/sprite-icon.png) no-repeat;
+  cursor: pointer;
+  list-style: none;
+}
+.m-footer .concat li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.m-footer .concat li .pic {
+  display: none;
+  position: absolute;
+  bottom: 65px;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  padding: 12px;
+  margin-left: -60px;
+  background-color: #398dee;
+  text-align: center;
+}
+.m-footer .concat li .pic p {
+  margin-top: 5px;
+  line-height: normal;
+  color: #fff;
+  font-size: 16px;
+}
+.m-footer .concat li .pic p span {
+  font-size: 14px;
+}
+.m-footer .concat li .pic .caret {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  margin-left: -12px;
+  border-top: 12px dashed;
+  border-top: 12px solid \9;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top-color: #398dee;
+}
+.m-footer .concat li:hover .pic {
+  display: block;
+}
+.m-footer .concat .weibo {
+  background-position: 0 0;
+}
+.m-footer .concat .weibo:hover {
+  background-position: -40px 0;
+}
+.m-footer .concat .weixin {
+  background-position: 0 -40px;
+}
+.m-footer .concat .weixin:hover {
+  background-position: -40px -40px;
+}
+.m-footer .concat .qq {
+  background-position: 0 -80px;
+}
+.m-footer .concat .qq:hover {
+  background-position: -40px -80px;
+}
 .m-footer-zwf {
   height: 70px;
 }

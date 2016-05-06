@@ -44,6 +44,84 @@
     bottom: 0;
     width: 100%;
   }
+
+  .concat {
+    float: right;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    li {
+      float: left;
+      margin-left: 30px;
+      padding: 0;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background: url(../img/sprite-icon.png) no-repeat;
+      cursor: pointer;
+      list-style: none;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .pic {
+        display: none;
+        position: absolute;
+        bottom: 65px;
+        left: 0;
+        width: 150px;
+        height: 150px;
+        padding: 12px;
+        margin-left: -60px;
+        background-color: #398dee;
+        text-align: center;
+
+        p{
+          margin-top: 5px;
+          line-height: normal;
+          color: #fff;
+          font-size: 16px;
+          span{
+            font-size: 14px;
+          }
+        }
+        .caret {
+          position: absolute;
+          bottom: -12px;
+          left: 50%;
+          margin-left: -12px;
+          border-top: 12px dashed;
+          border-top: 12px solid \9;
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+          border-top-color: #398dee;
+        }
+      }
+      &:hover .pic{
+        display: block;
+      }
+    }
+    .weibo {
+      background-position: 0 0;
+      &:hover {
+        background-position: -40px 0;
+      }
+    }
+    .weixin {
+      background-position: 0 -40px;
+      &:hover {
+        background-position: -40px -40px;
+      }
+    }
+    .qq {
+      background-position: 0 -80px;
+      &:hover {
+        background-position: -40px -80px;
+      }
+    }
+  }
 }
 
 .m-footer-zwf{
