@@ -29,7 +29,7 @@ $(function () {
             });
         },
 
-        // 发送验证码
+        // 发送验证码计时
         sendCode: function (objBtn) {
 
             var timer = null;
@@ -56,9 +56,35 @@ $(function () {
                 }, 1000);
             }
 
+        },
+
+        // 点击按钮文字变化
+        changeBtnText: function(objBtn, callback) {
+            var $btn = objBtn;
+            var sOldText = $btn.text();
+            var sNowText = $btn.attr('data-text');
+
+            if(callback){
+                callback();
+            }
+
+            // 还原
+            var restore = function() {
+                $btn.attr('disabled', false);
+                $btn.text(sOldText);
+            };
+
+            // 改变文字
+            var change = function(){
+                $btn.attr('disabled', true);
+                $btn.text(sNowText);
+            };
+
+            return {
+                restore: restore,
+                change: change
+            }
         }
-
-
     };
 
 
@@ -136,10 +162,13 @@ $(function () {
         //
         //    $('#city select').addClass('form-control');
         //}
+
+        // 城市级联
         if (window.PCAS) {
             new PCAS("Province", "City");
         }
 
+        // 发送验证码计时
         var $sendCode = $('.j-sendCode');
         $sendCode.click(function () {
             app.ui.sendCode($(this));
@@ -170,7 +199,10 @@ $(function () {
         }
 
 
-        // icheck
+
+
+
+         // icheck
         //$('input').iCheck({
         //    checkboxClass: 'icheckbox_minimal-blue',
         //    radioClass: 'iradio_minimal-blue',

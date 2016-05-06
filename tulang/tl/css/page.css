@@ -89,6 +89,20 @@ a.label-2:hover {
   border-radius: 0;
   box-shadow: none;
 }
+.form-group {
+  position: relative;
+}
+.form-group .err-place {
+  position: absolute;
+  top: 0;
+  right: 12px;
+  height: 40px;
+  line-height: 40px;
+}
+.form-group .formError .formErrorContent {
+  width: auto;
+  min-width: auto;
+}
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
@@ -103,14 +117,11 @@ fieldset[disabled] .form-control {
   margin-bottom: 20px;
   line-height: 20px;
   color: #ff0000;
-  font-size: 16px;
+  font-size: 14px;
 }
 .m-formtips .glyphicon {
   font-size: 20px;
   vertical-align: text-bottom;
-}
-.m-mimatips .formError {
-  width: 135px;
 }
 .j-sendCode {
   width: 96px;
@@ -492,6 +503,7 @@ fieldset[disabled] .form-control {
 .p-formBox10 {
   width: 1100px;
   height: 647px;
+  border: 1px solid #d5dae1;
 }
 .p-formBox2 {
   position: relative;
@@ -529,15 +541,25 @@ fieldset[disabled] .form-control {
   margin-bottom: 15px;
 }
 .p-loginForm {
-  width: 370px;
-  margin: 74px auto 0;
+  width: 500px;
+  height: 590px;
+  padding: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #d5dae1;
+  background-color: #fff;
 }
 .p-loginForm .logo {
   margin-bottom: 30px;
   text-align: center;
 }
+.p-loginForm .logo h2 {
+  margin-top: 24px;
+  font-size: 18px;
+  color: #757575;
+}
 .p-loginForm .form-group {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .p-loginForm .form-group label {
   font-weight: normal;
@@ -552,12 +574,12 @@ fieldset[disabled] .form-control {
   text-align: center;
 }
 .p-personRegister .col1 {
-  width: 698px;
+  width: 610px;
   float: left;
 }
 .p-personRegister .col1 .form {
   width: 370px;
-  margin: 0 auto;
+  margin-left: 140px;
   padding-top: 60px;
 }
 .p-personRegister .col1 .form-group {
@@ -565,10 +587,10 @@ fieldset[disabled] .form-control {
 }
 .p-personRegister .col2 {
   float: left;
-  width: 400px;
-  height: 400px;
+  width: 488px;
+  height: 327px;
   padding: 0 20px;
-  margin-top: 55px;
+  margin-top: 60px;
   border-left: 1px solid #f1f3f6;
 }
 .p-personRegister .col2 .form {
@@ -2582,4 +2604,16 @@ fieldset[disabled] .form-control {
   padding-top: 15px;
   padding-right: 15px;
   border: none !important;
+}
+.form-container {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  width: 1100px;
+  margin-left: -550px;
+}
+.form-bg {
+  height: 390px;
+  background: url(../img/form-bg.jpg) center top no-repeat;
+  background-size: cover;
 }

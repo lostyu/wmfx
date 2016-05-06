@@ -29,14 +29,15 @@
 </head>
 <body>
 
-<div class="p-wrap">
 
 
-    <div class="p-formBox p-formBox10 f-bd">
+<div class="form-bg"></div>
+<div class="form-container">
+    <div class="p-formBox p-formBox10">
         <div class="form-title clearfix">
             <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
 
-            <h2 class="text">注册账号</h2>
+            <h2 class="text">账号注册</h2>
         </div>
 
         <div class="p-personRegister  clearfix">
@@ -54,7 +55,8 @@
                                 <label class="sr-only">手机号（仅支持大陆）</label>
                                 <input name="uname" type="text"
                                        class="form-control validate[required, custom[r_phone]]"
-                                       placeholder="手机号（仅支持大陆）">
+                                       placeholder="手机号（仅支持大陆）" data-prompt-position="inline" data-prompt-target="err1">
+                                <span id="err1" class="err-place"></span>
                             </div>
                             <div class="form-group">
                                 <label class="sr-only">验证码</label>
@@ -62,24 +64,28 @@
                                 <div class="input-group">
                                     <input name="ucode" type="text"
                                            class="form-control validate[required]" placeholder="验证码"
-                                           data-prompt-position="centerRight:106,10">
+                                           data-prompt-position="inline" data-prompt-target="err2">
                                         <span class="input-group-btn">
                                             <button class="btn btn-primary j-sendCode" type="button">发送验证码</button>
                                         </span>
                                 </div>
+                                <span id="err2" class="err-place" style="right: 108px;"></span>
                             </div>
                             <div class="form-group">
                                 <label class="sr-only">邀请码</label>
                                 <input name="ucode2" type="text" class="form-control validate[required]"
-                                       placeholder="邀请码（必填）">
+                                       placeholder="邀请码（必填）" data-prompt-position="inline" data-prompt-target="err3">
+                                <span id="err3" class="err-place"></span>
+
                             </div>
                             <p class="text-right"><a href="javascript:;">如何获得邀请码？</a></p>
 
-                            <div class="form-group m-mimatips">
+                            <div class="form-group">
                                 <label class="sr-only">输入密码</label>
                                 <input id="pass1" name="upass" type="password"
                                        class="form-control validate[required, custom[r_passWord]]"
-                                       placeholder="密码（不少于8位）">
+                                       placeholder="密码（不少于8位）" data-prompt-position="inline" data-prompt-target="err4">
+                                <span id="err4" class="err-place"></span>
                             </div>
                             <div class="form-group">
                                 <div class="checkbox">
@@ -111,36 +117,50 @@
 
             <!--  注册成功提示 -->
             <div class="tips" style="display: none;">
-                <p><img src="img/success.png" alt=""/></p>
-                <p>注册成功</p>
-                <p>欢迎 用户名 来到图狼网，3秒后跳转到首页！</p>
-                <p><a href="javascript:;">立即跳转</a></p>
+                <p><img src="img/success2.png" alt=""/></p>
+                <p class="text-muted f-mb30">注册成功</p>
+                <p class="f-fz16 f-mb30">注册成功！ 欢迎 用户名 来到图狼网！</p>
+                <p><a class="f-tdu f-fz16" href="javascript:;">前往首页</a>　<a class="f-tdu f-fz16" href="javascript:;">个人设置</a></p>
             </div>
 
 
         </div>
     </div>
-
 </div>
 
 
-<!-- S 底部 -->
-<nav class="m-footer" style="margin-top: -70px;">
-    <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
-        <p class="link">
-            <a class="navbar-link" href="javascript:;">关于</a>|
-            <a class="navbar-link" href="javascript:;">我们是谁</a>|
-            <a class="navbar-link" href="javascript:;">帮助</a>|
-            <a class="navbar-link" href="javascript:;">用户协议</a>|
-            <a class="navbar-link" href="javascript:;">信任与安全</a>
+<div class="m-footer-zwf"></div>
 
-            <a class="fa fa-weixin" href="javascript:;"></a>
-            <a class="fa fa-weibo" href="javascript:;"></a>
+<!-- S 底部2 -->
+<nav class="m-footer fixed">
+    <div class="g-container">
+        <p class="info">
+            <span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span>
+            <span>渝ICP备14039480号-1</span>
         </p>
+        <ul class="concat">
+            <li class="weixin">
+                <div class="pic"><img src="img/ewm.png" alt=""/><span class="caret"></span></div>
+            </li>
+            <li class="qq">
+                <a href="javascript:;">
+                    <div class="pic"><img src="img/qq.png" alt=""/>
+                        <p><span>QQ号</span><br/>127628762872</p><span class="caret"></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <p class="link">
+            <a class="navbar-link" href="javascript:;">关于图狼网</a>|
+            <a class="navbar-link" href="javascript:;">帮助中心</a>|
+            <a class="navbar-link" href="javascript:;">意见反馈</a>|
+            <a class="navbar-link" href="javascript:;">联系方式</a>
+        </p>
+
     </div>
 </nav>
-<!-- E 底部 -->
+<!-- E 底部2-->
+
 
 
 <!-- jquery -->
