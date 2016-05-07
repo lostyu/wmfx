@@ -11,9 +11,10 @@
     <!-- 字体图标 -->
     <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
 
-    <!-- linkcloud -->
-    <!--<link rel="stylesheet" href="../css/demo.css">-->
-    <link rel="stylesheet" href="组件/wb02/css/upload.css"/>
+    <link rel="stylesheet" href="plugins/uploadify/css/upload.css"/>
+
+    <!-- 表单样式美化-->
+    <link rel="stylesheet" href="plugins/jquery-icheck/skins/flat/blue.css"/>
 
     <!-- your css -->
     <!--<link rel="stylesheet" href="../css/customer.css">-->
@@ -136,7 +137,8 @@
                     <label class="control-label formlabel"><span class="text-danger">*</span>任务名称：</label>
 
                     <div class="formipt">
-                        <input name="mingchen" type="text" class="form-control iptw1 validate[required, minSize[5], maxSize[30]]">
+                        <input name="mingchen" type="text"
+                               class="form-control iptw1 validate[required, minSize[5], maxSize[30]]">
 
                     </div>
                 </div>
@@ -146,39 +148,45 @@
                     <label class="control-label formlabel"><span class="text-danger">*</span>任务描述：</label>
 
                     <div class="formipt">
-                        <textarea rows="10" class="form-control validate[required, minSize[50], maxSize[1000]]"></textarea>
+                        <textarea rows="10"
+                                  class="form-control validate[required, minSize[50], maxSize[1000]]"></textarea>
                     </div>
                 </div>
 
 
-                <div class="upload_box f-mb40">
+                <div class="form-group">
+                    <label class="control-label formlabel"><span class="text-danger">*</span>上传附件：</label>
 
-                    <div class="upload_row">
-                        <div class="upload_col upload_title">上传附件：</div>
+                    <div class="formipt">
+                        <div class="upload_box">
 
-                        <div class="upload_col upload_input">
-                            <input id="file_upload" class="file_upload" name="file_upload"
-                                   type="file" multiple="true">
+                            <div class="upload_row">
+
+                                <div class="upload_col upload_input">
+                                    <input id="file_upload" class="file_upload" name="file_upload"
+                                           type="file" multiple="true">
+                                </div>
+                                <div class="upload_col upload_info">附件最大支持100MB 支持格式：zip，rar</div>
+
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="upload_none_box">
+                                <div class="upload_col upload_bg upload_none_bg"></div>
+                                <div class="upload_col upload_info upload_none_info">当前还没有文件哦</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="upload_err">
+                                <div class="err"></div>
+                            </div>
+                            <div class="queue_box">
+                                <div id="queue"></div>
+                                <div class="clear"></div>
+                            </div>
+
                         </div>
-                        <div class="upload_col upload_info">附件最大支持100MB 支持格式：zip，rar</div>
-
-                        <div class="clear"></div>
+                        <div class="help-block hide tips" style="color: red;">请上传附件</div>
                     </div>
-
-                    <div class="upload_none_box">
-                        <div class="upload_col upload_title">&nbsp;</div>
-                        <div class="upload_col upload_bg upload_none_bg"></div>
-                        <div class="upload_col upload_info upload_none_info">当前还没有文件哦</div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="upload_err">
-                        <div class="err"></div>
-                    </div>
-                    <div class="queue_box">
-                        <div id="queue"></div>
-                        <div class="clear"></div>
-                    </div>
-
                 </div>
 
 
@@ -186,43 +194,45 @@
                     <label class="control-label formlabel"><span class="text-danger">*</span>需要专业：</label>
 
                     <div class="formipt">
-                        <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox" value="0" name="zhuanye"
-                                   data-prompt-position="topLeft:-20,0"> 规划
-                        </label>
-                        <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox" value="1" name="zhuanye"> 建筑
-                        </label>
-                        <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox" value="2" name="zhuanye"> 给排水
-                        </label>
-                        <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox" value="3" name="zhuanye"> 园林
-                        </label>
-                        <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox" value="4" name="zhuanye"> 电气
-                        </label>
-                        <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox" value="5" name="zhuanye"> 结构
-                        </label>
-                        <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox" value="6" name="zhuanye"> 隧道
-                        </label>
-                        <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox" value="7" name="zhuanye"> 桥梁
-                        </label>
-                        <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox" value="8" name="zhuanye"> 道路
-                        </label>
-                        <label class="checkbox-inline">
-                            <input class="validate[minCheckbox[1]]" type="checkbox" value="9" name="zhuanye"> 其他
-                        </label>
+                        <div>
+                            <label class="checkbox-inline">
+                                <input class="validate[minCheckbox[1]]" type="checkbox" value="0" name="zhuanye" checked> 规划
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="validate[minCheckbox[1]]" type="checkbox" value="1" name="zhuanye"> 建筑
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="validate[minCheckbox[1]]" type="checkbox" value="2" name="zhuanye"> 给排水
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="validate[minCheckbox[1]]" type="checkbox" value="3" name="zhuanye"> 园林
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="validate[minCheckbox[1]]" type="checkbox" value="4" name="zhuanye"> 电气
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="validate[minCheckbox[1]]" type="checkbox" value="5" name="zhuanye"> 结构
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="validate[minCheckbox[1]]" type="checkbox" value="6" name="zhuanye"> 隧道
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="validate[minCheckbox[1]]" type="checkbox" value="7" name="zhuanye"> 桥梁
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="validate[minCheckbox[1]]" type="checkbox" value="8" name="zhuanye"> 道路
+                            </label>
+                            <label class="checkbox-inline">
+                                <input class="validate[minCheckbox[1]]" type="checkbox" value="9" name="zhuanye" data-prompt-target="err-ck"> 其他
+                            </label>
+                        </div>
+                        <div id="err-ck"></div>
                     </div>
                 </div>
 
 
                 <div class="form-group">
-                    <label class="control-label formlabel">封面：</label>
+                    <label class="control-label formlabel"><span class="text-danger">*</span>任务封面：</label>
 
                     <div class="formipt">
                         <div class="media">
@@ -263,14 +273,14 @@
                     <label class="control-label formlabel">合作方式：</label>
 
                     <div class="formipt">
-                        <label class="checkbox-inline">
-                            <input type="checkbox" checked> 不限
+                        <label class="radio-inline">
+                            <input name="r1" type="radio" checked> 不限
                         </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox"> 认证企业
+                        <label class="radio-inline">
+                            <input name="r1" type="radio"> 认证企业
                         </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox"> 认证个人
+                        <label class="radio-inline">
+                            <input name="r1" type="radio"> 认证个人
                         </label>
                     </div>
                 </div>
@@ -287,24 +297,29 @@
         <div class="m-mfromBox">
             <div class="form-horizontal">
 
-                <div class="form-group">
+                <div class="form-group form-inline">
                     <label class="control-label formlabel"><span class="text-danger">*</span>报名截止：</label>
 
                     <div class="formipt">
-                        <div>
-                            <input readonly id="start" type="text" class="form-control iptw laydate-icon validate[required]">
+                        <div class="input-group m-date iptw">
+                            <span class="input-group-addon"><img src="img/m-date.png" alt=""/></span>
+                            <input id="start" type="text" class="form-control validate[required]" placeholder="选择时间" data-errormessage-value-missing="请选择报名截止时间" data-prompt-target="err-start">
                         </div>
+                        <div id="err-start"></div>
                     </div>
                 </div>
 
 
-                <div class="form-group">
+
+                <div class="form-group form-inline">
                     <label class="control-label formlabel"><span class="text-danger">*</span>任务完成：</label>
 
                     <div class="formipt">
-                        <div>
-                            <input readonly id="end" type="text" class="form-control iptw laydate-icon validate[required]">
+                        <div class="input-group m-date iptw">
+                            <span class="input-group-addon"><img src="img/m-date.png" alt=""/></span>
+                            <input id="end" type="text" class="form-control validate[required]" placeholder="选择时间" data-errormessage-value-missing="请选择任务完成时间"  data-prompt-target="err-end">
                         </div>
+                        <div id="err-end"></div>
                     </div>
                 </div>
 
@@ -388,9 +403,22 @@
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
 
+<!-- 日期选择 -->
 <script src="plugins/laydate/laydate.js"></script>
+
+<!-- layer -->
 <script src="plugins/layer/layer.js"></script>
-<script src="组件/wb02/js/jquery.uploadify.js"></script>
+
+<!-- 城市选择 -->
+<script src="plugins/PCASClass2.js"></script>
+
+<!-- 表单美化 -->
+<script src="plugins/jquery-icheck/icheck.min.js"></script>
+
+<script src="plugins/uploadify/js/jquery.uploadify.js"></script>
+
+<!-- main -->
+<script src="js/main.js"></script>
 
 
 <!-- linkcloud -->
@@ -406,15 +434,13 @@
             autoHidePrompt: true,
             autoHideDelay: 5000,
             promptPosition: 'inline',
-            'custom_error_messages': {
-
-            },
+            'custom_error_messages': {},
             onValidationComplete: function (form, valid) {
                 console.log(form);
 
                 if (valid) {
                     if ($('#queue').children().length > 0) {
-                         alert('可以提交');
+                        alert('可以提交');
                     } else {
                         $('.upload_err .err').validationEngine('showPrompt', '* 请上传附件', 'error');
                     }
@@ -430,7 +456,6 @@
                 }
             }
         });
-
 
 
         // 图库图片选择
@@ -486,7 +511,7 @@
         height: 30,
         fileSizeLimit: 1024 * 10,// KB
         buttonText: "选择文件",
-        swf: '组件/wb02/js/uploadify.swf',
+        swf: 'plugins/uploadify/js/uploadify.swf',
         removeCompleted: false,
         removeTimeout: 0,
         itemTemplate: '<div id="${fileID}" class="uploadify-queue-item">\

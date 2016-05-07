@@ -2,9 +2,6 @@ html,
 body {
   background-color: #f1f3f6;
 }
-label {
-  font-weight: 500;
-}
 .label {
   display: inline-block;
   font-size: 12px;
@@ -1116,18 +1113,6 @@ fieldset[disabled] .form-control {
 }
 .m-mfromBox .iptw2 {
   width: 280px;
-}
-.form-horizontal .form-group {
-  margin-left: 0;
-  margin-right: 0;
-}
-.form-horizontal .formlabel {
-  float: left;
-  width: 90px;
-  text-align: left;
-}
-.form-horizontal .formipt {
-  margin-left: 100px;
 }
 .form-horizontal2 .formlabel {
   float: left;
@@ -2244,6 +2229,7 @@ fieldset[disabled] .form-control {
 }
 .fujianList li {
   float: left;
+  width: 90px;
   height: 90px;
   margin-left: 20px;
 }
@@ -2268,19 +2254,24 @@ fieldset[disabled] .form-control {
   width: 50px;
   height: 60px;
 }
+.m-fujian .link .text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .m-fujian .hover {
   display: none;
   position: absolute;
-  left: 0;
+  left: 15px;
   top: 0;
-  width: 100%;
+  width: 50px;
   height: 60px;
   background: rgba(0, 0, 0, 0.5) url(../img/icon-down.png) center no-repeat;
 }
 .m-fujian .j-del {
   display: none;
   position: absolute;
-  right: -15px;
+  right: 0px;
   top: -15px;
   color: #ff4343;
 }

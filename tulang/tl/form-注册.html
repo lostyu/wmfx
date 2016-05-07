@@ -30,7 +30,6 @@
 <body>
 
 
-
 <div class="form-bg"></div>
 <div class="form-container">
     <div class="p-formBox p-formBox10">
@@ -54,8 +53,8 @@
                             <div class="form-group">
                                 <label class="sr-only">手机号（仅支持大陆）</label>
                                 <input name="uname" type="text"
-                                       class="form-control validate[required, custom[r_phone]]"
-                                       placeholder="手机号（仅支持大陆）" data-prompt-position="inline" data-prompt-target="err1">
+                                       class="form-control validate[required, custom[r_phone]]" placeholder="手机号（仅支持大陆）"
+                                       data-prompt-target="err1">
                                 <span id="err1" class="err-place"></span>
                             </div>
                             <div class="form-group">
@@ -63,8 +62,7 @@
 
                                 <div class="input-group">
                                     <input name="ucode" type="text"
-                                           class="form-control validate[required]" placeholder="验证码"
-                                           data-prompt-position="inline" data-prompt-target="err2">
+                                           class="form-control validate[required]" placeholder="验证码" data-prompt-target="err2">
                                         <span class="input-group-btn">
                                             <button class="btn btn-primary j-sendCode" type="button">发送验证码</button>
                                         </span>
@@ -74,7 +72,7 @@
                             <div class="form-group">
                                 <label class="sr-only">邀请码</label>
                                 <input name="ucode2" type="text" class="form-control validate[required]"
-                                       placeholder="邀请码（必填）" data-prompt-position="inline" data-prompt-target="err3">
+                                       placeholder="邀请码（必填）" data-prompt-target="err3">
                                 <span id="err3" class="err-place"></span>
 
                             </div>
@@ -84,7 +82,7 @@
                                 <label class="sr-only">输入密码</label>
                                 <input id="pass1" name="upass" type="password"
                                        class="form-control validate[required, custom[r_passWord]]"
-                                       placeholder="密码（不少于8位）" data-prompt-position="inline" data-prompt-target="err4">
+                                       placeholder="密码（不少于8位）" data-prompt-target="err4">
                                 <span id="err4" class="err-place"></span>
                             </div>
                             <div class="form-group">
@@ -118,9 +116,13 @@
             <!--  注册成功提示 -->
             <div class="tips" style="display: none;">
                 <p><img src="img/success2.png" alt=""/></p>
+
                 <p class="text-muted f-mb30">注册成功</p>
+
                 <p class="f-fz16 f-mb30">注册成功！ 欢迎 用户名 来到图狼网！</p>
-                <p><a class="f-tdu f-fz16" href="javascript:;">前往首页</a>　<a class="f-tdu f-fz16" href="javascript:;">个人设置</a></p>
+
+                <p><a class="f-tdu f-fz16" href="javascript:;">前往首页</a>　<a class="f-tdu f-fz16"
+                                                                           href="javascript:;">个人设置</a></p>
             </div>
 
 
@@ -145,6 +147,7 @@
             <li class="qq">
                 <a href="javascript:;">
                     <div class="pic"><img src="img/qq.png" alt=""/>
+
                         <p><span>QQ号</span><br/>127628762872</p><span class="caret"></span>
                     </div>
                 </a>
@@ -160,7 +163,6 @@
     </div>
 </nav>
 <!-- E 底部2-->
-
 
 
 <!-- jquery -->
@@ -185,7 +187,6 @@
             $('#f-form-person').validationEngine();
 
         })();
-
 
 
         // 页面3秒后跳转 (默认值3秒)

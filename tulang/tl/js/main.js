@@ -95,7 +95,7 @@ $(function () {
 
             // 表单验证
             var _dft = {
-                promptPosition: 'centerRight: 10, 10',
+                promptPosition: 'inline',
                 addPromptClass: 'formError-text',
                 maxErrorsPerField: 1,
                 showOneMessage: true,
@@ -165,7 +165,10 @@ $(function () {
 
         // 城市级联
         if (window.PCAS) {
-            new PCAS("Province", "City");
+            if($('[name=Province]').length && $('[name=City]').length){
+                new PCAS("Province", "City");
+            }
+
         }
 
         // 发送验证码计时
@@ -203,11 +206,16 @@ $(function () {
 
 
          // icheck
-        //$('input').iCheck({
-        //    checkboxClass: 'icheckbox_minimal-blue',
-        //    radioClass: 'iradio_minimal-blue',
-        //    increaseArea: '20%' // optional
-        //});
+        if($.fn.iCheck){
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_flat-blue',
+                radioClass: 'iradio_flat-blue',
+                increaseArea: '' // optional
+            });
+        }
+
+
+
     })();
 
 

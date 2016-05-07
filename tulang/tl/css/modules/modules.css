@@ -156,6 +156,7 @@
   margin-right: 50px;
 }
 .m-date .input-group-addon {
+  width: 40px !important;
   background-color: #f5f9fd;
 }
 .btn.active.focus,
@@ -277,4 +278,28 @@
 .pagination > .active > span:hover {
   background-color: #3c8bee;
   border-color: #3c8bee;
+}
+label {
+  font-weight: 500;
+  color: #757575;
+}
+.checkbox-inline,
+.radio-inline {
+  padding-left: 0;
+}
+.f-form-box {
+  padding: 30px 0;
+  background-color: #fff;
+}
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+.form-horizontal .formlabel {
+  float: left;
+  width: 120px;
+  text-align: left;
+}
+.form-horizontal .formipt {
+  margin-left: 130px;
 }

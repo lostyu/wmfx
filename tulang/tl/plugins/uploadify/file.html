@@ -4,71 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>test</title>
+    <title>附件上传</title>
 
     <link rel="stylesheet" href="css/upload.css">
 
 </head>
 <body>
-<div class="upload_image_box">
+<div class="upload_box">
+    <form>
+        <div class="upload_row">
+            <div class="upload_col upload_title">上传附件：</div>
 
-
-    <div class="upload_image_row">
-        <div class="upload_image_title">封面</div>
-    </div>
-    <div class="upload_image_row">
-        <div class="upload_col upload_default_image">
-            <div class="upload_img_main"></div>
-            <a href="javascript: onCloseFile('', '*');" class="upload_img_main_close">取消</a>
-        </div>
-        <div class="upload_col">
-            <div class="upload_image_main">
-                <div class="upload_col upload_input">
-                    <input id="file_upload" class="file_upload" name="file_upload"
-                           type="file">
-                </div>
-                <div class="upload_col upload_info">图片大小2M以内</div>
+            <div class="upload_col upload_input">
+                <input id="file_upload" class="file_upload" name="file_upload"
+                       type="file" multiple="true">
             </div>
+            <div class="upload_col upload_info">附件最大支持100MB 支持格式：zip，rar</div>
+
             <div class="clear"></div>
-            <div class="upload_queue_main">
-                <div id="queue"></div>
-            </div>
-
         </div>
-
+    </form>
+    <div class="upload_none_box">
+        <div class="upload_col upload_title">&nbsp;</div>
+        <div class="upload_col upload_bg upload_none_bg"></div>
+        <div class="upload_col upload_info upload_none_info">当前还没有文件哦</div>
         <div class="clear"></div>
     </div>
-</div>
+    <div class="queue_box">
+        <div id="queue"></div>
+        <div class="clear"></div>
+    </div>
 
+</div>
 <script src="../../libs/jquery-2.2.2/jquery.min.js"></script>
 <script src="js/jquery.uploadify.js"></script>
-<script src="../../plugins/layer/layer.js"></script>
-<script type="text/javascript">
+<script src="../layer/layer.js"></script>
 
+<script>
     var _document = $(document);
+    var _upload_none_box = $(".upload_none_box");
     var _file_upload = $("#file_upload");
 
     _file_upload.uploadify({
         queueID: "queue",
+        queueSizeLimit: 100,
         buttonClass: "upload_button",
-        width: 77,
-        height: 32,
-        fileSizeLimit: 1024 * 2,// KB
-        buttonText: "上传",
+        width: 130,
+        height: 42,
+        fileSizeLimit: 1024 * 10,// KB
+        buttonText: "选择文件",
         swf: 'js/uploadify.swf',
         removeCompleted: false,
         removeTimeout: 0,
-        fileTypeDesc: 'Image Files',
-        fileTypeExts: '*.jpg;*.png',
-        multi:false,
-
         itemTemplate: '<div id="${fileID}" class="uploadify-queue-item">\
-        <div class="fileName">${fileName}</div>\
-            <div class="fileSize">（${fileSize}）</div>\
+            <a class="upload_bg upload_close_bg" href="javascript: onCloseFile(\'${instanceID}\', \'${fileID}\');"></a>\
+            <div class="upload_bg upload_other_bg ${suffix}_bg"></div>\
+            <div class="fileName">${fileName} （${fileSize}）</div>\
             <div class="uploadify-progress">\
             <div class="uploadify-progress-bar"><!--Progress Bar--></div>\
+            <div class="upload_data"><span class="data"></span></div>\
             </div>\
-            <a class="upload_img_close" href="javascript: onCloseFile(\'${instanceID}\', \'${fileID}\');">取消</a>\
             </div>',
         //后台地址
         uploader: 'uploadify.php',
@@ -76,42 +71,19 @@
         onSelect: onSelect,
         onSelectError: onSelectError,
         onUploadStart: onUploadStart,
-        onUploadComplete: onUploadComplete,
-        onUploadError: onUploadError,
-        onUploadSuccess: onUploadSuccess
     });
 
+
     function onSelect() {
-        var _list = $("#queue .uploadify-queue-item");
-        if(_list.length > 1){
-            _list.eq(0).each(function(){
-                var id = $(this).attr("id");
-                _file_upload.uploadify('cancel', id);
-            });
-        }
+        _upload_none_box.hide();
     }
 
     function onSelectError() {
+        notUploadQueue(this);
     }
 
     function onUploadStart() {
 
-    }
-
-    function onUploadSuccess(file, msg, status){
-        console.log(msg); //这里获得后台的图片路劲 自行赋值
-        $(".upload_img_main").html('<img src="'+msg+'"/>').addClass("show");
-    }
-
-    function onUploadError(){
-
-    }
-
-    function onUploadComplete(file){
-        var _file = $("#" + file.id);
-        if(_file.length){
-            _file.delay(1000).fadeOut(300);
-        }
     }
 
     function onCloseFile(instanceID, fileID) {
@@ -125,7 +97,7 @@
             btn: ['确定', '取消'] //按钮
         }, function () {
             _file_upload.uploadify('cancel', fileID);
-            $(".upload_img_main").html("").removeClass("show");
+            notUploadQueue();
             layer.closeAll();
         }, function () {
             layer.closeAll();
@@ -133,6 +105,31 @@
 
     }
 
+
+    _document.on("mouseenter", ".uploadify-queue-item", function () {
+        $(this).addClass("active");
+    });
+
+    _document.on("mouseleave", ".uploadify-queue-item", function () {
+        $(this).removeClass("active");
+    });
+
+    function notUploadQueue(uploadify) {
+        if (uploadify) {
+            if (uploadify.queueData.filesQueued != 0) {
+                _upload_none_box.hide();
+            } else {
+                _upload_none_box.show();
+            }
+        } else {
+            if ($("#queue .uploadify-queue-item").length) {
+                _upload_none_box.hide();
+            } else {
+                _upload_none_box.show();
+            }
+        }
+
+    }
 
     function layerConfirm(title, content, cb1, cb2) {
         layer.confirm(content, {

@@ -11,29 +11,66 @@
     <!-- 字体图标 -->
     <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
 
-    <!-- linkcloud -->
-    <!--<link rel="stylesheet" href="../css/demo.css">-->
-    <link rel="stylesheet" type="text/css" href="../plugins/webuploader/webuploader.css"/>
 
-    <!-- your css -->
-    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <!-- 表单样式美化-->
+    <link rel="stylesheet" href="../plugins/jquery-icheck/skins/flat/blue.css"/>
+
+    <!-- 上传插件 -->
+    <link rel="stylesheet" href="../plugins/uploadify/css/upload.css"/>
+
+
     <link rel="stylesheet" href="../css/all.css"/>
 
-    <style>
-        .box {
-            height: 100px;
-        }
-    </style>
 </head>
 <body>
 
 
-<div id="uploader" class="wu-example"> <!--用来存放文件信息-->
-    <div id="thelist" class="uploader-list"></div>
-    <div class="btns">
-        <div id="picker">选择文件</div>
-        <button id="ctlBtn" class="btn btn-default">开始上传</button>
-    </div>
+<div class="container">
+
+
+    <form class="f-form-box">
+
+        <div class="form-horizontal">
+            <div class="m-mfromBox ">
+
+
+                <div class="form-group">
+                    <label class="control-label formlabel"><span class="text-danger">*</span>文件：</label>
+
+                    <div class="formipt">
+                        <div class="upload_box">
+
+                            <div class="upload_row clearfix">
+
+
+                                <div class="upload_col upload_input">
+                                    <input id="file_upload" class="file_upload" name="file_upload"
+                                           type="file" multiple="true">
+                                </div>
+                                <div class="upload_col upload_info">附件最大支持100MB 支持格式：zip，rar</div>
+
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="upload_none_box">
+                                <div class="upload_col upload_bg upload_none_bg"></div>
+                                <div class="upload_col upload_info upload_none_info">当前还没有文件哦</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="queue_box">
+                                <div id="queue"></div>
+                                <div class="clear"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </form>
 </div>
 
 
@@ -43,7 +80,37 @@
 <!-- bootsrap -->
 <script src="../bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="../plugins/webuploader/webuploader.js"></script>
-<script type="text/javascript" src="../js/uploader.js"></script>
+<!-- 表单校验 -->
+<link rel="stylesheet" href="../plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="../plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="../plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
+
+<!-- 日期选择 -->
+<script src="../plugins/laydate/laydate.js"></script>
+
+<!-- 城市选择 -->
+<script src="../plugins/PCASClass2.js"></script>
+
+<!-- 表单美化 -->
+<script src="../plugins/jquery-icheck/icheck.min.js"></script>
+
+<!-- 上传插件 -->
+<script src="../plugins/uploadify/js/jquery.uploadify.js"></script>
+
+<script src="../js/fileUpload.js"></script>
+
+<!-- main -->
+<script src="../js/main.js"></script>
+
+<!-- your js -->
+<script>
+
+    $(function () {
+        $('#f-form-test').validationEngine();
+    });
+
+
+    FileUpload('file_upload');
+</script>
 </body>
 </html>

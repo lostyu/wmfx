@@ -177,6 +177,9 @@
   white-space: nowrap;
   color: #757575;
 }
+.m-header .nav2 .msg .msgList ul .media-body p a {
+  color: #757575;
+}
 .m-header .nav2 .msg .msgList .more {
   padding: 0 30px;
   line-height: 60px;
