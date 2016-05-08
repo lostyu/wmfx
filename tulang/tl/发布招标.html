@@ -138,7 +138,7 @@
 
                     <div class="formipt">
                         <input name="mingchen" type="text"
-                               class="form-control iptw1 validate[required, minSize[5], maxSize[30]]">
+                               class="form-control iptw1 validate[required, minSize[5], maxSize[20]]">
 
                     </div>
                 </div>
@@ -149,7 +149,7 @@
 
                     <div class="formipt">
                         <textarea rows="10"
-                                  class="form-control validate[required, minSize[50], maxSize[1000]]"></textarea>
+                                  class="form-control validate[required, minSize[50], maxSize[2000]]"></textarea>
                     </div>
                 </div>
 
@@ -166,7 +166,7 @@
                                     <input id="file_upload" class="file_upload" name="file_upload"
                                            type="file" multiple="true">
                                 </div>
-                                <div class="upload_col upload_info">附件最大支持100MB 支持格式：zip，rar</div>
+                                <div class="upload_col upload_info">单个文件最大50MB，支持格式：jpg、doc、docx、xls、xlsx、ppt、pptx、pdf和zip、rar，其他格式请压缩后上传。</div>
 
                                 <div class="clear"></div>
                             </div>
@@ -185,7 +185,7 @@
                             </div>
 
                         </div>
-                        <div class="help-block hide tips" style="color: red;">请上传附件</div>
+                        <div class="help-block hide tips j-tips" style="color: red;">请上传附件</div>
                     </div>
                 </div>
 
@@ -303,9 +303,9 @@
                     <div class="formipt">
                         <div class="input-group m-date iptw">
                             <span class="input-group-addon"><img src="img/m-date.png" alt=""/></span>
-                            <input id="start" type="text" class="form-control validate[required]" placeholder="选择时间" data-errormessage-value-missing="请选择报名截止时间" data-prompt-target="err-start">
+                            <input id="start" type="text" class="form-control" placeholder="选择时间" data-errormessage-value-missing="请选择报名截止时间" data-prompt-target="err-start">
                         </div>
-                        <div id="err-start"></div>
+                        <div id="err-start" style="display: inline-block; padding-left:10px;"></div>
                     </div>
                 </div>
 
@@ -317,9 +317,9 @@
                     <div class="formipt">
                         <div class="input-group m-date iptw">
                             <span class="input-group-addon"><img src="img/m-date.png" alt=""/></span>
-                            <input id="end" type="text" class="form-control validate[required]" placeholder="选择时间" data-errormessage-value-missing="请选择任务完成时间"  data-prompt-target="err-end">
+                            <input id="end" type="text" class="form-control" placeholder="选择时间" data-errormessage-value-missing="请选择任务完成时间"  data-prompt-target="err-end">
                         </div>
-                        <div id="err-end"></div>
+                        <div id="err-end" style="display: inline-block; padding-left:10px;"></div>
                     </div>
                 </div>
 
@@ -442,7 +442,20 @@
                     if ($('#queue').children().length > 0) {
                         alert('可以提交');
                     } else {
-                        $('.upload_err .err').validationEngine('showPrompt', '* 请上传附件', 'error');
+                        $('.j-tips').validationEngine('showPrompt', '* 请上传附件', 'error');
+                    }
+
+                    if($('#start').val() == ''){
+
+                        $('#err-start').validationEngine('showPrompt', '* 请选择报名截止时间', 'error');
+                    }else{
+                        $('#err-start').validationEngine('hide');
+                    }
+                    if($('#end').val() == ''){
+
+                        $('#err-end').validationEngine('showPrompt', '* 请选择任务完成时间', 'error');
+                    }else{
+                        $('#err-end').validationEngine('hide');
                     }
                 }
 

@@ -4,26 +4,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>帮助-关于我们</title>
+    <title>帮助-意见反馈</title>
     <!-- bootstap -->
-    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.5/css/bootstrap.min.css">
 
     <!-- 字体图标 -->
-    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
 
     <!-- linkcloud -->
     <!--<link rel="stylesheet" href="../css/demo.css">-->
 
     <!-- your css -->
     <!--<link rel="stylesheet" href="../css/customer.css">-->
-    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="../css/all.css"/>
 
 
 </head>
 <body class="f-bg2">
 <nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="../img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -43,7 +44,8 @@
             </li>
             <li class="item msg">
                 <span class="dot"></span>
-                <img src="img/icon-msg.png" alt=""/>
+                <img src="../img/icon-msg.png" alt=""/>
+
                 <div class="msgList">
                     <div class="inner">
                         <div class="text-center f-mb20">
@@ -89,7 +91,7 @@
                         </ul>
                     </div>
                     <div class="more">
-                        <img src="img/icon-settings.png" alt=""/>
+                        <img src="../img/icon-settings.png" alt=""/>
                         <a class="pull-right" href="javascript:;">查看更多</a>
                     </div>
                 </div>
@@ -97,7 +99,7 @@
             <li class="item tx">
                 <div class="pic">
                     <span class="u-icon u-icon-v2"></span>
-                    <img class="img-circle" width="50" height="50" src="img/tx-default.png" alt=""/>
+                    <img class="img-circle" width="50" height="50" src="../img/tx-default.png" alt=""/>
                 </div>
                 <ul class="subNav">
                     <li><a href="javascript:;">我的主页</a></li>
@@ -116,49 +118,51 @@
 <div class="g-container f-mb30">
     <div class="helpPage">
         <div class="pic">
-            <img src="img/help2.jpg" alt=""/>
+            <img src="../img/help6.jpg" alt=""/>
+
             <div class="text">
-                <h2 style="color: #fff;">关于图狼网</h2>
-                <a class="btn btn-primary btn-w150 pull-right" href="javascript:;">意见反馈</a>
+                <h2>意见反馈</h2>
             </div>
         </div>
-        <div class="g-box3">
-            <div class="g-side3">
-                <ul class="nav-help">
-                    <li class="active"><a href="javascript:;">关于我们</a></li>
-                    <li><a href="javascript:;">创始团队</a></li>
-                    <li><a href="javascript:;">人才招聘</a></li>
-                    <li><a href="javascript:;">联系方式</a></li>
-                </ul>
-            </div>
-            <div class="g-main3">
-                <div class="cntBox">
-                    <div class="title">
-                        <h2>保障交易说明</h2>
-                    </div>
-                    <div class="article">
-                        <p>1、招标方需托管10%的招标金额作为定金，方可进行招标。招标成功后，将转付给中标方。若招标失败，可全额退还给发布者。</p>
-                        <p>2、当招标方验收完PDF版设计图纸后，需至少托管最终中标金额的60%，此后方可获得图纸源文件。确认收到源文件后，图狼网
-                            将该部分赏金转付给中标方。</p>
-                        <p>3、当招标方验收完PDF版设计图纸后，需至少托管最终中标金额的60%，0%，此后方可获得图纸源文件。确认收到0%，此后方
-                            可获得图纸源文件。确认收到验收完PDF版设计图纸后，需至少托管最终中标金额的60%，此后方可获得图纸源文件。确认收到
-                            源文件后，图狼网将该部分赏金转付给中标方。</p>
-                    </div>
+
+        <div class="fankui">
+
+            <div class="title">问题反馈</div>
+            <div class="title2">对您给予的帮助和支持，深表感谢！</div>
+
+            <form id="f-form-form1">
+                <div class="form-group">
+                    <textarea rows="10" class="form-control validate[required]" placeholder="在这里描述你的问题"></textarea>
                 </div>
-            </div>
+                <div class="form-group" style="width: 300px;">
+                    <input type="text" class="form-control" placeholder="联系手机（选填）">
+                </div>
+
+                <div class="form-group" style="width: 300px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control j-yzm validate[required]" placeholder="输入验证码" data-prompt-target="err-yzm">
+                        <span class="input-group-addon" id="basic-addon2" style="padding: 0"><img width="100" height="38" src="http://reg.email.163.com/mailregAll/regvf1/verifyCodeImgF.jsp?env=488381217144&amp;type=en&amp;t=1333003692444" alt=""></span>
+                    </div>
+                    <div id="err-yzm"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-w150">提交问题</button>
+            </form>
+
         </div>
+
+
     </div>
 </div>
-
-
-
-
 
 
 <!-- S 底部 -->
 <nav class="m-footer">
     <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link"
+                                                       href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
         <p class="link">
             <a class="navbar-link" href="javascript:;">关于</a>|
             <a class="navbar-link" href="javascript:;">我们是谁</a>|
@@ -175,18 +179,24 @@
 
 
 <!-- jquery -->
-<script src="libs/jquery-2.2.2/jquery.min.js"></script>
+<script src="../libs/jquery-2.2.2/jquery.min.js"></script>
 
 <!-- bootsrap -->
-<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="../bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-
+<link rel="stylesheet" href="../plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="../plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="../plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
 <!-- linkcloud -->
-<script src="js/main.js"></script>
+<script src="../js/main.js"></script>
 
 <!-- your js -->
-<script src=""></script>
+<script>
+    $(function() {
+        $('#f-form-form1').validationEngine();
+    });
+</script>
 </body>
 </html>

@@ -442,7 +442,13 @@
                 $('<p style="color: red;">* 填写错误，任务赏金不少于500元</p>').appendTo($form1.parent());
                 bTrue = false;
                 return bTrue;
-            } else {
+            } else if(form1Val > 9999999){
+                $weibaoBox.hide();
+                $form1.next().remove();
+                $('<p style="color: red;">* 填写错误，任务赏金不能大于 一千万元</p>').appendTo($form1.parent());
+                bTrue = false;
+                return bTrue;
+            }else {
                 $form1.next().remove();
             }
 

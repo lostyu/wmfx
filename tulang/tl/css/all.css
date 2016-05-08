@@ -189,6 +189,9 @@ h2 {
 .f-fz22 {
   font-size: 22px;
 }
+.f-fz18 {
+  font-size: 18px;
+}
 .f-fz16 {
   font-size: 16px;
 }
@@ -927,11 +930,24 @@ label {
 }
 .form-horizontal .formlabel {
   float: left;
-  width: 120px;
+  width: 90px;
   text-align: left;
 }
 .form-horizontal .formipt {
-  margin-left: 130px;
+  margin-left: 100px;
+}
+.popup {
+  display: none;
+  padding: 20px;
+}
+.popup-sx .form-group {
+  margin-bottom: 20px;
+}
+.popup-sx .form-horizontal .formlabel {
+  width: 55px;
+}
+.popup-sx .form-horizontal .formipt {
+  margin-left: 65px;
 }
 html,
 body {

@@ -59,23 +59,23 @@ $(function () {
         },
 
         // 点击按钮文字变化
-        changeBtnText: function(objBtn, callback) {
+        changeBtnText: function (objBtn, callback) {
             var $btn = objBtn;
             var sOldText = $btn.text();
             var sNowText = $btn.attr('data-text');
 
-            if(callback){
+            if (callback) {
                 callback();
             }
 
             // 还原
-            var restore = function() {
+            var restore = function () {
                 $btn.attr('disabled', false);
                 $btn.text(sOldText);
             };
 
             // 改变文字
-            var change = function(){
+            var change = function () {
                 $btn.attr('disabled', true);
                 $btn.text(sNowText);
             };
@@ -152,20 +152,8 @@ $(function () {
 
 
         // 城市级联
-        //if ($('#city').length) {
-        //    $("#city").citySelect({
-        //        url: "plugins/jquery-city/city.min.js",
-        //        prov: "重庆", //省份
-        //        city: "渝中区", //城市
-        //        nodata: "none" //当子集无数据时，隐藏select
-        //    });
-        //
-        //    $('#city select').addClass('form-control');
-        //}
-
-        // 城市级联
         if (window.PCAS) {
-            if($('[name=Province]').length && $('[name=City]').length){
+            if ($('[name=Province]').length && $('[name=City]').length) {
                 new PCAS("Province", "City");
             }
 
@@ -202,11 +190,18 @@ $(function () {
         }
 
 
+        // layer
+        if (window.layer) {
+            layer.config({
+                extend: ['skin/moon/style.css'], //加载新皮肤
+                skin: 'layer-ext-moon', //一旦设定，所有弹层风格都采用此主题。
+                area: ['500px']
+            });
+        }
 
 
-
-         // icheck
-        if($.fn.iCheck){
+        // icheck
+        if ($.fn.iCheck) {
             $('input').iCheck({
                 checkboxClass: 'icheckbox_flat-blue',
                 radioClass: 'iradio_flat-blue',
@@ -215,6 +210,82 @@ $(function () {
         }
 
 
+        var $fujian = $('.m-fujian');
+
+        if ($fujian.length) {
+            var oType = {
+                jpg: '../img/type-jpg.png',
+                doc: '../img/type-doc.png',
+                docx: '../img/type-docx.png',
+                xls: '../img/type-xls.png',
+                xlsx: '../img/type-xlsx.png',
+                ppt: '../img/type-ppt.png',
+                pptx: '../img/type-pptx.png',
+                pdf: '../img/type-pdf.png',
+                zip: '../img/type-zip.png',
+                rar: '../img/type-rar.png'
+            };
+
+
+
+            $fujian.each(function (index, elem) {
+                var $elem = $(elem);
+                var $text = $elem.find('.text');
+                var str = $text.text();
+
+                var reg = /\.\w+$/;
+                var str2 = str.match(reg);
+
+                var arr = [];
+
+                for(var i in str2){
+                    if( i == 0){
+                        var s = str2[i].substr(1);
+                        arr.push(s);
+                    }
+                }
+
+                switch (arr[0]) {
+                    case 'jpg':
+                        setVal($text, 'jpg');
+                        break;
+                    case 'doc':
+                        setVal($text, 'doc');
+                        break;
+                    case 'docx':
+                        setVal($text, 'docx');
+                        break;
+                    case 'xls':
+                        setVal($text, 'xls');
+                        break;
+                    case 'xlsx':
+                        setVal($text, 'xlsx');
+                        break;
+                    case 'ppt':
+                        setVal($text, 'ppt');
+                        break;
+                    case 'pptx':
+                        setVal($text, 'pptx');
+                        break;
+                    case 'pdf':
+                        setVal($text, 'pdf');
+                        break;
+                    case 'zip':
+                        setVal($text, 'zip');
+                        break;
+                    case 'rar':
+                        setVal($text, 'rar');
+                        break;
+                }
+
+
+            });
+
+
+            function setVal(obj, val) {
+                obj.prevAll('img').attr('src', oType[val]);
+            }
+        }
 
     })();
 

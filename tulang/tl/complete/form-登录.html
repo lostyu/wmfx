@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>登录</title>
     <!-- bootstap -->
-    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.5/css/bootstrap.min.css">
 
     <!-- 字体图标 -->
-    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
 
     <!-- linkcloud -->
     <!--<link rel="stylesheet" href="../css/demo.css">-->
 
     <!-- your css -->
     <!--<link rel="stylesheet" href="../css/customer.css">-->
-    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="../css/all.css"/>
 
     <style>
         html, body {
@@ -33,7 +33,7 @@
 <div class="form-container">
     <div class="p-loginForm">
         <div class="logo">
-            <a href="#"><img width="162" height="67" src="img/logo2.png" alt=""/></a>
+            <a href="#"><img width="162" height="67" src="../img/logo2.png" alt=""/></a>
             <h2>账号登录</h2>
         </div>
         <form method="post" id="f-form-login">
@@ -44,7 +44,7 @@
             </div>
             <div class="form-group">
                 <label class="sr-only">密码</label>
-                <input name="upass" type="password" class="form-control j-mm validate[required]" placeholder="密码" data-prompt-target="err2">
+                <input name="upass" type="password" class="form-control j-mm validate[required, custom[r_passWord]]" placeholder="密码" data-prompt-target="err2">
                 <span class="err-place" id="err2"></span>
             </div>
             <div class="form-group">
@@ -68,7 +68,7 @@
             </div>
             <p class="text-center">
                 <span class="text-muted">还没有图狼帐号？</span><a class="f-fz16" href="javascript:;">立即注册 <img
-                    src="img/arrow-right.png" alt=""/></a>
+                    src="../img/arrow-right.png" alt=""/></a>
             </p>
 
 
@@ -90,11 +90,11 @@
         </p>
         <ul class="concat">
             <li class="weixin">
-                <div class="pic"><img src="img/ewm.png" alt=""/><span class="caret"></span></div>
+                <div class="pic"><img src="../img/ewm.png" alt=""/><span class="caret"></span></div>
             </li>
             <li class="qq">
                 <a href="javascript:;">
-                    <div class="pic"><img src="img/qq.png" alt=""/>
+                    <div class="pic"><img src="../img/qq.png" alt=""/>
                         <p><span>QQ号</span><br/>127628762872</p><span class="caret"></span>
                     </div>
                 </a>
@@ -113,18 +113,18 @@
 
 
 <!-- jquery -->
-<script src="libs/jquery-2.2.2/jquery.min.js"></script>
+<script src="../libs/jquery-2.2.2/jquery.min.js"></script>
 
 <!-- bootsrap -->
-<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="../bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
-<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
-<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
+<link rel="stylesheet" href="../plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="../plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="../plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
 <!-- linkcloud -->
-<script src="js/main.js"></script>
+<script src="../js/main.js"></script>
 
 <!-- your js -->
 <script>
@@ -132,7 +132,10 @@
         // 登录
         (function () {
 
+            var bValid = false;
             $('#f-form-login').validationEngine({
+                ajaxFormValidation: true,
+                ajaxFormValidationMethod: 'post',
 
                 'custom_error_messages': {
 
@@ -162,14 +165,27 @@
                 }
             });
 
+
+//            $('#f-form-login').bind('jqv.form.result', function(event, errorFound){
+//                if(!errorFound){
+//                    bValid = true;
+//                }
+//            });
+
+
+
+
+
             // changeBtnText
             $('.j-changeBtnText').click(function() {
-                var cbt = app.ui.changeBtnText($(this), function(){
-                    setTimeout(function() {
-                        cbt.restore();
-                    }, 3000);
-                });
-                cbt.change();
+                if( $('#f-form-login').validationEngine('validate') ){
+                    var cbt = app.ui.changeBtnText($(this), function(){
+                        setTimeout(function() {
+                            cbt.restore();
+                        }, 3000);
+                    });
+                    cbt.change();
+                }
             });
 
 

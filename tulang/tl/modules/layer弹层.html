@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>弹层提示</title>
+    <!-- bootstap -->
+    <link rel="stylesheet" href="../bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/all.css"/>
+
+    <style>
+        .box {
+            padding: 20px;
+            margin-bottom: 100px;
+            background-color: #ddd;
+        }
+
+        .box .title {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #000;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="g-container">
+
+
+    <div class="box">
+        <a class="btn btn-primary j-alert" href="javascript:;">alert</a>
+        <a class="btn btn-primary j-confirm" href="javascript:;">confirm</a>
+        <a class="btn btn-primary j-msg" href="javascript:;">msg</a>
+        <a class="btn btn-primary j-tips" href="javascript:;">tips</a>
+    </div>
+
+
+    <div class="box">
+        <a class="btn btn-primary j-open-zf" href="javascript:;">微信扫码支付</a>
+        <a class="btn btn-primary j-open-sx" href="javascript:;">发送私信</a>
+    </div>
+
+</div>
+
+
+<!-- 微信扫码支付 -->
+<div class="popup popup-zf">
+    <p class="text-center f-fz18">充值金额:<span class="m-c1">1000.00元</span></p>
+    <p class="text-center"><img src="../img/ewm2.png" alt=""/></p>
+    <p class="text-center">微信扫一扫支付</p>
+</div>
+<!-- /微信扫码支付 -->
+
+
+
+
+<!-- 私信回复 -->
+<div class="popup popup-sx">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="formlabel">发送：</div>
+            <div class="formipt">用户名</div>
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+            <div class="formlabel">内容：</div>
+            <div class="formipt">
+                <textarea class="form-control" rows="5"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- /私信回复 -->
+
+
+
+
+<!-- jquery -->
+<script src="../libs/jquery-2.2.2/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="../bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+<script src="../plugins/layer/layer.js"></script>
+
+<!-- linkcloud -->
+<script src="../js/main.js"></script>
+
+<!-- your js -->
+<script>
+    $(function () {
+
+        // alert
+        $('.j-alert').click(function () {
+            //eg1
+            // layer.alert('只想简单的提示');
+
+            //eg2
+            // layer.alert('加了个图标', {icon: 1}); //这时如果你也还想执行yes回调，可以放在第三个参数中。
+
+            //eg3
+            layer.alert('有了回调', {area: 'auto'}, function (index) {
+                //do something
+                alert();
+                layer.close(index);
+            });
+        });
+
+
+
+
+        // confirm
+        $('.j-confirm').click(function(){
+            //eg1
+//            layer.confirm('is not?', {icon: 3, title:'提示'}, function(index){
+//                //do something
+//
+//                layer.close(index);
+//            });
+
+
+            //eg2
+            layer.confirm('is not?', {area: 'auto'}, function(index){
+                //do something
+                alert('成功回调');
+                layer.close(index);
+            }, function(){
+                alert('失败回调');
+            });
+        });
+
+
+
+
+
+        // msg
+        $('.j-msg').click(function(){
+            //eg1
+//            layer.msg('只想弱弱提示', {skin: '', area: 'auto'});
+
+            //eg2
+//            layer.msg('有表情地提示', {icon: 6});
+
+            //eg3
+//            layer.msg('关闭后想做些什么', function(){
+//                //do something
+//            });
+
+            //eg
+            layer.msg('修改成功！', {
+                skin: 'layer-ext-moon-msg layer-ext-moon',
+                area: 'auto',
+                icon: 1,
+                time: 2000 //2秒关闭（如果不配置，默认是3秒）
+            }, function(){
+                //do something
+            });
+        });
+
+
+
+
+        $('.j-tips').click(function(){
+            //小tips
+            layer.tips('我是另外一个tips，只不过我长得跟之前那位稍有些不一样。', $(this), {
+                tips: [1, '#3595CC'],
+                time: 1000000
+            });
+        });
+
+
+
+
+        // open
+        $('.j-open-zf').click(function(){
+            layer.open({
+                type: 1,
+                area: ['500px'],
+                title: '微信扫码支付',
+                content: $('.popup-zf'), //捕获的元素
+                btn: ['我已支付成功', '遇到问题'],
+                yes: function(index, layero){ //或者使用btn1
+                    alert('成功回调');
+                    layer.close(index);
+                },
+                cancel: function(index){ //或者使用btn2
+                    alert('失败回调');
+                }
+            });
+        });
+
+
+        $('.j-open-sx').click(function(){
+            layer.open({
+                type: 1,
+                area: ['500px'],
+                title: '发送私信',
+                content: $('.popup-sx'), //捕获的元素
+                btn: ['发送', '取消'],
+                yes: function(index, layero){ //或者使用btn1
+                    alert('成功回调');
+                    layer.close(index);
+                },
+                cancel: function(index){ //或者使用btn2
+                    alert('失败回调');
+                }
+            });
+        });
+
+
+
+
+
+    });
+</script>
+</body>
+</html>
