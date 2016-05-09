@@ -37,7 +37,7 @@
         <a class="btn btn-primary j-alert" href="javascript:;">alert</a>
         <a class="btn btn-primary j-confirm" href="javascript:;">confirm</a>
         <a class="btn btn-primary j-msg" href="javascript:;">msg</a>
-        <a class="btn btn-primary j-tips" href="javascript:;">tips</a>
+
     </div>
 
 
@@ -46,7 +46,116 @@
         <a class="btn btn-primary j-open-sx" href="javascript:;">发送私信</a>
     </div>
 
+
+
+    <div class="box">
+        <div class="ywgl-zbrw">
+
+
+            <div class="table-responsive">
+                <table class="table tam table-s1 table-hover">
+                    <thead>
+                    <tr>
+                        <th style="width: 183px">任务名称</th>
+                        <th>任务编号</th>
+                        <th>报名日期</th>
+                        <th>任务状态</th>
+                        <th>招标价格</th>
+                        <th>发布方</th>
+                        <th class="text-right">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>某路城市段市政道路设计</td>
+                        <td>2346587098041325647687</td>
+                        <td>2016-3-22 16:00</td>
+                        <td>报名中</td>
+                        <td><span class="m-c1">20000</span></td>
+                        <td><span data-id="1" class="j-tips-user">用户名</span></td>
+                        <td class="text-right"><a class="btn btn-danger btn-h25" href="javascript:;">托管赏金</a> <a href="javascript:;">查看</a></td>
+                    </tr>
+                    <tr>
+                        <td>某路城市段市政道路设计</td>
+                        <td>2346587098041325647687</td>
+                        <td>2016-3-22  16:00</td>
+                        <td>报名中</td>
+                        <td><span class="m-c1">20000</span></td>
+                        <td><span data-id="2" class="j-tips-user">用户名</span></td>
+                        <td class="text-right"><a href="javascript:;">查看</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+
+
+
+        <div class="popup-user-tpl hide" style="width: 500px;">
+            <div class="popup-user">
+
+                <div class="userInfo">
+                    <div class="media">
+                        <div class="media-left">
+                            <a class="j-userUrl" href="javascript:;">
+                                <img class="j-userImgUrl" width="100" height="100" src="../img/tx-default.png" alt=""/>
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4><a class="j-userUrl" href="javascript:;">用户名</a></h4>
+                            <p class="j-userDes">该用户暂无一句话简介</p>
+                            <div class="tag j-userTag">
+                                <span class="label label-3 label-r label-sm">暂无标签</span><span class="label label-3 label-r label-sm">暂无标签</span><span class="label label-3 label-r label-sm">暂无标签</span><span class="label label-3 label-r label-sm">暂无标签</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="userScore">
+                    <ul class="clearfix">
+                        <li>
+                            <p class="num j-userScore1">2239</p>
+                            <span>图狼信誉值</span>
+                        </li>
+                        <li>
+                            <p class="num j-userScore2">4.3分</p>
+                            <span>服务评分<br />（<i class="j-userRw1">8</i>个任务）</span>
+                        </li>
+                        <li>
+                            <p class="num j-userScore3">4.3分</p>
+                            <span>雇主评分<br />（<i class="j-userRw2"></i>个任务）</span>
+                        </li>
+                    </ul>
+                    <a class="sx btn btn-primary btn-w100 j-userSx" href="javascript:;">私信</a>
+                </div>
+
+                <div class="arrow"></div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="box">
+        <a class="btn btn-primary j-tips1" href="javascript:;">tips1</a>
+        <a class="btn btn-primary j-tips2" href="javascript:;">tips2</a>
+        <a class="btn btn-primary j-tips3" href="javascript:;">tips3</a>
+        <a class="btn btn-primary j-tips4" href="javascript:;">tips4</a>
+    </div>
+
 </div>
+
+
+
 
 
 <!-- 微信扫码支付 -->
@@ -166,13 +275,147 @@
 
 
 
-        $('.j-tips').click(function(){
-            //小tips
-            layer.tips('我是另外一个tips，只不过我长得跟之前那位稍有些不一样。', $(this), {
-                tips: [1, '#3595CC'],
-                time: 1000000
+        // tips
+        $('.j-tips1').click(function(){
+            layer.tips('111', this,{
+                tips: 1,
+                time: 50000,
+                area: '100px'
             });
         });
+        $('.j-tips2').click(function(){
+            layer.tips('111', this,{
+                tips: 2,
+                time: 50000,
+                area: '100px'
+            });
+        });
+        $('.j-tips3').click(function(){
+            layer.tips('111', this,{
+                tips: 3,
+                time: 50000,
+                area: '100px'
+            });
+        });
+        $('.j-tips4').click(function(){
+            layer.tips('111', this,{
+                tips: 4,
+                time: 50000,
+                area: '100px'
+            });
+        });
+
+
+
+
+        var data = {
+            uname: '用户名',
+            url: 'xxx',
+            imgUrl: 'yyyyyyy',
+            des: '该用户暂无一句话简介,用户简介',
+            tag: ['xxx', 'yyy', '000'],
+            score1: '111',
+            score2: '1.3分',
+            score3: '1.3分',
+            rw1: '1',
+            rw2: '2'
+        };
+        var data2 = {
+            uname: '2222',
+            url: '222',
+            imgUrl: '222',
+            des: '2222,22222',
+            tag: ['222', '3333', '44444'],
+            score1: '566',
+            score2: '2.2分',
+            score3: '2.2分',
+            rw1: '2',
+            rw2: '3'
+        };
+
+        $('.j-tips-user').mouseover(function(){
+            showUserInfo($(this), data2);
+        });
+
+
+
+        /**
+         *
+         * @param selector  获取页面用户选择器
+         * @param userInfo  服务端获取用户数据
+         */
+        function showUserInfo(selector, userInfo){
+            var $tpl = $('.popup-user-tpl');
+            var $selector = $(selector);
+            var myLayer = null;
+            var timer = null;
+            var $useUrl = $tpl.find('.j-userUrl');
+            var $userImgUrl = $tpl.find('.j-userImgUrl');
+            var $userDes = $tpl.find('.j-userDes');
+            var $userTag = $tpl.find('.j-userTag');
+            var $userScore1 = $tpl.find('.j-userScore1');
+            var $userScore2 = $tpl.find('.j-userScore2');
+            var $userScore3 = $tpl.find('.j-userScore3');
+            var $userRw1 = $tpl.find('.j-userRw1');
+            var $userRw2 = $tpl.find('.j-userRw2');
+            var $userSx = $tpl.find('.j-userSx');
+
+            $useUrl.attr('href', userInfo.url);
+            $userImgUrl.attr('src', userInfo.imgUrl);
+            $userDes.html(userInfo.des);
+            if(userInfo.tag.length > 0){
+                var str = '';
+
+                for(var i=0;i<userInfo.tag.length;i++){
+                    str += '<span class="label label-3 label-r label-sm">'+ userInfo.tag[i] +'</span>';
+                }
+                $userTag.html(str);
+            }else{
+                $userTag.html('<span class="label label-3 label-r label-sm">暂无标签</span>');
+            }
+
+            $userScore1.html(userInfo.score1);
+            $userScore2.html(userInfo.score2);
+            $userScore3.html(userInfo.score3);
+            $userRw1.html(userInfo.rw1);
+            $userRw2.html(userInfo.rw2);
+            $userSx.attr('href', userInfo.url);
+
+
+            myLayer = layer.open({
+                skin: '',
+                type: 4,
+                shade: 0,
+                closeBtn: 0,
+                tips: 3,
+                content: [$tpl.html(), $selector]
+            });
+
+            $selector.on('mouseover', function(){
+                clearTimeout(timer);
+            });
+
+            $selector.on('mouseout', function(){
+                timer = setTimeout(function(){
+                    layer.close(myLayer);
+                }, 200);
+            });
+
+            $('#layui-layer'+myLayer).on('mouseover', function(){
+                clearTimeout(timer);
+            });
+
+            $('#layui-layer'+myLayer).on('mouseout', function(){
+                timer = setTimeout(function(){
+                    layer.close(myLayer);
+                }, 200);
+            });
+        }
+
+
+
+
+
 
 
 

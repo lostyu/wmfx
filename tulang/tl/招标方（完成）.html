@@ -583,9 +583,23 @@
         // 任务执行评价
         (function () {
             var myLayer;
+            var totalScore = 5;
 
             $.fn.raty.defaults.path = 'plugins/jquery-raty/img';
 
+
+            function setTotalStart() {
+                var s1 = $('#star2').raty('score');
+                var s2 = $('#star3').raty('score');
+                var s3 = $('#star4').raty('score');
+
+                totalScore = (s1 + s2 + s3)/3;
+
+                console.log(totalScore);
+                $('#star1').raty('readOnly', false);
+                $('#star1').raty('score', totalScore.toFixed(1));
+                $('#star1').raty('readOnly', true);
+            }
 
             $('#star1').raty({
                 scoreName: 'pingfen1',
@@ -599,7 +613,8 @@
                 target: '#hint1',
                 targetKeep: true,
                 targetType: 'score',
-                half: true
+                half: true,
+                readOnly: true
             });
 
             $('#star2').raty({
@@ -608,7 +623,10 @@
                 target: '#hint2',
                 targetKeep: true,
                 targetType: 'score',
-                half: true
+                half: true,
+                click: function(){
+                    setTotalStart();
+                }
             });
 
             $('#star3').raty({
@@ -617,7 +635,10 @@
                 target: '#hint3',
                 targetKeep: true,
                 targetType: 'score',
-                half: true
+                half: true,
+                click: function(){
+                    setTotalStart();
+                }
             });
 
             $('#star4').raty({
@@ -626,8 +647,13 @@
                 target: '#hint4',
                 targetKeep: true,
                 targetType: 'score',
-                half: true
+                half: true,
+                click: function(){
+                    setTotalStart();
+                }
             });
+
+
 
             $('.j-popup4').click(function () {
                 //自定页

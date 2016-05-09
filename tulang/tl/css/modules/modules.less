@@ -236,6 +236,9 @@ label {
   font-weight: 500;
   color: #757575;
 }
+.table-hover>tbody>tr:hover{
+  background-color: #f5f9fd;
+}
 .checkbox-inline, .radio-inline{
   padding-left: 0;
 }
@@ -259,6 +262,7 @@ label {
     margin-left: 100px;
   }
 }
+
 // ========================== / 表单
 
 
@@ -280,6 +284,72 @@ label {
   }
   .form-horizontal .formipt{
     margin-left: 65px;
+  }
+}
+.popup-user{
+  position: relative;
+  border: 1px solid #398dee;
+  background-color: #fff;
+  color: #333;
+
+  .arrow{
+    position: absolute;
+
+  }
+
+  .userInfo{
+    padding: 20px;
+    .media-left{
+      padding-right: 30px;
+    }
+    .tag .label{
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  .userScore{
+    position: relative;
+    padding: 10px;
+    background-color: #f5f9fd;
+
+    .sx{
+      position: absolute;
+      right: 20px;
+      top: 25px;
+    }
+
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li{
+        position: relative;
+        float: left;
+        height: 68px;
+        padding: 0 20px;
+        text-align: center;
+
+        &:after{
+          content: '';
+          position: absolute;
+          top: 20%;
+          right: -1px;
+          height: 60%;
+          border-right: 1px solid #e0e0e0;
+        }
+        
+        .num{
+          margin-bottom: 3px;
+          color: #3c8bee;
+          font-size: 18px;
+        }
+        span{
+          color: #999;
+          font-size: 12px;
+        }
+      }
+    }
   }
 }
 // ========================== / popup

@@ -117,7 +117,7 @@
 <div class="g-container">
 
     <div class="f-bg f-mb40">
-        <div class="m-title m-title2">
+        <div class="m-title m-title2 m-title-side">
             <h2>业务管理</h2>
         </div>
 
@@ -173,20 +173,25 @@
                             <div>
                                 <div class="form-group">
                                     <label class="control-label">充值时间：</label>
-                                    <input id="start" type="text" class="form-control f-mr20 laydate-icon" style="margin-right:0;"
-                                           placeholder="">&nbsp;&nbsp;至&nbsp;&nbsp;
-                                    <input id="end" type="text" class="form-control f-mr20 laydate-icon" placeholder="">
+                                    <div class="input-group m-date">
+                                        <span class="input-group-addon" style="padding: 0;"><img src="img/m-date.png" alt=""></span>
+                                        <input id="start" type="text" class="form-control" placeholder="选择时间">
+                                    </div>&nbsp;&nbsp;至&nbsp;&nbsp;
+                                    <div class="input-group m-date">
+                                        <span class="input-group-addon" style="padding: 0;"><img src="img/m-date.png" alt=""></span>
+                                        <input id="end" type="text" class="form-control" placeholder="选择时间">
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-default btn-w100 " type="button">筛选</button>
-                                    <button class="btn btn-success btn-w100 " type="button">充值</button>
+                                    <button class="btn btn-default btn-h30 btn-w75 " type="button">筛选</button>
+                                    <button class="btn btn-success btn-h30 btn-w75 " type="button">充值</button>
                                 </div>
                             </div>
 
                         </form>
 
                         <div class="table-responsive">
-                            <table class="table tam table-s1">
+                            <table class="table tam table-s1 table-hover">
                                 <thead>
                                 <tr>
                                     <th>充值订单号</th>
@@ -223,7 +228,7 @@
                                             微信
                                         </td>
                                         <td class="text-right">
-                                            <a class="btn btn-primary btn-h25 btn-w50" href="javascript:;">付款</a>
+                                            <a class="btn btn-danger btn-h25 btn-w50" href="javascript:;">付款</a>
                                         </td>
 
                                     </tr>

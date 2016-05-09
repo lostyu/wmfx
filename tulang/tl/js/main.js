@@ -210,8 +210,8 @@ $(function () {
         }
 
 
+        // 附件文件格式
         var $fujian = $('.m-fujian');
-
         if ($fujian.length) {
             var oType = {
                 jpg: '../img/type-jpg.png',
@@ -285,6 +285,22 @@ $(function () {
             function setVal(obj, val) {
                 obj.prevAll('img').attr('src', oType[val]);
             }
+        }
+
+
+
+        // 底部是否固定
+        var $mFooter = $('.m-footer');
+        if($mFooter.length){
+            var iClientH = document.documentElement.clientHeight || document.body.clientHeight;
+            var iDomH = $('body').height();
+
+            if(iDomH <= iClientH){
+                $mFooter.addClass('fixed');
+            }
+
+            console.log(iClientH);
+            console.log(iDomH);
         }
 
     })();

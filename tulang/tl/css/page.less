@@ -385,6 +385,8 @@ a.label-2:focus, a.label-2:hover {
   color: #292929;
 }
 
+
+
 .m-paypal {
   margin: 0;
   padding: 0;
@@ -1739,13 +1741,14 @@ a.label-2:focus, a.label-2:hover {
 .nav-side {
   .title {
     margin: 0;
-    padding: 30px 0;
+    margin-top: 5px;
+    padding: 10px 0;
 
     h3 {
       margin: 0;
       padding-left: 57px;
       line-height: 20px;
-      font-size: 16px;
+      font-size: 14px;
       color: #b8b8b8;
       background: url(../img/nav-side.png) 10px 10px no-repeat;
     }
@@ -1767,17 +1770,27 @@ a.label-2:focus, a.label-2:hover {
     border-bottom: 1px solid #f1f3f6;
   }
   li {
-    margin-bottom: 18px;
+    position: relative;
     list-style: none;
     a {
       display: block;
-      line-height: 30px;
-      padding-left: 57px;
+      line-height: 40px;
+      padding-right: 53px;
       color: #757575;
+      text-align: right;
     }
     &.active a {
       color: #fff;
       background-color: #3c8bee;
+    }
+    &.active a:after{
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: 40px;
+      border-left: 5px solid #fff;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
     }
   }
   .nbb {
@@ -1788,13 +1801,79 @@ a.label-2:focus, a.label-2:hover {
 
 // 招标任务
 .ywgl-zbrw {
+
+
+  .form-control[type='text']{
+    height: 30px;
+  }
+  select.form-control{
+    padding:   4px 12px 3px;
+  }
+  .form-control{
+    height: auto;
+  }
+
   .tongji {
-    background-color: #e8f1fb;
-    color: #abbdd3;
+    margin-bottom: 20px;
+    color: #fff;
+
+    .col1{
+      float: left;
+      width: 210px;
+    }
+    .col2{
+      float: right;
+      background-color: #82b5f4;
+    }
+
+    .item{
+      position: relative;
+      float: left;
+      width: 162px;
+      padding: 20px 0;
+      margin-left: 1px;
+      height: 110px;
+      list-style: none;
+      text-align: center;
+      background-color: #82b5f4;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 20%;
+        right: -1px;
+        height: 60%;
+        border-right: 1px solid #a2c6f2;
+      }
+    }
+
+    .none:after {
+      border-right: none;
+    }
+
+    .hover:hover{
+      background-color: #3c8bee;
+    }
+
+    .one{
+      width: 210px;
+      margin-left: 0;
+      margin-right: 10px;
+      img{
+        vertical-align: initial;
+      }
+    }
 
     .num {
-      font-size: 22px;
-      color: #6082ac;
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .bg1{
+      background-color: #3acc73;
+    }
+    .bg2{
+      background-color: #fe892b;
     }
   }
 
@@ -1858,17 +1937,25 @@ a.label-2:focus, a.label-2:hover {
   .btnw2 {
     min-width: 136px;
   }
+
+
+  .pingfen {
+    h3 {
+      padding-left: 10px;
+      margin: 0;
+      font-size: 18px;
+      color: #333333;
+    }
+  }
+
+
+
+
 }
 
 // 投标评价
 .ywgl-pingjia {
-  .pingfen {
-    h3 {
-      margin: 0;
-      font-size: 18px;
-      color: #999999;
-    }
-  }
+
 }
 
 .choosePay {
@@ -1902,7 +1989,7 @@ a.label-2:focus, a.label-2:hover {
       vertical-align: middle;
     }
     &.active {
-      border-color: #9dc5f6;
+      border-color: #3c8bee;
       background-color: #d7e8fc;
     }
     &.active a {
@@ -1914,7 +2001,7 @@ a.label-2:focus, a.label-2:hover {
       left: 50%;
       bottom: -10px;
       margin-left: -5px;
-      border-top: 10px solid #9dc5f6;
+      border-top: 10px solid #3c8bee;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
     }
@@ -2959,4 +3046,44 @@ a.label-2:focus, a.label-2:hover {
   height: 390px;
   background: url(../img/form-bg.jpg) center top no-repeat;
   background-size: cover;
+}
+
+
+
+.m-title-side{
+  padding: 15px 25px;
+  background-color: #f5f9fd;
+}
+
+
+.yw-title{
+  padding: 0 18px;
+  margin-bottom: 15px;
+  border: 1px solid #dcdcdc;
+  line-height: 40px;
+  background-color: #f7f7f7;
+  h3{
+    margin: 0;
+    line-height: 40px;
+    font-size: 18px;
+    color: #333333;
+    img{
+      margin-right: 5px;
+      vertical-align: text-bottom;
+    }
+  }
+  a{
+    margin-left: 15px;
+    color: #3c8bee;
+  }
+}
+
+
+.wrw{
+  height: 82px;
+  line-height: 82px;
+  border: 1px solid #3c8bee;
+  background-color: #f5f9fd;
+  color: #82b5f4;
+  text-align: center;
 }

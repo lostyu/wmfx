@@ -116,7 +116,7 @@
 <div class="g-container">
 
     <div class="f-bg f-mb40">
-        <div class="m-title m-title2">
+        <div class="m-title m-title2 m-title-side">
             <h2>业务管理</h2>
         </div>
 
@@ -154,20 +154,40 @@
                 <div class="inner">
                     <div class="ywgl-zbrw">
 
-                        <div class="m-colBox m-colBox3 f-pb20 f-pt20 f-mb30 tongji">
-                            <ul class="col">
-                                <li class="item">
+
+                        <div class="yw-title clearfix">
+                            <h3 class="pull-left"><img src="img/icon-yw2.png" alt=""/>我是雇主</h3>
+                            <span class="pull-right">
+                                <a href="javascript:;">保障交易说明</a><a href="javascript:;">维保金说明</a>
+                            </span>
+                        </div>
+
+
+                        <div class="tongji clearfix">
+                            <div class="col1">
+                                <div class="item one none bg2">
+                                    <div class="num"><img src="img/icon-sj2.png" alt=""/>1283748</div>
+                                    <div>招标总金额</div>
+                                </div>
+                            </div>
+                            <div class="col2">
+                                <div class="item hover">
+                                    <div class="num">1</div>
+                                    <div>报名中任务</div>
+                                </div>
+                                <div class="item hover">
                                     <div class="num">5</div>
-                                    <div>共发布任务</div>
-                                </li>
-                                <li class="item">
-                                    <div class="num">125325</div>
-                                    <div>成功招标总金额</div>
-                                </li>
-                                <li class="item last">
-                                    <div style="margin-top:8px;"><a class="btn btn-default btn-w100" href="javascript:;">发布任务</a></div>
-                                </li>
-                            </ul>
+                                    <div>执行中任务</div>
+                                </div>
+                                <div class="item hover">
+                                    <div class="num">5</div>
+                                    <div>维保中任务</div>
+                                </div>
+                                <div class="item none hover">
+                                    <div class="num">5</div>
+                                    <div>已完成任务</div>
+                                </div>
+                            </div>
                         </div>
 
 
@@ -191,47 +211,74 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label">　　　　　</label>
-                                <button class="btn btn-primary btn-w100" type="button">筛选</button>
+                                <button class="btn btn-default btn-h30 btn-w75" type="button">筛选</button>
+                                <button class="btn btn-primary btn-h30 btn-w75" type="button">发布任务</button>
                             </div>
 
 
                         </form>
 
 
-                        <div class="list">
-                            <ul class="title">
-                                <li class="one">任务名称</li>
-                                <li class="two">任务状态</li>
-                                <li class="three">招标价格</li>
-                                <li class="four">招标方</li>
-                                <li class="five">操作</li>
+                        <div class="table-responsive">
+                            <table class="table tam table-s1 table-hover">
+                                <thead>
+                                <tr>
+                                    <th style="width: 183px">任务名称</th>
+                                    <th>任务编号</th>
+                                    <th>报名日期</th>
+                                    <th>任务状态</th>
+                                    <th>招标价格</th>
+                                    <th>发布方</th>
+                                    <th class="text-right">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>某路城市段市政道路设计</td>
+                                    <td>2346587098041325647687</td>
+                                    <td>2016-3-22 16:00</td>
+                                    <td>报名中</td>
+                                    <td><span class="m-c1">20000</span></td>
+                                    <td>用户名</td>
+                                    <td class="text-right"><a class="btn btn-danger btn-h25" href="javascript:;">托管赏金</a> <a href="javascript:;">查看</a></td>
+                                </tr>
+                                <tr>
+                                    <td>某路城市段市政道路设计</td>
+                                    <td>2346587098041325647687</td>
+                                    <td>2016-3-22  16:00</td>
+                                    <td>报名中</td>
+                                    <td><span class="m-c1">20000</span></td>
+                                    <td>用户名</td>
+                                    <td class="text-right"><a href="javascript:;">查看</a></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <nav class="text-right">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">«</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">»</span>
+                                    </a>
+                                </li>
                             </ul>
-                            <div class="item">
-                                <div class="subtitle">
-                                    任务编号：2346587098041325647687
-                                    <span class="pull-right">发布日期：2016-3-22  16:00</span>
-                                </div>
-                                <ul class="itemcol">
-                                    <li class="one">某路城市段市政道路设计</li>
-                                    <li class="two">已投标</li>
-                                    <li class="three"><span class="m-c1">20000</span></li>
-                                    <li class="four">-</li>
-                                    <li class="five"><a class="btn btn-primary btn-w75 btn-h25" href="javascript:;">托管赏金</a> <a class="f-fz14" href="javascript:;">查看</a></li>
-                                </ul>
-                            </div>
-                            <div class="item">
-                                <div class="subtitle">
-                                    任务编号：2346587098041325647687
-                                    <span class="pull-right">发布日期：2016-3-22  16:00</span>
-                                </div>
-                                <ul class="itemcol">
-                                    <li class="one">某路城市段市政道路设计</li>
-                                    <li class="two">已投标</li>
-                                    <li class="three"><span class="m-c1">20000</span></li>
-                                    <li class="four">-</li>
-                                    <li class="five"><span class="f-fz14">(已发起验收)</span> <a class="f-fz14" href="javascript:;">查看</a></li>
-                                </ul>
-                            </div>
+                        </nav>
+
+
+                        <div class="wrw">
+                            暂无任务
                         </div>
 
                     </div>

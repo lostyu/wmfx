@@ -156,3 +156,49 @@ body .layer-ext-moon .layui-layer-btn .layui-layer-btn3 {
 body .layer-ext-moon .layui-layer-title span.layui-layer-tabnow{
 	height:47px;
 }
+
+
+
+.layui-layer-tips i.layui-layer-TipsG{
+	/*display: none;*/
+	/*z-index: 1;*/
+}
+.layui-layer-tips i.layui-layer-TipsL,.layui-layer-tips i.layui-layer-TipsR {
+	/*top: 1px;*/
+	/*border-bottom-style: solid;*/
+	/*border-bottom-color: #F90*/
+	/*border-;*/
+}
+.layui-layer-tips i.layui-layer-TipsT {
+	left: 5px;
+	bottom: -16px;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: #398dee;
+}
+.layui-layer-tips i.layui-layer-TipsB{
+	left: 5px;
+	top: -16px;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: #398dee;
+}
+.layui-layer-tips i.layui-layer-TipsL {
+	right: -16px;
+	border-left-color: #398dee;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+.layui-layer-tips i.layui-layer-TipsR {
+	left: -16px;
+	border-right-color: #398dee;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+
+
+.layui-layer-tips .layui-layer-content{
+	box-shadow: none;
+	background-color: transparent;
+	padding: 0;
+}

@@ -118,7 +118,7 @@
 <div class="g-container">
 
     <div class="f-bg f-mb40">
-        <div class="m-title m-title2">
+        <div class="m-title m-title2 m-title-side">
             <h2>业务管理</h2>
         </div>
 
@@ -171,8 +171,8 @@
                         <div class="m-panel f-mb30" style="padding: 30px;">
                             可用余额：<span class="f-fz22 m-c1">354121.00</span>
                             <span class="pull-right">
-                                <a class="btn btn-success btn-w100" href="javascript:;">充值</a>
-                                <a class="btn btn-default btn-w100" href="javascript:;">提现</a>
+                                <a class="btn btn-success btn-h30 btn-w75" href="javascript:;">充值</a>
+                                <a class="btn btn-primary btn-h30 btn-w75" href="javascript:;">提现</a>
                             </span>
                         </div>
 
@@ -180,15 +180,20 @@
                         <form class="form-inline f-mb30 f-p20 f-bg2">
 
                             <div class="f-mb20">
-                                <div class="form-group">
+                                <div class="form-group form-inline">
                                     <label class="control-label">项目编号：</label>
-                                    <input type="text" class="form-control f-mr20" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group form-inline">
                                     <label class="control-label">收支时间：</label>
-                                    <input id="start" type="text" class="form-control f-mr20 laydate-icon" style="margin-right:0;"
-                                           placeholder="">&nbsp;&nbsp;至&nbsp;&nbsp;
-                                    <input id="end" type="text" class="form-control f-mr20 laydate-icon" placeholder="">
+                                    <div class="input-group m-date">
+                                        <span class="input-group-addon" style="padding: 0;"><img src="img/m-date.png" alt=""/></span>
+                                        <input id="start" type="text" class="form-control" placeholder="选择时间">
+                                    </div>&nbsp;&nbsp;至&nbsp;&nbsp;
+                                    <div class="input-group m-date">
+                                        <span class="input-group-addon" style="padding: 0;"><img src="img/m-date.png" alt=""/></span>
+                                        <input id="end" type="text" class="form-control" placeholder="选择时间">
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -199,14 +204,14 @@
                             </div>
 
                             <div class="form-group">
-                                <button class="btn btn-primary btn-w100" type="button">筛选</button>
+                                <button class="btn btn-default btn-h30 btn-w75" type="button">筛选</button>
                             </div>
 
 
                         </form>
 
                         <div class="table-responsive">
-                            <table class="table tam table-s1">
+                            <table class="table tam table-s1 table-hover">
                                 <thead>
                                 <tr>
                                     <th>时间</th>

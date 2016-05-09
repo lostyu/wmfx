@@ -152,11 +152,14 @@
 .f-bd {
   border: 1px solid #eee;
 }
-.f-fz20 {
-  font-size: 20px;
+.f-fz30 {
+  font-size: 30px;
 }
 .f-fz22 {
   font-size: 22px;
+}
+.f-fz20 {
+  font-size: 20px;
 }
 .f-fz18 {
   font-size: 18px;

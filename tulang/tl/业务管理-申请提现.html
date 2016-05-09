@@ -23,7 +23,8 @@
 <body class="f-bg2">
 <nav class="m-header navbar-fixed-top">
     <div class="g-container">
-        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span></h1>
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
 
         <ul class="nav-main">
             <li class="active"><a href="#">了解我们</a></li>
@@ -44,6 +45,7 @@
             <li class="item msg">
                 <span class="dot"></span>
                 <img src="img/icon-msg.png" alt=""/>
+
                 <div class="msgList">
                     <div class="inner">
                         <div class="text-center f-mb20">
@@ -116,7 +118,7 @@
 <div class="g-container">
 
     <div class="f-bg f-mb40">
-        <div class="m-title m-title2">
+        <div class="m-title m-title2 m-title-side">
             <h2>业务管理</h2>
         </div>
 
@@ -155,62 +157,89 @@
                     <div class="ywgl-zbrw">
 
 
-                        <div class="breadcrumb2 f-mb20"><a href="javascript:;"><img src="img/icon-back.png" alt=""/></a>　申请提现</div>
-
-                        <div class="f-mb20">
-                            可提现金额：<span class="f-fz22 m-c1">3560.00</span>
-                        </div>
-                        
-                        <div class="m-panel f-mb30" style="padding: 30px;">
-                            暂无提现账户
-                            <a class="pull-right" href="javascript:;">设置</a>
-
+                        <div class="breadcrumb2 f-mb20"><a href="javascript:;"><img src="img/icon-back.png" alt=""/></a>　申请提现
                         </div>
 
-                        <div class="m-panel f-mb30" style="padding: 30px;">
-                            支付宝
-                            <div class="pull-right">
-                                <span>文沛霖（***2983039）</span>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        操作 <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
+                        <form class="form-horizontal" id="f-form-tx">
+                            <div class="form-group">
+                                <label class="control-label formlabel">可提现金额：</label>
+
+                                <div class="formipt"><span class="f-fz22 m-c1">3560.00</span></div>
                             </div>
-                        </div>
 
 
-                        <form class="form-inline f-mb30" id="f-form-tx">
+                            <div class="form-group">
+                                <label class="control-label formlabel">提现渠道：</label>
 
-                            <div class="f-mb20">
-                                <div class="form-group">
-                                    <label class="control-label">提现金额：</label>
-                                    <input type="text" class="form-control validate[required, custom[number]]" placeholder="最多可提取3445.00元">
-                                </div>
-                            </div>
-                            <div class="f-mb20">
-                                <div class="form-group">
-                                    <label class="control-label pull-left">提现金额：</label>
-                                    <div style="padding-left:70px;">
-                                        3个工作日内处理完成
-                                        <p class="help-block">提现咨询专线：023-65177665，服务时间：10:00-18:00</p>
+                                <div class="formipt">
+                                    <div class="m-panel f-mb30" style="padding: 30px;">
+                                        暂无提现账户
+                                        <a class="pull-right" href="javascript:;">设置</a>
+
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <div style="padding-left: 70px;">
-                                    <button class="btn btn-primary btn-w100" type="submit">确定提现</button>
+                                <label class="control-label formlabel">提现渠道：</label>
+
+                                <div class="formipt">
+                                    <div class="m-panel f-mb30" style="padding: 30px;">
+                                        支付宝
+                                        <div class="pull-right">
+                                            <span>文沛霖（***2983039）</span>
+
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default dropdown-toggle btn-sm"
+                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                    操作 <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
 
+                            <div class="form-group">
+                                <label class="control-label formlabel">提现金额：</label>
+
+                                <div class="formipt">
+                                    <input style="height: 40px;" type="text" class="form-control iptw validate[required, custom[number]]"
+                                           placeholder="最多可提取3445.00元">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label formlabel">提现周期：</label>
+
+                                <div class="formipt">
+                                    <p>3个工作日内处理完成</p>
+
+                                    <p>提现咨询专线：023-65177665，服务时间：10:00-18:00</p>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label formlabel"></label>
+
+                                <div class="formipt">
+                                    <button type="submit" class="btn btn-primary btn-w150">确定提现</button>
+                                </div>
+                            </div>
+
+
+
                         </form>
+
 
                     </div>
                 </div>
@@ -225,7 +254,10 @@
 <!-- S 底部 -->
 <nav class="m-footer">
     <div class="g-container">
-        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link" href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span></p>
+        <p class="info"><span>Copyright © 2014-2016 <a class="navbar-link"
+                                                       href="javascript:;">kaistart.com</a></span><span>渝ICP备14039480号-1</span><span>京公网安备 33011002010123</span>
+        </p>
+
         <p class="link">
             <a class="navbar-link" href="javascript:;">关于</a>|
             <a class="navbar-link" href="javascript:;">我们是谁</a>|
@@ -253,7 +285,6 @@
 <script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
 
-
 <!-- linkcloud -->
 <script src="js/main.js"></script>
 
@@ -261,12 +292,11 @@
 <script>
     $(function () {
 
-        $(function(){
+        $(function () {
             (function () {
                 $('#f-form-tx').validationEngine();
             })();
         });
-
 
 
     });

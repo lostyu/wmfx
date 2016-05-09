@@ -116,9 +116,8 @@
 <div class="g-container">
 
     <div class="f-bg f-mb40">
-        <div class="m-title m-title2">
-            <h2>业务管理</h2><span style="padding: 0 20px;"> — </span><span class="f-mr20">申请提现</span><a
-                href="javascript:;">返回</a>
+        <div class="m-title m-title2 m-title-side">
+            <h2>业务管理</h2>
         </div>
 
         <div class="g-box2">
@@ -152,9 +151,16 @@
             </div>
 
             <div class="g-main2">
+                <style>
+                    .ywgl-zbrw .form-control[type='text'] {
+                        height: 40px;
+                    }
+                </style>
                 <div class="inner">
                     <div class="ywgl-zbrw">
 
+                        <div class="breadcrumb2 f-mb20"><a href="javascript:;"><img src="img/icon-back.png" alt=""/></a>　提现账号设置
+                        </div>
 
                         <div class="f-mb30">
                             <ul class="choosePay clearfix" role="tablist">
@@ -189,12 +195,12 @@
                                         <div class="col-sm-9">
                                             <div class="input-group">
                                                 <input name="ucode" type="text"
-                                                       class="form-control validate[required]" placeholder="输入验证码"
-                                                       data-prompt-position="centerRight:95,5">
+                                                       class="form-control validate[required]" placeholder="输入验证码" data-prompt-target="err1">
                                             <span class="input-group-btn">
                                                 <button class="btn btn-primary j-sendCode" type="button">发送验证码</button>
                                             </span>
                                             </div>
+                                            <div id="err1"></div>
                                             <p class="help-block f-fz12">验证短信将发送到您绑定的手机：15023361515，请注意查收</p>
                                         </div>
                                     </div>
@@ -242,12 +248,12 @@
                                         <div class="col-sm-9">
                                             <div class="input-group">
                                                 <input name="ucode" type="text"
-                                                       class="form-control validate[required]" placeholder="输入验证码"
-                                                       data-prompt-position="centerRight:95,5">
+                                                       class="form-control validate[required]" placeholder="输入验证码" data-prompt-target="err2">
                                             <span class="input-group-btn">
                                                 <button class="btn btn-primary j-sendCode" type="button">发送验证码</button>
                                             </span>
                                             </div>
+                                            <div id="err2"></div>
                                             <p class="help-block f-fz12">验证短信将发送到您绑定的手机：15023361515，请注意查收</p>
                                         </div>
                                     </div>
@@ -295,12 +301,12 @@
                                         <div class="col-sm-9">
                                             <div class="input-group">
                                                 <input name="ucode" type="text"
-                                                       class="form-control validate[required]" placeholder="输入验证码"
-                                                       data-prompt-position="centerRight:95,5">
+                                                       class="form-control validate[required]" placeholder="输入验证码" data-prompt-target="err3">
                                             <span class="input-group-btn">
                                                 <button class="btn btn-primary j-sendCode" type="button">发送验证码</button>
                                             </span>
                                             </div>
+                                            <div id="err3"></div>
                                             <p class="help-block f-fz12">验证短信将发送到您绑定的手机：15023361515，请注意查收</p>
                                         </div>
                                     </div>
