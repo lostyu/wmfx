@@ -98,12 +98,15 @@ function ImageUpload(file_upload_id, opt) {
         height: 32,
         fileSizeLimit: 1024 * 2,// KB
         buttonText: "上传",
-        swf: '../plugins/uploadify/js/uploadify.swf',
+        swf: '../plugins/uploadify/js/uploadify.swf?'+new Date().getTime(),
         removeCompleted: false,
         removeTimeout: 0,
         fileTypeDesc: 'Image Files',
         fileTypeExts: '*.jpg;*.png',
         multi: false,
+        scriptAccess: 'always',
+        debug: true,
+
 
         itemTemplate: '<div id="${fileID}" class="uploadify-queue-item">\
         <div class="fileName">${fileName}</div>\

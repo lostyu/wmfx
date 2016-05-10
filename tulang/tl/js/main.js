@@ -214,16 +214,17 @@ $(function () {
         var $fujian = $('.m-fujian');
         if ($fujian.length) {
             var oType = {
-                jpg: '../img/type-jpg.png',
-                doc: '../img/type-doc.png',
-                docx: '../img/type-docx.png',
-                xls: '../img/type-xls.png',
-                xlsx: '../img/type-xlsx.png',
-                ppt: '../img/type-ppt.png',
-                pptx: '../img/type-pptx.png',
-                pdf: '../img/type-pdf.png',
-                zip: '../img/type-zip.png',
-                rar: '../img/type-rar.png'
+                jpg: 'img/type-img.png',
+                png: 'img/type-img.png',
+                doc: 'img/type-doc.png',
+                docx: 'img/type-doc.png',
+                xls: 'img/type-xls.png',
+                xlsx: 'img/type-xls.png',
+                ppt: 'img/type-ppt.png',
+                pptx: 'img/type-ppt.png',
+                pdf: 'img/type-pdf.png',
+                zip: 'img/type-other.png',
+                rar: 'img/type-other.png'
             };
 
 
@@ -246,6 +247,7 @@ $(function () {
                 }
 
                 switch (arr[0]) {
+                    case 'png':
                     case 'jpg':
                         setVal($text, 'jpg');
                         break;
@@ -274,6 +276,9 @@ $(function () {
                         setVal($text, 'zip');
                         break;
                     case 'rar':
+                        setVal($text, 'rar');
+                        break;
+                    default :
                         setVal($text, 'rar');
                         break;
                 }
