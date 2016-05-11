@@ -39,7 +39,7 @@
   margin-left: 118px;
 }
 .m-footer.fixed {
-  z-index: 999999;
+  z-index: 900;
   position: fixed;
   bottom: 0;
   width: 100%;

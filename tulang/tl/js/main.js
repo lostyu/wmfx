@@ -303,10 +303,11 @@ $(function () {
             if(iDomH <= iClientH){
                 $mFooter.addClass('fixed');
             }
-
-            console.log(iClientH);
-            console.log(iDomH);
         }
+
+
+
+        app.ui.toggleText('j-toggle', 'j-togglePanel');
 
     })();
 
