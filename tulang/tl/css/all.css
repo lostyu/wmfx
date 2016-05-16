@@ -1010,6 +1010,165 @@ label {
   color: #999;
   font-size: 12px;
 }
+.popup-upload,
+.m-uploadFile {
+  /*图片格式*/
+  /*word格式*/
+  /*EXCEL格式*/
+  /*PPT格式*/
+  /*CAD? 格式*/
+  /*PDF格式*/
+  /*文件格式*/
+}
+.popup-upload object:hover + .upload_button,
+.m-uploadFile object:hover + .upload_button {
+  background: #ececec;
+}
+.popup-upload .btn-control,
+.m-uploadFile .btn-control {
+  margin-bottom: 10px;
+}
+.popup-upload .fileName,
+.m-uploadFile .fileName {
+  width: auto;
+}
+.popup-upload .uploadify,
+.m-uploadFile .uploadify {
+  margin-left: auto;
+  margin-right: auto;
+}
+.popup-upload .uploadify-progress,
+.m-uploadFile .uploadify-progress {
+  width: auto;
+}
+.popup-upload .uploadify-queue-item .upload_close_bg,
+.m-uploadFile .uploadify-queue-item .upload_close_bg {
+  top: 2px;
+  right: 2px;
+}
+.popup-upload .uploadify-progress .upload_data,
+.m-uploadFile .uploadify-progress .upload_data {
+  width: 64px;
+  overflow: hidden;
+}
+.popup-upload .uploadify-queue-item,
+.m-uploadFile .uploadify-queue-item {
+  width: 64px;
+  height: 95px;
+  padding: 15px;
+}
+.popup-upload .png_bg,
+.m-uploadFile .png_bg,
+.popup-upload .jpg_bg,
+.m-uploadFile .jpg_bg,
+.popup-upload .jpeg_bg,
+.m-uploadFile .jpeg_bg,
+.popup-upload .gif_bg,
+.m-uploadFile .gif_bg,
+.popup-upload .bmp_bg,
+.m-uploadFile .bmp_bg {
+  width: 64px;
+  height: 64px;
+  background: url(../plugins/uploadify/images/upload2.png) no-repeat;
+}
+.popup-upload .upload_other_bg,
+.m-uploadFile .upload_other_bg {
+  background-position: -320px 0;
+}
+.popup-upload .png_bg,
+.m-uploadFile .png_bg,
+.popup-upload .jpg_bg,
+.m-uploadFile .jpg_bg,
+.popup-upload .jpeg_bg,
+.m-uploadFile .jpeg_bg,
+.popup-upload .gif_bg,
+.m-uploadFile .gif_bg,
+.popup-upload .bmp_bg,
+.m-uploadFile .bmp_bg {
+  background-position-x: -448px;
+}
+.popup-upload .doc_bg,
+.m-uploadFile .doc_bg,
+.popup-upload .docx_bg,
+.m-uploadFile .docx_bg,
+.popup-upload .docm_bg,
+.m-uploadFile .docm_bg,
+.popup-upload .dotx_bg,
+.m-uploadFile .dotx_bg,
+.popup-upload .dotm_bg,
+.m-uploadFile .dotm_bg {
+  background-position-x: 0;
+}
+.popup-upload .xls_bg,
+.m-uploadFile .xls_bg,
+.popup-upload .xlsx_bg,
+.m-uploadFile .xlsx_bg,
+.popup-upload .xlsm_bg,
+.m-uploadFile .xlsm_bg,
+.popup-upload .xltx_bg,
+.m-uploadFile .xltx_bg,
+.popup-upload .xltm_bg,
+.m-uploadFile .xltm_bg,
+.popup-upload .xlsb_bg,
+.m-uploadFile .xlsb_bg,
+.popup-upload .xlam_bg,
+.m-uploadFile .xlam_bg {
+  background-position-x: -64px;
+}
+.popup-upload .ppt_bg,
+.m-uploadFile .ppt_bg,
+.popup-upload .pptx_bg,
+.m-uploadFile .pptx_bg,
+.popup-upload .pptm_bg,
+.m-uploadFile .pptm_bg,
+.popup-upload .ppsx_bg,
+.m-uploadFile .ppsx_bg,
+.popup-upload .ppsx_bg,
+.m-uploadFile .ppsx_bg,
+.popup-upload .potx_bg,
+.m-uploadFile .potx_bg,
+.popup-upload .potm_bg,
+.m-uploadFile .potm_bg,
+.popup-upload .ppam_bg,
+.m-uploadFile .ppam_bg {
+  background-position-x: -128px;
+}
+.popup-upload .cad_bg,
+.m-uploadFile .cad_bg,
+.popup-upload .dwg_bg,
+.m-uploadFile .dwg_bg {
+  background-position-x: -192px;
+}
+.popup-upload .pdf_bg,
+.m-uploadFile .pdf_bg {
+  background-position-x: -256px;
+}
+.popup-upload .txt_bg,
+.m-uploadFile .txt_bg,
+.popup-upload .java_bg,
+.m-uploadFile .java_bg,
+.popup-upload .javac_bg,
+.m-uploadFile .javac_bg,
+.popup-upload .js_bg,
+.m-uploadFile .js_bg,
+.popup-upload .css_bg,
+.m-uploadFile .css_bg,
+.popup-upload .html_bg,
+.m-uploadFile .html_bg,
+.popup-upload .php_bg,
+.m-uploadFile .php_bg,
+.popup-upload .xml_bg,
+.m-uploadFile .xml_bg {
+  background-position-x: -384px;
+  width: 96px;
+  height: 96px;
+}
+.m-uploadFile .uploadify-queue-item {
+  height: 87px;
+}
+.m-uploadFile .nofile {
+  margin-bottom: 10px;
+}
 html,
 body {
   background-color: #f1f3f6;
