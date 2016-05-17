@@ -1074,6 +1074,16 @@ fieldset[disabled] .form-control {
   margin-left: 20px;
   color: #757575;
 }
+.m-subTitle3 {
+  overflow: hidden;
+}
+.m-subTitle3 h3 {
+  margin-left: 0;
+}
+.m-subTitle3:before {
+  top: 10px;
+  left: 100px;
+}
 .m-step {
   position: relative;
   width: 933px;
@@ -2570,4 +2580,37 @@ fieldset[disabled] .form-control {
   background-color: #f5f9fd;
   color: #82b5f4;
   text-align: center;
+}
+.j-pf-tips {
+  display: inline-block;
+}
+.star-tips {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  width: 260px;
+  padding: 20px;
+  padding-bottom: 10px;
+  border: 1px solid #398dee;
+  background-color: #f5f9fd;
+}
+.star-tips:after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 30px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #398dee;
+  border-right: 1px solid #398dee;
+  background-color: #f5f9fd;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.star-tips .m-star {
+  margin-bottom: 5px;
 }

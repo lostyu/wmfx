@@ -46,6 +46,8 @@
         <a class="btn btn-primary j-open-sx" href="javascript:;">发送私信</a>
         <a class="btn btn-primary j-tips-user" href="javascript:;" data-id="1">用户名</a>
         <a class="btn btn-primary j-open-sjyz" href="javascript:;">手机验证</a>
+        <a class="btn btn-primary j-open-pl-zbf" href="javascript:;">招标方评价</a>
+        <a class="btn btn-primary j-open-pl-tbf" href="javascript:;">投标方评价</a>
     </div>
 
 
@@ -147,20 +149,70 @@
         <p class="text-center f-mb40">短信将发送至 15023361515，请注意查收！</p>
 
 
-            <div class="form-group" style="width: 300px; margin-left: auto; margin-right:auto;">
-                <div class="input-group">
-                    <input name="ucode" type="text"
-                           class="form-control validate[required]" placeholder="验证码" data-prompt-target="err2">
+        <div class="form-group" style="width: 300px; margin-left: auto; margin-right:auto;">
+            <div class="input-group">
+                <input name="ucode" type="text"
+                       class="form-control validate[required]" placeholder="验证码" data-prompt-target="err2">
                                             <span class="input-group-btn">
                                                 <button class="btn btn-primary j-sendCode" type="button">发送验证码</button>
                                             </span>
-                </div>
-                <span id="err2" class="err-place" style="right: 108px;"></span>
             </div>
+            <span id="err2" class="err-place" style="right: 108px;"></span>
+        </div>
 
     </form>
 </div>
 <!-- /手机验证 -->
+
+
+<!-- 投标方评价 -->
+<div class="popup popup-pl-tbf">
+    <form id="f-form-pl-tbf">
+        <div class="f-mb20">
+            <div class="raty">
+                <div class="tit">付款进度：</div>
+                <div id="star1" class="star"></div>
+                <div id="hint1" class="hint hint-big"></div>
+            </div>
+        </div>
+        <div>
+            <textarea rows="10" class="form-control validate[required,maxSize[500]]"
+                      placeholder="500个字以内（必填）"></textarea>
+        </div>
+    </form>
+</div>
+<!-- /投标方评价 -->
+
+
+<!-- 招标方评价 -->
+<div class="popup popup-pl-zbf">
+    <form id="f-form-pl-zbf">
+        <div class="f-mb20">
+            <div>
+                <div class="raty">
+                    <div class="tit">任务质量：</div>
+                    <div id="star2" class="star"></div>
+                    <div id="hint2" class="hint hint-big"></div>
+                </div>
+                <div class="raty">
+                    <div class="tit">工作进度：</div>
+                    <div id="star3" class="star"></div>
+                    <div id="hint3" class="hint hint-big"></div>
+                </div>
+                <div class="raty">
+                    <div class="tit">服务态度：</div>
+                    <div id="star4" class="star"></div>
+                    <div id="hint4" class="hint hint-big"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <textarea rows="10" class="form-control validate[required,maxSize[500]]"
+                      placeholder="500个字以内（必填）"></textarea>
+        </div>
+    </form>
+</div>
+<!-- /招标方评价 -->
 
 
 <!-- jquery -->
@@ -174,6 +226,8 @@
 <script src="../plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
 <script src="../plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 <script src="../plugins/layer/layer.js"></script>
+
+<script src="../plugins/jquery-raty/jquery.raty.js"></script>
 
 
 <!-- linkcloud -->
@@ -383,7 +437,6 @@
             });
         });
 
-
         $('.j-open-sx').click(function () {
             layer.open({
                 type: 1,
@@ -401,13 +454,12 @@
             });
         });
 
-
         $('.j-open-sjyz').click(function () {
             $('#f-form-sjyz').validationEngine('attach');
             layer.open({
                 type: 1,
                 area: ['500px'],
-                title: '发送私信',
+                title: '手机验证',
                 content: $('.popup-sjyz'), //捕获的元素
                 btn: ['发送', '取消'],
                 yes: function (index, layero) { //或者使用btn1
@@ -422,6 +474,95 @@
             });
         });
 
+
+
+        // 投标法方评价
+        $.fn.raty.defaults.path = '../plugins/jquery-raty/img';
+        $('.j-open-pl-tbf').click(function () {
+
+            $('#star1').raty({
+                scoreName: 'pingfen1',
+                score: 5.0,
+                target: '#hint1',
+                targetKeep: true,
+                targetType: 'score',
+                half: true
+            });
+
+            $('#f-form-pl-tbf').validationEngine('attach');
+            layer.open({
+                type: 1,
+                area: ['780px'],
+                title: '设计阶段/维保一期/维保二期/维保三期评价',
+                content: $('.popup-pl-tbf'), //捕获的元素
+                btn: ['发送', '取消'],
+                yes: function (index, layero) { //或者使用btn1
+
+                    // 验证成功
+                    if ($('#f-form-pl-tbf').validationEngine('validate')) {
+                        // TODO
+                    }
+
+                    // layer.close(index);
+                },
+                cancel: function (index) { //或者使用btn2
+                    alert('失败回调');
+                }
+            });
+        });
+
+
+        // 招标方评价
+        $('.j-open-pl-zbf').click(function () {
+
+            $('#star2').raty({
+                scoreName: 'pingfen2',
+                score: 5.0,
+                target: '#hint2',
+                targetKeep: true,
+                targetType: 'score',
+                half: true
+            });
+
+            $('#star3').raty({
+                scoreName: 'pingfen3',
+                score: 5.0,
+                target: '#hint3',
+                targetKeep: true,
+                targetType: 'score',
+                half: true
+            });
+
+            $('#star4').raty({
+                scoreName: 'pingfen4',
+                score: 5.0,
+                target: '#hint4',
+                targetKeep: true,
+                targetType: 'score',
+                half: true
+            });
+
+            $('#f-form-pl-zbf').validationEngine('attach');
+            layer.open({
+                type: 1,
+                area: ['780px'],
+                title: '设计阶段/维保一期/维保二期/维保三期评价',
+                content: $('.popup-pl-zbf'), //捕获的元素
+                btn: ['发送', '取消'],
+                yes: function (index, layero) { //或者使用btn1
+
+                    // 验证成功
+                    if ($('#f-form-pl-zbf').validationEngine('validate')) {
+                        // TODO
+                    }
+
+                    // layer.close(index);
+                },
+                cancel: function (index) { //或者使用btn2
+                    alert('失败回调');
+                }
+            });
+        });
 
     });
 </script>

@@ -1334,6 +1334,17 @@ a.label-2:focus, a.label-2:hover {
   }
 }
 
+.m-subTitle3{
+  overflow: hidden;
+  h3{
+    margin-left: 0;
+  }
+  &:before{
+    top: 10px;
+    left: 100px;
+  }
+}
+
 .m-step {
   position: relative;
   width: 933px;
@@ -3086,4 +3097,39 @@ a.label-2:focus, a.label-2:hover {
   background-color: #f5f9fd;
   color: #82b5f4;
   text-align: center;
+}
+
+
+.j-pf-tips{
+  display: inline-block;
+}
+.star-tips{
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  width: 260px;
+  padding: 20px;
+  padding-bottom: 10px;
+  border: 1px solid #398dee;
+  background-color: #f5f9fd;
+  &:after{
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 30px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #398dee;
+    border-right: 1px solid #398dee;
+    background-color: #f5f9fd;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .m-star{
+    margin-bottom: 5px;
+  }
 }

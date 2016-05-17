@@ -532,3 +532,20 @@ label {
 .m-uploadFile .nofile {
   margin-bottom: 10px;
 }
+.m-pj .control {
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #f1f3f6;
+}
+.m-pj .control .tit {
+  color: #ff0042;
+}
+.m-pj .control a {
+  margin-right: 10px;
+}
+.m-empty2 {
+  padding: 50px 30px;
+  border: 1px solid #3399ff;
+  background-color: #f5f9fd;
+  text-align: center;
+}
