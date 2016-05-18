@@ -48,6 +48,7 @@
         <a class="btn btn-primary j-open-sjyz" href="javascript:;">手机验证</a>
         <a class="btn btn-primary j-open-pl-zbf" href="javascript:;">招标方评价</a>
         <a class="btn btn-primary j-open-pl-tbf" href="javascript:;">投标方评价</a>
+        <a class="btn btn-primary j-open-sqzc" href="javascript:;">申请仲裁</a>
     </div>
 
 
@@ -213,6 +214,18 @@
     </form>
 </div>
 <!-- /招标方评价 -->
+
+
+<!-- 申请仲裁 -->
+<div class="popup popup-sqzc">
+    <form class="form-horizontal" id="f-form-sqzc">
+        <p>申请理由：</p>
+        <div class="form-group" style="margin-bottom:0;">
+                <textarea class="form-control validate[required, maxSize[300]]" rows="5" placeholder="请输入申请理由，最多300字"></textarea>
+        </div>
+    </form>
+</div>
+<!-- /申请仲裁 -->
 
 
 <!-- jquery -->
@@ -557,6 +570,29 @@
                     }
 
                     // layer.close(index);
+                },
+                cancel: function (index) { //或者使用btn2
+                    alert('失败回调');
+                }
+            });
+        });
+
+
+        // 申请仲裁
+        $('.j-open-sqzc').click(function(){
+            $('#f-form-sqzc').validationEngine('attach');
+
+            layer.open({
+                type: 1,
+                area: ['500px', '320px'],
+                title: '申请仲裁',
+                content: $('.popup-sqzc'), //捕获的元素
+                btn: ['发送', '取消'],
+                yes: function (index, layero) { //或者使用btn1
+                    if($('#f-form-sqzc').validationEngine('validate')){
+                        alert();
+                    }
+//                    layer.close(index);
                 },
                 cancel: function (index) { //或者使用btn2
                     alert('失败回调');
