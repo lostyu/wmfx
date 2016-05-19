@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录，注册</title>
+    <!-- frames-->
+    <link rel="stylesheet" href="../dist/lib/weui.css"/>
+    <link rel="stylesheet" href="../dist/css/jquery-weui.css"/>
+    <!-- /frames-->
+    <link rel="stylesheet" href="../css/global.css"/>
+</head>
+
+<body>
+
+<!-- 登录 -->
+<div class="m-form f-dn">
+    <form action="" method="post" id="form-login">
+        <h2 class="logo"><a href="javascript:;"><img src="../img/logo.png" width="90" alt=""/></a></h2>
+
+        <div class="m-formGroup">
+            <input type="text" class="u-ipt" placeholder="输入手机号/邮箱"/>
+        </div>
+        <div class="m-formGroup">
+            <input type="password" class="u-ipt" placeholder="输入密码"/>
+        </div>
+        <div class="m-formGroup">
+            <a class="weui_btn weui_btn_primary u-btn-primary j-login" href="javascript:;">登录</a>
+        </div>
+        <p class="f-tac f-txt">还没有账号，<a href="javascript:;">立即注册</a></p>
+    </form>
+</div>
+<!-- /登录 -->
+
+
+<!-- 注册 -->
+<div class="m-form">
+    <form action="" method="post" id="form-register">
+        <h2 class="logo"><a href="javascript:;"><img src="../img/logo.png" width="90" alt=""/></a></h2>
+
+        <div class="m-formGroup">
+            <input type="text" class="u-ipt" placeholder="输入手机号"/>
+        </div>
+
+        <div class="m-formGroup">
+
+            <div class="u-iptGroup">
+                <button class="weui_btn weui_btn_primary u-btn-primary j-sendCode">发送验证码</button>
+                <div class="input">
+                    <input type="text" class="u-ipt" placeholder="输入验证码"/>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="m-formGroup">
+            <input type="password" class="u-ipt" placeholder="输入密码"/>
+        </div>
+
+        <div class="m-formGroup">
+            <a class="weui_btn weui_btn_primary u-btn-primary j-register" href="javascript:;">注册</a>
+        </div>
+        <p class="f-tac f-txt">已有账号，<a href="javascript:;">立即登录</a></p>
+    </form>
+</div>
+<!-- /注册 -->
+
+
+<!-- frames -->
+<script src="../dist/lib/jquery-2.1.4.js"></script>
+<script src="../dist/js/jquery-weui.js"></script>
+<script src="../js/main.js"></script>
+<!-- /frames -->
+<script>
+    $(function () {
+
+        function formTips(title, text, data){
+            $.notification({
+                title: title,
+                text: text,
+                data: data
+            });
+        }
+
+        function checkLogin(){
+            var $form = $('#form-login').get(0);
+            var input1 = $form.elements[0];
+            var input2 = $form.elements[1];
+            var bValid = true;
+            var reg = /^((^[1][1234567890][0-9]{9}$)|(([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})))$/;
+
+            $.closeNotification();
+
+            if(!reg.test(input1.value)){
+                bValid = false;
+                formTips('错误提示', '请输入手机号或者邮箱');
+                input1.focus();
+                return bValid;
+            }
+
+            if($.trim(input1.value).length < 1){
+                bValid = false;
+                formTips('错误提示', '手机号不能为空');
+                return bValid;
+            }
+
+            if($.trim(input2.value).length < 1){
+                bValid = false;
+                formTips('错误提示', '密码不能为空');
+                input2.focus();
+                return bValid;
+            }
+
+            return bValid;
+        }
+
+        function checkRegister(){
+            var $form = $('#form-register').get(0);
+            var input1 = $form.elements[0];
+            var input2 = $form.elements[1];
+            var input3 = $form.elements[2];
+            var bValid = true;
+            var reg = /^1\d{10}$/;
+
+            $.closeNotification();
+
+            if(!reg.test(input1.value)){
+                bValid = false;
+                formTips('错误提示', '请输入手机号');
+                input1.focus();
+                return bValid;
+            }
+
+            if($.trim(input1.value).length < 1){
+                bValid = false;
+                formTips('错误提示', '手机号不能为空');
+                return bValid;
+            }
+
+            if($.trim(input2.value).length < 1){
+                bValid = false;
+                formTips('错误提示', '请输入验证码');
+                input2.focus();
+                return bValid;
+            }
+
+            if($.trim(input3.value).length < 1){
+                bValid = false;
+                formTips('错误提示', '请输入密码');
+                input3.focus();
+                return bValid;
+            }
+
+            return bValid;
+        }
+
+        // 登录
+        $('.j-login').click(function () {
+
+            // 验证成功
+            if(checkLogin()){
+                // TODO
+            }
+
+        });
+
+
+
+        // 注册
+        $('.j-register').click(function () {
+            // 验证成功
+            if(checkRegister()){
+                // TODO
+            }
+        });
+
+
+
+    });
+
+</script>
+</body>
+
+</html>

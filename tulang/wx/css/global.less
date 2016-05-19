@@ -1,0 +1,47 @@
+/* 重置 */
+// div,p,ul,ol,li{margin:0;padding:0;}
+*{box-sizing: border-box;}
+
+/* 默认 */
+// strong,em{font-style:normal;font-weight:bold;}
+body{
+  background-color:#f1f3f6;
+  color: #333;
+}
+a{
+  color: #398dee;
+}
+
+/* 统一调用背景图 */
+// .m-logo a,.m-nav a,.m-nav em{background:url(images/sprite.png) no-repeat 9999px 9999px;}
+
+/* 统一清除浮动 */
+// .g-bdc:after,.m-dimg ul:after,.u-tab:after{display:block;visibility:hidden;clear:both;height:0;overflow:hidden;content:'.';}
+// .g-bdc,.m-dimg ul,.u-tab{zoom:1;}
+
+/* 布局 */
+// .g-sd{float:left;width:300px;}
+
+/* 模块 */
+// .m-logo{width:200px;height:50px;}
+@import "modules/module.less";
+
+/* 元件 */
+// .u-btn{height:20px;border:1px solid #333;}
+@import "modules/unit.less";
+
+/* 功能 */
+.f-tac{text-align:center;}
+.f-txt{color: #999;}
+.f-dn{display: none;}
+
+
+/* 皮肤 */
+// .s-fc,a.s-fc:hover{color:#fff;}
+
+// demo
+.box {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}

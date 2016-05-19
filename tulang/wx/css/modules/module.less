@@ -1,0 +1,85 @@
+// 表单
+.m-form{
+  padding: 88px 20px 0;
+  .logo{
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+.m-formGroup{
+  margin-bottom: 20px;
+}
+
+// 头部
+
+.m-header{
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  right:0;
+  top: 0;
+
+  .main{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    background-color: #398dee;
+    color: #fff;
+  }
+
+
+  .title{
+    height: 44px;
+    padding-left: 44px;
+    padding-right: 44px;
+    text-align: center;
+  }
+
+  h1{
+    height: 44px;
+  }
+
+  .back, .nav{
+    position: absolute;
+    top: 0;
+    width: 44px;
+    height: 44px;
+  }
+
+  .back{
+    left: 0;
+    background: url(../img/icon-back.png) center no-repeat;
+    background-size: auto 24px;
+  }
+  .nav{
+    right: 0;
+    background: url(../img/icon-nav.png) center no-repeat;
+    background-size: 24px;
+  }
+  .nav.active{
+    background-color: #2074d5;
+  }
+  .navList{
+    display: none;
+    position: relative;
+    padding-top: 44px;
+    background-color: #2074d5;
+    li{
+      border-bottom: 1px solid #398dee;
+    }
+    a{
+      display: block;
+      padding: 0 44px;
+      line-height: 44px;
+      color: #fff;
+    }
+  }
+
+}
+.m-headerPlace{
+  height: 44px;
+}
+

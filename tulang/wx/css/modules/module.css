@@ -1,0 +1,74 @@
+.m-form {
+  padding: 88px 20px 0;
+}
+.m-form .logo {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.m-formGroup {
+  margin-bottom: 20px;
+}
+.m-header {
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.m-header .main {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background-color: #398dee;
+  color: #fff;
+}
+.m-header .title {
+  height: 44px;
+  padding-left: 44px;
+  padding-right: 44px;
+  text-align: center;
+}
+.m-header h1 {
+  height: 44px;
+}
+.m-header .back,
+.m-header .nav {
+  position: absolute;
+  top: 0;
+  width: 44px;
+  height: 44px;
+}
+.m-header .back {
+  left: 0;
+  background: url(../img/icon-back.png) center no-repeat;
+  background-size: auto 24px;
+}
+.m-header .nav {
+  right: 0;
+  background: url(../img/icon-nav.png) center no-repeat;
+  background-size: 24px;
+}
+.m-header .nav.active {
+  background-color: #2074d5;
+}
+.m-header .navList {
+  display: none;
+  position: relative;
+  padding-top: 44px;
+  background-color: #2074d5;
+}
+.m-header .navList li {
+  border-bottom: 1px solid #398dee;
+}
+.m-header .navList a {
+  display: block;
+  padding: 0 44px;
+  line-height: 44px;
+  color: #fff;
+}
+.m-headerPlace {
+  height: 44px;
+}
