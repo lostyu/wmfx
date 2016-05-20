@@ -1,6 +1,6 @@
-$(function(){
+$(function () {
 
-    if(!window.app){
+    if (!window.app) {
         var app = {};
     }
 
@@ -35,13 +35,22 @@ $(function(){
                 }, 1000);
             }
 
+        },
+
+        // tabs切换
+        tabs: function(oTabNav, oPanel){
+            var $tabNav = oTabNav.find('.tabNav');
+            var $panel = oPanel.find('.panel');
+
+            $tabNav.click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+                $panel.eq($(this).index()).show().siblings().hide();
+            });
         }
     };
 
 
-
-
-    (function(){
+    (function () {
 
 
         // 发送验证码计时
@@ -51,20 +60,37 @@ $(function(){
         });
 
 
-
         // 导航菜单切换
         var bOpen = false;
-        $('.j-btnNav').click(function(){
+        function toggleMenu() {
             bOpen = !bOpen;
-            $('.j-navList').stop().slideToggle();
+            var $nav = $('.j-btnNav');
+            $('.j-navList').stop().toggle();
 
-            if(bOpen){
-                $(this).addClass('active');
-            }else{
-                $(this).removeClass('active');
+            if (bOpen) {
+                $nav.addClass('active');
+            } else {
+                $nav.removeClass('active');
             }
+        }
+
+        $('.j-btnNav').click(function (ev) {
+            ev.stopPropagation();
+            toggleMenu();
         });
 
+        $(document).on('click', function(){
+            bOpen = false;
+            $('.j-navList').hide();
+            $('.j-btnNav').removeClass('active');
+        });
+
+
+
+        // tabs切换
+        var $tab = $('.j-tabs1');
+        var $panel = $('.j-panel1');
+        app.ui.tabs($tab, $panel);
 
     })();
 

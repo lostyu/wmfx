@@ -5,6 +5,16 @@
   color: #fff;
   background-color: #1373e1;
 }
+.u-lable {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-right: 2px;
+  line-height: 1;
+  border-radius: 20px;
+  background-color: #e7f4fc;
+  color: #398dee;
+  font-size: 12px;
+}
 .u-ipt {
   width: 100%;
   height: 44px;

@@ -10,10 +10,34 @@ body {
 a {
   color: #398dee;
 }
+h2 {
+  font-size: 14px;
+  font-weight: normal;
+}
 /* 统一调用背景图 */
 /* 统一清除浮动 */
 /* 布局 */
 /* 模块 */
+.m-media {
+  overflow: hidden;
+}
+.m-media .pic,
+.m-media .text {
+  display: table-cell;
+  vertical-align: top;
+}
+.m-media .pic {
+  padding-right: 10px;
+}
+.m-media .pic img {
+  display: block;
+}
+.m-media .text {
+  width: 100000px;
+}
+.m-media .text.m-media-middle {
+  vertical-align: middle;
+}
 .m-form {
   padding: 88px 20px 0;
 }
@@ -25,11 +49,12 @@ a {
   margin-bottom: 20px;
 }
 .m-header {
-  position: absolute;
+  position: fixed;
   z-index: 9;
   left: 0;
   right: 0;
   top: 0;
+  min-height: 44px;
 }
 .m-header .main {
   position: fixed;
@@ -72,8 +97,10 @@ a {
 }
 .m-header .navList {
   display: none;
-  position: relative;
-  padding-top: 44px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 44px;
   background-color: #2074d5;
 }
 .m-header .navList li {
@@ -88,6 +115,144 @@ a {
 .m-headerPlace {
   height: 44px;
 }
+.m-banner img {
+  display: block;
+  max-width: 100%;
+}
+.m-taskInfo {
+  margin-top: 20px;
+  background-color: #fff;
+  font-size: 14px;
+}
+.m-taskInfo .bd {
+  padding: 10px;
+}
+.m-taskInfo .ft {
+  border-top: 1px solid #f1f3f6;
+}
+.m-taskInfo .title h2 {
+  width: 100%;
+  font-weight: bold;
+}
+.m-taskInfo .title a {
+  display: block;
+  color: #999;
+}
+.m-taskInfo .meta {
+  margin-top: 5px;
+}
+.m-taskInfo .meta li {
+  line-height: 30px;
+  color: #b8b8b8;
+}
+.m-tips {
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+.m-load {
+  padding: 40px  0;
+  text-align: center;
+}
+.m-load .weui_btn {
+  display: inline-block;
+  width: auto;
+  min-width: 120px;
+  font-size: 14px;
+}
+.m-panel {
+  padding: 10px;
+  background-color: #fff;
+}
+.m-panel h2 {
+  margin-bottom: 5px;
+  color: #398dee;
+  font-size: 18px;
+}
+.m-panel p {
+  margin-bottom: 10px;
+}
+.m-tab {
+  margin-top: 20px;
+}
+.m-tab .weui_tabbar {
+  position: relative;
+}
+.m-tab .weui_tabbar a {
+  display: block;
+  padding-top: 0;
+  line-height: 44px;
+}
+.m-tab .weui_tabbar .weui_tabbar_label {
+  font-size: 14px;
+}
+.m-tab .weui_tabbar_item.weui_bar_item_on .weui_tabbar_label {
+  background-color: #fff;
+  color: #398dee;
+}
+.m-tab .weui_tab_bd {
+  background-color: #fff;
+  padding-bottom: 0;
+}
+.m-pinglun {
+  padding: 10px;
+  background-color: #fff;
+}
+.m-pinglun .panel {
+  display: none;
+}
+.m-pinglun .tabs {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.m-pinglun .tabs li {
+  list-style: none;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.m-pinglun .tabs .active a {
+  background-color: #4d96ef;
+  color: #fff;
+}
+.m-pinglun .tabs a {
+  display: block;
+  line-height: 44px;
+  background-color: #e8eaef;
+  color: #333;
+}
+.m-pinglun .plItem {
+  margin-bottom: 10px;
+}
+.m-pinglun .plItem h3 {
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #999;
+}
+.m-pinglun .plItem .score {
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #ff4b00;
+}
+.m-pinglun .plItem .score span {
+  margin-right: 4px;
+}
+.m-pinglun .plItem .text {
+  margin-bottom: 5px;
+}
+.m-pinglun .plItem .date {
+  font-size: 12px;
+  color: #ccc;
+}
+.m-empty {
+  padding: 40px 0;
+  border: 1px solid #3399ff;
+  background-color: #f5f9fd;
+  text-align: center;
+}
+.m-empty img {
+  vertical-align: middle;
+}
 /* 元件 */
 .u-btn-primary {
   background-color: #398dee;
@@ -95,6 +260,16 @@ a {
 .u-btn-primary:not(.weui_btn_disabled):active {
   color: #fff;
   background-color: #1373e1;
+}
+.u-lable {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-right: 2px;
+  line-height: 1;
+  border-radius: 20px;
+  background-color: #e7f4fc;
+  color: #398dee;
+  font-size: 12px;
 }
 .u-ipt {
   width: 100%;
@@ -130,14 +305,52 @@ a {
   overflow: hidden;
 }
 /* 功能 */
-.f-tac {
-  text-align: center;
-}
 .f-txt {
   color: #999;
 }
+.f-txt2 {
+  color: #292929;
+}
+.f-txt3 {
+  color: #f16125;
+}
+.f-tac {
+  text-align: center;
+}
 .f-dn {
   display: none;
+}
+.f-toe {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.f-fl {
+  float: left;
+}
+.f-fr {
+  float: right;
+}
+.f-mt5 {
+  margin-top: 5px;
+}
+.f-mt10 {
+  margin-top: 10px;
+}
+.f-mt20 {
+  margin-top: 20px;
+}
+.f-p10 {
+  padding: 10px;
+}
+.f-bg {
+  background-color: #f9f9f9;
+}
+.f-fz12 {
+  font-size: 12px;
+}
+.f-fz18 {
+  font-size: 18px;
 }
 /* 皮肤 */
 .box {

@@ -1,3 +1,27 @@
+// 左图右文
+.m-media{
+  overflow: hidden;
+  .pic, .text{
+    display: table-cell;
+    vertical-align: top;
+  }
+  .pic{
+    padding-right: 10px;
+    img{
+      display: block;
+    }
+  }
+  .text{
+    width: 100000px;
+  }
+  .text.m-media-middle{
+    vertical-align: middle;
+  }
+}
+
+
+
+
 // 表单
 .m-form{
   padding: 88px 20px 0;
@@ -13,11 +37,12 @@
 // 头部
 
 .m-header{
-  position: absolute;
+  position: fixed;
   z-index: 9;
   left: 0;
   right:0;
   top: 0;
+  min-height: 44px;
 
   .main{
     position: fixed;
@@ -64,8 +89,10 @@
   }
   .navList{
     display: none;
-    position: relative;
-    padding-top: 44px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 44px;
     background-color: #2074d5;
     li{
       border-bottom: 1px solid #398dee;
@@ -83,3 +110,176 @@
   height: 44px;
 }
 
+
+// banner
+.m-banner{
+  img{
+    display: block;
+    max-width: 100%;
+  }
+}
+
+
+// 任务信息
+.m-taskInfo{
+  margin-top: 20px;
+  background-color: #fff;
+  font-size: 14px;
+  .bd{
+    padding: 10px;
+  }
+  .ft{
+    //padding: 10px 8px;
+    border-top: 1px solid #f1f3f6;
+    //background-color: #f9f9f9;
+  }
+
+  .title{
+    h2{
+      width: 100%;
+      font-weight: bold;
+    }
+    a {
+      display: block;
+      color: #999;
+    }
+  }
+  .meta{
+    margin-top: 5px;
+    li{
+      line-height: 30px;
+      color: #b8b8b8;
+    }
+  }
+}
+
+
+// 任务状态提示
+.m-tips{
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+
+// 加载更多
+.m-load{
+  padding: 40px  0;
+  text-align: center;
+  .weui_btn{
+    display: inline-block;
+    width: auto;
+    min-width: 120px;
+    font-size: 14px;
+  }
+}
+
+
+//
+.m-panel{
+  padding: 10px;
+  background-color: #fff;
+  h2{
+    margin-bottom: 5px;
+    color: #398dee;
+    font-size: 18px;
+  }
+  p{
+    margin-bottom: 10px;
+  }
+}
+
+
+// m-tab
+.m-tab{
+  margin-top: 20px;
+  .weui_tabbar{
+    position: relative;
+    a{
+      display: block;
+      padding-top: 0;
+      line-height: 44px;
+    }
+
+    .weui_tabbar_label{
+      font-size: 14px;
+    }
+  }
+
+  .weui_tabbar_item.weui_bar_item_on .weui_tabbar_label{
+    background-color: #fff;
+    color: #398dee;
+  }
+
+  .weui_tab_bd{
+    background-color: #fff;
+    padding-bottom: 0;
+  }
+}
+
+
+// 评论
+.m-pinglun{
+  padding: 10px;
+  background-color: #fff;
+
+  .panel{
+    display: none;
+  }
+  .tabs{
+    margin-bottom: 10px;
+    overflow: hidden;
+    li{
+      list-style: none;
+      float: left;
+      width: 50%;
+      text-align: center;
+    }
+    .active a{
+      background-color: #4d96ef;
+      color: #fff;
+    }
+    a{
+      display: block;
+      line-height: 44px;
+      background-color: #e8eaef;
+      color: #333;
+    }
+  }
+
+  .plItem{
+    margin-bottom: 10px;
+    h3{
+      margin-bottom: 5px;
+      font-weight: normal;
+      font-size: 16px;
+      color: #999;
+    }
+    .score{
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: #ff4b00;
+      span{
+        margin-right: 4px;
+      }
+    }
+    .text{
+      margin-bottom: 5px;
+    }
+    .date{
+      font-size: 12px;
+      color: #ccc;
+    }
+  }
+}
+
+
+// 空
+.m-empty{
+  padding: 40px 0;
+  border: 1px solid #3399ff;
+  background-color: #f5f9fd;
+  text-align: center;
+  img{
+    vertical-align: middle;
+  }
+}
