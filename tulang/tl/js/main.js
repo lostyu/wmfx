@@ -109,6 +109,18 @@ $(function () {
 
             $.extend($.validationEngine.defaults, _dft);
 
+            $.validationEngineLanguage.allRules.minSize = {
+                alertText: "最少 ",
+                alertText2: " 个字",
+                regex: "none"
+            };
+
+            $.validationEngineLanguage.allRules.maxSize = {
+                alertText: "最多 ",
+                alertText2: " 个字",
+                regex: "none"
+            };
+
             $.validationEngineLanguage.allRules.r_phone = {
                 'regex': /^1\d{10}$/,
                 'alertText': '手机号错误'
@@ -308,6 +320,39 @@ $(function () {
 
 
         app.ui.toggleText('j-toggle', 'j-togglePanel');
+
+
+
+
+        // textarea文字字数提示
+        (function () {
+            var $textarea = $('.j-textarea');
+            var $wrap = $('<div style="position: relative;"></div>');
+
+            $textarea.keyup(function () {
+                var len = $(this).attr('data-maxSize');
+                var l = $(this).val().length;
+                var $textCount = $(this).parent().find('.j-count');
+
+                $textCount.html(l + '/' + len);
+                if (l > len) {
+                    $textCount.css('color', 'red');
+                } else {
+                    $textCount.css('color', '#999');
+                }
+            });
+
+            $textarea.each(function () {
+                var $wrap = $('<div style="position: relative;"></div>');
+                var len = $(this).attr('data-maxSize');
+                var $textCount = $('<span class="j-count" style="position: absolute; top: -20px; right: 0; color: #999;">0/' + len + '</span>');
+
+                $wrap.insertBefore($(this));
+                $textCount.appendTo($wrap);
+                $(this).clone(true).appendTo($wrap);
+                $(this).remove();
+            });
+        })();
 
     })();
 

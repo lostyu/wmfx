@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../plugins/jquery-icheck/skins/flat/blue.css"/>
 
 
-
     <link rel="stylesheet" href="../css/all.css"/>
 
 </head>
@@ -47,8 +46,18 @@
                     <label class="control-label formlabel"><span class="text-danger">*</span>任务描述：</label>
 
                     <div class="formipt">
-                        <textarea rows="10"
-                                  class="form-control validate[required, minSize[50], maxSize[1000]]"></textarea>
+                        <textarea rows="10" data-maxSize="1000"
+                                  class="j-textarea form-control validate[required, minSize[50], maxSize[1000]]"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label formlabel"><span class="text-danger">*</span>任务描述：</label>
+
+                    <div class="formipt">
+                        <textarea rows="10" data-maxSize="1000"
+                                  class="j-textarea form-control validate[required, minSize[50], maxSize[1000]]"></textarea>
                     </div>
                 </div>
 
@@ -119,7 +128,6 @@
                         </label>
                     </div>
                 </div>
-
 
 
                 <div class="form-group form-inline">
@@ -201,6 +209,9 @@
     $(function () {
         $('#f-form-test').validationEngine();
     });
+
+
+
 
 </script>
 </body>

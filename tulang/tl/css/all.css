@@ -869,6 +869,27 @@ h2 {
   border-color: #d9d9d9;
   color: #333;
 }
+.btn-primary.disabled,
+.btn-primary.disabled.active,
+.btn-primary.disabled.focus,
+.btn-primary.disabled:active,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:hover,
+.btn-primary[disabled],
+.btn-primary[disabled].active,
+.btn-primary[disabled].focus,
+.btn-primary[disabled]:active,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary,
+fieldset[disabled] .btn-primary.active,
+fieldset[disabled] .btn-primary.focus,
+fieldset[disabled] .btn-primary:active,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary:hover {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
 .btn-w50 {
   min-width: 50px;
 }
@@ -3785,6 +3806,7 @@ fieldset[disabled] .form-control {
 .star-tips {
   display: none;
   position: absolute;
+  z-index: 1;
   top: 40px;
   left: 80px;
   width: 260px;

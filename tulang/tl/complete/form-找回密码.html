@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>找回密码</title>
     <!-- bootstap -->
-    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.5/css/bootstrap.min.css">
 
     <!-- 字体图标 -->
-    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
 
     <!-- linkcloud -->
     <!--<link rel="stylesheet" href="../css/demo.css">-->
 
     <!-- your css -->
     <!--<link rel="stylesheet" href="../css/customer.css">-->
-    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="../css/all.css"/>
 
     <style>
         html, body {
@@ -32,7 +32,7 @@
 
     <div class="p-formBox p-formBox10 f-bd">
         <div class="form-title clearfix">
-            <a class="img" href="javascript:;"><img width="90" height="38" src="img/logo2.png" alt=""/></a>
+            <a class="img" href="javascript:;"><img width="90" height="38" src="../img/logo2.png" alt=""/></a>
 
             <h2 class="text">找回密码</h2>
         </div>
@@ -45,18 +45,19 @@
                 <div class="form-group">
                     <label class="sr-only">注册时手机/邮箱</label>
                     <input name="utel" type="tel" class="form-control j-yhm validate[required, custom[r_phoneOrEmail]]"
-                           placeholder="注册时手机/邮箱">
+                           placeholder="注册时手机/邮箱" data-prompt-target="err1">
+                    <span class="err-place" id="err1"></span>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                         <input type="text" class="form-control validate[required]"
-                               placeholder="输入验证码" data-prompt-target="err-yzm">
+                               placeholder="输入验证码" data-prompt-target="err2">
                         <span class="input-group-addon" id="basic-addon2" style="padding: 0"><img width="100"
                                                                                                   height="38"
                                                                                                   src="http://reg.email.163.com/mailregAll/regvf1/verifyCodeImgF.jsp?env=488381217144&amp;type=en&amp;t=1333003692444"
                                                                                                   alt=""></span>
                     </div>
-                    <div id="err-yzm"></div>
+                    <span class="err-place" id="err2" style="right: 112px"></span>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">确定</button>
                 <div class="checkbox text-right">
@@ -107,20 +108,20 @@
 
 
 <!-- jquery -->
-<script src="libs/jquery-2.2.2/jquery.min.js"></script>
+<script src="../libs/jquery-2.2.2/jquery.min.js"></script>
 
 <!-- bootsrap -->
-<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="../bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 <!-- plugins -->
-<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
-<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
-<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
+<link rel="stylesheet" href="../plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="../plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="../plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
 
-<script src="plugins/layer/layer.js"></script>
+<script src="../plugins/layer/layer.js"></script>
 
 <!-- linkcloud -->
-<script src="js/main.js"></script>
+<script src="../js/main.js"></script>
 
 <!-- your js -->
 <script>
