@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>工作室认证-申请</title>
+    <!-- bootstap -->
+    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+    <!-- linkcloud -->
+    <!--<link rel="stylesheet" href="../css/demo.css">-->
+    <link rel="stylesheet" href="plugins/uploadify/css/upload.css"/>
+    <link rel="stylesheet" href="css/wmz.css">
+
+    <!-- your css -->
+    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="css/2.0.css">
+
+</head>
+<body>
+<nav class="m-header navbar-fixed-top">
+    <div class="g-container">
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
+
+        <ul class="nav-main">
+            <li class="active"><a href="#">了解我们</a></li>
+            <li><a href="#">设计机构</a></li>
+            <li><a href="#">寻找任务</a></li>
+            <li><a href="#">图狼达人</a></li>
+        </ul>
+
+        <ul class="nav2">
+            <li class="item search">
+                <div class="input">
+                    <input type="text"/>
+                </div>
+            </li>
+            <li class="item fb">
+                <a class="button" href="javascript:;">发布任务</a>
+            </li>
+            <li class="item msg">
+                <span class="dot"></span>
+                <img src="img/icon-msg.png" alt=""/>
+
+                <div class="msgList">
+                    <div class="inner">
+                        <div class="text-center f-mb20">
+                            <div class="tabs">
+                                <a class="active" href="javascript:;">私信</a>
+                                <a href="javascript:;">通知</a>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img class="img-circle" width="50" height="50" src="" alt=""/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">用户名<span class="pull-right">3月15日</span></div>
+                                        <p class="text-overflow">省深圳市南山区留仙大道世外桃源创意园省深圳市南山区留仙大道世外桃源创意园</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img class="img-circle" width="50" height="50" src="" alt=""/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">用户名<span class="pull-right">3月15日</span></div>
+                                        <p class="text-overflow">省深圳市南山区留仙大道世外桃源创意园省深圳市南山区留仙大道世外桃源创意园</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img class="img-circle" width="50" height="50" src="" alt=""/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">用户名<span class="pull-right">3月15日</span></div>
+                                        <p class="text-overflow">省深圳市南山区留仙大道世外桃源创意园省深圳市南山区留仙大道世外桃源创意园</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <img src="img/icon-settings.png" alt=""/>
+                        <a class="pull-right" href="javascript:;">查看更多</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item tx">
+                <div class="pic">
+                    <span class="u-icon u-icon-v2"></span>
+                    <img class="img-circle" width="50" height="50" src="img/tx-default.png" alt=""/>
+                </div>
+                <ul class="subNav">
+                    <li><a href="javascript:;">我的主页</a></li>
+                    <li><a href="javascript:;">我的账簿</a></li>
+                    <li><a href="javascript:;">账号设置</a></li>
+                    <li><a href="javascript:;"><span style="color: #ff4e4e;">退出</span></a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<div class="m-headerSpace"></div>
+
+<div class="container f-mb40">
+    <div class="p-renzheng">
+        <div class="p-box f-bg">
+            <div class="p-box-hd">
+                <div class="m-title">
+                    <h2>工作室认证</h2>
+
+                </div>
+
+            </div>
+            <div class="p-box-bd">
+                <p class="text-center f-mb30"><img src="img/step2-1.jpg" alt=""></p>
+
+                <div class="form-boxp">
+
+
+                    <!-- 审核失败 -->
+                    <div class="tips wmz_error_tips" style="display: -none;">
+                        <div class="media">
+                            <div class="media-left">
+                                <!--<span class="glyphicon glyphicon-remove-circle text-danger"></span>-->
+                                <span class="wmz_icon wmz_icon_error"></span>
+                            </div>
+                            <div class="media-body wmz_error_info">
+                                <ul class="list-unstyled">
+                                    <li>认证未通过：</li>
+                                    <li>·身份证信息与姓名不一致</li>
+                                    <li>·身份证照片不清晰，无法看到详细信息</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="wmz_line_title wmz_mb40"><span>负责主体</span><i></i></div>
+                    <form id="f-form-grrz">
+
+                        <!--<div class="m-subTitle f-mb40">-->
+                        <!--<h3>个人认证信息</h3>-->
+                        <!--</div>-->
+
+                        <div class="form-horizontal">
+
+                            <div class="form-group">
+                                <div class="formipt">
+                                    <div class="box-bg">
+                                        <ul class="m-ztxz">
+                                            <li class="active">普通工作室</li>
+                                            <li>企业型工作室</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grgzs ztxz1">
+                                <div class="form-group">
+                                    <label class="formlabel control-label"><span
+                                            class="text-danger">*</span>真实姓名：</label>
+
+                                    <div class="formipt">
+                                        <input type="text" class="form-control iptw validate[required]">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="formlabel control-label"><span
+                                            class="text-danger">*</span>身份证号：</label>
+
+                                    <div class="formipt">
+                                        <input type="text"
+                                               class="form-control iptw validate[required, custom[chinaIdLoose]]">
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="formlabel control-label"><span
+                                            class="text-danger">*</span>身份证照：</label>
+
+                                    <div class="formipt" style="position: relative;">
+                                        <div class="form-photo"><a href="javascript:;"><img src="img/icon-photo.png"
+                                                                                            alt="">拍照指南</a></div>
+
+                                        <div class="upload_image_row no_padding">
+                                            <div class="upload_col upload_default_image" style="margin-right: 10px;">
+                                                <div class="upload_img_main"></div>
+                                                <a href="javascript:" onclick="removeImg(this);"
+                                                   class="upload_img_main_close">取消</a>
+                                            </div>
+                                            <div class="upload_col">
+                                                <div class="upload_image_main file_upload01">
+                                                    <div class="upload_col upload_input">
+                                                        <input id="file_upload01" class="file_upload" name="file_upload"
+                                                               type="file">
+                                                    </div>
+                                                    <div class="upload_col upload_info">图片大小5M以内</div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="upload_queue_main">
+                                                    <div id="queue01" class="queue file_upload01"></div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="clear"></div>
+                                        </div>
+
+                                        <p class="help-block">上传本人手持身份证照片，需清晰可见身份证详细信息</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="qygzs ztxz2" style="display: none;">
+                                <div class="form-group">
+                                    <label class="formlabel control-label"><span
+                                            class="text-danger">*</span>企业全称：</label>
+
+                                    <div class="formipt">
+                                        <input type="text" class="form-control iptw validate[required, maxSize[30]]"
+                                               data-errormessage-range-overflow="填写有误，30字以内，且不可空白！">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="formlabel control-label"><span
+                                            class="text-danger">*</span>工商执照注册号：</label>
+
+                                    <div class="formipt">
+                                        <input type="text"
+                                               class="form-control iptw validate[required, minSize[15], maxSize[15]]"
+                                               data-errormessage-range-underflow="填写有误，15位执照号!"
+                                               data-errormessage-range-overflow="填写有误，15位执照号!">
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="formlabel control-label"><span
+                                            class="text-danger">*</span>营业执照副本：</label>
+
+                                    <div class="formipt" style="position: relative;">
+                                        <div class="form-photo"><a href="javascript:;"><img src="img/icon-photo.png"
+                                                                                            alt="">拍照指南</a></div>
+
+                                        <div class="upload_image_row no_padding">
+                                            <div class="upload_col upload_default_image" style="margin-right: 10px;">
+                                                <div class="upload_img_main"></div>
+                                                <a href="javascript:;" onclick="removeImg(this)"
+                                                   class="upload_img_main_close">取消</a>
+                                            </div>
+                                            <div class="upload_col">
+                                                <div class="upload_image_main file_upload01">
+                                                    <div class="upload_col upload_input">
+                                                        <input id="file_upload02" class="file_upload" name="file_upload"
+                                                               type="file">
+                                                    </div>
+                                                    <div class="upload_col upload_info">图片大小5M以内</div>
+                                                </div>
+                                                <div class="clear"></div>
+                                                <div class="upload_queue_main">
+                                                    <div id="queue02" class="queue file_upload02"></div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="clear"></div>
+                                        </div>
+
+                                        <p class="help-block">上传营业执照副本扫描件，证件号需清晰可见</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="wmz_line_title wmz_mb40"><span>工作室信息</span><i></i></div>
+
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>工作室名称：</label>
+
+                                <div class="formipt">
+                                    <input type="text"
+                                           class="form-control iptw validate[required, minSize[4], maxSize[10]]"
+                                           data-errormessage-range-underflow="填写错误，4-10个字"
+                                           data-errormessage-range-overflow="填写错误，4-10个字" placeholder="4-10个字">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>工作室介绍：</label>
+                                <div class="formipt">
+                                    <textarea class="form-control validate[required, maxSize[500]]" rows="10"
+                                              placeholder="文字描述500字以内"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>专业选择：</label>
+                                <div class="formipt form-inline">
+                                    <select class="form-control j-zhuanyeCk" style="min-width: 200px;">
+                                        <option value="1">一级专业</option>
+                                        <option value="2">二级专业</option>
+                                        <option value="3">三级专业</option>
+                                        <option value="4">四级专业</option>
+                                    </select>
+
+                                    <div class="checkList">
+                                        <div class="zhuanye zhuanyeCk1">
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="0"
+                                                       name="zhuanye1" data-prompt-position="topLeft:-20,0"> 规划1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="1"
+                                                       name="zhuanye1"> 建筑1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="2"
+                                                       name="zhuanye1"> 给排水1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="3"
+                                                       name="zhuanye1"> 园林1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="4"
+                                                       name="zhuanye1"> 电气1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="5"
+                                                       name="zhuanye1"> 结构1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="6"
+                                                       name="zhuanye1"> 隧道1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="7"
+                                                       name="zhuanye1"> 桥梁1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="8"
+                                                       name="zhuanye1"> 道路1
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="9"
+                                                       name="zhuanye1"> 其他1
+                                            </label>
+                                        </div>
+                                        <div style="display: none;" class="zhuanye zhuanyeCk2">
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="0"
+                                                       name="zhuanye2" data-prompt-position="topLeft:-20,0"> 规划2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="1"
+                                                       name="zhuanye2"> 建筑2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="2"
+                                                       name="zhuanye2"> 给排水2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="3"
+                                                       name="zhuanye2"> 园林2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="4"
+                                                       name="zhuanye2"> 电气2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="5"
+                                                       name="zhuanye2"> 结构2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="6"
+                                                       name="zhuanye2"> 隧道2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="7"
+                                                       name="zhuanye2"> 桥梁2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="8"
+                                                       name="zhuanye2"> 道路2
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="9"
+                                                       name="zhuanye2"> 其他2
+                                            </label>
+                                        </div>
+                                        <div style="display: none;" class="zhuanye zhuanyeCk3">
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="0"
+                                                       name="zhuanye3" data-prompt-position="topLeft:-20,0"> 规划3
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="1"
+                                                       name="zhuanye3"> 建筑3
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="2"
+                                                       name="zhuanye3"> 给排水3
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="3"
+                                                       name="zhuanye3"> 园林3
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="4"
+                                                       name="zhuanye3"> 电气3
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="5"
+                                                       name="zhuanye3"> 结构3
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="6"
+                                                       name="zhuanye3"> 隧道3
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="7"
+                                                       name="zhuanye3"> 桥梁3
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="8"
+                                                       name="zhuanye3"> 道路3
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="9"
+                                                       name="zhuanye3"> 其他3
+                                            </label>
+                                        </div>
+                                        <div style="display: none;" class="zhuanye zhuanyeCk4">
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="0"
+                                                       name="zhuanye4" data-prompt-position="topLeft:-20,0"> 规划4
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="1"
+                                                       name="zhuanye4"> 建筑4
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="2"
+                                                       name="zhuanye4"> 给排水4
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="3"
+                                                       name="zhuanye4"> 园林4
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="4"
+                                                       name="zhuanye4"> 电气4
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="5"
+                                                       name="zhuanye4"> 结构4
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="6"
+                                                       name="zhuanye4"> 隧道4
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="7"
+                                                       name="zhuanye4"> 桥梁4
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="8"
+                                                       name="zhuanye4"> 道路4
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input class="validate[minCheckbox[1], maxCheckbox[3]]" type="checkbox"
+                                                       value="9"
+                                                       name="zhuanye4"> 其他4
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <p class="help-2">※ 每项认证费为1000元，认证信息审核通过后缴纳，每个工作室最多可选择三项。</p>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>所在地：</label>
+
+                                <div class="formipt">
+                                    <div>
+                                        <select name="Province" class="prov form-control"></select>
+                                        <select name="City" class="city form-control"></select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="wmz_line_title wmz_mb40"><span>人员信息</span><i></i></div>
+
+                            <div class="form-group">
+                                <div class="formipt">
+                                    <p>至少上传两名设计师信息　<a href="javascript:;">下载 《设计师文档模板》</a></p>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+
+
+                                <div class="formipt">
+
+                                    <div class="upload_box f-mb40">
+
+                                        <div class="upload_row">
+                                            <div class="upload_col upload_title" style="width: auto;">上传附件：</div>
+
+                                            <div class="upload_col upload_input">
+                                                <input id="file_upload03" class="file_upload" name="file_upload"
+                                                       type="file" multiple="true">
+                                            </div>
+
+                                            <div class="clear"></div>
+                                        </div>
+
+                                        <div class="upload_none_box file_upload03">
+                                            <!--<div class="upload_col upload_title">&nbsp;</div>-->
+                                            <div class="upload_col upload_bg upload_none_bg"></div>
+                                            <div class="upload_col upload_info upload_none_info">当前还没有文件哦</div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="upload_err">
+                                            <div class="err"></div>
+                                        </div>
+                                        <div class="queue_box">
+                                            <div id="queue03" class="queue file_upload03"></div>
+                                            <div class="clear"></div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                            <!--<div class="form-group wmz_zs_title">-->
+                            <!--<label class="formlabel control-label"><span class="text-danger">*</span>证书名称</label>-->
+
+                            <!--<div class="formipt">-->
+                            <!--<input type="text" class="form-control iptw validate[required]">-->
+                            <!--<p class="help-block">请填写并上传相关资质证书扫描件</p>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="form-group wmz_zs_file">-->
+                            <!--<label class="formlabel control-label"><span class="text-danger">*</span>证书扫描件</label>-->
+
+                            <!--<div class="formipt">-->
+                            <!--<div class="upload_image_row no_padding">-->
+                            <!--<div class="upload_col upload_default_image">-->
+                            <!--<div class="upload_img_main file_zs_01"></div>-->
+                            <!--<a href="javascript: onCloseFile('file_zs_01', '*');"-->
+                            <!--class="upload_img_main_close">取消</a>-->
+                            <!--</div>-->
+                            <!--<div class="upload_col">-->
+                            <!--<div class="upload_image_main">-->
+                            <!--<div class="upload_col upload_input">-->
+                            <!--<input id="file_zs_01" class="file_upload" name="file_upload"-->
+                            <!--type="file">-->
+                            <!--</div>-->
+                            <!--<div class="upload_col upload_info">图片大小5M以内</div>-->
+                            <!--</div>-->
+                            <!--<div class="clear"></div>-->
+                            <!--<div class="upload_queue_main">-->
+                            <!--<div id="queue_zs_01" class="queue file_zs_01"></div>-->
+                            <!--</div>-->
+
+                            <!--</div>-->
+
+                            <!--<div class="clear"></div>-->
+                            <!--</div>-->
+
+                            <!--<p class="help-block">上传证件扫描件，关键信息需清晰可见</p>-->
+                            <!--</div>-->
+
+
+                            <!--</div>-->
+
+                            <!--<div class="wmz_zs_box"></div>-->
+
+                            <!--<div class="form-group">-->
+                            <!--<label class="formlabel control-label"></label>-->
+                            <!--<div class=" formipt">-->
+                            <!--<a href="javascript: addZS();" class="btn btn-default btn-w wmz_zs_add">添加证书</a>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+
+                            <div class="form-group">
+                                <label class="formlabel control-label"></label>
+
+                                <div class=" formipt">
+                                    <button type="submit" class="btn btn-primary btn-w150">提交认证</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<button class="j-showPic">显示图片</button>-->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">图片</h4>
+            </div>
+            <div class="modal-body">
+                <div style="text-align: center">
+                    <img id="j-pic" src="" alt="" style="max-width: 100%">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery -->
+<script src="libs/jquery-2.2.2/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
+
+
+<script src="plugins/PCASClass2.js"></script>
+<script src="plugins/layer/layer.js"></script>
+<script src="plugins/uploadify/js/jquery.uploadify.js"></script>
+
+<!-- linkcloud -->
+<script src="js/main.js"></script>
+
+<!-- your js -->
+<script>
+    $(function () {
+        $('#f-form-grrz').validationEngine({
+            validateNonVisibleFields: false, // 验证隐藏表单
+            binded: true,   // 提交时验证
+//            autoHidePrompt: true,   // 自动隐藏提示信息
+//            autoHideDelay: 5000,
+            showOneMessage: false,
+            scroll: false,
+            promptPosition: 'inline',
+
+
+            onValidationComplete: function (form, valid) {
+                if (valid) {
+                    var myLayer = layer.confirm(
+                            '确认申请技能认证？',
+                            {
+                                title: '提示',
+                                btn: ['确认申请', '取消'] //可以无限个按钮
+                            },
+                            function () {
+                                // 成功回调
+                                layer.close(myLayer);
+                            },
+                            function () {
+                                // 取消回调
+                            }
+                    );
+                }
+            }
+
+        });
+
+
+        $('.m-ztxz li').click(function () {
+            var $this = $(this);
+            $this.siblings().removeClass();
+            $this.addClass('active');
+
+            if ($this.index() == 0) {
+                $('.ztxz1').show();
+                $('.ztxz2').hide();
+            } else if ($this.index() == 1) {
+                $('.ztxz1').hide();
+                $('.ztxz2').show();
+            }
+        });
+
+
+        $(document).on('click', '.j-showPic', function () {
+            $('#j-pic').attr('src', ($(this).attr('src')));
+            $('#myModal').modal('show');
+        });
+
+
+        $('.j-zhuanyeCk').change(function(){
+            var _index = $(this).val();
+            $('.zhuanye').hide();
+            $('.zhuanyeCk'+_index).show();
+        });
+
+    });
+
+
+    function removeImg(obj) {
+        layer.confirm('<div class="dialog_content"><i class="upload_bg upload_gt_bg"></i>亲，你真要删掉我吗？</div>', {
+            skin: "dialog_layer",
+            closeBtn: 0, //不显示关闭按钮
+            shade: 0,
+            title: "删除提示",
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            $(obj).prev().find('img').remove();
+            $(obj).hide();
+            layer.closeAll();
+        }, function () {
+            layer.closeAll();
+        });
+    }
+
+    //附件上传参数
+    var uploadFileOptions = {
+
+        queueSizeLimit: 100,
+        buttonClass: "upload_button",
+        width: 77,
+        height: 32,
+        fileSizeLimit: 1024 * 10,// KB
+        buttonText: "选择文件",
+        swf: 'plugins/uploadify/js/uploadify.swf',
+        removeCompleted: false,
+        removeTimeout: 0,
+        itemTemplate: '<div id="${fileID}" class="uploadify-queue-item">\
+            <a class="upload_bg upload_close_bg" href="javascript: onCloseFile(\'${instanceID}\', \'${fileID}\');"></a>\
+            <div class="upload_bg upload_other_bg ${suffix}_bg"></div>\
+            <div class="fileName">${fileName} （${fileSize}）</div>\
+            <div class="uploadify-progress">\
+            <div class="uploadify-progress-bar"><!--Progress Bar--></div>\
+            <div class="upload_data"><span class="data"></span></div>\
+            </div>\
+            </div>',
+        //后台地址
+        uploader: 'form.json',
+        method: "post",
+        onSelect: onSelect,
+        onSelectError: onSelectError,
+        onUploadSuccess: onUploadSuccess,
+        type: 1
+    };
+
+    //图片上传参数
+    var uploadImageOptions = {
+        buttonClass: "upload_button",
+        width: 77,
+        height: 32,
+        fileSizeLimit: 1024 * 2,// KB
+        buttonText: "上传",
+        swf: 'plugins/uploadify/js/uploadify.swf',
+        removeCompleted: false,
+        removeTimeout: 0,
+        fileTypeDesc: 'Image Files',
+        fileTypeExts: '*.jpg;*.jpeg;*.png',
+        multi: false,
+        itemTemplate: '<div id="${fileID}" class="uploadify-queue-item">\
+        <div class="fileName">${fileName}</div>\
+            <div class="fileSize">（${fileSize}）</div>\
+            <div class="uploadify-progress">\
+            <div class="uploadify-progress-bar"><!--Progress Bar--></div>\
+            </div>\
+            <a class="upload_img_close" href="javascript: onCloseFile(\'${instanceID}\', \'${fileID}\');">取消</a>\
+            </div>',
+        //后台地址
+        uploader: 'form.json',
+        method: "post",
+        onSelect: onSelect,
+        onUploadComplete: onUploadComplete,
+        onUploadSuccess: onUploadSuccess,
+        type: 2
+    };
+
+
+    //上传身份证
+    var _file_upload01 = $("#file_upload01");
+    uploadImageOptions["queueID"] = "queue01";
+    _file_upload01.uploadify(uploadImageOptions);
+
+    // 上传执照
+    var _file_upload02 = $("#file_upload02");
+    uploadImageOptions["queueID"] = "queue02";
+    _file_upload02.uploadify(uploadImageOptions);
+
+    // 附件上传
+    var _document = $(document);
+    var _file_upload03 = $("#file_upload03");
+    uploadFileOptions["queueID"] = "queue03";
+    _file_upload03.uploadify(uploadFileOptions);
+
+
+
+    function onUploadSuccess(file, msg, status) {
+        console.log(msg); //这里获得后台的图片路劲 自行赋值
+        var self = this;
+        switch (self.settings.type) {
+            case 2:
+                var $upload_default_image = $('#' + self.settings.id).parents('.formipt').find('.upload_default_image');
+                var $upload_img_main = $upload_default_image.find('.upload_img_main');
+                var $upload_img_main_close = $upload_default_image.find('.upload_img_main_close');
+                $upload_img_main.html('<img style="width:100%; height: 100%;" class="j-showPic" src="' + msg + '"/>');
+                $upload_img_main_close.show();
+                break;
+        }
+    }
+
+    function onSelect() {
+        var self = this;
+        switch (self.settings.type) {
+            case 1:
+                //附件
+                $(".upload_none_box." + self.settings.id).hide();
+                break;
+            case 2:
+                //图片
+                var _list = $("#" + self.settings.queueID + " .uploadify-queue-item");
+                if (_list.length > 1) {
+                    _list.eq(0).each(function () {
+                        var id = $(this).attr("id");
+                        $("#" + self.settings.id).uploadify('cancel', id);
+                    });
+                }
+                break;
+        }
+
+    }
+
+    function onSelectError() {
+        var self = this;
+        switch (self.settings.type) {
+            case 1:
+                //附件
+                notUploadQueue(self);
+                break;
+        }
+
+    }
+
+    function onUploadComplete(file) {
+        var self = this;
+        switch (self.settings.type) {
+            case 2:
+                //图片
+                var _file = $("#" + file.id);
+                if (_file.length) {
+                    _file.delay(1000).fadeOut(300);
+                }
+                break;
+        }
+
+    }
+
+    function onCloseFile(instanceID, fileID) {
+
+        layer.confirm('<div class="dialog_content"><i class="upload_bg upload_gt_bg"></i>亲，你真要删掉我吗？</div>', {
+            skin: "dialog_layer",
+            closeBtn: 0, //不显示关闭按钮
+            shade: 0,
+            title: "删除提示",
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            $("#" + instanceID).uploadify('cancel', fileID);
+            notUploadQueue(null, instanceID);
+            layer.closeAll();
+        }, function () {
+            layer.closeAll();
+        });
+
+    }
+
+
+    _document.on("mouseenter", ".uploadify-queue-item", function () {
+        $(this).addClass("active");
+    });
+
+    _document.on("mouseleave", ".uploadify-queue-item", function () {
+        $(this).removeClass("active");
+    });
+
+    function notUploadQueue(uploadify, instanceID) {
+        console.log(uploadify);
+        console.log(instanceID);
+        if (uploadify) {
+            if (uploadify.queueData.filesQueued != 0) {
+                $(".upload_none_box." + uploadify.settings.id).hide();
+            } else {
+                $(".upload_none_box." + uploadify.settings.id).show();
+            }
+        } else {
+            if ($(".queue." + instanceID + " .uploadify-queue-item").length) {
+                $(".upload_none_box." + instanceID).hide();
+            } else {
+                $(".upload_none_box." + instanceID).show();
+            }
+        }
+
+    }
+
+    function layerConfirm(title, content, cb1, cb2) {
+        layer.confirm(content, {
+            skin: "dialog_layer",
+            shade: 0,
+            title: title,
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            cb1 && cb1();
+            layer.closeAll();
+        }, function () {
+            cb2 && cb2();
+            layer.closeAll();
+        });
+    }
+
+    function layerAlert(title, content) {
+        layer.alert(content, {
+            skin: "dialog_layer",
+            shade: 0,
+            title: title,
+            area: ['567px', '211px']
+        });
+    }
+
+
+
+</script>
+</body>
+</html>

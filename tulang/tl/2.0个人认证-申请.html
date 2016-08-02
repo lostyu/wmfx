@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人认证-申请</title>
+    <!-- bootstap -->
+    <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+    <!-- linkcloud -->
+    <!--<link rel="stylesheet" href="../css/demo.css">-->
+    <link rel="stylesheet" href="plugins/uploadify/css/upload.css">
+    <link rel="stylesheet" href="css/wmz.css">
+
+    <!-- your css -->
+    <!--<link rel="stylesheet" href="../css/customer.css">-->
+    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="css/2.0.css">
+</head>
+<body>
+<nav class="m-header navbar-fixed-top">
+    <div class="g-container">
+        <h1><a href="#"><img width="112" height="48" src="img/logo2.png" alt=""/></a><span class="sr-only">图狼网</span>
+        </h1>
+
+        <ul class="nav-main">
+            <li class="active"><a href="#">了解我们</a></li>
+            <li><a href="#">设计机构</a></li>
+            <li><a href="#">寻找任务</a></li>
+            <li><a href="#">图狼达人</a></li>
+        </ul>
+
+        <ul class="nav2">
+            <li class="item search">
+                <div class="input">
+                    <input type="text"/>
+                </div>
+            </li>
+            <li class="item fb">
+                <a class="button" href="javascript:;">发布任务</a>
+            </li>
+            <li class="item msg">
+                <span class="dot"></span>
+                <img src="img/icon-msg.png" alt=""/>
+
+                <div class="msgList">
+                    <div class="inner">
+                        <div class="text-center f-mb20">
+                            <div class="tabs">
+                                <a class="active" href="javascript:;">私信</a>
+                                <a href="javascript:;">通知</a>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img class="img-circle" width="50" height="50" src="" alt=""/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">用户名<span class="pull-right">3月15日</span></div>
+                                        <p class="text-overflow">省深圳市南山区留仙大道世外桃源创意园省深圳市南山区留仙大道世外桃源创意园</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img class="img-circle" width="50" height="50" src="" alt=""/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">用户名<span class="pull-right">3月15日</span></div>
+                                        <p class="text-overflow">省深圳市南山区留仙大道世外桃源创意园省深圳市南山区留仙大道世外桃源创意园</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img class="img-circle" width="50" height="50" src="" alt=""/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">用户名<span class="pull-right">3月15日</span></div>
+                                        <p class="text-overflow">省深圳市南山区留仙大道世外桃源创意园省深圳市南山区留仙大道世外桃源创意园</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <img src="img/icon-settings.png" alt=""/>
+                        <a class="pull-right" href="javascript:;">查看更多</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item tx">
+                <div class="pic">
+                    <span class="u-icon u-icon-v2"></span>
+                    <img class="img-circle" width="50" height="50" src="img/tx-default.png" alt=""/>
+                </div>
+                <ul class="subNav">
+                    <li><a href="javascript:;">我的主页</a></li>
+                    <li><a href="javascript:;">我的账簿</a></li>
+                    <li><a href="javascript:;">账号设置</a></li>
+                    <li><a href="javascript:;"><span style="color: #ff4e4e;">退出</span></a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<div class="m-headerSpace"></div>
+
+<div class="container f-mb40">
+    <div class="p-renzheng">
+        <div class="p-box f-bg">
+            <div class="p-box-hd">
+                <div class="m-title">
+                    <h2>身份认证</h2>
+                </div>
+
+            </div>
+            <div class="p-box-bd">
+                <p class="text-center f-mb30"><img src="img/step1.jpg" alt=""></p>
+
+                <div class="form-boxp">
+
+                    <!-- 审核失败 -->
+                    <div class="tips wmz_error_tips" style="display: -none;">
+                        <div class="media">
+                            <div class="media-left">
+                                <!--<span class="glyphicon glyphicon-remove-circle text-danger"></span>-->
+                                <span class="wmz_icon wmz_icon_error"></span>
+                            </div>
+                            <div class="media-body wmz_error_info">
+                                <ul class="list-unstyled">
+                                    <li>认证未通过：</li>
+                                    <li>·身份证信息与姓名不一致</li>
+                                    <li>·身份证照片不清晰，无法看到详细信息</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="wmz_line_title wmz_mb40"><span>个人认证信息</span><i></i></div>
+
+
+                    <form id="f-form-grrz">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>真实姓名：</label>
+
+                                <div class="formipt">
+                                    <input type="text" class="form-control iptw validate[required]">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>身份证号：</label>
+
+                                <div class="formipt">
+                                    <input type="text"
+                                           class="form-control iptw validate[required, custom[chinaIdLoose]]">
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>身份证照：</label>
+
+                                <div class="formipt" style="position: relative;">
+                                    <div class="form-photo"><a href="javascript:;"><img src="img/icon-photo.png" alt="">拍照指南</a></div>
+
+                                    <div class="upload_image_row no_padding">
+                                        <div class="upload_col upload_default_image" style="margin-right: 10px;">
+                                            <div class="upload_img_main"></div>
+                                            <a href="javascript:;" onclick="removeImg(this);" class="upload_img_main_close">取消</a>
+                                        </div>
+                                        <div class="upload_col">
+                                            <div class="upload_image_main file_upload01">
+                                                <div class="upload_col upload_input">
+                                                    <input id="file_upload01" class="file_upload" name="file_upload"
+                                                           type="file">
+                                                </div>
+                                                <div class="upload_col upload_info">图片大小5M以内</div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="upload_queue_main">
+                                                <div id="queue01" class="queue file_upload01"></div>
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="clear"></div>
+                                    </div>
+
+                                    <p class="help-block">上传本人手持身份证照片，需清晰可见身份证详细信息</p>
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="formlabel control-label"><span class="text-danger">*</span>所在地：</label>
+
+                                <div class="formipt">
+                                    <div>
+                                        <select name="Province" class="prov form-control"></select>
+                                        <select name="City" class="city form-control"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="formlabel control-label"></label>
+
+                                <div class=" formipt">
+                                    <button type="submit" class="btn btn-primary btn-w150">提交认证</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--<button class="j-showPic">显示图片</button>-->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">身份证照</h4>
+            </div>
+            <div class="modal-body">
+                <div style="text-align: center">
+                    <img id="j-pic" src="" alt="" style="max-width: 100%">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- jquery -->
+<script src="libs/jquery-2.2.2/jquery.min.js"></script>
+
+<!-- bootsrap -->
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+<!-- plugins -->
+<link rel="stylesheet" href="plugins/jquery-validationEngine/css/validationEngine.jquery.css">
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine-zh_CN.js"></script>
+<script src="plugins/jquery-validationEngine/js/jquery.validationEngine.min.js"></script>
+
+<script src="plugins/uploadify/js/jquery.uploadify.js"></script>
+
+<script src="plugins/layer/layer.js"></script>
+<script src="plugins/PCASClass2.js"></script>
+
+<!-- linkcloud -->
+<script src="js/main.js"></script>
+
+<!-- your js -->
+<script>
+    $(function () {
+        $('#f-form-grrz').validationEngine({
+            validateNonVisibleFields: true, // 验证隐藏表单
+            binded: false,   // 提交时验证
+            autoHidePrompt: true,   // 自动隐藏提示信息
+            autoHideDelay: 5000,
+            showOneMessage: false,
+            scroll: false,
+
+
+            onValidationComplete: function (form, valid) {
+                if (valid) {
+                    var myLayer = layer.confirm(
+                            '确认申请个人认证？',
+                            {
+                                title: '提示',
+                                btn: ['确认申请', '取消'] //可以无限个按钮
+                            },
+                            function () {
+                                // 成功回调
+                                layer.close(myLayer);
+                            },
+                            function () {
+                                // 取消回调
+                            }
+                    );
+                }
+            }
+
+        });
+
+        $(document).on('click', '.j-showPic', function(){
+            $('#j-pic').attr('src', ($(this).attr('src')));
+            $('#myModal').modal('show');
+        });
+
+
+
+    });
+
+
+    function removeImg(obj){
+        layer.confirm('<div class="dialog_content"><i class="upload_bg upload_gt_bg"></i>亲，你真要删掉我吗？</div>', {
+            skin: "dialog_layer",
+            closeBtn: 0, //不显示关闭按钮
+            shade: 0,
+            title: "删除提示",
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            $(obj).prev().find('img').remove();
+            $(obj).hide();
+            layer.closeAll();
+        }, function () {
+            layer.closeAll();
+        });
+    }
+
+    //图片上传参数
+    var uploadImageOptions = {
+        buttonClass: "upload_button",
+        width: 77,
+        height: 32,
+        fileSizeLimit: 1024 * 5,// KB
+        buttonText: "上传",
+        swf: 'plugins/uploadify/js/uploadify.swf',
+        removeCompleted: false,
+        removeTimeout: 0,
+        fileTypeDesc: 'Image Files',
+        fileTypeExts: '*.jpg;*.jpeg;*.png',
+        multi: false,
+        itemTemplate: '<div id="${fileID}" class="uploadify-queue-item">\
+        <div class="fileName">${fileName}</div>\
+            <div class="fileSize">（${fileSize}）</div>\
+            <div class="uploadify-progress">\
+            <div class="uploadify-progress-bar"><!--Progress Bar--></div>\
+            </div>\
+            <a class="upload_img_close" href="javascript: onCloseFile(\'${instanceID}\', \'${fileID}\');">取消</a>\
+            </div>',
+        //后台地址
+        uploader: 'form.json',
+        method: "post",
+        onSelect: onSelect,
+        onUploadComplete: onUploadComplete,
+        onUploadSuccess: onUploadSuccess,
+        onUploadStart: onUploadStart,
+        type: 2,
+//        requeueErrors: true
+    };
+    var _file_upload01 = $("#file_upload01");
+    uploadImageOptions["queueID"] = "queue01";
+    _file_upload01.uploadify(uploadImageOptions);
+
+    function onUploadStart() {
+//        console.log(111);
+    }
+
+    function onUploadSuccess(file, msg, status) {
+        console.log(msg); //这里获得后台的图片路劲 自行赋值
+        var self = this;
+
+        switch (self.settings.type) {
+            case 2:
+                    var $upload_default_image = $('#'+self.settings.id).parents('.formipt').find('.upload_default_image');
+                    var $upload_img_main  = $upload_default_image.find('.upload_img_main');
+                    var $upload_img_main_close = $upload_default_image.find('.upload_img_main_close');
+                    $upload_img_main.html('<img style="width:100%; height: 100%;" class="j-showPic" src="' + msg + '"/>');
+                    $upload_img_main_close.show();
+//                $(".upload_img_main." + self.settings.id).html('<img id="j-showPic" src="' + msg + '"/>').addClass("show");
+                break;
+        }
+    }
+
+    function onSelect() {
+        var self = this;
+        switch (self.settings.type) {
+            case 1:
+                //附件
+                $(".upload_none_box." + self.settings.id).hide();
+                break;
+            case 2:
+                //图片
+                var _list = $("#" + self.settings.queueID + " .uploadify-queue-item");
+                if (_list.length > 1) {
+                    _list.eq(0).each(function () {
+                        var id = $(this).attr("id");
+                        $("#" + self.settings.id).uploadify('cancel', id);
+                    });
+                }
+                break;
+        }
+
+    }
+
+    function onSelectError() {
+        var self = this;
+        switch (self.settings.type) {
+            case 1:
+                //附件
+                notUploadQueue(self);
+                break;
+        }
+
+    }
+
+    function onUploadComplete(file) {
+        var self = this;
+        switch (self.settings.type) {
+            case 2:
+                //图片
+                var _file = $("#" + file.id);
+                if (_file.length) {
+                    _file.delay(1000).fadeOut(300);
+                }
+                break;
+        }
+
+    }
+
+    function onCloseFile(instanceID, fileID) {
+
+        layer.confirm('<div class="dialog_content"><i class="upload_bg upload_gt_bg"></i>亲，你真要删掉我吗？</div>', {
+            skin: "dialog_layer",
+            closeBtn: 0, //不显示关闭按钮
+            shade: 0,
+            title: "删除提示",
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            $("#" + instanceID).uploadify('cancel', fileID);
+            notUploadQueue(null, instanceID);
+            layer.closeAll();
+        }, function () {
+            layer.closeAll();
+        });
+
+    }
+
+    function notUploadQueue(uploadify, instanceID) {
+        if (uploadify) {
+            if (uploadify.queueData.filesQueued != 0) {
+                $(".upload_none_box." + uploadify.settings.id).hide();
+            } else {
+                $(".upload_none_box." + uploadify.settings.id).show();
+            }
+        } else {
+            if ($(".queue." + instanceID + " .uploadify-queue-item").length) {
+                $(".upload_none_box." + instanceID).hide();
+            } else {
+                $(".upload_none_box." + instanceID).show();
+            }
+        }
+
+    }
+
+    function layerConfirm(title, content, cb1, cb2) {
+        layer.confirm(content, {
+            skin: "dialog_layer",
+            shade: 0,
+            title: title,
+            area: ['567px', '211px'],
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+            cb1 && cb1();
+            layer.closeAll();
+        }, function () {
+            cb2 && cb2();
+            layer.closeAll();
+        });
+    }
+
+    function layerAlert(title, content) {
+        layer.alert(content, {
+            skin: "dialog_layer",
+            shade: 0,
+            title: title,
+            area: ['567px', '211px']
+        });
+    }
+</script>
+</body>
+</html>
