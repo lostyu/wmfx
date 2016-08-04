@@ -61,6 +61,16 @@ a:hover {
   width: 200px;
   height: 156px;
 }
+.f-mt10 {
+  margin-top: 10px;
+}
+.m-subTitle h3 {
+  color: #ff6800;
+}
+.g-wrap {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 .list-fj {
   overflow: hidden;
   margin-top: -20px;
@@ -422,6 +432,14 @@ a:hover {
   color: #333;
   font-weight: normal;
 }
+.u-tag {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 12px;
+  border: 1px solid #666;
+  text-align: center;
+  font-size: 12px;
+}
 .m-zzxm {
   margin-bottom: 40px;
 }
@@ -515,6 +533,23 @@ a:hover {
   margin-left: 40px;
   margin-top: 40px;
 }
+.m-indexList-1 ul {
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.m-indexList-1 li {
+  width: 534px;
+  height: 200px;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding: 12px;
+  background-color: #fff;
+}
+.m-indexList-1 li .ft {
+  margin-top: 15px;
+  line-height: 24px;
+  color: #666;
+}
 .m-zygzs {
   margin-bottom: 40px;
 }
@@ -568,4 +603,88 @@ a:hover {
   color: #ff6800;
   font-weight: bold;
   font-size: 16px;
+}
+.m-zygzs .filter {
+  padding: 22px 40px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+.m-zygzs .filter select {
+  min-width: 150px;
+}
+.p-userCenter {
+  margin-top: 0;
+}
+.p-userCenter .userInfo .media-body ul li {
+  width: auto;
+}
+.p-userCenter .userInfo .media-body ul li:first-child {
+  margin-left: -40px;
+}
+.p-userCenter .userInfo .media-body ul li .num {
+  padding: 0 40px;
+  color: #ff6800;
+}
+.p-userCenter .userInfo .media-heading .btn-rz {
+  border-color: #ff6800;
+  color: #ff6800;
+}
+.m-tabs .nav-tabs a {
+  font-size: 16px;
+  color: #b8b8b8;
+  border: none;
+}
+.m-tabs .nav-tabs a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+.m-tabs .nav-tabs > li.active > a,
+.m-tabs .nav-tabs > li.active > a:focus,
+.m-tabs .nav-tabs > li.active > a:hover {
+  background: none;
+  border: 2px solid #ff6800;
+  border-width: 0 0 2px;
+  color: #ff6800;
+}
+.m-tabs .tab-content {
+  padding: 20px 0;
+}
+.p-userSetting .u-nav .active a {
+  color: #ff6800;
+  border-bottom-color: #ff6800;
+}
+.m-list {
+  margin-top: 30px;
+}
+.m-list .media-left {
+  padding-right: 30px;
+}
+.m-list .media-body p {
+  line-height: 20px;
+  color: #757575;
+}
+.m-list .media-body p:last-child {
+  margin-bottom: 0;
+}
+.m-list .media-heading {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.m-list .media-heading a {
+  color: #000;
+  font-size: 16px;
+  vertical-align: top;
+}
+.m-list .media-heading a:hover {
+  color: #ff6800;
+}
+.m-list .meta span {
+  margin-right: 50px;
+}
+.m-empty-1 {
+  line-height: 140px;
+  border: 1px solid #ff6800;
+  text-align: center;
+  background-color: #fdfaf5;
 }
